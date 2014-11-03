@@ -119,7 +119,7 @@ Cases of putting a bracket/parenthesis on the right side of the equation.
 \end{gather*}
 
 
-%Cases of putting a bracket/parenthesis on the right side of the equation.\\
+Cases of putting a bracket/parenthesis on the right side of the equation.\\
 %$\begin{rcases*}
 %	E = m c^2 & foo \\
 %	\int x-3\, dx & barbaz
