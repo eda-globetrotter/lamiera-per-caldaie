@@ -78,8 +78,8 @@
 // Utilities module
 #include "../utilities/printer.h"
 #include "utilities_t/printer_ut.h"
-//#include "../utilities/file_io.h"
-//#include "utilities_t/file_io_ut.h"
+#include "../utilities/file_io.h"
+#include "utilities_t/file_io_ut.h"
 #include "../utilities/violated_assertion.h"
 #include "utilities_t/violated_assertion_ut.h"
 #include "../utilities/violated_precondition.h"
