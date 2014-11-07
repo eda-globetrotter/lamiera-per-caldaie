@@ -72,11 +72,22 @@
 // Import class definitions from different packages in this software.
 #include "node.h"
 
-// ==================================================================
+// Use the standard namespace.
+using namespace std;
+
+// =========================================================
+
+// Shortcut to container of nodes.
+//typedef vector<T> t_vec;
+// Shortcut to represent a pointer to the container of strings.
+//typedef vector<T>::iterator t_vec_p;
+
+// =========================================================
 
 // Default constructor.
-node::node() {
-	outgoing_nodes = null;
+template <class T>
+node<T>::node() {
+	outgoing_nodes = NULL;
 	incoming_nodes = null;
 }
 
@@ -91,7 +102,8 @@ node::node() {
  * @param - None
  * @return - The list of incoming nodes.
  */
-t_vec get_incoming_nodes() {
+template <class T>
+vector<T> node<T>::get_incoming_nodes() {
 	return incoming_nodes;
 }
 
@@ -101,7 +113,8 @@ t_vec get_incoming_nodes() {
  * @param - None
  * @return - The list of outging nodes.
  */
-t_vec get_outgoing_nodes() {
+template <class T>
+vector<T> node<T>::get_outgoing_nodes() {
 	return outgoing_nodes;
 }
 
@@ -118,7 +131,8 @@ t_vec get_outgoing_nodes() {
  * @param incoming_t_list - The list of incoming nodes.
  * @return - Nothing.
  */
-void set_incoming_nodes(t_vec &incoming_t_list) {
+template <class T>
+void node<T>::set_incoming_nodes(vector<T> &incoming_t_list) {
 	incoming_nodes = incoming_t_list;
 }
 
@@ -128,7 +142,8 @@ void set_incoming_nodes(t_vec &incoming_t_list) {
  * @param incoming_t_elem - An incoming node.
  * @return - Nothing.
  */
-void add_incoming_node(T &incoming_t_elem) {
+template <class T>
+void node<T>::add_incoming_node(T &incoming_t_elem) {
 	incoming_nodes.push_back(incoming_t_elem);
 }
 
@@ -138,7 +153,8 @@ void add_incoming_node(T &incoming_t_elem) {
  * @param outgoing_t_list - The list of outgoing nodes.
  * @return - Nothing.
  */
-void set_outgoing_nodes(t_vec &outgoing_t_list) {
+template <class T>
+void node<T>::set_outgoing_nodes(vector<T> &outgoing_t_list) {
 	outgoing_nodes = outgoing_t_list;
 }
 
@@ -148,67 +164,8 @@ void set_outgoing_nodes(t_vec &outgoing_t_list) {
  * @param outgoing_t_elem - An outgoing node.
  * @return - Nothing.
  */
-void add_outgoing_node(T &outgoing_t_elem) {
+template <class T>
+void node<T>::add_outgoing_node(T &outgoing_t_elem) {
 	outgoing_nodes.push_back(outgoing_t_elem);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

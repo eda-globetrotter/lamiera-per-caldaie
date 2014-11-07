@@ -72,6 +72,7 @@
 // Import Header files from the C++ STL
 #include <iostream>
 #include <string>
+#include <vector>
 
 // Use the standard namespace.
 using namespace std;
@@ -79,9 +80,9 @@ using namespace std;
 // =========================================================
 
 // Shortcut to container of nodes.
-typedef vector<T> t_vec;
+//typedef vector<T> t_vec;
 // Shortcut to represent a pointer to the container of strings.
-typedef vector<T>::iterator t_vec_p;
+//typedef vector<T>::iterator t_vec_p;
 
 // =========================================================
 
@@ -101,9 +102,9 @@ class node {
 		// Accessor methods.
 		
 		// Function to get the list of nodes connected to this node.
-		t_vec get_incoming_nodes();
+		vector<T> get_incoming_nodes();
 		// Function to get the list of nodes connected from this node.
-		t_vec get_outgoing_nodes();
+		vector<T> get_outgoing_nodes();
 		
 		
 		
@@ -112,12 +113,12 @@ class node {
 		// Mutator methods.
 		
 		// Function to set the list of nodes connected to this node.
-		void set_incoming_nodes(t_vec &incoming_t_list);
+		void set_incoming_nodes(vector<T> &incoming_t_list);
 		// Function to add a node connected to this node.
 		void add_incoming_node(T &incoming_t_elem);
 		
 		// Function to set the list of nodes connected from this node.
-		void set_outgoing_nodes(t_vec &outgoing_t_list);
+		void set_outgoing_nodes(vector<T> &outgoing_t_list);
 		// Function to add a node connected from this node.
 		void add_outgoing_node(T &outgoing_t_elem);
 		
@@ -131,10 +132,10 @@ class node {
 		// Instance variables.
 		
 		// List of outgoing nodes.
-		t_vec outgoing_nodes;
+		vector<T> outgoing_nodes;
 		// List of incoming nodes.
-		t_vec incoming_nodes;
-}
+		vector<T> incoming_nodes;
+};
 
 
 
