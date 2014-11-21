@@ -32,6 +32,9 @@
  *
  * @author Zhiyang Ong
  *
+ * Test/Element_t package
+ * Submodule of Test package to test classes in the Element module.
+ *
  * This is a template for elements that would be stored in containers,
  *	or data structures.
  *
