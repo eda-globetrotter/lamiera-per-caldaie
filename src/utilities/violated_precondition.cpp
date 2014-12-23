@@ -36,7 +36,7 @@
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
-#include "violated_precondition.h"
+#include "violated_precondition.hpp"
 using namespace std;
 
 violated_precondition::violated_precondition() {

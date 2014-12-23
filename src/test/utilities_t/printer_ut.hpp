@@ -27,9 +27,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Import Header files from the other modules of Tiramisu.
-#include "../../utilities/printer.h"
-#include "../../utilities/violated_assertion.h"
+// Import Header files from the other modules of lamiera-per-caldaie.
+#include "../../utilities/printer.hpp"
+#include "../../utilities/violated_assertion.hpp"
 
 // Import appropriate header files from the C++ STL
 #include <iostream>

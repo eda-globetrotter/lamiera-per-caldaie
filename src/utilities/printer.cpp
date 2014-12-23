@@ -72,7 +72,7 @@
  */
 
 // Import packages from the software
-#include "printer.h"
+#include "printer.hpp"
 
 // Import packages from the C++ STL
 #include <iostream>

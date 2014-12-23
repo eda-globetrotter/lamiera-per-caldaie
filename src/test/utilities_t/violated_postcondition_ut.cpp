@@ -27,9 +27,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Import Header files from the other modules of Tiramisu.
-#include "violated_postcondition_ut.h"
-#include "../../utilities/printer.h"
+// Import Header files from the other modules of lamiera-per-caldaie.
+#include "violated_postcondition_ut.hpp"
+#include "../../utilities/printer.hpp"
 
 // Import appropriate header files from the C++ STL
 #include <iostream>

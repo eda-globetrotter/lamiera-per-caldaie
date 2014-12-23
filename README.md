@@ -35,3 +35,18 @@ Boilerplate code for my open source software projects. It will include implement
 - src: Source code of the software project, including test suites for automated regression testing.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+References:
+http://stackoverflow.com/editing-help
