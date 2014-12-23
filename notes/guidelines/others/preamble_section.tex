@@ -27,13 +27,13 @@
 % For better typesetting of mathematical proofs (for theorems and colloraries), from the American Mathematical Society (AMS).
 \usepackage{amsthm}
 %	Create definitions for new theorems, axioms, colloraries.
-	\newtheorem{theorem}{Theorem}[chapter]
-	\newtheorem{axiom}{Axiom}[chapter]
-	\newtheorem{corollary}{Corollary}[chapter]
-	\newtheorem{lemma}{Lemma}[chapter]
-	\newtheorem{Rule}{Rule}[chapter]
-	\newtheorem{law}{Law}[chapter]
-	\newtheorem{principle}{Principle}[chapter]
+	\newtheorem{theorem}{Theorem}[section]
+	\newtheorem{axiom}{Axiom}[section]
+	\newtheorem{corollary}{Corollary}[section]
+	\newtheorem{lemma}{Lemma}[section]
+	\newtheorem{Rule}{Rule}[section]
+	\newtheorem{law}{Law}[section]
+	\newtheorem{principle}{Principle}[section]
 % To change the style of newly defined theorems.
 %		\usepackage{theorem}
 
@@ -52,11 +52,11 @@
 % Use the packages needed to typeset algorithms. I can also use the combined ``algorithms'' bundle.
 \usepackage{algorithm}
 \usepackage{algorithmic}
-% The listings package is a source code printer for LaTeX. You can typeset stand alone files as well as listings with an environment similar to verbatim as well as you can print code snippets using a command similar to \verb. Many parameters control the output and if your preferred programming language isnï¿½t already supported, you can make your own definition.
+% The listings package is a source code printer for LaTeX. You can typeset stand alone files as well as listings with an environment similar to verbatim as well as you can print code snippets using a command similar to \verb. Many parameters control the output and if your preferred programming language isnÕt already supported, you can make your own definition.
 \usepackage{listings}
 % Use the ``clrscode3e'' LaTeX package to typeset algorithms like CLRS
 %	\usepackage{/data/others/notes/clrscode3e}
-\usepackage{clrscode3e}
+\usepackage{/data/others/grappanotes/clrscode3e}
 % Use the ``algpseudocode'' LaTeX package to typeset algorithms -- Alternate solution, not preferred
 %\usepackage{algpseudocode}
 % Alternative packages for typesetting algorithms.
@@ -64,7 +64,7 @@
 %\usepackage{algorithmicx}
 %\usepackage{program}
 %	To check for syntax errors in my LaTeX document.
-%\RequirePackage[l2tabu, orthodox]{nag}
+\RequirePackage[l2tabu, orthodox]{nag}
 
 % Concatenate adjacent references together when typeset.
 % That is, cite{ref1,ref2,ref3,ref4} can appear as [12-15], instead of [12] [13] [14] [15]
@@ -221,9 +221,9 @@
 % To define multiple floats (figures and tables), with individual captions and labels, within one environment.
 		\usepackage{subfig}
 % For a modular LaTeX document with multiple files (including the ``root file''), it allows the a non-empty subset of the ``child files'' to be typeset without having to typeset the ``root file'' (and/or the other ``child files'').
-%		\usepackage{subfiles}
+		\usepackage{subfiles}
 % To annotate the LaTeX document with to-do notes.
-%		\usepackage[colorinlistoftodos]{todonotes}
+		\usepackage[colorinlistoftodos]{todonotes}
 % To insert images surrounded by text.
 		\usepackage{wrapfig}
 % To create trees, graphs, (commutative) diagrams, and similar things. Reference: Wikibooks contributors, ``\LaTeX/Xy-pic,'' in {\it \LaTeX}, Wikibooks: Open books for an open world, Wikimedia Foundation, San Francisco, CA, June 5, 2005. Available online at: \url{http://en.wikibooks.org/wiki/LaTeX/Xy-pic}; last accessed on December 25, 2013.		=> This package seems to have bugs in it. If I use this package, my document will not typeset properly. I have tried to use it successfully in other documents. It does not seem to be compatible with 
