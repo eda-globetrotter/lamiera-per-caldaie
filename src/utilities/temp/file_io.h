@@ -118,20 +118,6 @@ class file_io {
 	
 		// Accessor functions.
 		
-		// Get the container of input filenames.
-		static str_vec get_input_filenames();
-		// Get the container of output filenames.
-		static str_vec get_output_filenames();
-		// Get the container of input/output filenames.
-		static str_vec get_ip_op_filenames();
-	
-		// Generate the input filenames.
-		static str_vec generate_ip_filenames();
-		// Generate the output filenames.
-		static str_vec generate_op_filenames();
-		// Generate the input/output filenames.
-		static str_vec generate_io_filenames();
-	
 		/**
 		 * Function to get the filename of the standard output
 		 *	log file.
@@ -143,20 +129,15 @@ class file_io {
 		 */
 		static string get_err_log_filename();
 	
-		// Function to determine the file extension of a filename.
-		static string get_file_extn(const string &filename);
-		
 		// Function to determine if mode is logging or otherwise.
 		static bool is_logging_mode();
 	
-		// Function to check if the location of benchmarks is valid.
-		static bool is_bmk_loc_valid(const string &bmk_loc);
 		// Function to check if the benchmark is valid.
 		static bool is_bmk_valid(const string &bmk);
-		// Function to obtain the location of the benchmarks.
-		static string get_bmk_loc();
 		// Function to obtain the name of the benchmark.
 		static string get_name_of_bmk();
+		// Function to obtain the name of the output file.
+		static string get_name_of_op_file();
 	
 		// Function to determine if this character is a delimiter.
 		static bool is_delimiter(const char &c);
@@ -188,12 +169,10 @@ class file_io {
 		static void set_log_filenames(const string &op_log_filename,
 			const string &err_log_filename);
 
-		// Function to set the input and output filenames.
-		static void set_io_filenames(str_vec ip_str_vec, str_vec op_str_vec, str_vec io_str_vec);
-	
-		// Function to set the location of the benchmarks.
-		static void set_bmk_loc(const string &bmk_loc);
 		// Function to set the name of the benchmark.
+		static void set_name_of_bmk(const string &nm_bmk);
+		// Function to set the name of the output file.
+### To be fixed
 		static void set_name_of_bmk(const string &nm_bmk);
 	
 		// Function to set the delimiters.
@@ -247,11 +226,11 @@ class file_io {
 		static str_vec str_tokenizer(string orig_str);
 	
 		// Function to check if a file extension is valid.
-		static bool chk_file_extn(const string &f_extn);
+//		static bool chk_file_extn(const string &f_extn);
 		// Function to check if an input file extension is valid.
-		static bool chk_ip_file_extn(const string &f_extn);
+//		static bool chk_ip_file_extn(const string &f_extn);
 		// Function to check if an output file extension is valid.
-		static bool chk_op_file_extn(const string &f_extn);
+//		static bool chk_op_file_extn(const string &f_extn);
 	
 	
 	// =========================================================

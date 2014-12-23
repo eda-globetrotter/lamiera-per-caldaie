@@ -114,14 +114,6 @@ typedef vector<string>::iterator str_vec_p;
 // ==================================================================
 
 // Initialization of (string) constants.
-const string file_io::VERILOG = string("v");
-const string file_io::SPEF_IP = string("spef");
-const string file_io::SDC_IP = string("sdc");
-const string file_io::IP_CELL_LIB = string("lib");
-const string file_io::TIMING = string("timing");
-const string file_io::SIZES = string("sizes");
-const string file_io::INT_SIZES = string("int.sizes");
-const string file_io::INTGR = string("int");
 const string file_io::PERIOD = string(".");
 const string file_io::SLASH = string("/");
 const string file_io::TEXT = string("txt");
@@ -133,18 +125,16 @@ const string file_io::TEXT = string("txt");
 // Initialize the logging mode to FALSE.
 bool file_io::is_logging = false;
 // Initialize the containers of input and/or output filenames to NULL.
+/*
 str_vec file_io::input_filenames;
 str_vec file_io::output_filenames;
 str_vec file_io::io_filenames;
+*/
 // Initialize the filenames of the standard output/error filenames.
 string file_io::standard_logfile = "normal_output.txt";
 string file_io::error_logfile = "error_output.txt";
 // Initialize the string of delimiting characters.
 string file_io::delimiters = ". \t";
-// Initialize the container of file formats to NULL.
-str_vec file_io::ip_file_formats;
-str_vec file_io::op_file_formats;
-str_vec file_io::io_file_formats;
 // Define the location of the benchmarks.
 string file_io::location_of_benchmarks="../benchmarks";
 // Define the name of the benchmark.
@@ -170,37 +160,6 @@ file_io::file_io() {
 // -----------------------------------------------------
 
 // Accessor functions.
-
-/**
- * Function to get the container of input filenames.
- * @param - None.
- * @return - The container of input filenames.
- */
-str_vec file_io::get_input_filenames() {
-	return input_filenames;
-}
-
-/**
- * Function to get the container of output filenames.
- * @param - None.
- * @return - The container of output filenames.
- */
-str_vec file_io::get_output_filenames() {
-	return output_filenames;
-}
-
-
-
-/**
- * Function to get the container of input/output filenames.
- * @param - None.
- * @return - The container of input/output filenames.
- */
-str_vec file_io::get_ip_op_filenames() {
-	return io_filenames;
-}
-
-
 
 /**
  * Function to get the filename of the standard output
@@ -301,6 +260,7 @@ bool file_io::is_delimiter(const char &c) {
  * @return - boolean TRUE, if file extension is valid; else,
  *	return FALSE.
  */
+/*
 bool file_io::chk_file_extn(const string &f_extn) {
 	if(chk_ip_file_extn(f_extn) || chk_op_file_extn(f_extn)) {
 		return true;
@@ -308,7 +268,7 @@ bool file_io::chk_file_extn(const string &f_extn) {
 		return false;
 	}
 }
-
+*/
 
 /**
  * Function to check if an input file extension is valid.
@@ -316,6 +276,7 @@ bool file_io::chk_file_extn(const string &f_extn) {
  * @return - boolean TRUE, if input file extension is valid; else,
  *	return FALSE.
  */
+
 bool file_io::chk_ip_file_extn(const string &f_extn) {
 	// Are there any valid input and I/O file formats?
 	if((0 == ip_file_formats.size())	&&
