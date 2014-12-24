@@ -254,10 +254,10 @@ test:
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Parsers Directory
 	@echo === Graph Directory
-	@echo === Test/Utilities Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
 	@echo === Elements Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(ELEMPATH)$(SOURCE)
+	@echo === Test/Utilities Directory
+	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
 	@echo === Test/Parsers Directory
 	@echo === Test/Graph Directory
 	@echo === Test Directory

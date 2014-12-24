@@ -199,6 +199,36 @@ bool file_io::is_logging_mode() {
 }
 
 
+
+/**
+ * Function to determine if file stream for standard
+ *	output is open.
+ * @param - None.
+ * @return - boolean TRUE, if in std_op_ofs is open;
+ *				else, return FALSE.
+ */
+bool file_io::std_op_ofs_is_open() {
+	if(std_op_ofs.is_open()) {
+		return true;
+	}else{
+		return false;
+	}
+}
+/**
+ * Function to determine if file stream for standard
+ *	error is open.
+ * @param - None.
+ * @return - boolean TRUE, if in err_op_ofs is open;
+ *				else, return FALSE.
+ */
+bool file_io::err_op_ofs_is_open() {
+	if(err_op_ofs.is_open()) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
 // -----------------------------------------------------
 
 // Mutator functions.
@@ -274,8 +304,14 @@ void file_io::set_log_filenames(const string &op_log_filename,
  * @param msg:	Message to be printed to standard output
  * @return - Nothing.
  */
-void file_io::fileIO_std_op(const string &op_message) {	
-	if(is_logging_mode() && std_op_ofs.is_open()) {
+void file_io::fileIO_std_op(const string &op_message) {
+	/**
+	 * Conditions for printing standard output message to a file:
+	 *	#	in logging mode
+	 *	#	file stream for standard output is open
+	 *	#	message is not empty
+	 */
+	if(is_logging_mode() && std_op_ofs.is_open() && (!op_message.empty())) {
 //cout<<"==u			In logging mode and std_ofs is open."<<endl;
 		std_op_ofs << op_message << endl;
 	}
@@ -292,7 +328,13 @@ void file_io::fileIO_std_op(const string &op_message) {
  * @return - Nothing.
  */
 void file_io::fileIO_std_err(const string &err_message) {
-	if(is_logging_mode() && err_op_ofs.is_open()) {
+	/**
+	 * Conditions for printing standard error message to a file:
+	 *	#	in logging mode
+	 *	#	file stream for standard error is open
+	 *	#	message is not empty
+	 */
+	if(is_logging_mode() && err_op_ofs.is_open() && (!err_message.empty())) {
 //cout<<"==u			In logging mode and err_ofs is open."<<endl;
 		err_op_ofs << err_message << endl;
 	}
@@ -314,8 +356,27 @@ void file_io::fileIO_std_err(const string &err_message) {
  */
 void file_io::open_io_streams() {
 	// Open output file streams for the log files.
-	std_op_ofs.open(get_std_log_filename().c_str(),ofstream::out);
-	err_op_ofs.open(get_err_log_filename().c_str(),ofstream::out);
+
+	// Is the filename for standard output not empty?
+	if(!get_std_log_filename().empty()) {
+		// Yes. Open output file stream.
+		std_op_ofs.open(get_std_log_filename().c_str(),ofstream::out);
+	}else{
+		// No. Set up the default filenames for standard output/error.
+		file_io::set_up_file_io();
+		// Open output file stream for standard output.
+		std_op_ofs.open(get_std_log_filename().c_str(),ofstream::out);
+	}
+	// Is the filename for standard error not empty?
+	if(!get_err_log_filename().empty()) {
+		// Yes. Open output file stream.
+		err_op_ofs.open(get_err_log_filename().c_str(),ofstream::out);
+	}else{
+		// No. Set up the default filenames for standard output/error.
+		file_io::set_up_file_io();
+		// Open output file stream for standard error.
+		err_op_ofs.open(get_err_log_filename().c_str(),ofstream::out);
+	}
 }
 
 
@@ -327,11 +388,17 @@ void file_io::open_io_streams() {
  * @return - Nothing.
  */
 void file_io::close_io_streams() {
-//cout << "==fio		Close output file streams." << endl;
-	// For each available input file stream, close it.
-	std_op_ofs.close();
-	err_op_ofs.close();
-//cout << "==fio		Close Output file streams." << endl;
+//cout << "==fio		Close opened file streams." << endl;
+	// For each available/open I/O file stream, close it.
+	if(std_op_ofs.is_open()) {
+		std_op_ofs.close();
+	}
+	if(err_op_ofs.is_open()) {
+		err_op_ofs.close();
+	}
+
+	// Else, if file streams are close, I don't need to close them.
+//cout << "==fio		Close OPENed file streams." << endl;
 }
 
 
@@ -347,10 +414,10 @@ void file_io::set_up_file_io() {
 	 * Define the default filenames for the standard output and
 	 *	standard error log files.
 	 */
-	if(!get_std_log_filename().empty()) {
+	if(get_std_log_filename().empty()) {
 		standard_logfile = "normal_output.txt";
 	}
-	if(!get_err_log_filename().empty()) {
+	if(get_err_log_filename().empty()) {
 		error_logfile = "error_output.txt";
 	}
 }

@@ -130,7 +130,18 @@ class file_io {
 		 *	log file.
 		 */
 		static string get_err_log_filename();
-	
+
+		/**
+		 * Function to determine if file stream for standard
+		 *	output is open.
+		 */
+		static bool std_op_ofs_is_open();
+		/**
+		 * Function to determine if file stream for standard
+		 *	error is open.
+		 */
+		static bool err_op_ofs_is_open();
+
 		// Function to determine if mode is logging or otherwise.
 		static bool is_logging_mode();
 

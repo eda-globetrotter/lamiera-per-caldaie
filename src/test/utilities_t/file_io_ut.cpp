@@ -44,7 +44,11 @@ file_io_ut::file_io_ut() {
 
 // ===========================================================
 
-// Function to test the constructor and functions of file_io
+/**
+ * Function to test the constructor and functions of file_io
+ * @param - None
+ * @return - Nothing
+ */
 void file_io_ut::test_file_io() {
 	cout << "==tu	Testing: file_io..." << endl;
 	/**
@@ -58,17 +62,17 @@ void file_io_ut::test_file_io() {
 	// Function to test functions to access/modify filenames.
 	test_log_filenames();
 
-/*
 
-	// Functions to test the output write functions
-	test_file_io_std_op_fn();
-	test_file_io_std_err_fn();No
+	/**
+	 * Function to test I/O file streams and output write
+	 *	functions.
+	 * This function test for the following:
+	 *	#	Test if I/O file streams can be opened.
+	 *	#	Test if I/O file streams can write messages.
+	 *	#	Test if I/O file streams can be closed.
+	 */
+	test_open_io_fs();
 
-	// Function to test the opening of I/O file streams
-	void test_open_io_fs();
-	// Function to test the closing of I/O file streams
-	void test_close_io_fs();
-*/
 	cout << endl;
 }
 
@@ -168,7 +172,110 @@ void file_io_ut::test_log_filenames() {
 	}
 	string temp_std_op_fname = file_io::get_std_log_filename();
 	string temp_std_err_fname = file_io::get_err_log_filename();
+
+
 	// Set up the default filenames for standard output/error.
 	file_io::set_up_file_io();
+	// Check if default filename for standard output is acceptable.
+	cout << "==tu	>>	Default filename for std o/p is ok?";
+	printer::num_test_cases_eval();
+	if(0 == file_io::get_std_log_filename().compare(temp_std_op_fname)) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+	// Check if default filename for standard error is acceptable.
+	cout << "==tu	>>	Default filename for std err is ok?";
+	printer::num_test_cases_eval();
+	if(0 == file_io::get_err_log_filename().compare(temp_std_err_fname)) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
 
+
+	// Check if the filenames can be sell to empty strings.
+	file_io::set_log_filenames("","");
+	// Check if filename for standard output is not empty.
+	cout << "==tu	>>	Filename for std o/p cannot be empty?";
+	printer::num_test_cases_eval();
+	if(!file_io::get_std_log_filename().empty()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+	// Check if filename for standard error is not empty.
+	cout << "==tu	>>	Filename for std err cannot be empty?";
+	printer::num_test_cases_eval();
+	if(!file_io::get_err_log_filename().empty()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+
+
+	// Check if the filenames can be set correctly.
+	string good_fname = "good.text";
+	string bad_fname = "bad.text";
+	file_io::set_log_filenames(good_fname,bad_fname);
+	// Check if filename for standard output is changed correctly.
+	cout << "==tu	>>	Filename for std o/p is changed correctly?";
+	printer::num_test_cases_eval();
+	if(0 == file_io::get_std_log_filename().compare(good_fname)) {
+		cout << "	Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+	// Check if filename for standard error is changed correctly.
+	cout << "==tu	>>	Filename for std err is changed correctly?";
+	printer::num_test_cases_eval();
+	if(0 == file_io::get_err_log_filename().compare(bad_fname)) {
+		cout << "	Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+
+
+	// Set up the default filenames for standard output/error again.
+	file_io::set_up_file_io();
+}
+
+
+
+
+
+/**
+ * Function to test I/O file streams and output write
+ *	functions.
+ * This function test for the following:
+ *	#	Test if I/O file streams can be opened.
+ *	#	Test if I/O file streams can write messages.
+ *	#	Test if I/O file streams can be closed.
+ */
+void file_io_ut::test_open_io_fs() {
+	// Is the output file stream for standard output open?
+	cout << "==tu	>>	o/p file stream for std o/p closed by default?";
+	printer::num_test_cases_eval();
+	if(!file_io::std_op_ofs_is_open()) {
+		cout << "	Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "	NO!!!" << endl;
+	}
+
+	// Is the output file stream for standard error open?
+	cout << "==tu	>>	o/p file stream for std err closed by default?";
+	printer::num_test_cases_eval();
+	if(!file_io::err_op_ofs_is_open()) {
+		cout << "	Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "	NO!!!" << endl;
+	}
 }

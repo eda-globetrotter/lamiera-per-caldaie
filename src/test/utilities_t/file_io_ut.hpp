@@ -71,12 +71,13 @@ class file_io_ut {
 		 */
 		static void test_log_filenames();
 
+		// Function to test the opening of I/O file streams
+		static void test_open_io_fs();
+
 		// Functions to test the output write functions.
 		static void test_file_io_std_op_fn();
 		static void test_file_io_std_err_fn();
 
-		// Function to test the opening of I/O file streams
-		static void test_open_io_fs();
 		// Function to test the closing of I/O file streams
 		static void test_close_io_fs();
 };
