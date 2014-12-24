@@ -121,6 +121,7 @@ int main(int argc, char *argv[]) {
 	 * If the first two input arguments for this program is null,
 	 * request for the user to rerun the program and exit.
 	 */
+/*
 	if((argv[1] == NULL) || (argv[2] == NULL)) {
 		cout << "To run this program, lamiera-per-caldaie (test-boilerplate-code)," << endl;
 		cout << "do the following:" << endl;
@@ -134,7 +135,9 @@ int main(int argc, char *argv[]) {
 	cout << argv[1] << endl;
 	cout << "Output filename to store test results is:" << endl;
 	cout << argv[2] << endl;
-	
+*/
+
+
 /*
 	// Check if the benchmark is valid.
 	if(!file_io::is_bmk_loc_valid(argv[1])) {

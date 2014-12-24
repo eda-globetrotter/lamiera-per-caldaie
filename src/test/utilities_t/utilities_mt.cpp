@@ -30,7 +30,7 @@
 
 // Import Header files from the other modules of lamiera-per-caldaie.
 #include "utilities_mt.hpp"
-#include "../../utilities/printer.hpp"
+//#include "../../utilities/printer.hpp"
 
 
 // Import appropriate header files from the C++ STL
@@ -68,5 +68,5 @@ void utilities_mt::test_utilities() {
 	// Test the class printer
 	printer_ut::test_printer();
 	// Test the class file_io
-//	file_io_ut::test_file_io();
+	file_io_ut::test_file_io();
 }
