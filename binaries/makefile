@@ -282,7 +282,7 @@ test:
 	@echo
 	more $(NORMALTXT)
 	more $(ERRORTXT)
-	more $(OPRESULTS)
+
 
 
 

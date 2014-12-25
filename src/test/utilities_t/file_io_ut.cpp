@@ -243,7 +243,7 @@ void file_io_ut::test_log_filenames() {
 
 
 	// Set up the default filenames for standard output/error again.
-	file_io::set_up_file_io();
+	file_io::set_log_filenames("normal_output.txt","error_output.txt");
 }
 
 
@@ -268,7 +268,6 @@ void file_io_ut::test_open_io_fs() {
 	}else{
 		cout << "	NO!!!" << endl;
 	}
-
 	// Is the output file stream for standard error open?
 	cout << "==tu	>>	o/p file stream for std err closed by default?";
 	printer::num_test_cases_eval();
@@ -277,5 +276,66 @@ void file_io_ut::test_open_io_fs() {
 		printer::num_passed_test_cases_eval();
 	}else{
 		cout << "	NO!!!" << endl;
+	}
+
+
+	/**
+	 * Open the output file streams for standard output and
+	 *	standard error.
+	 */
+	file_io::open_io_streams();
+	// Is the output file stream for standard output open?
+	cout << "==tu	>>	o/p file stream for std o/p opened?";
+	printer::num_test_cases_eval();
+	if(file_io::std_op_ofs_is_open()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+	// Is the output file stream for standard error open?
+	cout << "==tu	>>	o/p file stream for std err opened?";
+	printer::num_test_cases_eval();
+	if(file_io::err_op_ofs_is_open()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+
+
+	/**
+	 * Write messages using I/O file streams for standard
+	 *	output and standard error.
+	 *
+	 * Manually check the contents of the files to determine if
+	 *	their contents are correct.
+	 */
+	file_io::fileIO_std_op("File I/O stream for standard output is OK.");
+	file_io::fileIO_std_err("File I/O stream for standard error is OK.");
+
+
+	/**
+	 * Close the output file streams for standard output and
+	 *	standard error.
+	 */
+	file_io::close_io_streams();
+	// Is the output file stream for standard output open?
+	cout << "==tu	>>	o/p file stream for std o/p closed?";
+	printer::num_test_cases_eval();
+	if(!file_io::std_op_ofs_is_open()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
+	}
+	// Is the output file stream for standard error open?
+	cout << "==tu	>>	o/p file stream for std err closed?";
+	printer::num_test_cases_eval();
+	if(!file_io::err_op_ofs_is_open()) {
+		cout << "		Yes." << endl;
+		printer::num_passed_test_cases_eval();
+	}else{
+		cout << "		NO!!!" << endl;
 	}
 }
