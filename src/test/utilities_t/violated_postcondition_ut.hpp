@@ -2,8 +2,8 @@
  * Test/Utilities_t package:
  * Submodule of Test package to test classes in the Utilities package.
  *
- * violated_precondition_ut class:
- * Class that tests the violated_precondition class.
+ * violated_postcondition_ut class:
+ * Class that tests the violated_postcondition class.
  *
  * 
  *
@@ -28,28 +28,31 @@
  */
 
 // Import Header files from the other modules of lamiera-per-caldaie.
-#include "violated_precondition_ut.hpp"
-#include "../../utilities/printer.hpp"
+#include "../../utilities/violated_postcondition.hpp"
 
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
+
+#ifndef __VIOLATEDpostcondition_UT_H
+#define __VIOLATEDpostcondition_UT_H
 using namespace std;
 
-violated_precondition_ut::violated_precondition_ut() {
-	cerr << "==tu	Don't instantiate the tester for violated_precondition";
-	cerr << endl;
-}
+// ==================================================================
 
+class violated_postcondition_ut {
+//	private:
+//		string ex_msg;
 
-void violated_precondition_ut::test_violated_precondition() {
-	try{
-		printer::num_test_cases_eval();
-		cout << "==tu	Testing: violated_precondition..." << endl;
-		throw new violated_precondition("==tu	>>	Testing: violated_precondition");
-	}catch(violated_precondition *err) {
-		cout << "==tu	==>	violated_precondition works." << endl;
-		printer::num_passed_test_cases_eval();
-		cout << endl << endl;
-	}
-}
+	// --------------------------------------------------------------
+	
+	public:
+		// Default constructor
+		violated_postcondition_ut();
+
+		// ----------------------------------------------------------
+
+		// Function to check if the violated_postcondition exception works
+		static void test_violated_postcondition();
+};
+#endif

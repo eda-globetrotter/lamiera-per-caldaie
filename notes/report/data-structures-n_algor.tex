@@ -1,4 +1,4 @@
-%	This is written by Zhiyang Ong as a template for writing reports.
+%	This is written by Zhiyang Ong to document, in a report, common data structures and algorithms that are used in electronic design automation software.
 
 %	The MIT License (MIT)
 
@@ -73,24 +73,24 @@
 %	Beginning of FRONT MATTER: title page, table of contents and prefaces
 %	Note that the \vspace{length} command does NOT work for the front matter
 %\frontmatter
-\title{\Huge \bf Title of the Report: Some Details about the Report}
+\title{\Huge \bf Boilerplate Code: Data Structures and Algorithms for Design Automation}
 
 %	Indicate the date of the report.
 \date{\today}
 
-\author{{\LARGE Nome Cognome}
-\thanks{Email correspondence to: \href{mailto:email-id@domain.url}{\Email\ email-id@domain.url}}
+\author{{\LARGE Zhiyang Ong}
+\thanks{Email correspondence to: \href{mailto:ongz@acm.org}{\Email\ ongz@acm.org}}
 \ \\
 \vspace{-4.0in}
 \ \\
 \ \\
 \ \\
 {\bf \LARGE
-	Name of Organization
+	Design Automation Renegades
 	\vspace{0.1cm}} \\
 \hline
 \ \\
-{\Large \sc Name of Group/Division} \\
+{\Large \sc Globetrotting Division} \\
 \ \\
 \ \\
 \ \\
@@ -98,9 +98,10 @@
 \ \\
 \vspace{2.0in}
 \ \\
-{\large \sc What is this report for?} \\
-{\large It is for \dots} \\
-{\large and BLAH \dots}
+{\large \sc Report on } \\
+{\large Common Data Structures and Algorithms} \\
+{\large Found in Bolierplate Code for} \\
+{\large Design Automation Software}
 }
 
 %	Create the title page.
@@ -193,6 +194,14 @@ More stuff to be included.
 %\input{./others/bibliography}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\label{chp:Acknowledgments}
+
+I would like to thank Ms. Deepika Panchalingam for motivating me to revise basic data structures and algorithms for internship and job interviews.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,7 +219,8 @@ More stuff to be included.
 
 {\linespread{1}
 \bibliographystyle{plain}
-\bibliography{./references/references}
+%\bibliography{./references/references}
+\bibliography{/data/research/antipastobibtex/references}
 \addcontentsline{toc}{chapter}{Bibliography}
 }
 \end{document}

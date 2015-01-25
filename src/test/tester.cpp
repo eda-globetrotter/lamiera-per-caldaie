@@ -74,18 +74,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Import Header files from the other modules of Tiramisu.
+// Import Header files from the other modules of lamiera-per-caldaie.
 // Utilities module
-#include "../utilities/printer.h"
-#include "utilities_t/printer_ut.h"
+#include "utilities_t/utilities_mt.hpp"
+/*
+#include "../utilities/printer.hpp"
+#include "utilities_t/printer_ut.hpp"
 //#include "../utilities/file_io.h"
 //#include "utilities_t/file_io_ut.h"
-#include "../utilities/violated_assertion.h"
-#include "utilities_t/violated_assertion_ut.h"
-#include "../utilities/violated_precondition.h"
-#include "utilities_t/violated_precondition_ut.h"
-#include "../utilities/violated_postcondition.h"
-#include "utilities_t/violated_postcondition_ut.h"
+#include "../utilities/violated_assertion.hpp"
+#include "utilities_t/violated_assertion_ut.hpp"
+#include "../utilities/violated_precondition.hpp"
+#include "utilities_t/violated_precondition_ut.hpp"
+#include "../utilities/violated_postcondition.hpp"
+#include "utilities_t/violated_postcondition_ut.hpp"
+#include "utilities_t/utilities_mt.hpp"
+*/
 
 
 using namespace std;
@@ -117,6 +121,7 @@ int main(int argc, char *argv[]) {
 	 * If the first two input arguments for this program is null,
 	 * request for the user to rerun the program and exit.
 	 */
+/*
 	if((argv[1] == NULL) || (argv[2] == NULL)) {
 		cout << "To run this program, lamiera-per-caldaie (test-boilerplate-code)," << endl;
 		cout << "do the following:" << endl;
@@ -130,7 +135,9 @@ int main(int argc, char *argv[]) {
 	cout << argv[1] << endl;
 	cout << "Output filename to store test results is:" << endl;
 	cout << argv[2] << endl;
-	
+*/
+
+
 /*
 	// Check if the benchmark is valid.
 	if(!file_io::is_bmk_loc_valid(argv[1])) {
@@ -167,19 +174,7 @@ int main(int argc, char *argv[]) {
 	// Start testing my code here!
 	
 	// Testing the utilities package
-	cout << "--------------------------------------------------------" << endl;
-	cout << "		TESTING the Utilities package" << endl << endl << endl;
-	// Test the class violated_assertion
-	violated_assertion_ut::test_violated_assertion();
-	// Test the class violated_precondition
-	violated_precondition_ut::test_violated_precondition();
-	// Test the class violated_postcondition
-	violated_postcondition_ut::test_violated_postcondition();
-	// Test the class printer
-	printer_ut::test_printer();
-	// Test the class file_io
-//	file_io_ut::test_file_io();
-
+	utilities_mt::test_utilities();
 	
 	
 	

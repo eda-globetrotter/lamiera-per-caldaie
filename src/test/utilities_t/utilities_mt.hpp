@@ -2,8 +2,8 @@
  * Test/Utilities_t package:
  * Submodule of Test package to test classes in the Utilities package.
  *
- * violated_precondition_ut class:
- * Class that tests the violated_precondition class.
+ * utilities_mt class:
+ * Class that tests the utilities class.
  *
  * 
  *
@@ -28,28 +28,43 @@
  */
 
 // Import Header files from the other modules of lamiera-per-caldaie.
-#include "violated_precondition_ut.hpp"
+// Utilities module
 #include "../../utilities/printer.hpp"
+#include "printer_ut.hpp"
+//#include "../../utilities/file_io.h"
+//#include "file_io_ut.h"
+#include "../../utilities/violated_assertion.hpp"
+#include "violated_assertion_ut.hpp"
+#include "../../utilities/violated_precondition.hpp"
+#include "violated_precondition_ut.hpp"
+#include "../../utilities/violated_postcondition.hpp"
+#include "violated_postcondition_ut.hpp"
+#include "file_io_ut.hpp"
+
 
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
+
+#ifndef __UTILITIES_MT_H
+#define __UTILITIES_MT_H
 using namespace std;
 
-violated_precondition_ut::violated_precondition_ut() {
-	cerr << "==tu	Don't instantiate the tester for violated_precondition";
-	cerr << endl;
-}
+// ==================================================================
 
+class utilities_mt {
+//	private:
+//		string ex_msg;
 
-void violated_precondition_ut::test_violated_precondition() {
-	try{
-		printer::num_test_cases_eval();
-		cout << "==tu	Testing: violated_precondition..." << endl;
-		throw new violated_precondition("==tu	>>	Testing: violated_precondition");
-	}catch(violated_precondition *err) {
-		cout << "==tu	==>	violated_precondition works." << endl;
-		printer::num_passed_test_cases_eval();
-		cout << endl << endl;
-	}
-}
+	// --------------------------------------------------------------
+	
+	public:
+		// Default constructor
+		utilities_mt();
+
+		// ----------------------------------------------------------
+
+		// Function to test different classes in the Utilities package.
+		static void test_utilities();
+};
+#endif

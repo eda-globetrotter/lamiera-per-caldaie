@@ -27,8 +27,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Import Header files from the other modules of Tiramisu.
-#include "printer_ut.h"
+// Import Header files from the other modules of lamiera-per-caldaie.
+#include "printer_ut.hpp"
 
 // Import appropriate header files from the C++ STL
 #include <iostream>

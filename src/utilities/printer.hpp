@@ -73,8 +73,8 @@
 
 
 // Import packages from the software
-#include "violated_assertion.h"
-#include "violated_precondition.h"
+#include "violated_assertion.hpp"
+#include "violated_precondition.hpp"
 
 
 // Import packages from the C++ STL

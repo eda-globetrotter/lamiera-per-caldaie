@@ -36,7 +36,7 @@
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
-#include "violated_assertion.h"
+#include "violated_assertion.hpp"
 using namespace std;
 
 violated_assertion::violated_assertion() {

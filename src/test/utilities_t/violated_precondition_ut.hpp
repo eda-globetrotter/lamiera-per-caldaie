@@ -2,8 +2,8 @@
  * Test/Utilities_t package:
  * Submodule of Test package to test classes in the Utilities package.
  *
- * violated_postcondition_ut class:
- * Class that tests the violated_postcondition class.
+ * violated_precondition_ut class:
+ * Class that tests the violated_precondition class.
  *
  * 
  *
@@ -27,20 +27,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Import Header files from the other modules of Tiramisu.
-#include "../../utilities/violated_postcondition.h"
+// Import Header files from the other modules of lamiera-per-caldaie.
+#include "../../utilities/violated_precondition.hpp"
 
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
 
-#ifndef __VIOLATEDpostcondition_UT_H
-#define __VIOLATEDpostcondition_UT_H
+#ifndef __VIOLATEDPRECONDITION_UT_H
+#define __VIOLATEDPRECONDITION_UT_H
 using namespace std;
 
 // ==================================================================
 
-class violated_postcondition_ut {
+class violated_precondition_ut {
 //	private:
 //		string ex_msg;
 
@@ -48,11 +48,11 @@ class violated_postcondition_ut {
 	
 	public:
 		// Default constructor
-		violated_postcondition_ut();
+		violated_precondition_ut();
 
 		// ----------------------------------------------------------
 
-		// Function to check if the violated_postcondition exception works
-		static void test_violated_postcondition();
+		// Function to check if the violated_precondition exception works
+		static void test_violated_precondition();
 };
 #endif

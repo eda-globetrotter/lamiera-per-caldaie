@@ -36,7 +36,7 @@
 // Import appropriate header files from the C++ STL
 #include <iostream>
 #include <string>
-#include "violated_postcondition.h"
+#include "violated_postcondition.hpp"
 using namespace std;
 
 violated_postcondition::violated_postcondition() {

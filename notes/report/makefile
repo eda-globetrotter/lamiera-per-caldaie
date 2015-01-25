@@ -40,5 +40,6 @@ clean:
 	rm -rf *.pdf
 	rm -rf *.synctex.gz
 	rm -rf *.toc
+	rm -rf *~
 
 
