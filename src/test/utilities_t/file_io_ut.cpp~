@@ -259,8 +259,6 @@ void file_io_ut::test_log_filenames() {
  *	#	Test if I/O file streams can be opened.
  *	#	Test if I/O file streams can write messages.
  *	#	Test if I/O file streams can be closed.
- * @param - None
- * @return - Nothing
  */
 void file_io_ut::test_open_io_fs() {
 	// Is the output file stream for standard output open?

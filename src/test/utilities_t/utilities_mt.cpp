@@ -3,7 +3,7 @@
  * Submodule of Test package to test classes in the Utilities package.
  *
  * utilities_mt class:
- * Class that tests the utilities class.
+ * Class that tests the utilities package.
  *
  * 
  *

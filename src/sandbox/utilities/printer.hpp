@@ -71,149 +71,90 @@
  *	would contain messages that were intended for standard error.
  */
 
+
 // Import packages from the software
-#include "printer.hpp"
+#include "violated_assertion.hpp"
+#include "violated_precondition.hpp"
+
 
 // Import packages from the C++ STL
 #include <iostream>
 #include <string>
 #include <cstring>
 
+#ifndef __PRINTER_H
+#define __PRINTER_H
 using namespace std;
 
-// ==================================================================
+// =========================================================
 
-// Define the static variables of the class printer.
-bool printer::is_debugging = false;
-int printer::num_test_cases = 0;
-int printer::num_passed_test_cases = 0;
+// Class definition of the printer class
+class printer {
+	// Publicly accessible data members, constructors, and functions
+	public:
+		// Default constructor
+		printer();
 
-// ==================================================================
-
-// Default constructor
-printer::printer() {
-	string err_msg = "==u	printers shouldn't be instantiated!";
-	throw new violated_assertion(err_msg);
-}
-
-
-// -----------------------------------------------------
-
-// Accessor functions.
-
-/**
- * Function to determine if mode is debugging or otherwise.
- * @param - None
- * @return - boolean TRUE, if in debugging mode; else, return FALSE.
- */
-bool printer::is_debugging_mode() {
-	if(is_debugging) {
-		return true;
-	}else{
-		return false;
-	}
-}
-
-
-// -----------------------------------------------------
-
-// Mutator functions.
-
-
-/**
- * Function to enter/exit debugging mode.
- * @param debug_mode:	Indicator for entering the debugging mode
- *		(when true); false, otherwise.
- * @return - Nothing.
- */
-void printer::set_debugging_mode(const bool &debug_mode) {
-	// Enter the debugging mode
-	is_debugging = debug_mode;
+		// -----------------------------------------------------
+		
+		// Define headers for functions...
 	
-	if(is_debugging_mode()) {
-		cout << "==u	In the debugging mode" << endl;
-	}else{
-		cout << "==u	Not in the debugging mode" << endl;
-	}
+		// Accessor functions.
+		
+		// Function to determine if mode is debugging or otherwise
+		static bool is_debugging_mode();
 	
-	return;
-}
+		// Function to get the number of test cases.
+		static int get_num_test_cases();
+		
+		// Function to get the number of passed test cases.
+		static int get_num_passed_test_cases();
+				
+		// -----------------------------------------------------
 
-
-// -----------------------------------------------------
-
-// Output functions
-
-/**
- * Function to print message in standard output while
- * in debugging mode
- * @param msg:	Message to be printed to standard output
- * @return - Nothing.
- */
-void printer::debug_std_op(const string &msg) {
-	if(is_debugging_mode()) {
-		cout << msg << endl;
-	}
+		// Mutator functions.
+		
+		// Function to enter/exit debugging mode
+		static void set_debugging_mode(const bool &debug_mode);
 	
-	return;
-}
+		// Function to update the number of test cases.
+		static void num_test_cases_eval();
+		
+		// Function to update the number of passed test cases.
+		static void num_passed_test_cases_eval();
+	
+		// -----------------------------------------------------
+	
+		// Output functions
 
+		/**
+		 * Function to print message in standard output while
+		 * in debugging mode
+		 */
+		static void debug_std_op(const string &msg);
+		/**
+		 * Function to print error message in standard error
+		 * while in debugging mode
+		 */
+		static void debug_std_err(const string &err_msg);
 
+	// =========================================================
+	
+	// Privately accessible data members and functions.
+	
+	private:
+		// Declaration of static variables...
+		
+		// Flag to indicate that the software is in debugging mode
+		static bool is_debugging;
+		// Number of test cases.
+		static int num_test_cases;
+		// Number of passed test cases.
+		static int num_passed_test_cases;
+	
+		// -------------------------------------------------------
+		
+		// Define headers for private functions...
 
-/**
- * Function to print error message in standard error while
- * in debugging mode
- * @param msg:	Error message to be printed to standard error
- * @return - Nothing.
- */
-void printer::debug_std_err(const string &err_msg) {
-	if(is_debugging_mode()) {
-		cerr << err_msg << endl;
-	}
-
-	return;
-}
-
-
-
-/**
- * Function to update the number of test cases.
- * @param - None.
- * @return - Nothing.
- */
-void printer::num_test_cases_eval() {
-	num_test_cases = num_test_cases + 1;
-}
-
-
-/**
- * Function to update the number of passed test cases.
- * @param - None.
- * @return - Nothing.
- */
-void printer::num_passed_test_cases_eval() {
-	num_passed_test_cases = num_passed_test_cases + 1;
-}
-
-
-
-/**
- * Function to get the number of test cases.
- * @param - None.
- * @return - Nothing.
- */
-int printer::get_num_test_cases() {
-	return num_test_cases;
-}
-
-
-
-
-/**
- * Function to get the number of passed test cases.
- * @param - None.
- * @return - Nothing.
- */
-int printer::get_num_passed_test_cases() {
-	return num_passed_test_cases;
-}
+};
+#endif

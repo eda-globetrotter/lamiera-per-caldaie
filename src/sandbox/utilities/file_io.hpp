@@ -9,8 +9,8 @@
  * Call the function "set_up_file_io()" before any other functions.
  *
  * IMPORTANT NOTES:
- * Input and output file streams cannot be placed in containers, since
- *	they cannot be assigned, copied, nor instantiated.
+ * Input and output file streams cannot be assigned, copied, nor
+ *	instantiated.
  * Hence, I shall provide a list of I/O functions for each file stream,
  *	and use a switch statement to call the appropriate file stream
  *	for file I/O operations.
@@ -26,10 +26,12 @@
  * That is, I shall define and implement functions either for file
  *	input or output operations, but not for both.
  *
+ * This parent class shall handle File I/O for log files only.
+ * Child classes that inherit from this will handle file I/O for
+ *	specific file types (using typical file extensions).
  *
  *
- *
- * How to use the File_IO class?
+ * How to use the File_IO class.
  *	set up file I/O.
  *	if file I/O operations (other than those for logging) are needed,
  *		set the filenames for file I/O.
@@ -76,10 +78,10 @@
 
 
 // Import packages from the software
-#include "printer.h"
-#include "violated_assertion.h"
-#include "violated_precondition.h"
-#include "violated_postcondition.h"
+#include "printer.hpp"
+#include "violated_assertion.hpp"
+#include "violated_precondition.hpp"
+#include "violated_postcondition.hpp"
 
 // Import packages from the C++ STL
 #include <iostream>
@@ -109,7 +111,7 @@ typedef vector<string>::iterator str_vec_p;
 class file_io {
 	// Publicly accessible data members, constructors, and functions
 	public:
-		// Default constructor
+		// Default constructor. Deprecated, but required.
 		file_io();
 
 		// -----------------------------------------------------
@@ -128,34 +130,21 @@ class file_io {
 		 *	log file.
 		 */
 		static string get_err_log_filename();
-	
+
+		/**
+		 * Function to determine if file stream for standard
+		 *	output is open.
+		 */
+		static bool std_op_ofs_is_open();
+		/**
+		 * Function to determine if file stream for standard
+		 *	error is open.
+		 */
+		static bool err_op_ofs_is_open();
+
 		// Function to determine if mode is logging or otherwise.
 		static bool is_logging_mode();
-	
-		// Function to check if the benchmark is valid.
-		static bool is_bmk_valid(const string &bmk);
-		// Function to obtain the name of the benchmark.
-		static string get_name_of_bmk();
-		// Function to obtain the name of the output file.
-		static string get_name_of_op_file();
-	
-		// Function to determine if this character is a delimiter.
-		static bool is_delimiter(const char &c);
-		// Function get the delimiters.
-		static string get_delimiters();
 
-		// Function to obtain the "get" pointer of input file stream.
-		static long find_get_pointer_position(const string &ip_fextn);
-	
-		// Function to get put pointer of output file stream.
-		static long get_put_pointer_position(const string &op_fextn);
-	
-		// Function to determine if i/p file stream has reach EOF.
-		static bool ip_fstream_at_eof(const string &ip_fextn);
-	
-		// Function to determine if file stream is open.
-		static bool fstream_is_open(const string &fextn);
-	
 		// -----------------------------------------------------
 
 		// Mutator functions.
@@ -164,51 +153,25 @@ class file_io {
 		static void set_logging_mode(const bool &logging_mode);
 		/**
 		 * Function to set the filenames of the standard and error
-		 * output log files.
+		 *	output log files.
 		 */
 		static void set_log_filenames(const string &op_log_filename,
 			const string &err_log_filename);
 
-		// Function to set the name of the benchmark.
-		static void set_name_of_bmk(const string &nm_bmk);
-		// Function to set the name of the output file.
-### To be fixed
-		static void set_name_of_bmk(const string &nm_bmk);
-	
-		// Function to set the delimiters.
-		static void set_delimiters(const string &delim);
-	
 		// -----------------------------------------------------
 	
-		// Input and Output functions
+		// Output functions
 	
 		/**
-		 * Function to write message to an output dump file via
-		 *	its standard output file stream.
-		 * It shall print messages that are directed from
-		 *	standard output.
+		 * Function to write message to an output dump file.
 		 */
 		static void fileIO_std_op(const string &op_message);
 		/**
-		 * Function to write error message to an output dump file
-		 *	via its standard error file stream.
-		 * It shall print messages that are directed from
-		 *	standard output.
+		 * Function to write error message to an output dump file.
 		 */
 		static void fileIO_std_err(const string &err_message);
-	
-		// Function to generate the output files.
-		static void dump_output();
-	
-		// Function to read from an input file stream.
-		static void read_fr_an_input_file_stream(const string &ip_fextn, string & ip_str);
-	
-		// Function to restart input file processing.
-		static void restart_ip_file_proc(const string &ip_fextn);
-	
-		// Function to write to an output file stream.
-		static void write_to_an_output_file_stream(const string &op_fextn, string & op_msg);
-	
+
+
 		// -----------------------------------------------------
 	
 		// Other functions.
@@ -221,17 +184,6 @@ class file_io {
 	
 		// Function to set up the file I/O operations.
 		static void set_up_file_io();
-		
-		// Function to tokenize the string
-		static str_vec str_tokenizer(string orig_str);
-	
-		// Function to check if a file extension is valid.
-//		static bool chk_file_extn(const string &f_extn);
-		// Function to check if an input file extension is valid.
-//		static bool chk_ip_file_extn(const string &f_extn);
-		// Function to check if an output file extension is valid.
-//		static bool chk_op_file_extn(const string &f_extn);
-	
 	
 	// =========================================================
 	
@@ -241,6 +193,7 @@ class file_io {
 		// Declare (and initialize) constants...
 	
 		// Types of file formats.
+/*
 		static const string VERILOG;
 		static const string SPEF_IP;
 		static const string SDC_IP;
@@ -252,7 +205,7 @@ class file_io {
 		static const string PERIOD;
 		static const string SLASH;
 		static const string TEXT;
-	
+*/
 		// -----------------------------------------------------
 	
 		// Declaration of static variables...
@@ -260,25 +213,10 @@ class file_io {
 		// Flag to indicate that the software is in logging mode
 		static bool is_logging;
 		
-		// Container of input filenames.
-		static str_vec input_filenames;
 		// Container of output filenames.
 		static str_vec output_filenames;
-		// Container of input/output filenames.
-		static str_vec io_filenames;
-
-		// Input file streams.
-		static ifstream verilog_ifs;
-		static ifstream spef_ifs;
-		static ifstream sdc_ifs;
-		static ifstream lib_ifs;
-
-		// Input/Output (I/O) file streams.
-		static fstream int_sizes_fs;
-		static fstream timing_fs;
 
 		// Output file streams.
-		static ofstream sizes_ofs;
 		static ofstream std_op_ofs;
 		static ofstream err_op_ofs;
 		
@@ -286,23 +224,7 @@ class file_io {
 		static string standard_logfile;
 		// Filename of the error output log file.
 		static string error_logfile;
-	
-		// String of delimiters.
-		static string delimiters;
-	
-		// Container of input file formats.
-		static str_vec ip_file_formats;
-		// Container of output file formats.
-		static str_vec op_file_formats;
-		// Container of I/O file formats.
-		static str_vec io_file_formats;
-		
-	
-		// Location of the benchmarks.
-		static string location_of_benchmarks;
-		// Name of the benchmark.
-		static string name_of_benchmark;
-	
+
 		// Error message to be printed when exceptions are thrown.
 		static string err_msg;
 		
