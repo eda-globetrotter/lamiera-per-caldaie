@@ -132,7 +132,7 @@ ERRORTXT=			error_output.txt
 #	the software resides, so that it is easier to maintain.
 #
 # Module that defines the key components of a (hyper)graphs.
-#GRAPHPATH=		../src/graph/
+GRAPHPATH=		../src/graph/
 #
 # Module containing the input benchmarks that are used to test my software.
 BENCHMARKS=		../benchmarks/
@@ -252,14 +252,14 @@ test:
 	@echo === Compiling C++ source code in the...
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
-	@echo === Parsers Directory
 	@echo === Graph Directory
-	@echo === Elements Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(ELEMPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(COMPILE)	$(GRAPHPATH)$(SOURCE)
+	@echo === Parsers Directory
 	@echo === Test/Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
-	@echo === Test/Parsers Directory
 	@echo === Test/Graph Directory
+	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
+	@echo === Test/Parsers Directory
 	@echo === Test Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(SOURCE)
 	@echo === Link the C++ object files...
@@ -360,6 +360,41 @@ help:
 	@echo ___________code, including header files, and the scripts.
 	@echo test:______Test the program.
 	
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################
+# INITIALIZE DOCUMENTATION GENERATION
+########################################################################
+# Initialize Documentation Generation
+doxygeninit:
+	doxygen -g doxygen.config
+
+
+########################################################################
+# GENERATE DOCUMENTATION
+########################################################################
+# Generate Documentation
+doxygen:
+	doxygen doxygen.config
+
+
+
+
+
+
+
+
+
 
 
 
