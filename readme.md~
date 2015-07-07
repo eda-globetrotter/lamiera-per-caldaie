@@ -50,7 +50,7 @@ Static linked binaries
 
 
 
-{Stack Overflow contributors}, "Static linking vs dynamic linking," in {\it Stack Overflow}, Stack Exchange Inc., New York, NY, February 12, 2015. Available from {\it Stack Exchange: Stack Overflow} at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
+Stack Overflow contributors, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, February 12, 2015. Available from *Stack Exchange: Stack Overflow* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
 
 
@@ -59,3 +59,8 @@ Static linked binaries
 
 References:
 http://stackoverflow.com/editing-help
+http://daringfireball.net/projects/markdown/syntax
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+https://help.github.com/articles/markdown-basics/
+https://help.github.com/articles/github-flavored-markdown/
+https://help.github.com/articles/writing-on-github/
