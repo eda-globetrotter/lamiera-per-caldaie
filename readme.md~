@@ -45,7 +45,19 @@ Boilerplate code for my open source software projects. It will include implement
 UNIX command for determining if a binary is statically linked: ldd <binary>. If dynamic libraries show up, the binary/software is not statically linked. 
 
 Produce statically linked binaries to meet requirements of research contests.
-Static linked binaries 
+
+Static linked binaries:
+- Advantages:
+	* S
+- Disadvantages:
+	* S
+
+Dynamically linked binaries:
+- Advantages:
+	* S
+- Disadvantages:
+	* S
+
 
 
 
