@@ -40,8 +40,17 @@ Boilerplate code for my open source software projects. It will include implement
 
 
 
+## Building Static Binaries for Boilerplate Code
+
+UNIX command for determining if a binary is statically linked: ldd <binary>. If dynamic libraries show up, the binary/software is not statically linked. 
+
+Produce statically linked binaries to meet requirements of research contests.
+Static linked binaries 
 
 
+
+
+{Stack Overflow contributors}, "Static linking vs dynamic linking," in {\it Stack Overflow}, Stack Exchange Inc., New York, NY, February 12, 2015. Available from {\it Stack Exchange: Stack Overflow} at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
 
 
