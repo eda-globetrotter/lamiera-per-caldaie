@@ -46,15 +46,15 @@ UNIX command for determining if a binary is statically linked: ldd <binary>. If 
 
 Produce statically linked binaries to meet requirements of research contests.
 
-Static linked binaries:
+Statically linked binaries:
 - Advantages:
-	* S
+	* Can optimize library code that is not available via pre-compiled object files.
 - Disadvantages:
 	* S
 
 Dynamically linked binaries:
 - Advantages:
-	* S
+	* "Reduce total resource consumption" for sharing libraries with multiple processes.
 - Disadvantages:
 	* S
 

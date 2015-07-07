@@ -48,13 +48,13 @@ Produce statically linked binaries to meet requirements of research contests.
 
 Statically linked binaries:
 - Advantages:
-	* S
+	* Can optimize library code that is not available via pre-compiled object files.
 - Disadvantages:
 	* S
 
 Dynamically linked binaries:
 - Advantages:
-	* S
+	* "Reduce total resource consumption" for sharing libraries with multiple processes. The resources include: disk space, RAM, and cache space.
 - Disadvantages:
 	* S
 
