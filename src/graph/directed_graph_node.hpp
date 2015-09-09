@@ -76,6 +76,33 @@ using namespace std;
 // Shortcut to container of node IDs.
 //typedef vector<unsigned long long> set_of_node_IDs;
 
+
+// Shortcut to container of int.
+typedef set<int> int_set;
+// Shortcut to represent a pointer to the container of int.
+typedef set<int>::iterator int_set_p;
+
+// Shortcut to container of node.
+typedef set<node> node_set;
+// Shortcut to represent an iterator to the container of nodes.
+typedef set<node>::iterator node_set_p;
+/**
+ * Shortcut to a pair representing an iterator to the container of
+ *	nodes and a boolean flag representing the success of a set
+ *	operation.
+ */
+typedef pair<node_set_p, bool> pair_nodesetp_bool;
+
+// Shortcut to a pair construct, integer and boolean value.
+typedef pair<int, bool> pair_int_bool;
+/**
+ * Shortcut to a pair representing an iterator pointer to the
+ *	set of integers and a boolean flag representing the success of
+ *	a set operation.
+ */
+typedef pair<int_set_p, bool> pair_intboolp_bool;
+
+
 // =========================================================
 
 // Class definition of the directed_graph_node class

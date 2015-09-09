@@ -43,11 +43,12 @@ shortest common subsequence problem; see common subexpression elimination
 
 
 
-
-
-
-
-
+## From the sandbox, the following shortcuts are being used.
+int_set
+pair_intboolp_bool
+node_set
+pair_nodesetp_bool
+node_set_p
 
 
 

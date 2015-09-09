@@ -287,9 +287,9 @@ int main(int argc, char *argv[]) {
 	nsp = n_set.find(temp_node);
 	
 	if(nsp == n_set.end()) {
-		cout << "Node 327/china is NOT found!" << endl;
-	}else{
 		cout << "Node 327/china is found." << endl;
+	}else{
+		cout << "Node 327/china is NOT found!" << endl;
 	}
 
 	
