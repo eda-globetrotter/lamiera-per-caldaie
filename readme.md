@@ -49,14 +49,44 @@ Produce statically linked binaries to meet requirements of research contests.
 Statically linked binaries:
 - Advantages:
 	* Can optimize library code that is not available via pre-compiled object files.
+	* guarantee
 - Disadvantages:
 	* S
 
 Dynamically linked binaries:
 - Advantages:
 	* "Reduce total resource consumption" for sharing libraries with multiple processes. The resources include: disk space, RAM, and cache space.
+	* Enable bug fixes and library upgrades to propagate without requiring actions from the developers.
 - Disadvantages:
-	* S
+	* Risk of suffering in DLL hell (dependency hell for dynamic link libraries).
+- Required by plugins.
+
+
+http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking
+
+http://stackoverflow.com/questions/5563906/compiling-c-into-portable-linux-binaries
+http://stackoverflow.com/questions/37398/how-do-i-make-a-fully-statically-linked-exe-with-visual-studio-express-2005
+http://www.trilithium.com/johan/2005/06/static-libstdc/
+https://en.wikipedia.org/wiki/Static_library
+http://tschottdorf.github.io/linking-golang-go-statically-cgo-testing/
+http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
+
+
+https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=c%2B%2B%20statically%20linked%20binary%20compilation&oq=c%2B%2B%20statically%20linked%20binary%20compilation&aqs=chrome..69i57.17967j0j7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,3 +110,13 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 https://help.github.com/articles/markdown-basics/
 https://help.github.com/articles/github-flavored-markdown/
 https://help.github.com/articles/writing-on-github/
+
+
+http://markdown-guide.readthedocs.org/en/latest/basics.html
+http://scottboms.com/downloads/documentation/markdown_cheatsheet.pdf
+
+
+
+
+https://github.com/eda-globetrotter/lamiera-per-caldaie
+
