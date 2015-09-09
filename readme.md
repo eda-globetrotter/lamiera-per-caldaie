@@ -6,9 +6,12 @@ Boilerplate code for my open source software projects. It will include implement
 
 
 ## Currently Implemented Data Structures and Algorithms
+- Graph: Directed graphs, such as AIGs and BDDs.
+- Heap: min heap, max heap, Fibonacci heap (important for fast implementations of graph algorithms), and binomial heaps.
+- Trees: binary search trees, self-balancing trees, and combinations thereof (e.g., AVL trees and red-black trees)
 - Stack
 
-
+[Note: The priority queue is available from the C++ STL.]
 
 
 

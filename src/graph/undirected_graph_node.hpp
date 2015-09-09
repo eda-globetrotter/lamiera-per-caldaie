@@ -8,7 +8,6 @@
  * IMPORTANT NOTES:
  * Assume that the ID of each node is unique for all the nodes in
  *	the graph.
- * Hence, the node ID can be used to identify a given node.
  * The terms "node" and "vertex", of a graph, are used synonymously
  *	in our software AggieMC.
  * Enable support of multigraphs and hypergraphs.

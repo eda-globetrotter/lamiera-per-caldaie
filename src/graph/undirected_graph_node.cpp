@@ -8,7 +8,6 @@
  * IMPORTANT NOTES:
  * Assume that the ID of each node is unique for all the nodes in
  *	the graph.
- * Hence, the node ID can be used to identify a given node.
  * The terms "node" and "vertex", of a graph, are used synonymously
  *	in our software AggieMC.
  * Enable support of multigraphs and hypergraphs.
@@ -170,10 +169,6 @@ void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long
  * @return - Nothing.
  */
 void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_ID) {
-	// Is there an edge in the set of incoming edges with given ID?
-	if() {
-	}else{
-	}
 }
 
 
