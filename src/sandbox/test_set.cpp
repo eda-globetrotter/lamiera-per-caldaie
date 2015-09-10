@@ -82,6 +82,11 @@ typedef pair<node_set_p, bool> pair_nodesetp_bool;
  */
 typedef pair<int_set_p, bool> pair_intboolp_bool;
 
+
+
+
+// Unused shortcuts...
+
 // Shortcut to a pair construct, integer and boolean value.
 typedef pair<int, bool> pair_int_bool;
 
@@ -193,7 +198,7 @@ int main(int argc, char *argv[]) {
 
 	// Create an empty set of nodes.
 	node_set n_set;
-	cout << "==>	Test a set of integers." << endl;
+	cout << "==>	Test a set of integer/string nodes." << endl;
 	/**
 	 * Create a set of nodes.
 	 * # (109, "america")
@@ -262,7 +267,8 @@ int main(int argc, char *argv[]) {
 		//(*it).set_node_ID(temp_ID);
 		//(*it)->set_node_ID(temp_ID);
 		//it.set_node_ID(temp_ID);
-		cout << "ID oif the node is:::" << it->get_node_ID() << "==" << endl;
+		cout << "		==ID of the node is:::" << it->get_node_ID() << "==" << endl;
+		cout << "		Label of the node is:::" << it->get_node_label() << "==" << endl;
 		//it->set_node_ID(temp_ID);
 		/**
 		 * Don't use the pointer to set the attributes of the
@@ -278,32 +284,131 @@ int main(int argc, char *argv[]) {
 //	a_node->set_node_ID(23);
 
 
+	cout << "==>	Verify the find() function of set, in the C++ STL.";
+	cout << endl;
 	// Verify the find function for a set.
 	node_set_p nsp = n_set.begin();
 	
+	// Create clone of a node in the set.
 	temp_ID = 327;
 	temp_node.set_node_ID(temp_ID);
 	temp_node.set_node_label("china");
 	nsp = n_set.find(temp_node);
 	
+	// Check if clone has equivalent node in the set.
 	if(nsp == n_set.end()) {
-		cout << "Node 327/china is NOT found!" << endl;
+		cout << "	Node 327/china is NOT found!" << endl;
 	}else{
-		cout << "Node 327/china is found." << endl;
+		cout << "	Node 327/china is found." << endl;
+	}
+
+	if(nsp->get_node_ID() == temp_node.get_node_ID()) {
+		cout << "		Node ID is correct." << endl;
+	}else{
+		cout << "		Node ID is WRONG!!!" << endl;
+	}
+
+	if(nsp->get_node_label() == temp_node.get_node_label()) {
+		cout << "		Node label is correct." << endl;
+	}else{
+		cout << "		Node label is WRONG!!!" << endl;
+	}
+	// Yes, it does.
+
+	// Create a node that is not in the set.
+	temp_ID = 545;
+	temp_node.set_node_ID(temp_ID);
+	temp_node.set_node_label("bad-NaMe");
+	nsp = n_set.find(temp_node);
+
+	// Check if this node has equivalent node in the set.
+	if(nsp == n_set.end()) {
+		cout << "	Node 545/bad-NaMe is NOT found!" << endl;
+	}else{
+		cout << "	Node 545/bad-NaMe is found." << endl;
+	}
+
+	if(nsp->get_node_ID() == temp_node.get_node_ID()) {
+		cout << "		Node ID is correct." << endl;
+	}else{
+		cout << "		Node ID is WRONG!!!" << endl;
+	}
+	
+	if(nsp->get_node_label() == temp_node.get_node_label()) {
+		cout << "		Node label is correct." << endl;
+	}else{
+		cout << "		Node label is WRONG!!!" << endl;
+		cout << "		nsp->get_node_label():::";
+		cout << nsp->get_node_label() << ":::" << endl;
+		cout << "		temp_node.get_node_label()+++";
+		cout << temp_node.get_node_label() << "+++" << endl;
+	}
+	// Yes, it does... Error!!!
+	
+	// Create another node that is not in the set.
+	temp_ID = 10239;
+	temp_node.set_node_ID(temp_ID);
+	temp_node.set_node_label("america");
+	nsp = n_set.find(temp_node);
+
+	// Check if this node has equivalent node in the set.
+	if(nsp == n_set.end()) {
+		cout << "	Node 10239/america is NOT found!" << endl;
+	}else{
+		cout << "	Node 10239/america is found." << endl;
+		
+		if(nsp->get_node_ID() == temp_node.get_node_ID()) {
+			cout << "		Node ID is correct." << endl;
+		}else{
+			cout << "		Node ID is WRONG!!!" << endl;
+		}
+
+		if(nsp->get_node_label() == temp_node.get_node_label()) {
+			cout << "		Node label is correct." << endl;
+		}else{
+			cout << "		Node label is WRONG!!!" << endl;
+			cout << "		nsp->get_node_label():::";
+			cout << nsp->get_node_label() << ":::" << endl;
+			cout << "		temp_node.get_node_label()+++";
+			cout << temp_node.get_node_label() << "+++" << endl;
+		}
 	}
 
 	
+	// Create yet another node that is not in the set.
+	temp_ID = 390101;
+	temp_node.set_node_ID(temp_ID);
+	temp_node.set_node_label("Aussies-in-australia");
+	nsp = n_set.find(temp_node);
+
+	// Check if this node has equivalent node in the set.
+	if(nsp == n_set.end()) {
+		cout << "	Node 390101/Aussies-in-australia is NOT found!" << endl;
+	}else{
+		cout << "	Node 390101/Aussies-in-australia is found." << endl;
+		
+		if(nsp->get_node_ID() == temp_node.get_node_ID()) {
+			cout << "		Node ID is correct." << endl;
+		}else{
+			cout << "		Node ID is WRONG!!!" << endl;
+		}
+
+		if(nsp->get_node_label() == temp_node.get_node_label()) {
+			cout << "		Node label is correct." << endl;
+		}else{
+			cout << "		Node label is WRONG!!!" << endl;
+			cout << "		nsp->get_node_label():::";
+			cout << nsp->get_node_label() << ":::" << endl;
+			cout << "		temp_node.get_node_label()+++";
+			cout << temp_node.get_node_label() << "+++" << endl;
+		}
+	}
 
 
-
-
-
-
-
-	
-
-
-
+	/**
+	 * Check if swapping the nodes will change the order of the
+	 *	results for testing the find() function.
+	 */
 
 
 
