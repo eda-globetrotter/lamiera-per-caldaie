@@ -74,6 +74,7 @@ class node_swap {
 		node_swap();
 		// Standard constructors.
 		node_swap(const string &n_label, const unsigned long long &n_ID);
+		node_swap(const string &n_label, const unsigned long long &n_real, const unsigned long long int &n_ID, const unsigned long long int &n_int);
 		// Default destructor.
 		~node_swap();
 
@@ -84,10 +85,16 @@ class node_swap {
 		// Accessor functions.
 
 		// Function to get the ID of this node_swap.
-		unsigned long long get_node_swap_ID() const;
+		unsigned long long int get_node_swap_ID() const;
 		
 		// Function to get the label of this node_swap.
 		string get_node_swap_label() const;
+		
+		// Function to get the random integer of this node_swap.
+		unsigned long long int get_node_swap_rand_int() const;
+		
+		// Function to get the random real number of this node_swap.
+		unsigned long long int get_node_swap_rand_real() const;
 		
 		// Function to print details of the object.
 		void print_node_swap() const;
@@ -97,11 +104,17 @@ class node_swap {
 		// Mutator functions.
 		
 		// Function to set the ID of the node_swap.
-		void set_node_swap_ID(const unsigned long long &temp_ID);
+		void set_node_swap_ID(const unsigned long long int &temp_ID);
 //		void set_node_swap_ID(unsigned long long &temp_ID);
 		
 		// Function to set the label of the node_swap
 		void set_node_swap_label(const string &temp_label);
+		
+		// Function to set the random integer of node_swap.
+		void set_node_swap_rand_int(const unsigned long long int &r_int);
+		
+		// Function to set the random real number of node_swap.
+		void set_node_swap_rand_real(const unsigned long long &r_real);
 		
 		// -----------------------------------------------------
 		
@@ -133,7 +146,13 @@ class node_swap {
 		string node_swap_label;
 
 		// Index (as an integer) of the node_swap.
-		unsigned long long node_swap_ID;
+		unsigned long long int node_swap_ID;
+		
+		// Random integer.
+		unsigned long long int random_int;
+		// Random real number.
+		unsigned long long random_real;
+		
 		
 		// -------------------------------------------------------
 		
