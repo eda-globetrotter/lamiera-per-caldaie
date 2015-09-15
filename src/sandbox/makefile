@@ -228,6 +228,7 @@ set:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	node.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	node_swap.cpp
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	test_set.cpp
 	#$(GPLUSPLUS)	$(COMPILE)	test_set.cpp
 	@echo === Link the C++ object files...

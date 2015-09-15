@@ -83,9 +83,9 @@ typedef set<int> int_set;
 typedef set<int>::iterator int_set_p;
 
 // Shortcut to container of node.
-typedef set<node> node_set;
+typedef set<directed_graph_node> node_set;
 // Shortcut to represent an iterator to the container of nodes.
-typedef set<node>::iterator node_set_p;
+typedef set<directed_graph_node>::iterator node_set_p;
 /**
  * Shortcut to a pair representing an iterator to the container of
  *	nodes and a boolean flag representing the success of a set

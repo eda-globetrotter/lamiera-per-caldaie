@@ -52,6 +52,7 @@
 
 // Import packages from the software
 #include "node.hpp"
+#include "node_swap.hpp"
 
 
 using namespace std;
@@ -62,19 +63,6 @@ using namespace std;
 typedef set<int> int_set;
 // Shortcut to represent a pointer to the container of int.
 typedef set<int>::iterator int_set_p;
-
-// Shortcut to container of node.
-typedef set<node> node_set;
-// Shortcut to represent an iterator to the container of nodes.
-typedef set<node>::iterator node_set_p;
-
-/**
- * Shortcut to a pair representing an iterator to the container of
- *	nodes and a boolean flag representing the success of a set
- *	operation.
- */
-typedef pair<node_set_p, bool> pair_nodesetp_bool;
-
 /**
  * Shortcut to a pair representing an iterator pointer to the
  *	set of integers and a boolean flag representing the success of
@@ -83,6 +71,29 @@ typedef pair<node_set_p, bool> pair_nodesetp_bool;
 typedef pair<int_set_p, bool> pair_intboolp_bool;
 
 
+// Shortcut to container of node.
+typedef set<node> node_set;
+// Shortcut to represent an iterator to the container of nodes.
+typedef set<node>::iterator node_set_p;
+/**
+ * Shortcut to a pair representing an iterator to the container of
+ *	nodes and a boolean flag representing the success of a set
+ *	operation.
+ */
+typedef pair<node_set_p, bool> pair_nodesetp_bool;
+
+
+
+// Shortcut to container of node_swap.
+typedef set<node_swap> node_swap_set;
+// Shortcut to represent an iterator to the container of node_swaps.
+typedef set<node_swap>::iterator node_swap_set_p;
+/**
+ * Shortcut to a pair representing an iterator to the container of
+ *	node_swaps and a boolean flag representing the success of a set
+ *	operation.
+ */
+typedef pair<node_swap_set_p, bool> pair_node_swap_setp_bool;
 
 
 // Unused shortcuts...
@@ -175,7 +186,7 @@ int main(int argc, char *argv[]) {
 
 
 
-	
+//	===========================================================
 	// Dummy variables and pointer references for key information of a node.
 //	int *n_ID;
 /*
@@ -192,7 +203,7 @@ int main(int argc, char *argv[]) {
 //cout << "Halfway through playing (2)." << endl;
 
 //	n_label = temp_label;
-
+//	===========================================================
 
 
 
@@ -406,18 +417,153 @@ int main(int argc, char *argv[]) {
 
 
 	/**
-	 * Check if swapping the nodes will change the order of the
-	 *	results for testing the find() function.
+	 * Check if swapping the node's fields will change the order
+	 *	of the results for testing the find() function.
 	 */
 
+	// Create an empty set of node_swaps.
+	node_swap_set ns_set;
+	// Default instantiation of node_swap.
+	node_swap temp_ns;
+	// Output of inserting node_swaps into a set of node_swaps.
+	pair_node_swap_setp_bool nssb_op;
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 600019;
+	temp_ns.set_node_swap_ID(temp_ID);
+	// Setting node_swap label.
+	temp_ns.set_node_swap_label("chicago");
+	nssb_op = ns_set.insert(temp_ns);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 600028;
+	temp_ns.set_node_swap_ID(temp_ID);
+	// Setting node_swap label.
+	temp_ns.set_node_swap_label("seattle");
+	nssb_op = ns_set.insert(temp_ns);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 600037;
+	temp_ns.set_node_swap_ID(temp_ID);
+	// Setting node_swap label.
+	temp_ns.set_node_swap_label("houston");
+	nssb_op = ns_set.insert(temp_ns);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 600046;
+	temp_ns.set_node_swap_ID(temp_ID);
+	// Setting node_swap label.
+	temp_ns.set_node_swap_label("austin");
+	nssb_op = ns_set.insert(temp_ns);
 
 
-
-
-
-
-
-
+	// Iterate the sequence of nodes in the set.
+	for(node_swap_set_p itsw=ns_set.begin(); itsw != ns_set.end(); ++itsw) {
+		cout << "		>==ID of the node is:::" << itsw->get_node_swap_ID() << "==" << endl;
+		cout << "		Label of the node is:::" << itsw->get_node_swap_label() << "==" << endl;
+	}
+	
+	// Verify the find function for a set.
+	node_swap_set_p nssp = ns_set.begin();
+	// Create a clone of an existing node.
+	temp_ID = 600028;
+	temp_ns.set_node_swap_ID(temp_ID);
+	temp_ns.set_node_swap_label("seattle");
+	
+	// Find the clone's original in the set.
+	nssp = ns_set.find(temp_ns);	
+	// Is the clone in the set?
+	if(nssp != ns_set.end()) {
+		// Yes.
+		cout << "	Clone is in the set." << endl;
+	}else{
+		// No.
+		cout << "	Clone is NOT in the set." << endl;
+	}
+	// Are the IDs the same?
+	if(nssp->get_node_swap_ID() == temp_ns.get_node_swap_ID()) {
+		cout << "		Yes. IDs are the same." << endl;
+	}else{
+		cout << "		Yes. IDs are NOT the same." << endl;
+	}
+	// Are the labels the same?
+	if(nssp->get_node_swap_label() == temp_ns.get_node_swap_label()) {
+		cout << "		Yes. labels are the same." << endl;
+	}else{
+		cout << "		Yes. labels are NOT the same." << endl;
+	}
+	
+	
+	
+	
+	// Create a node that does not exists in the set.
+	temp_ID = 7928;
+	temp_ns.set_node_swap_ID(temp_ID);
+	temp_ns.set_node_swap_label("Trento");
+	
+	// Find the temp_ns in the set.
+	nssp = ns_set.find(temp_ns);	
+	// Is the temp_ns in the set?
+	if(nssp == ns_set.end()) {
+		// Yes.
+		cout << "	temp_ns is NOT in the set." << endl;
+	}else{
+		// No.
+		cout << "	temp_ns is in the set." << endl;
+	}
+	// Are the IDs the same?
+	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
+		cout << "		No. IDs are NOT the same." << endl;
+	}else{
+		cout << "		Yes. IDs are the same." << endl;
+	}
+	// Are the labels the same?
+	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
+		cout << "		No. labels are NOT the same." << endl;
+	}else{
+		cout << "		Yes. labels are the same." << endl;
+	}
+	
+	
+	
+	
+	
+	// Create a node that does not exists in the set.
+	temp_ID = 3489234829;
+	temp_ns.set_node_swap_ID(temp_ID);
+	temp_ns.set_node_swap_label("chicago");
+	
+	// Find the temp_ns in the set.
+	nssp = ns_set.find(temp_ns);	
+	// Is the temp_ns in the set?
+	if(nssp == ns_set.end()) {
+		// Yes.
+		cout << "	temp_ns is NOT in the set." << endl;
+	}else{
+		// No.
+		cout << "	temp_ns is in the set." << endl;
+	}
+	// Are the IDs the same?
+	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
+		cout << "		No. IDs are NOT the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+	}else{
+		cout << "		Yes. IDs are the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+	}
+	// Are the labels the same?
+	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
+		cout << "		No. labels are NOT the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+	}else{
+		cout << "		Yes. labels are the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+	}
+	
+	
+	
+	
+	
 
 
 cout << "Complete playing." << endl;
