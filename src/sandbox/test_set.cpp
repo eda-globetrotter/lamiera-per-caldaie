@@ -513,15 +513,27 @@ int main(int argc, char *argv[]) {
 	}
 	// Are the IDs the same?
 	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
-		cout << "		No. IDs are NOT the same." << endl;
+		cout << "		No. IDs are NOT the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}else{
-		cout << "		Yes. IDs are the same." << endl;
+		cout << "		Yes. IDs are the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}
 	// Are the labels the same?
 	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
-		cout << "		No. labels are NOT the same." << endl;
+		cout << "		No. labels are NOT the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}else{
-		cout << "		Yes. labels are the same." << endl;
+		cout << "		Yes. labels are the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}
 	
 	
@@ -547,20 +559,81 @@ int main(int argc, char *argv[]) {
 	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
 		cout << "		No. IDs are NOT the same:::";
 		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}else{
 		cout << "		Yes. IDs are the same:::";
 		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}
 	// Are the labels the same?
 	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
 		cout << "		No. labels are NOT the same:::";
 		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}else{
 		cout << "		Yes. labels are the same:::";
 		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}
 	
 	
+	
+	
+	
+	
+	
+	// Create a node that does not exists in the set.
+	temp_ID = 600037;
+	temp_ns.set_node_swap_ID(temp_ID);
+	temp_ns.set_node_swap_label("chicago");
+	
+	// Find the temp_ns in the set.
+	nssp = ns_set.find(temp_ns);	
+	// Is the temp_ns in the set?
+	if(nssp == ns_set.end()) {
+		// Yes.
+		cout << "	temp_ns is NOT in the set." << endl;
+	}else{
+		// No.
+		cout << "	temp_ns is in the set." << endl;
+	}
+	// Are the IDs the same?
+	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
+		cout << "		No. IDs are NOT the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
+	}else{
+		cout << "		Yes. IDs are the same:::";
+		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << "		nssp->get_node_swap_ID():::";
+		cout << nssp->get_node_swap_ID() << ":::" << endl;
+	}
+	// Are the labels the same?
+	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
+		cout << "		No. labels are NOT the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
+	}else{
+		cout << "		Yes. labels are the same:::";
+		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << "		nssp->get_node_swap_label():::";
+		cout << nssp->get_node_swap_label() << ":::" << endl;
+	}
+	
+	/**
+	 * This is proof that the find() function for sets in the
+	 *	C++ STL compares elements of the set by comparing a
+	 *	field that is number based.
+	 *
+	 * Question: What happens if there exists multiple fields
+	 *	that are number based?
+	 */
 	
 	
 	
