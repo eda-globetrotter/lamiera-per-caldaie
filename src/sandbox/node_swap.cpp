@@ -73,7 +73,7 @@ node_swap::node_swap(const string &n_label, const unsigned long long &n_ID) {
  * @param n_real:	A random real number.
  * @param n_int:	A random integer.
  */
-node_swap::node_swap(const string &n_label, const unsigned long long &n_real, const unsigned long long int &n_ID, const unsigned long long int &n_int) {
+node_swap::node_swap(const string &n_label, const long double &n_real, const unsigned long long int &n_ID, const unsigned long long int &n_int) {
 	// Assign the node_swap ID to be n_ID.
 	//node_swap_ID = new int(n_ID);
 	node_swap_ID = n_ID;
@@ -129,7 +129,7 @@ unsigned long long int node_swap::get_node_swap_rand_int() const {
  * @param - None.
  * @return - The random real number of this node_swap.
  */
-unsigned long long node_swap::get_node_swap_rand_real() const {
+long double node_swap::get_node_swap_rand_real() const {
 	return random_real;
 }
 
@@ -200,7 +200,7 @@ void node_swap::set_node_swap_rand_int(const unsigned long long int &r_int) {
  * @param temp_label:	The random real number of node_swap.
  * @return - Nothing.
  */
-void node_swap::set_node_swap_rand_real(const unsigned long long &r_real) {
+void node_swap::set_node_swap_rand_real(const long double &r_real) {
 	node_swap_label = r_real;
 }
 

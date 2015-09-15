@@ -74,7 +74,7 @@ class node_swap {
 		node_swap();
 		// Standard constructors.
 		node_swap(const string &n_label, const unsigned long long &n_ID);
-		node_swap(const string &n_label, const unsigned long long &n_real, const unsigned long long int &n_ID, const unsigned long long int &n_int);
+		node_swap(const string &n_label, const long double &n_real, const unsigned long long int &n_ID, const unsigned long long int &n_int);
 		// Default destructor.
 		~node_swap();
 
@@ -94,7 +94,7 @@ class node_swap {
 		unsigned long long int get_node_swap_rand_int() const;
 		
 		// Function to get the random real number of this node_swap.
-		unsigned long long int get_node_swap_rand_real() const;
+		long double get_node_swap_rand_real() const;
 		
 		// Function to print details of the object.
 		void print_node_swap() const;
@@ -114,7 +114,7 @@ class node_swap {
 		void set_node_swap_rand_int(const unsigned long long int &r_int);
 		
 		// Function to set the random real number of node_swap.
-		void set_node_swap_rand_real(const unsigned long long &r_real);
+		void set_node_swap_rand_real(const long double &r_real);
 		
 		// -----------------------------------------------------
 		
@@ -151,7 +151,7 @@ class node_swap {
 		// Random integer.
 		unsigned long long int random_int;
 		// Random real number.
-		unsigned long long random_real;
+		long double random_real;
 		
 		
 		// -------------------------------------------------------

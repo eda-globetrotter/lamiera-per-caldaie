@@ -643,42 +643,148 @@ int main(int argc, char *argv[]) {
 	 *	operator overloading would determine how the find()
 	 *	function for "sets" (in the C++ STL) work.
 	 */
+	// Create an empty set of node_swaps.
+	node_swap_set ns_set_ext;
+	// Default instantiation of node_swap.
+	node_swap temp_ns_ext;
+	// Output of inserting node_swaps into a set of node_swaps.
+//	pair_node_swap_setp_bool nssb_op;
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	unsigned long long int temp_ID_ext = 9100019;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("sydney");
+	temp_ID_ext = 1233;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	//unsigned long long temp_real = 12.3313;
+	long double temp_real = 12.3313;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100015;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("melbourne");
+	temp_ID_ext = 1234;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3314;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100011;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("brisbane");
+	temp_ID = 1235;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3315;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100018;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("cairns");
+	temp_ID = 1236;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3316;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100016;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("darwin");
+	temp_ID = 1237;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3317;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100014;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("perth");
+	temp_ID = 2910;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3318;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100012;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("adelaide");
+	temp_ID = 2911;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3313;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+	// -------------------------------------------------------
+	// Setting node_swap ID.
+	temp_ID = 9100010;
+	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
+	// Setting node_swap label.
+	temp_ns_ext.set_node_swap_label("newcastle");
+	temp_ID = 2912;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.39;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	nssb_op = ns_set_ext.insert(temp_ns_ext);
+
+
+	// Iterate the sequence of nodes in the set.
+	for(node_swap_set_p itsw=ns_set_ext.begin(); itsw != ns_set_ext.end(); ++itsw) {
+		cout << "	>==ID of the node is:::" << itsw->get_node_swap_ID() << "==" << endl;
+		cout << "		Label of the node is:::" << itsw->get_node_swap_label() << "==" << endl;
+		cout << "		Random real number:::";
+		cout << itsw->get_node_swap_rand_real() << "==" << endl;
+		cout << "		Random integer:::";
+		cout << itsw->get_node_swap_rand_int() << "==" << endl;
+	}
 	// Create a clone of a node_swap in the set
 	temp_ID = 600037;
-	temp_ns.set_node_swap_ID(temp_ID);
-	temp_ns.set_node_swap_label("chicago");
+	temp_ns_ext.set_node_swap_ID(temp_ID);
+	temp_ns_ext.set_node_swap_label("chicago");
 	
 	// Find the temp_ns in the set.
-	nssp = ns_set.find(temp_ns);	
+	nssp = ns_set_ext.find(temp_ns_ext);
 	// Is the temp_ns in the set?
-	if(nssp == ns_set.end()) {
+	if(nssp == ns_set_ext.end()) {
 		// Yes.
-		cout << "	temp_ns is NOT in the set." << endl;
+		cout << "	temp_ns_ext is NOT in the set." << endl;
 	}else{
 		// No.
-		cout << "	temp_ns is in the set." << endl;
+		cout << "	temp_ns_ext lies in the set." << endl;
 	}
 	// Are the IDs the same?
-	if(nssp->get_node_swap_ID() != temp_ns.get_node_swap_ID()) {
+	if(nssp->get_node_swap_ID() != temp_ns_ext.get_node_swap_ID()) {
 		cout << "		No. IDs are NOT the same:::";
-		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
 		cout << "		nssp->get_node_swap_ID():::";
 		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}else{
 		cout << "		Yes. IDs are the same:::";
-		cout << temp_ns.get_node_swap_ID() << ":::" << endl;
+		cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
 		cout << "		nssp->get_node_swap_ID():::";
 		cout << nssp->get_node_swap_ID() << ":::" << endl;
 	}
 	// Are the labels the same?
-	if(nssp->get_node_swap_label() != temp_ns.get_node_swap_label()) {
+	if(nssp->get_node_swap_label() != temp_ns_ext.get_node_swap_label()) {
 		cout << "		No. labels are NOT the same:::";
-		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << temp_ns_ext.get_node_swap_label() << ":::" << endl;
 		cout << "		nssp->get_node_swap_label():::";
 		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}else{
 		cout << "		Yes. labels are the same:::";
-		cout << temp_ns.get_node_swap_label() << ":::" << endl;
+		cout << temp_ns_ext.get_node_swap_label() << ":::" << endl;
 		cout << "		nssp->get_node_swap_label():::";
 		cout << nssp->get_node_swap_label() << ":::" << endl;
 	}
