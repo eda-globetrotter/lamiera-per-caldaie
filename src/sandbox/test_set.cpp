@@ -1,6 +1,24 @@
 /**
  * Test the node object using sets.
  *
+ * To use the "set" container from the C++ STL, it is required
+ *	to overload the "<" operator.
+ * To simplify the software design, the "set" implementation in
+ *	the C++ STL is a binary search tree.
+ * Binary search trees are ordered/sorted data structures.
+ * The implementation of "<" operator overloading will determine
+ *	how the elements in the binary search tree will be ordered.
+ * The comparison of two numbers is easiest to create the
+ *	ordering of elements in the binary search tree.
+ * If a conjunction of multiple comparisons are used, a precedence
+ *	of these comparisons should be provided. However, this can
+ *	complicate the software design.
+ *
+ *
+ *
+ *
+ *
+ *
  *
  * @author Zhiyang Ong
  * @version 1.0.0
