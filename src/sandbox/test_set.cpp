@@ -633,6 +633,8 @@ int main(int argc, char *argv[]) {
 	 *
 	 * Question: What happens if there exists multiple fields
 	 *	that are number based?
+	 * Solution: Add a number field to node_swap and re-test
+	 *	the code calling the find() function.
 	 */
 	
 	
