@@ -436,10 +436,10 @@ int main(int argc, char *argv[]) {
 	nssb_op = ns_set.insert(temp_ns);
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 600028;
+	temp_ID = 600046;
 	temp_ns.set_node_swap_ID(temp_ID);
 	// Setting node_swap label.
-	temp_ns.set_node_swap_label("seattle");
+	temp_ns.set_node_swap_label("austin");
 	nssb_op = ns_set.insert(temp_ns);
 	// -------------------------------------------------------
 	// Setting node_swap ID.
@@ -450,10 +450,10 @@ int main(int argc, char *argv[]) {
 	nssb_op = ns_set.insert(temp_ns);
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 600046;
+	temp_ID = 600028;
 	temp_ns.set_node_swap_ID(temp_ID);
 	// Setting node_swap label.
-	temp_ns.set_node_swap_label("austin");
+	temp_ns.set_node_swap_label("seattle");
 	nssb_op = ns_set.insert(temp_ns);
 
 
@@ -660,10 +660,18 @@ int main(int argc, char *argv[]) {
 	//unsigned long long temp_real = 12.3313;
 	long double temp_real = 12.3313;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
+cout << "==	Adding element:" << endl;
+temp_ns_ext.print_node_swap();
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100015;
+	temp_ID_ext = 9100015;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("melbourne");
@@ -672,97 +680,154 @@ int main(int argc, char *argv[]) {
 	temp_real = 12.3314;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100011;
+	temp_ID_ext = 9100091;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("brisbane");
-	temp_ID = 1235;
+	temp_ID_ext = 1235;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.3315;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100018;
+	temp_ID_ext = 9100018;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("cairns");
-	temp_ID = 1236;
+	temp_ID_ext = 1236;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.3316;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100016;
+	temp_ID_ext = 9100076;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("darwin");
-	temp_ID = 1237;
+	temp_ID_ext = 1237;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.3317;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100014;
+	temp_ID_ext = 9100014;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("perth");
-	temp_ID = 2910;
+	temp_ID_ext = 2910;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.3318;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100012;
+	temp_ID_ext = 9100032;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("adelaide");
-	temp_ID = 2911;
+	temp_ID_ext = 2911;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.3313;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 	// -------------------------------------------------------
 	// Setting node_swap ID.
-	temp_ID = 9100010;
+	temp_ID_ext = 9100010;
 	temp_ns_ext.set_node_swap_ID(temp_ID_ext);
 	// Setting node_swap label.
 	temp_ns_ext.set_node_swap_label("newcastle");
-	temp_ID = 2912;
+	temp_ID_ext = 2912;
 	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
 	temp_real = 12.39;
 	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	nssb_op = ns_set_ext.insert(temp_ns_ext);
+cout << ">> Size of node_swap_set is:::";
+cout << ns_set_ext.size() << ":::" << endl;
+if (nssb_op.second == false) {
+	cout << "	Set insertion failed:::";
+	cout << temp_ns_ext.get_node_swap_ID() << ":::" << endl;
+}
 
 
 	// Iterate the sequence of nodes in the set.
-	for(node_swap_set_p itsw=ns_set_ext.begin(); itsw != ns_set_ext.end(); ++itsw) {
-		cout << "	>==ID of the node is:::" << itsw->get_node_swap_ID() << "==" << endl;
-		cout << "		Label of the node is:::" << itsw->get_node_swap_label() << "==" << endl;
+	for(node_swap_set_p rand_ri_iter=ns_set_ext.begin(); rand_ri_iter != ns_set_ext.end(); ++rand_ri_iter) {
+	
+		cout << "==	Current element:" << endl;
+		rand_ri_iter->print_node_swap();
+/*
+		cout << "	>==ID of the node is:::";
+			cout << rand_ri_iter->get_node_swap_ID();
+			cout << "==" << endl;
+		cout << "		Label of the node is:::";
+			cout << rand_ri_iter->get_node_swap_label();
+			cout << "==" << endl;
 		cout << "		Random real number:::";
-		cout << itsw->get_node_swap_rand_real() << "==" << endl;
+			cout << rand_ri_iter->get_node_swap_rand_real();
+			cout << "==" << endl;
 		cout << "		Random integer:::";
-		cout << itsw->get_node_swap_rand_int() << "==" << endl;
+			cout << rand_ri_iter->get_node_swap_rand_int();
+			cout << "==" << endl;
+*/
 	}
 	// Create a clone of a node_swap in the set
-	temp_ID = 600037;
+	temp_ID = 9100018;
 	temp_ns_ext.set_node_swap_ID(temp_ID);
-	temp_ns_ext.set_node_swap_label("chicago");
+	temp_ns_ext.set_node_swap_label("cairns");
+	temp_ID_ext = 1236;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3316;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
 	
 	// Find the temp_ns in the set.
 	nssp = ns_set_ext.find(temp_ns_ext);
 	// Is the temp_ns in the set?
-	if(nssp == ns_set_ext.end()) {
+	if(nssp != ns_set_ext.end()) {
 		// Yes.
-		cout << "	temp_ns_ext is NOT in the set." << endl;
+		cout << "	temp_ns_ext is in the set." << endl;
 	}else{
 		// No.
-		cout << "	temp_ns_ext lies in the set." << endl;
+		cout << "	temp_ns_ext is NOT in the set." << endl;
 	}
 	// Are the IDs the same?
 	if(nssp->get_node_swap_ID() != temp_ns_ext.get_node_swap_ID()) {
@@ -790,6 +855,36 @@ int main(int argc, char *argv[]) {
 	}
 	
 	
+	
+	
+	
+	// Create a clone of a node_swap in the set
+	temp_ID = 1029384756;	//	9100014
+	temp_ns_ext.set_node_swap_ID(temp_ID);
+	temp_ns_ext.set_node_swap_label("perth");
+	temp_ID_ext = 2910;
+	temp_ns_ext.set_node_swap_rand_int(temp_ID_ext);
+	temp_real = 12.3318;
+	temp_ns_ext.set_node_swap_rand_real(temp_real);
+	
+	// Find the temp_ns in the set.
+	nssp = ns_set_ext.find(temp_ns_ext);
+	// Is the temp_ns in the set?
+	if(nssp == ns_set_ext.end()) {
+		// No.
+		cout << "	temp_ns_ext is not in the set." << endl;
+	}else{
+		// Yes.
+		cout << "	temp_ns_ext IS in the set." << endl;
+	}
+	
+	
+	/**
+	 * ### IMPORTANT
+	 *
+	 * See the comments at the top of the file for my reflections
+	 *	on this exercise.
+	 */
 
 
 cout << "Complete playing." << endl;

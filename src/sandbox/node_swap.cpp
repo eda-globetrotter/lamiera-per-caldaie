@@ -192,7 +192,7 @@ void node_swap::set_node_swap_label(const string &temp_label) {
  * @return - Nothing.
  */
 void node_swap::set_node_swap_rand_int(const unsigned long long int &r_int) {
-	node_swap_label = r_int;
+	random_int = r_int;
 }
 
 /**
@@ -201,7 +201,7 @@ void node_swap::set_node_swap_rand_int(const unsigned long long int &r_int) {
  * @return - Nothing.
  */
 void node_swap::set_node_swap_rand_real(const long double &r_real) {
-	node_swap_label = r_real;
+	random_real = r_real;
 }
 
 // ==================================================================
