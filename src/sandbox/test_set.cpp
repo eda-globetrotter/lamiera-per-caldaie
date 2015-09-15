@@ -635,6 +635,8 @@ int main(int argc, char *argv[]) {
 	 *	that are number based?
 	 * Solution: Add a number field to node_swap and re-test
 	 *	the code calling the find() function.
+	 *
+	 * Fix this!!!
 	 */
 	
 	
