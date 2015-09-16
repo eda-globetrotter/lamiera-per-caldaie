@@ -37,7 +37,7 @@
 
 
 // Import packages from the software
-#include "node.hpp"
+#include "./node.hpp"
 
 // ==================================================================
 

@@ -117,7 +117,18 @@ SCRIPTS=		../../scripts/
 # Module that provides classes to support the development and
 #	debugging of the software, including Exception classes.
 UTILITYPATH=	utilities/
-#
+# Module that contains classes for testing concepts
+CPPCLASSES=		classes/
+# Module for testing concepts about C++ STL.
+CPPSTL=			stl/
+# Module for testing concepts about C++ STL containers.
+STLCONTAINERS=	containers/
+# Module for testing concepts about C++ STL multithreading.
+MULTITHREADING=	multithreading/
+# Module for testing concepts about other C++ STL features.
+STLOTHERS=		others/
+# Module for testing miscellaneous concepts.
+CPPMISC=		misc/
 
 
 # UNIX commands/utilities that are used
@@ -161,7 +172,7 @@ null:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	$(DATE)
 	@echo === Compiling C++ source code...
-	$(GPLUSPLUS)	$(COMPILE)	test_null_ptr.cpp
+	$(GPLUSPLUS)	$(COMPILE)	$(CPPMISC)test_null_ptr.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
@@ -192,7 +203,7 @@ vector:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	$(DATE)
 	@echo === Compiling C++ source code...
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	test_vector.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_vector.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
@@ -227,9 +238,9 @@ set:
 	@echo === Compiling C++ source code...
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	node.cpp
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	node_swap.cpp
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	test_set.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node_swap.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_set.cpp
 	#$(GPLUSPLUS)	$(COMPILE)	test_set.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)

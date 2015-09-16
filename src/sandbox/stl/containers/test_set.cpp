@@ -69,8 +69,8 @@
 #include <utility>
 
 // Import packages from the software
-#include "node.hpp"
-#include "node_swap.hpp"
+#include "../../classes/node.hpp"
+#include "../../classes/node_swap.hpp"
 
 
 using namespace std;
