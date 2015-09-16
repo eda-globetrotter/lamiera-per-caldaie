@@ -77,8 +77,27 @@ int main(int argc, char *argv[]) {
 	cout << "==>	Test how a function can return a value.";
 	cout << endl;
 
+	if(!how_to_return(-35)) {
+		cout << "-35 returns false" << endl;
+	}
 	
-
+	if(!how_to_return(2)) {
+		cout << "2 returns false" << endl;
+	}
+	
+	if(!how_to_return(798)) {
+		cout << "798 returns false" << endl;
+	}
+	
+	if(how_to_return(49)) {
+		cout << "49 returns true" << endl;
+	}
+	
+	
+	
+	
+	
+	
 
 	
 	
@@ -86,4 +105,24 @@ int main(int argc, char *argv[]) {
 	cout<<"============================================="<<endl;
 	// End of main function...
 	return 0;
+}
+
+// ===============================================================
+
+/**
+ * Function to 
+ * @param i		Input to determine which function call return is
+ *					used.
+ * @return true, if . Else, return false.
+ */
+bool how_to_return(int i) {
+	if(i > 5) {
+		if (i > 50) {
+			return false;
+		}else{
+			return true;
+		}
+	}else{
+		return false;
+	}
 }

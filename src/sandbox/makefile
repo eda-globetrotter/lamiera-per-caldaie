@@ -238,8 +238,10 @@ set:
 	@echo === Compiling C++ source code...
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	@echo === C++ Classes Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node_swap.cpp
+	@echo === C++ STL Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_set.cpp
 	#$(GPLUSPLUS)	$(COMPILE)	test_set.cpp
 	@echo === Link the C++ object files...
@@ -258,6 +260,33 @@ set:
 	@echo
 
 
+
+
+#####################################################################
+#	Target for testing function call returns
+#####################################################################
+# Build and run C++ program to experiment with function call returns.
+fcreturn:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)test_function_return.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "You daft compiler, stop whinging!!!"
+	@echo "-- Mr. David Knight"
+	@echo
+	@echo "It compiles. Ship it!"
+	@echo
+	@echo
 
 
 
