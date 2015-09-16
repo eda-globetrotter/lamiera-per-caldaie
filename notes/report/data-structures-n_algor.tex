@@ -113,9 +113,22 @@
 %	Abstract
 
 \begin{abstract} 
-Insert abstract here. \\
+This report describes the design and implementation of common data structures and algorithms, as well as ``computational engines'' that are found in electronic design automation (EDA) software. \\
 
-More stuff to be included.
+Data structures and algorithms for digital VLSI and cyber-physical system design include: binary decision diagrams (BDDs), AND-inverter graphs (AIGs), and their associated algorithms for optimization, traversal, and other operations (such as graph matching). Common computational engines for digital systems would include: optimization and verification engines for deterministic and nondeterministic finite state machines; decision procedures for the boolean satisfiability problem (SAT solvers) and satisfiability modulo theories (SMT solvers); quantified boolean formula (QBF) solvers; and SAT and SMT solvers for maximum satisfiability (i.e., Max-SAT and Max-SMT solvers). \\
+
+Regarding EDA problems that require numerical computation (in digital, analog, or mixed-signal VLSI design), the data structures and algorithms for circuit simulation based on sparse graph would be required. In addition, techniques for model order reduction shall be implemented. \\
+
+Computational engines for statistical and probabilistic analyses or stochastic modeling can include data structures and algorithms for partially observable Markov decision processes (POMDPs) and Markov chains. Tools for analyses of queueing systems (based on queueing theory) should be included. \\
+
+Regarding cyber-physical systems and mixed-signal circuits, hybrid automata can be used to represent these circuits and systems. \\
+
+Optimization engines for EDA include: solvers for different types of mathematical programming, such as linear programming (LP), integer linear programming (ILP), mixed-integer linear programming (MILP), quadratic programming (QP), convex programming (CP), geometric programming (GP), and second-order conic programming (SOCP); solvers for pseudo-boolean optimization (PBO solvers) and weighted-boolean optimization (WBO); and meta-heuristics (e.g., evolutionary algorithms, simulated annealing, and ant colony optimization). \\
+
+Algorithms shall be implemented using parallel programming, in a scalable style. In addition, considerations shall be given to the use of constraint programming. \\
+\ \\
+\ \\
+More stuff to be included\dots
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,7 +181,19 @@ More stuff to be included.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Typesetting Text in LaTeX
-\input{./latex-text/text}
+%\input{./latex-text/text}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Typesetting Algorithms
+\input{./algor/algorithms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Typesetting Data Structures
+\input{./data_structures/data_structures}
 
 
 
@@ -178,15 +203,23 @@ More stuff to be included.
 \input{./math/mathematics}
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Typesetting Statistics
+\input{./statistics/statistics}
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Typesetting for Data Visualization
-\input{./data_visualization/tables}
-\input{./data_visualization/figures}
+%\input{./data_visualization/tables}
+%\input{./data_visualization/figures}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Typesetting Algorithms
-\input{./algor/algorithms}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
