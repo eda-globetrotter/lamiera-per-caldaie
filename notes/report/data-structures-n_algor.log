@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  16 SEP 2015 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  17 SEP 2015 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -678,7 +678,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen154
 \l_MT_below_shortintertext_sep=\dimen155
 )
-(./data-structures-n_algor.aux)
+(./data-structures-n_algor.aux
+
+LaTeX Warning: Label `sssec:BinaryDecisionDiagramsBDDs' multiply defined.
+
+)
 \openout1 = `data-structures-n_algor.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -695,8 +699,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 51.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 51.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 51.
@@ -946,26 +949,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
  (./data-structures-n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+Package rerunfilecheck Info: File `data-structures-n_algor.out' has not changed
+.
+(rerunfilecheck)             Checksum: 470D857B8D97FFEC8EAF722EE05F2B2B;518.
 
 
-Package rerunfilecheck Warning: File `data-structures-n_algor.out' has changed.
-
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `data-structures-n_algor.out':
-(rerunfilecheck)             Before: 49F1EAE54F2478F2BF1D7B215C754156;330
-(rerunfilecheck)             After:  470D857B8D97FFEC8EAF722EE05F2B2B;518.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 15414 strings out of 493117
- 219749 string characters out of 6135433
- 317688 words of memory out of 5000000
- 18559 multiletter control sequences out of 15000+600000
+ 15418 strings out of 493117
+ 219819 string characters out of 6135433
+ 317999 words of memory out of 5000000
+ 18562 multiletter control sequences out of 15000+600000
  19858 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1115b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -985,10 +982,10 @@ ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures-n_algor.pdf (10 pages, 177751 bytes).
+Output written on data-structures-n_algor.pdf (10 pages, 178080 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

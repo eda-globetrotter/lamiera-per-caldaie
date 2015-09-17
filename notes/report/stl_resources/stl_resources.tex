@@ -1,4 +1,4 @@
-%	This is written by Zhiyang Ong as a template for inserting figures in LaTeX.
+%	This is written by Zhiyang Ong as a template for writing algorithms in LaTeX.
 
 %	The MIT License (MIT)
 
@@ -17,50 +17,48 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Figures}
-\label{chp:Figures}
-
-A template for inserting figures is shown in Figures \ref{fig:MyFigure1}, \ref{fig:MyFigure2}, \ref{fig:MyFigure3}, and \ref{fig:MyFigure4}. Also, a TikZ figure is shown in Figure \ref{tikz:MyPolarPlot}. \\
-
-I have used the {\tt $\backslash$clearpage} command to clear the remanding part of the first page for this section (\S\ref{chp:Figures}), and insert the remaining figures and text in subsequent pages. If the last three figures (Figures  \ref{fig:MyFigure3}, \ref{tikz:MyPolarPlot}, and \ref{fig:MyFigure4}) are reordered to the following order, Figures  \ref{fig:MyFigure4}, \ref{tikz:MyPolarPlot}, and \ref{fig:MyFigure3}, the effects of the {\tt $\backslash$clearpage} command would be more evident.
+\chapter{STL Resources}
+\label{chp:STLresources}
 
 
-\begin{figure}[h]
-\centering 
-\includegraphics[height=1.5in]{./pics/short}
-\caption{Caption for my figure1}
-\label{fig:MyFigure1}
-\end{figure}
+Some {C++} STL resources are: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item \url{http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm}
+\item \url{http://www.cplusplus.com/reference/stl/}
+\item \url{http://en.cppreference.com/w/cpp/container}
+\item \url{http://www.cs.wustl.edu/~schmidt/PDF/stl4.pdf}
+\end{enumerate}
 
-\begin{figure}[h]
-\centering 
-\includegraphics[height=1.5in]{./pics/small}
-\caption{Caption for my figure2}
-\label{fig:MyFigure2}
-\end{figure}
 
-%	Clear the remanding part of the page, and insert the remaining figures and text in subsequent pages.
-\clearpage
-
-\begin{figure}[h]
-\centering 
-\includegraphics[width=6in]{./pics/my_figure}
-\caption{Caption for my figure3}
-\label{fig:MyFigure3}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Computational Complexity of C++ Containers}
+\label{sec:ComputationalComplexityofCppContainers}
 
 
 
 
+\begin{table}[htdp]
+\caption{Computational Complexity of C++ Containers}	\vspace{-0.2in}
+\label{tab:ComputationalComplexityofCppContainers}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Container $\backslash$ Complexity & add & remove & search & size & empty & begin & end \\
+		\hline
+		vector & O(1) & O(n) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+%		Level & Use & Features & Abstraction \\
+		\hline
+		\end{tabular}
+	\end{center}
+\end{table}
 
 
 
-\begin{figure}[h]
-\centering 
-\includegraphics[height=1.5in]{./pics/trim}
-\caption{Caption for my figure4}
-\label{fig:MyFigure4}
-\end{figure}
+
+
+
+
 
 
 
