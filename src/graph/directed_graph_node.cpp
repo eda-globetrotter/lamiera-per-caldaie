@@ -1,6 +1,6 @@
 /**
  * Graph package:
- * Module to implement graphs and networks in AggieMC.
+ * Module to implement graphs and networks.
  *
  * directed_graph_node class:
  * Class to represent basic directed graph operations/functions.
@@ -12,6 +12,10 @@
  * The terms "node" and "vertex", of a graph, are used synonymously
  *	in our software AggieMC.
  * Enable support of multigraphs and hypergraphs.
+ * Other boolean comparisons can be implemented by overloading the
+ *	operator child class.
+ *
+ *
  *
  *
  *
@@ -101,7 +105,7 @@ directed_graph_node::~directed_graph_node() {
  * @return - The vector of incoming edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_incoming_edges() {
-set<unsigned long long> directed_graph_node::get_incoming_edges() {
+set<unsigned long long int> directed_graph_node::get_incoming_edges() {
 	return incoming_edges;
 }
 
@@ -112,7 +116,7 @@ set<unsigned long long> directed_graph_node::get_incoming_edges() {
  * @return - The vector of outgoing edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_outgoing_edges() {
-set<unsigned long long> directed_graph_node::get_outgoing_edges() {
+set<unsigned long long int> directed_graph_node::get_outgoing_edges() {
 	return outgoing_edges;
 }
 
@@ -122,7 +126,7 @@ set<unsigned long long> directed_graph_node::get_outgoing_edges() {
  * @param - None.
  * @return - The ID of this node.
  */
-unsigned long long directed_graph_node::get_node_ID() {
+unsigned long long int directed_graph_node::get_node_ID() {
 	return node_ID;
 }
 
@@ -135,7 +139,7 @@ unsigned long long directed_graph_node::get_node_ID() {
  * @param temp_ID:	The new ID to replace the current ID of the node.
  * @return - Nothing.
  */
-void directed_graph_node::set_node_ID(const unsigned long long &temp_ID) {
+void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
 	node_ID = temp_ID;
 }
 
@@ -148,7 +152,7 @@ void directed_graph_node::set_node_ID(const unsigned long long &temp_ID) {
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
-void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long> &set_incoming_links) {
+void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long int> &set_incoming_links) {
 	incoming_edges.insert(set_incoming_links.begin(), set_incoming_links.end());
 }
 
@@ -159,7 +163,7 @@ void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
-void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long> &set_outgoing_links) {
+void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long int> &set_outgoing_links) {
 	outgoing_edges.insert(set_outgoing_links.begin(), set_outgoing_links.end());
 }
 

@@ -1,6 +1,6 @@
 /**
  * Graph package:
- * Module to implement graphs and networks in AggieMC.
+ * Module to implement graphs and networks.
  *
  * directed_graph_node class:
  * Class to represent basic directed graph operations/functions.
@@ -12,6 +12,10 @@
  * The terms "node" and "vertex", of a graph, are used synonymously
  *	in our software AggieMC.
  * Enable support of multigraphs and hypergraphs.
+ * Other boolean comparisons can be implemented by overloading the
+ *	operator child class.
+ *
+ *
  *
  *
  *
@@ -77,30 +81,20 @@ using namespace std;
 //typedef vector<unsigned long long> set_of_node_IDs;
 
 
-// Shortcut to container of int.
-typedef set<int> int_set;
-// Shortcut to represent a pointer to the container of int.
-typedef set<int>::iterator int_set_p;
+
 
 // Shortcut to container of node.
-typedef set<directed_graph_node> node_set;
+//typedef set<directed_graph_node> dg_node_set;
 // Shortcut to represent an iterator to the container of nodes.
-typedef set<directed_graph_node>::iterator node_set_p;
+//typedef set<directed_graph_node>::iterator dg_node_set_p;
 /**
  * Shortcut to a pair representing an iterator to the container of
  *	nodes and a boolean flag representing the success of a set
  *	operation.
  */
-typedef pair<node_set_p, bool> pair_nodesetp_bool;
+//typedef pair<dg_node_set_p, bool> pair_nodesetp_bool;
 
-// Shortcut to a pair construct, integer and boolean value.
-typedef pair<int, bool> pair_int_bool;
-/**
- * Shortcut to a pair representing an iterator pointer to the
- *	set of integers and a boolean flag representing the success of
- *	a set operation.
- */
-typedef pair<int_set_p, bool> pair_intboolp_bool;
+
 
 
 // =========================================================
@@ -112,7 +106,7 @@ class directed_graph_node {
 		// Default constructor.
 		directed_graph_node();
 		// Standard constructors.
-		directed_graph_node(unsigned long long node_id_num);
+		directed_graph_node(unsigned long long int node_id_num);
 		// Default destructor.
 		~directed_graph_node();
 
@@ -141,54 +135,54 @@ class directed_graph_node {
 		 * Function to get the incoming edges from this node.
 		 */
 //		set<pair<unsigned long long,bool> > get_incoming_edges();
-		set<unsigned long long> get_incoming_edges();
+		set<unsigned long long int> get_incoming_edges();
 		/**
 		 * Function to get the outgoing edges from this node.
 		 */
 //		set<pair<unsigned long long,bool> > get_outgoing_edges();
-		set<unsigned long long> get_outgoing_edges();		
+		set<unsigned long long int> get_outgoing_edges();		
 		// Function to get the ID of the node.
-		unsigned long long get_node_ID();
+		unsigned long long int get_node_ID();
 
 		// -----------------------------------------------------
 
 		// Mutator functions.
 		
 		// Function to set the ID of the node.
-		void set_node_ID(const unsigned long long &temp_ID);
+		void set_node_ID(const unsigned long long int &temp_ID);
 		
 		/**
 		 * Function to add a set of incoming edges to the current
 		 *	set of incoming edges.
 		 */
 //		void add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links);
-		void add_set_of_incoming_edges(const set<unsigned long long> &set_incoming_links);
+		void add_set_of_incoming_edges(const set<unsigned long long int> &set_incoming_links);
 		/**
 		 * Function to add a set of outgoing edges to the current
 		 *	set of outgoing edges.
 		 */
 //		void add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links);
-		void add_set_of_outgoing_edges(const set<unsigned long long> &set_outgoing_links);
+		void add_set_of_outgoing_edges(const set<unsigned long long int> &set_outgoing_links);
 		/**
 		 * Function to add an incoming edge to the current set of
 		 *	incoming edges.
 		 */
-		void add_incoming_edge(const unsigned long long &src_node_ID);
+		void add_incoming_edge(const unsigned long long int &src_node_ID);
 		/**
 		 * Function to add an outgoing edge to the current set of
 		 *	outgoing edges.
 		 */
-		void add_outgoing_edge(const unsigned long long &destn_node_ID);
+		void add_outgoing_edge(const unsigned long long int &destn_node_ID);
 		/**
 		 * Function to remove an incoming edge to the current set of
 		 *	incoming edges.
 		 */
-		void remove_incoming_edge(const unsigned long long &node_ID_removal);
+		void remove_incoming_edge(const unsigned long long int &node_ID_removal);
 		/**
 		 * Function to remove an outgoing edge to the current set of
 		 *	outgoing edges.
 		 */
-		void remove_outgoing_edge(const unsigned long long &node_ID_removal);
+		void remove_outgoing_edge(const unsigned long long int &node_ID_removal);
 		
 
 	// =========================================================
@@ -226,13 +220,13 @@ class directed_graph_node {
 		// Boolean function of the node
 //		bool logic_function;
 		// Index (as an integer) of the node.
-		unsigned long long node_ID;
+		unsigned long long int node_ID;
 		// Vector of outgoing edges: pair(destination node, inverter flag).
 //		set<pair<unsigned long long,bool> > outgoing_edges;
-		set<unsigned long long> outgoing_edges;
+		set<unsigned long long int> outgoing_edges;
 		// Vector of incoming edges: pair(source node, inverter flag).
 //		set<pair<unsigned long long,bool> > incoming_edges;
-		set<unsigned long long> incoming_edges;
+		set<unsigned long long int> incoming_edges;
 		
 		
 		// -------------------------------------------------------
