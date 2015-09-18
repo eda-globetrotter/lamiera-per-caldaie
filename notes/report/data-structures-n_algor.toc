@@ -9,5 +9,7 @@
 \contentsline {subsection}{\numberline {2.1.2}Undirected Graphs}{2}{subsection.2.1.2}
 \contentsline {chapter}{\numberline {3}Mathematics}{3}{chapter.3}
 \contentsline {chapter}{\numberline {4}Statistics}{5}{chapter.4}
-\contentsline {chapter}{Acknowledgments}{6}{chapter*.3}
-\contentsline {chapter}{Bibliography}{6}{chapter*.3}
+\contentsline {chapter}{\numberline {5}STL Resources}{6}{chapter.5}
+\contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{6}{section.5.1}
+\contentsline {chapter}{Acknowledgments}{7}{chapter*.4}
+\contentsline {chapter}{Bibliography}{8}{appendix*.5}
