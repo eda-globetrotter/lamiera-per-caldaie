@@ -54,6 +54,79 @@ node_set_p
 
 
 
+## Data Structure Representations for Graphs
+
+### Operations that I care about:
++ add()
++ remove()
++ search()
++ size()
++ empty()
++ begin()
++ end()
+
+
+
+
+
+
+### Adjacency List
+
+
+
+### Adjacency Matrix
+
+Adjacency matrix: for sparse graphs, it takes up a lot of space
+
+
+### Edge List
+
+Keep an unordered list of all edges.
++ different to find a given edge, (u,v)
++ different to find a set of all edges incident to a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -221,10 +221,10 @@ class directed_graph_node {
 //		bool logic_function;
 		// Index (as an integer) of the node.
 		unsigned long long int node_ID;
-		// Vector of outgoing edges: pair(destination node, inverter flag).
+		// Set of outgoing edges: pair(destination node, inverter flag).
 //		set<pair<unsigned long long,bool> > outgoing_edges;
 		set<unsigned long long int> outgoing_edges;
-		// Vector of incoming edges: pair(source node, inverter flag).
+		// Set of incoming edges: pair(source node, inverter flag).
 //		set<pair<unsigned long long,bool> > incoming_edges;
 		set<unsigned long long int> incoming_edges;
 		
