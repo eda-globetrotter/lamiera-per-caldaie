@@ -82,12 +82,12 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 ### Edge List
 
 + Keep an unordered list of all edges.
-+ Different to find a given edge, $(u,v)$
-+ Different to find a set of all edges incident to a vertex $v$, which is important for deletion or modification of the vertex $v$
-+ $|E| \approx |V|^{2}$
-+ Number of edges in a directed graph: $n(n - 1)$.
-+ Number of edges in a undirected graph: $\frac{n(n - 1)}{2}$.
-+ $|E| \subseteq V \times V \dots$ list of lists 
++ Different to find a given edge, *(u,v)*
++ Different to find a set of all edges incident to a vertex *v*, which is important for deletion or modification of the vertex *v*
++ *|E| \approx |V|^{2}*
++ Number of edges in a directed graph: *n(n - 1)*.
++ Number of edges in a undirected graph: *\frac{n(n - 1)}{2}*.
++ *|E| \subseteq V \times V \dots* list of lists 
 
 
 ### Edge map
@@ -110,26 +110,26 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 
 ## Design of Node class and Edge class
 
-Node: Fields: int node_id
-			: elem store in the node/vertex (object???/class)
-			: bool is_adjacent_to(node vw)
-			: set<edge> outgoing_edges
-			: set<edge> incoming_edges
+Node: Fields	: int node_id
+				: elem store in the node/vertex (object???/class)
+				: bool is_adjacent_to(node vw)
+				: set<edge> outgoing_edges
+				: set<edge> incoming_edges
 
-			: <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between $u$ and $v$.
+				: <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
 				Enable implementation of hypergraphs, where an edge can connect any number of vertices.
 	: Functions	: set<edge> get_incident_edges()
-					Return incoming_edges $\cup$ outgoing_edges
+					Return incoming_edges *\cup* outgoing_edges
 				: set<edge> get_incoming_edges()
 				: set<edge> get_outgoing_edges()
 				: bool is_adjacent_to(node v)
-					Return true iff $u$ and $v$ are adjacent
+					Return true iff *u* and *v* are adjacent
 				: elem get_element()
 
 
 
 
-Edge: Fields: values stored in the interconnect, which can be an object or a set of fields
+Edge: Fields	: values stored in the interconnect, which can be an object or a set of fields
 	: Functions	: set<node> get_destination_vertices()
 					Return set of destination node(s)
 				: set<node> get_source_vertices()
@@ -143,18 +143,29 @@ Edge: Fields: values stored in the interconnect, which can be an object or a set
 						node is neither a source nor destination node
 						throw an error/exception
 				: bool is_adjacent_to(edge f)
-					Return true if this/current edge $e$ is adjacent to edge $f$.
+					Return true if this/current edge *e* is adjacent to edge *f*.
 				: bool is_incident_on(v)
-					Return true if current edge is incident on $v$
+					Return true if current edge is incident on *v*
+				: erase_vertex(v)
+					Remove vertex v and all its incident edges.
 
-	: If I do not use an edge class, I cannot represent information about an edge without using a pair of structs.
-
-
-
-
+	: If I do not use an edge class, I cannot represent information about an edge without using a pair or a struct. Hence, I used a class for representing the edges.
 
 
 
+
+
+
+Graph	: Fields	: set<node> vertices
+					: set<edge> edges
+		: Functions	: set<node> get_vertices()
+					: set<edge> get_edges()
+					: node insert_vertex(x);
+						Return node storing element *x*
+					: set<edge> get_outgoing_edges()
+					: bool is_adjacent_to(node v)
+						Return true iff *u* and *v* are adjacent
+					: elem get_element()
 
 
 
