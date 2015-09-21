@@ -103,6 +103,8 @@ Value and key comparison: in maps are complicated.
 
 Accessing elements of a map is more complicated than that of a set. Go to key, then value.
 
+## Additional Information About Data Structures
+
 sets and maps in the C++ STL are typically implemented as BSTs...
 
 
@@ -141,8 +143,9 @@ Edge: Fields: values stored in the interconnect, which can be an object or a set
 						node is neither a source nor destination node
 						throw an error/exception
 				: bool is_adjacent_to(edge f)
-					Return edges $e$ and $f$
+					Return true if this/current edge $e$ is adjacent to edge $f$.
 				: bool is_incident_on(v)
+					Return true if current edge is incident on $v$
 
 
 
