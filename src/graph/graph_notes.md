@@ -197,11 +197,14 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 		Remove node *v* and all its incident edges.
 		
 	+ bool erase_edge(edge e)
-						Remove edge *e*.
-					: unsigned long long int node_count()
-					: unsigned long long int edge_count()
-					: edge get_edge(node u, node v)
-						Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return null.
+	
+		Remove edge *e*.
+		
+	+ unsigned long long int node_count()
+	+ unsigned long long int edge_count()
+	+ edge get_edge(node u, node v)
+	
+		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return null.
 
 
 
