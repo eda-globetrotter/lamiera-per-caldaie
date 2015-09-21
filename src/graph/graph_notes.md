@@ -146,20 +146,15 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 	
 		Return set of source node(s)
 	+ set<node> get_opposite_node(node v)
-	
+'''
 		If v = source node,
-
 			return destination node.
-
 		Else If v = destination node,
-
 			return source node.
-
 		Else
-
 			node is neither a source nor destination node
-
 			throw an error/exception
+'''
 				: bool is_adjacent_to(edge f)
 					Return true if this/current edge *e* is adjacent to edge *f*.
 				: bool is_incident_on(node v)
