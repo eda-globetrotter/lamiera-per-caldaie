@@ -146,23 +146,31 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 	
 		Return set of source node(s)
 	+ set<node> get_opposite_node(node v)
-'''
+	
 		If v = source node,
-			return destination node.
-		Else If v = destination node,
-			return source node.
-		Else
-			node is neither a source nor destination node
-			throw an error/exception
-'''
-				: bool is_adjacent_to(edge f)
-					Return true if this/current edge *e* is adjacent to edge *f*.
-				: bool is_incident_on(node v)
-					Return true if current edge is incident on *v*
-				: erase_node(v)
-					Remove node v and all its incident edges.
 
-	: If I do not use an edge class, I cannot represent information about an edge without using a pair or a struct. Hence, I used a class for representing the edges.
+			return destination node.
+
+		Else If v = destination node,
+
+			return source node.
+
+		Else
+
+			node is neither a source nor destination node
+
+			throw an error/exception
+	+ bool is_adjacent_to(edge f)
+
+		Return true if this/current edge *e* is adjacent to edge *f*.
+	+ bool is_incident_on(node v)
+	
+		Return true if current edge is incident on *v*
+	+ erase_node(v)
+	
+		Remove node v and all its incident edges.
+
++ If I do not use an edge class, I cannot represent information about an edge without using a pair or a struct. Hence, I used a class for representing the edges.
 
 
 
