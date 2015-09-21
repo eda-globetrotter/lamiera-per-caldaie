@@ -81,9 +81,9 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 
 ### Edge List
 
-Keep an unordered list of all edges.
-+ different to find a given edge, (u,v)
-+ different to find a set of all edges incident to a vertex v, which is important for deletion or modification of the vertex v
++ Keep an unordered list of all edges.
++ Different to find a given edge, $(u,v)$
++ Different to find a set of all edges incident to a vertex $v$, which is important for deletion or modification of the vertex $v$
 + $|E| \approx |V|^{2}$
 + Number of edges in a directed graph: $n(n - 1)$.
 + Number of edges in a undirected graph: $\frac{n(n - 1)}{2}$.
@@ -147,7 +147,7 @@ Edge: Fields: values stored in the interconnect, which can be an object or a set
 				: bool is_incident_on(v)
 					Return true if current edge is incident on $v$
 
-
+	: If I do not use an edge class, I cannot represent information about an edge without using a pair of structs.
 
 
 
