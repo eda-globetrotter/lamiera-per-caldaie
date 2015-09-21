@@ -110,7 +110,9 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 
 ## Design of Node class and Edge class
 
-Node
+
+
+#### Design of Node class
 + Fields
 	+ int node_id
 	+ elem store in the node (object???/class)
