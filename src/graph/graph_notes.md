@@ -106,10 +106,43 @@ Accessing elements of a map is more complicated than that of a set. Go to key, t
 sets and maps in the C++ STL are typically implemented as BSTs...
 
 
+## Design of Node class and Edge class
+
+Node: Fields: int node_id
+			: elem store in the node/vertex (object???/class)
+			: bool is_adjacent_to(node vw)
+			: set<edge> outgoing_edges
+			: set<edge> incoming_edges
+
+			: <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between $u$ and $v$.
+				Enable implementation of hypergraphs, where an edge can connect any number of vertices.
+	: Functions	: set<edge> get_incident_edges()
+					Return incoming_edges $\cup$ outgoing_edges
+				: set<edge> get_incoming_edges()
+				: set<edge> get_outgoing_edges()
+				: bool is_adjacent_to(node v)
+					Return true iff $u$ and $v$ are adjacent
+				: elem get_element()
 
 
 
 
+Edge: Fields: values stored in the interconnect, which can be an object or a set of fields
+	: Functions	: set<node> get_destination_vertices()
+					Return set of destination node(s)
+				: set<node> get_source_vertices()
+					Return set of source node(s)
+				: set<node> get_opposite_vertex(v)
+					If v = source node,
+						return destination node.
+					Else If v = destination node,
+						return source node.
+					Else
+						node is neither a source nor destination node
+						throw an error/exception
+				: bool is_adjacent_to(edge f)
+					Return edges $e$ and $f$
+				: bool is_incident_on(v)
 
 
 
