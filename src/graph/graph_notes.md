@@ -83,7 +83,8 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 
 Keep an unordered list of all edges.
 + different to find a given edge, (u,v)
-+ different to find a set of all edges incident to a 
++ different to find a set of all edges incident to a vertex v, which is important for deletion or modification of the vertex v
++ $|E| \approx |V|^{2}$
 
 
 
