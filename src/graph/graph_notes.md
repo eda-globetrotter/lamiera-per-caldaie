@@ -195,6 +195,7 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 	+ bool erase_node(node v)
 
 		Remove node *v* and all its incident edges.
+		
 	+ bool erase_edge(edge e)
 						Remove edge *e*.
 					: unsigned long long int node_count()
