@@ -147,11 +147,11 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 		Return set of source node(s)
 	+ set<node> get_opposite_node(node v)
 	
-		If v = source node,
+		If (v = source node),
 
 			return destination node.
 
-		Else If v = destination node,
+		Else If (v = destination node),
 
 			return source node.
 
@@ -176,19 +176,26 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 
 
 
+#### Graph class
++ Fields
+	+ set<node> nodes
+	+ set<edge> edges
++ Functions
+	+ set<node> get_nodes()
+	+ set<edge> get_edges()
+	+ node insert_node(elem x);
+	
+		Return node storing element *x*.
+	+ edge insert_edge(node v, node w, elem x)
+	
+		If *v = w*, return NULL (because self-loops are not allowed).
 
-Graph	: Fields	: set<node> nodes
-					: set<edge> edges
-		: Functions	: set<node> get_nodes()
-					: set<edge> get_edges()
-					: node insert_node(elem x);
-						Return node storing element *x*.
-					: edge insert_edge(node v, node w, elem x)
-						If *v = w*, return NULL (because self-loops are not allowed).
-						Else, return new directed edge from node *v* to node *w*, storing element *x*.
-					: bool erase_node(node v)
-						Remove node *v* and all its incident edges.
-					: bool erase_edge(edge e)
+		Else, return new directed edge from node *v* to node *w*, storing element *x*.
+
+	+ bool erase_node(node v)
+
+		Remove node *v* and all its incident edges.
+	+ bool erase_edge(edge e)
 						Remove edge *e*.
 					: unsigned long long int node_count()
 					: unsigned long long int edge_count()
