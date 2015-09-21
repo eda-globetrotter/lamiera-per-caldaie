@@ -85,14 +85,25 @@ Keep an unordered list of all edges.
 + different to find a given edge, (u,v)
 + different to find a set of all edges incident to a vertex v, which is important for deletion or modification of the vertex v
 + $|E| \approx |V|^{2}$
++ Number of edges in a directed graph: $n(n - 1)$.
++ Number of edges in a undirected graph: $\frac{n(n - 1)}{2}$.
++ $|E| \subseteq V \times V \dots$ list of lists 
 
 
+### Edge map
+
+List/vector of maps
 
 
+### Hash maps
++ unordered associative containers
++ associative containers (ordered by keys) tend to be ordered
 
+Value and key comparison: in maps are complicated.
 
+Accessing elements of a map is more complicated than that of a set. Go to key, then value.
 
-
+sets and maps in the C++ STL are typically implemented as BSTs...
 
 
 
