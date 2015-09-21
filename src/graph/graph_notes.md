@@ -188,9 +188,13 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 		Return node storing element *x*.
 	+ edge insert_edge(node v, node w, elem x)
 	
-		If *v = w*, return NULL (because self-loops are not allowed).
+		If (*v = w*),
+		
+			return NULL (because self-loops are not allowed).
 
-		Else, return new directed edge from node *v* to node *w*, storing element *x*.
+		Else,
+
+			return new directed edge from node *v* to node *w*, storing element *x*.
 
 	+ bool erase_node(node v)
 
