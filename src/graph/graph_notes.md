@@ -110,20 +110,25 @@ sets and maps in the C++ STL are typically implemented as BSTs...
 
 ## Design of Node class and Edge class
 
-Node: Fields	: int node_id
-				: elem store in the node (object???/class)
-				: set<edge> outgoing_edges
-				: set<edge> incoming_edges
-
-				: <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
-				Enable implementation of hypergraphs, where an edge can connect any number of nodes.
-	: Functions	: set<edge> get_incident_edges()
-					Return incoming_edges *\cup* outgoing_edges
-				: set<edge> get_incoming_edges()
-				: set<edge> get_outgoing_edges()
-				: bool is_adjacent_to(node v)
-					Return true iff *u* and *v* are adjacent
-				: elem get_element()
+Node
++ Fields
+	+ int node_id
+	+ elem store in the node (object???/class)
+	+ set<edge> outgoing_edges
+	+ set<edge> incoming_edges
+	+ <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
+		
+		Enable implementation of hypergraphs, where an edge can connect any number of nodes.
++ Functions
+	+ set<edge> get_incident_edges()
+		
+		Return incoming_edges *\cup* outgoing_edges
+	+ set<edge> get_incoming_edges()
+	+ set<edge> get_outgoing_edges()
+	+ bool is_adjacent_to(node v)
+	
+		Return true iff *u* and *v* are adjacent
+	+ elem get_element()
 
 
 
