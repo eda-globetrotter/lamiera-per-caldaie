@@ -124,6 +124,8 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ \<set> outgoing_edges and \<set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
 		
 		Enable implementation of hypergraphs, where an edge can connect any number of nodes.
+
+			position in *V*.
 + Functions
 	+ set\<edge> get_incident_edges()
 		
