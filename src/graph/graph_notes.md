@@ -209,7 +209,10 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ edge get_edge(node u, node v)
 	
 		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return null.
-
+	+ unsigned long long int out_degree(v)
+	+ unsigned long long int in_degree(v)
+	+ set\<edge> outgoing_edges(node v)
+	+ set\<edge> incoming_edges(node v)
 
 
 
