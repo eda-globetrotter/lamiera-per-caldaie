@@ -105,7 +105,7 @@ Accessing elements of a map is more complicated than that of a set. Go to key, t
 
 ## Additional Information About Data Structures
 
-sets and maps in the C++ STL are typically implemented as BSTs...
+sets and maps in the C++ STL are typically implemented as binary search trees (BSTs)...
 
 
 ## Design of Node class and Edge class
