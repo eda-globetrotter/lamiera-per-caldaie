@@ -97,7 +97,7 @@ It is simple to implement, but is not an efficient representation of graphs \\ci
 
 Computational space complexity: **O(|V| + |E|)**.
 
-The container for nodes *V* can be implemented with a dictionary.
+The container for nodes *V* can be implemented with a dictionary \\cite[pp. 60?]{Goodrich2011}, while the container for edges *E* can be implemented with a list \\cite[pp. 601]{Goodrich2011}.
 
 
 
