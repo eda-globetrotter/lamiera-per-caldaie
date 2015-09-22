@@ -105,7 +105,7 @@ Accessing elements of a map is more complicated than that of a set. Go to key, t
 
 ## Additional Information About Data Structures
 
-sets and maps in the C++ STL are typically implemented as binary search trees (BSTs)...
+sets and maps in the C++ STL are typically implemented as binary search trees (BSTs)\...
 
 
 ## Design of Node class and Edge class
@@ -144,7 +144,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		Return set of destination node(s)\.
 	+ set\<node> get_source_nodes()
 	
-		Return set of source node(s).
+		Return set of source node(s)\.
 	+ set\<node> get_opposite_node(node v)
 	
 		If (v = source node),
@@ -190,7 +190,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	
 		If (*v = w*),
 		
-			return NULL (because self-loops are not allowed).
+			return NULL (because self-loops are not allowed)\.
 
 		Else,
 
