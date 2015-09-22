@@ -124,12 +124,12 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 + Functions
 	+ set\<edge> get_incident_edges()
 		
-		Return incoming_edges *\cup* outgoing_edges
+		Return incoming_edges *\cup* outgoing_edges.
 	+ set\<edge> get_incoming_edges()
 	+ set\<edge> get_outgoing_edges()
 	+ bool is_adjacent_to(node v)
 	
-		Return true iff *u* and *v* are adjacent
+		Return true iff *u* and *v* are adjacent.
 	+ elem get_element()
 
 
@@ -137,14 +137,14 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 #### Edge class
 + Fields
-	+ values stored in the interconnect, which can be an object or a set of fields
+	+ values stored in the interconnect, which can be an object or a set of fields.
 + Functions
 	+ set\<node> get_destination_nodes()
 	
-		Return set of destination node(s)
+		Return set of destination node(s)\.
 	+ set\<node> get_source_nodes()
 	
-		Return set of source node(s)
+		Return set of source node(s).
 	+ set\<node> get_opposite_node(node v)
 	
 		If (v = source node),
@@ -155,17 +155,17 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 			return source node.
 
-		Else
+		Else,
 
-			node is neither a source nor destination node
+			node is neither a source nor destination node.
 
-			throw an error/exception
+			throw an error/exception.
 	+ bool is_adjacent_to(edge f)
 
 		Return true if this/current edge *e* is adjacent to edge *f*.
 	+ bool is_incident_on(node v)
 	
-		Return true if current edge is incident on *v*
+		Return true if current edge is incident on *v*.
 	+ erase_node(v)
 	
 		Remove node v and all its incident edges.
