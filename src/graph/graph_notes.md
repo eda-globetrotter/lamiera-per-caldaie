@@ -116,17 +116,17 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 + Fields
 	+ int node_id
 	+ elem store in the node (object???/class)
-	+ set<edge> outgoing_edges
-	+ set<edge> incoming_edges
-	+ <set> outgoing_edges and <set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
+	+ set\<edge> outgoing_edges
+	+ set\<edge> incoming_edges
+	+ \<set> outgoing_edges and \<set> incoming_edges avoids multigraphs with the set container. This is implies that there are no parallel edges between *u* and *v*.
 		
 		Enable implementation of hypergraphs, where an edge can connect any number of nodes.
 + Functions
-	+ set<edge> get_incident_edges()
+	+ set\<edge> get_incident_edges()
 		
 		Return incoming_edges *\cup* outgoing_edges
-	+ set<edge> get_incoming_edges()
-	+ set<edge> get_outgoing_edges()
+	+ set\<edge> get_incoming_edges()
+	+ set\<edge> get_outgoing_edges()
 	+ bool is_adjacent_to(node v)
 	
 		Return true iff *u* and *v* are adjacent
@@ -139,13 +139,13 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 + Fields
 	+ values stored in the interconnect, which can be an object or a set of fields
 + Functions
-	+ set<node> get_destination_nodes()
+	+ set\<node> get_destination_nodes()
 	
 		Return set of destination node(s)
-	+ set<node> get_source_nodes()
+	+ set\<node> get_source_nodes()
 	
 		Return set of source node(s)
-	+ set<node> get_opposite_node(node v)
+	+ set\<node> get_opposite_node(node v)
 	
 		If (v = source node),
 
@@ -178,11 +178,11 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 #### Graph class
 + Fields
-	+ set<node> nodes
+	+ set\<node> nodes
 	+ set\<edge> edges
 + Functions
-	+ set<node> get_nodes()
-	+ set<edge> get_edges()
+	+ set\<node> get_nodes()
+	+ set\<edge> get_edges()
 	+ node insert_node(elem x);
 	
 		Return node storing element *x*.
