@@ -65,7 +65,7 @@
 + begin()
 + end()
 
-
+See Table 14.1 of \cite{Goodrich2013}
 
 
 
