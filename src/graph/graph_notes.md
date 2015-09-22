@@ -190,7 +190,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	
 		If (*v = w*),
 		
-			return NULL (because self-loops are not allowed)\.
+			return NULL (because self-loops are not allowed).
 
 		Else,
 
