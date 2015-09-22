@@ -141,7 +141,9 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 #### Edge class
 + Fields
 	+ values stored in the interconnect, which can be an object or a set of fields.
-	- position in *E*.
+
+		position in *E*.
+
 + Functions
 	+ set\<node> get_destination_nodes()
 	
