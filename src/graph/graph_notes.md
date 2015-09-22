@@ -178,8 +178,8 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 #### Graph class
 + Fields
-	+ set<<node>> nodes
-	+ set<edge> edges
+	+ set <<node>> nodes
+	+ set<< edge >> edges
 + Functions
 	+ set<node> get_nodes()
 	+ set<edge> get_edges()
