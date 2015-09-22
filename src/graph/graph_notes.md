@@ -65,13 +65,14 @@
 + begin()
 + end()
 
-See Table 14.1 of \cite{Goodrich2013}
+See Table 14.1 of \cite{Goodrich2013} (Python version) for the computational time complexities of these operations.
 
 
 
 
 ### Adjacency List
 
+See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
 
 
 ### Adjacency Matrix
@@ -88,6 +89,8 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 + Number of edges in a directed graph: *n(n - 1)*.
 + Number of edges in a undirected graph: *\frac{n(n - 1)}{2}*.
 + *|E| \subseteq V \times V \dots* list of lists 
+
+See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the edge list structure.
 
 
 ### Edge map
