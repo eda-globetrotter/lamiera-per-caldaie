@@ -93,7 +93,7 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 
 See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the edge list structure.
 
-It is simple to implement, but is not an efficient representation of graphs \\cite\[pp. 600-601\]{Goodrich2011}.
+It is simple to implement, but is not an efficient representation of graphs \\cite[pp. 600-601]{Goodrich2011}.
 
 Computational space complexity: **O(|V| + |E|)**.
 
