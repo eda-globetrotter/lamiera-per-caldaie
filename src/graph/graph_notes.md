@@ -75,7 +75,11 @@ See Tables 14.1 of \cite{Goodrich2013} (Python version) for the computational ti
 
 See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
 
-Compared to the edge list, the adjacency list adds extra information to enable edges incident on a given node to be found. Consequently, the neigboring nodes of the given node can also be found via the edges. This implies that functions that depending on finding edges incident on a node can be executed faster. The extra information stored is: each node stores a collection of adjacent nodes, via its incident edges \\cite[pp. 603]{Goodrich2011}.
+Compared to the edge list, the adjacency list adds extra information to enable edges incident on a given node to be found. Consequently, the neigboring nodes of the given node can also be found via the edges. This implies that functions that depending on finding edges incident on a node can be executed faster \\cite[pp. 603]{Goodrich2011}.
+
+One way to store the extra information is: each node stores a collection of adjacent nodes, via its incident edges; and each node also stores a reference to each of its incident edges. Another way to store the information is: each node stores a reference to each of its incident edges. These references can be used to determine the adjacent nodes of the given node \\cite[pp. 603]{Goodrich2011}.
+
+The main advantage of the adjacency list is that it provides nodes (direct) access to its incident edges and it also provides edges (direct) access to its end nodes \\cite[pp. 603]{Goodrich2011}.
 
 
 ### Adjacency Matrix
