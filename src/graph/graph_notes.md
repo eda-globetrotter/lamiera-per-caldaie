@@ -97,7 +97,7 @@ It is simple to implement, but is not an efficient representation of graphs \\ci
 
 Computational space complexity: **O(|V| + |E|)**.
 
-The container for nodes *V* can be implemented with a dictionary \\cite[pp. 60?]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container), using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values.
+The container for nodes *V* can be implemented with a dictionary \\cite[pp. 60?]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container) [https://en.wikipedia.org/wiki/Associative_array], using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values.
 
 
 
