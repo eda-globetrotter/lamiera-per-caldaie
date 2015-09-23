@@ -75,6 +75,8 @@ See Tables 14.1 of \cite{Goodrich2013} (Python version) for the computational ti
 
 See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
 
+Compared to the edge list, the adjacency list adds extra information to enable edges incident on a given node to be found. Consequently, the neigboring nodes of the given node can also be found via the edges. This implies that functions that depending on finding edges incident on a node can be executed faster. The extra information stored is: each node stores a collection of adjacent nodes, via its incident edges \\cite[pp. 603]{Goodrich2011}.
+
 
 ### Adjacency Matrix
 
@@ -97,9 +99,9 @@ It is simple to implement, but is not an efficient representation of graphs \\ci
 
 Computational space complexity: **O(|V| + |E|)**.
 
-The container for nodes *V* can be implemented with a dictionary \\cite[pp. 60?]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container) [https://en.wikipedia.org/wiki/Associative_array], using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values. Dictionary implementations of the containers for *V* and *E* allow searching for specific elements to be more convenient \\cite[pp. 601]{Goodrich2011}.
+The container for nodes *V* can be implemented with a dictionary \\cite[pp. 601]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container) [https://en.wikipedia.org/wiki/Associative_array], using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values. Dictionary implementations of the containers for *V* and *E* allow searching for specific elements to be more convenient \\cite[pp. 601]{Goodrich2011}.
 
-The main feature of this data structure is that a given edge allows direct access to vertices that it is incident on/upon \\cite[pp. 601]{Goodrich2011}. However, for a given node, it is difficult to determine which edges are incident upon it; this requires enumerating all the edges in *E*. This requires all other functions depending on this "function"/event to on in *O(|E|)*.
+The main feature of this data structure is that a given edge allows direct access to vertices that it is incident on/upon \\cite[pp. 601]{Goodrich2011}. However, for a given node, it is difficult to determine which edges are incident upon it; this requires enumerating all the edges in *E*. This requires all other functions depending on this "function"/event to on in *O(|E|)*. This is because the container for storing edges is unordered \\cite[pp. 602]{Goodrich2011}.
 
 Note that in *C++*, class templates in the *C++ STL* refer to a group of class templates for the ordered associative containers: set, map, multiset, and multimap [https://en.wikipedia.org/wiki/Associative_containers].
 
