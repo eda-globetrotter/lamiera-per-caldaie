@@ -108,7 +108,7 @@ Compared to the edge list, and just like the adjacency list, the adjacency matri
 
 
 
-Suggestion for implementation: If the 
+
 
 
 ### Edge List
@@ -125,7 +125,7 @@ See \\cite[Figure 14.4, pp. 628]{Goodrich2013} (Python version) for a more intui
 
 It is simple to implement, but is not an efficient representation of graphs \\cite[pp. 600-601]{Goodrich2011}.
 
-Computational space complexity: **O(|V| + |E|)**.
+Computational space complexity: **O(|V| + |E|)** \\cite[pp. 600-601]{Goodrich2011}.
 
 The container for nodes *V* can be implemented with a dictionary \\cite[pp. 601]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container) [https://en.wikipedia.org/wiki/Associative_array], using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values. Dictionary implementations of the containers for *V* and *E* allow searching for specific elements to be more convenient \\cite[pp. 601]{Goodrich2011}.
 
