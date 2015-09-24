@@ -56,6 +56,8 @@
 
 ## Data Structure Representations for Graphs
 
+The adjacency list is recommended for representing sparse graphs, while the adjacency matrix is recommended for representing dense graphs. The former requires *\Theta(V + E)* memory space, while the latter requires *\Theta(V^{2})* memory space \\cite{Cormen2009}.
+
 ### Operations that I care about:
 + add()
 + remove()
@@ -65,7 +67,7 @@
 + begin()
 + end()
 
-See Tables 14.1 of \cite{Goodrich2013} (Python version) for the computational time complexities of these operations.
+See Tables 14.1 of \\cite{Goodrich2013} (Python version) for the computational time complexities of these operations.
 
 
 
@@ -73,7 +75,7 @@ See Tables 14.1 of \cite{Goodrich2013} (Python version) for the computational ti
 
 ### Adjacency List
 
-See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
+See \\cite[Figure 14.5, pp. 630]{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
 
 Compared to the edge list, the adjacency list adds extra information to enable edges incident on a given node to be found. Consequently, the neigboring nodes of the given node can also be found via the edges. This implies that functions that depending on finding edges incident on a node can be executed faster \\cite[pp. 603]{Goodrich2011}.
 
@@ -81,10 +83,30 @@ One way to store the extra information is: each node stores a collection of adja
 
 The main advantage of the adjacency list is that it provides nodes (direct) access to its incident edges and it also provides edges (direct) access to its end nodes \\cite[pp. 603]{Goodrich2011}.
 
+It enables operations to be performed faster on the adjacency list representation than on the edge list representation \\cite[pp. 603]{Goodrich2011}.
+
 
 ### Adjacency Matrix
 
-Adjacency matrix: for sparse graphs, it takes up a lot of space
+See \\cite[Figure 14.7, pp. 633]{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
+
+Adjacency matrix: for sparse graphs, it takes up a lot of space???
+
+Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable edges incident on a given node to be found.
+\\cite[pp. 605]{Goodrich2011}
+
+
+
+
+
+
+
+
+
+
+
+
+Suggestion for implementation: If the 
 
 
 ### Edge List
@@ -97,7 +119,7 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space
 + Number of edges in a undirected graph: *\frac{n(n - 1)}{2}*.
 + *|E| \subseteq V \times V \dots* list of lists 
 
-See \cite{Goodrich2013} (Python version) for a more intuitive representation/diagram of the edge list structure.
+See \\cite[Figure 14.4, pp. 628]{Goodrich2013} (Python version) for a more intuitive representation/diagram of the edge list structure.
 
 It is simple to implement, but is not an efficient representation of graphs \\cite[pp. 600-601]{Goodrich2011}.
 

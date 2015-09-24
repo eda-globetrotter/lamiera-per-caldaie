@@ -193,6 +193,48 @@ null:
 
 
 
+
+#####################################################################
+#	Target for data types
+#####################################################################
+# Build and run C++ program to experiment with data types.
+dtypes:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	$(GPLUSPLUS)	$(COMPILE)	$(CPPMISC)test_data_types.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+
+
+
+
+
+
+
+
+
+
+
+
+
 #####################################################################
 #	Target for vector
 #####################################################################
