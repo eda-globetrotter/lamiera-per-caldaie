@@ -85,7 +85,16 @@ The main advantage of the adjacency list is that it provides nodes (direct) acce
 
 It enables operations to be performed faster on the adjacency list representation than on the edge list representation \\cite[pp. 603]{Goodrich2011}.
 
-Computational space complexity: **O(|V| + |E|)** \\cite[pp. 604]{Goodrich2011}.
+Computational space complexity: **O(|V| + |E|)** \\cite[pp. 604]{Goodrich2011} \\cite[pp. 600]{Goodrich2010}.
+
+
+
+
+
+
+
+
+
 
 
 ### Adjacency Matrix
@@ -102,6 +111,7 @@ Yet another implementation style: If the node and edge contain various sets of i
 
 Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable adjacent nodes (connected by an edge, between pairs of nodes) to be found in constant time \\cite[pp. 605]{Goodrich2011}.
 
+Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011} \\cite[pp. 600]{Goodrich2010}.
 
 
 
@@ -111,12 +121,6 @@ Compared to the edge list, and just like the adjacency list, the adjacency matri
 
 
 
-
-
-
-
-
-Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011}.
 
 
 ### Edge List
@@ -133,7 +137,7 @@ See \\cite[Figure 14.4, pp. 628]{Goodrich2013} (Python version) for a more intui
 
 It is simple to implement, but is not an efficient representation of graphs \\cite[pp. 600-601]{Goodrich2011}.
 
-Computational space complexity: **O(|V| + |E|)** \\cite[pp. 602]{Goodrich2011}.
+Computational space complexity: **O(|V| + |E|)** \\cite[pp. 602]{Goodrich2011} \\cite[pp. 600]{Goodrich2010}.
 
 The container for nodes *V* can be implemented with a dictionary \\cite[pp. 601]{Goodrich2011}. The container for edges *E* can be implemented with a list or dictionary (or associative array, map, symbol table, or associative container) [https://en.wikipedia.org/wiki/Associative_array], using the element as the key and edge as the value \\cite[pp. 601]{Goodrich2011}. Here, a dictionary is a set/collection of (key,value) pairs; or rather, it is an abstract data type (ADT) that maps keys to values. Dictionary implementations of the containers for *V* and *E* allow searching for specific elements to be more convenient \\cite[pp. 601]{Goodrich2011}.
 
