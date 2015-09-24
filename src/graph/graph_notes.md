@@ -117,6 +117,9 @@ Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011} \\cit
 
 
 
+### Adjacency Map
+
+
 
 
 
@@ -146,12 +149,14 @@ The main feature of this data structure is that a given edge allows direct acces
 Note that in *C++*, class templates in the *C++ STL* refer to a group of class templates for the ordered associative containers: set, map, multiset, and multimap [https://en.wikipedia.org/wiki/Associative_containers].
 
 
-### Edge map
+### Types Of Dictionaries For My Graphs
+
+#### Edge map
 
 List/vector of maps
 
 
-### Hash maps
+#### Hash maps
 + unordered associative containers
 + associative containers (ordered by keys) tend to be ordered
 
