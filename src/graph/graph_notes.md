@@ -90,7 +90,9 @@ It enables operations to be performed faster on the adjacency list representatio
 
 See \\cite[Figure 14.7, pp. 633]{Goodrich2013} (Python version) for a more intuitive representation/diagram of the adjacency list structure.
 
-Adjacency matrix: for sparse graphs, it takes up a lot of space???
+Adjacency matrix: for sparse graphs, it takes up a lot of space. For undirected graphs, the upper and lower triangular matrices are symmetrical with respect to each other along the diagonal. For directed graphs, the upper and lower triangular matrices differ (i.e., not symmetrical about any axis).
+
+With regards to implementation, if the edge weight can be treated as a number, and the nodes do not contain any unique/special element or set of elements, a 2-D matrix of numbers (e.g., int[][], double[][], or bool[][]) can be used to represent the 2-D array/matrix of nodes in the graph/network/circuit. Each entry in this 2-D array/matrix
 
 Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable edges incident on a given node to be found.
 \\cite[pp. 605]{Goodrich2011}

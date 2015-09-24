@@ -1,6 +1,8 @@
 /**
  * This is written by Zhiyang Ong to test ideas about data types.
- * Reference: http://www.cplusplus.com/doc/tutorial/variables/
+ * Reference:
+ *	http://www.cplusplus.com/doc/tutorial/variables/
+ *	http://www.cplusplus.com/reference/climits/
  *
  * The MIT License (MIT)
  *
