@@ -248,7 +248,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	
 		If (*v = w*),
 		
-			return NULL (because self-loops are not allowed).
+			return *NULL* (because self-loops are not allowed).
 
 		Else,
 
@@ -266,7 +266,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ unsigned long long int edge_count()
 	+ edge get_edge(node u, node v)
 	
-		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return null.
+		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return *NULL*.
 	+ unsigned long long int out_degree(v)
 	+ unsigned long long int in_degree(v)
 	+ set\<edge> outgoing_edges(node v)
