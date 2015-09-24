@@ -98,7 +98,7 @@ With regards to implementation, if the edge weight can be treated as a number, a
 
 Another implementation style: If the node does not contain specific information, but the edge contains various information, the node's ID needs to be uniquely mapped into [1, n]; uniquely map the node's ID into the range 1 to *n*, inclusive, without conflicts (i.e., mapping multiple nodes' IDs into the same integer between 1 and *n* is forbidden). This mapping, via the dictionary ADT, allows edges (or references to edge objects) to be stored in a 2-D matrix of edges (or references to edge objects). Here, if no edge connects a given pair of nodes *i* and *j*, the entry array[i][j] shall point to *NULL*. This representation also can be extended to multigraphs by adding another container to store multiple edges (or pointer references to edges).
 
-Yet another implementation style: If the node and edge contain various sets of information, a separate container of node objects is needed to augment information stored in a 2-D matrix of edge objects. Once again, if no edge connects a given pair of nodes *i* and *j*, the entry array[i][j] shall point to *NULL*.
+Yet another implementation style: If the node and edge contain various sets of information, a separate container of node objects is needed to augment information stored in a 2-D matrix of edge objects. Once again, if no edge connects a given pair of nodes *i* and *j*, the entry array[i][j] shall point to *NULL*. It is difficult to extend this representation to multigraphs.
 
 Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable adjacent nodes (connected by an edge, between pairs of nodes) to be found in constant time \\cite[pp. 605]{Goodrich2011}.
 
