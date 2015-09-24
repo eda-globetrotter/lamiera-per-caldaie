@@ -238,7 +238,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ bool is_incident_on(node v)
 	
 		Return true if current edge is incident on *v*.
-	+ erase_node(v)
+	+ remove_node(v)
 	
 		Remove node v and all its incident edges.
 
@@ -268,11 +268,11 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 			return new directed edge from node *v* to node *w*, storing element *x*.
 
-	+ bool erase_node(node v)
+	+ bool remove_node(node v)
 
 		Remove node *v* and all its incident edges.
 		
-	+ bool erase_edge(edge e)
+	+ bool remove_edge(edge e)
 	
 		Remove edge *e*.
 		
