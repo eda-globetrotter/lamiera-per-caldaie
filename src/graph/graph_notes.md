@@ -96,9 +96,9 @@ Adjacency matrix: for sparse graphs, it takes up a lot of space. For undirected 
 
 With regards to implementation, if the edge weight can be treated as a number, and the nodes do not contain any unique/special element or set of elements, a 2-D matrix of numbers (e.g., int[][], double[][], or bool[][]) can be used to represent the 2-D array/matrix of nodes in the graph/network/circuit. Each entry in this 2-D array/matrix would be the weight of the edge connecting the row-indexed node with the column-indexed node.
 
-Another implementation style: If the node does not contain specific information, but the edge contains various information, the node's ID needs to be mapped into [1, n]. This 
-int[][]
- of the 
+Another implementation style: If the node does not contain specific information, but the edge contains various information, the node's ID needs to be mapped into [1, n]. This mapping, via the dictionary ADT, allows edges (or references to edge objects) to be stored in a 2-D matrix of edges (or references to edge objects).
+
+Yet another implementation style: If the node and the edge contain various information each, a separate container of node objects is needed to augment information stored in a 2-D matrix of edge objects.
 
 Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable edges incident on a given node to be found.
 \\cite[pp. 605]{Goodrich2011}
