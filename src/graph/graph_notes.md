@@ -116,7 +116,7 @@ Compared to the edge list, and just like the adjacency list, the adjacency matri
 
 
 
-Computational space complexity: **O(|V| + |E|)** \\cite[pp. 60?]{Goodrich2011}.
+Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011}.
 
 
 ### Edge List
