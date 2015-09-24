@@ -128,7 +128,7 @@ Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011} \\cit
 
 ### Edge List
 
-+ Keep an unordered list of all edges.
++ Keep an unordered list of all edges \\cite[pp. 627]{Goodrich2013}.
 + Difficult to find a given edge, *(u,v)*
 + Difficult to find a set of all edges incident to a node *v*, which is important for deletion or modification of the node *v*
 + *|E| \approx |V|^{2}*
