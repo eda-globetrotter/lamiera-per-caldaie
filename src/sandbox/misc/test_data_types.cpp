@@ -77,6 +77,9 @@ int main(int argc, char *argv[]) {
 	 * Be careful with assigning negative numbers to the
 	 *	data type "unsigned long long".
 	 * It will result in a subtraction from ULLONG_MAX.
+	 *
+	 * E.g., unsigned long long my_number = -100;
+	 *		my_number = ULLONG_MAX - 100;
 	 */
 	unsigned long long c = -123456789;
 	cout << "c is		::" << c << "==" << endl;
@@ -86,7 +89,7 @@ int main(int argc, char *argv[]) {
 	
 	// For computation with large real numbers.
 	long double d = 123456789.9178;
-	
+	cout << "d is		::" << d << "==" << endl;
 	
 	// End of main function...
 	return 0;
