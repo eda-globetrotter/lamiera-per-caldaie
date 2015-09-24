@@ -94,7 +94,11 @@ See \\cite[Figure 14.7, pp. 633]{Goodrich2013} (Python version) for a more intui
 
 Adjacency matrix: for sparse graphs, it takes up a lot of space. For undirected graphs, the upper and lower triangular matrices are symmetrical with respect to each other along the diagonal. For directed graphs, the upper and lower triangular matrices differ (i.e., not symmetrical about any axis).
 
-With regards to implementation, if the edge weight can be treated as a number, and the nodes do not contain any unique/special element or set of elements, a 2-D matrix of numbers (e.g., int[][], double[][], or bool[][]) can be used to represent the 2-D array/matrix of nodes in the graph/network/circuit. Each entry in this 2-D array/matrix
+With regards to implementation, if the edge weight can be treated as a number, and the nodes do not contain any unique/special element or set of elements, a 2-D matrix of numbers (e.g., int[][], double[][], or bool[][]) can be used to represent the 2-D array/matrix of nodes in the graph/network/circuit. Each entry in this 2-D array/matrix would be the weight of the edge connecting the row-indexed node with the column-indexed node.
+
+Another implementation style: If the node does not contain specific information, but the edge contains various information, the node's ID needs to be mapped into [1, n]. This 
+int[][]
+ of the 
 
 Compared to the edge list, and just like the adjacency list, the adjacency matrix adds extra information to enable edges incident on a given node to be found.
 \\cite[pp. 605]{Goodrich2011}
@@ -157,7 +161,7 @@ Accessing elements of a map is more complicated than that of a set. Go to key, t
 sets and maps in the C++ STL are typically implemented as binary search trees (BSTs)\...
 
 
-## Design of Node class and Edge class
+## Design of Node class and Edge class for Directed Graph
 
 
 
