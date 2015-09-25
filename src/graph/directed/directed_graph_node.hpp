@@ -52,10 +52,10 @@
 
 
 // Import packages from the software
-#include "../utilities/printer.hpp"
-#include "../utilities/violated_assertion.hpp"
-#include "../utilities/violated_precondition.hpp"
-#include "../utilities/violated_postcondition.hpp"
+#include "../../utilities/printer.hpp"
+#include "../../utilities/violated_assertion.hpp"
+#include "../../utilities/violated_precondition.hpp"
+#include "../../utilities/violated_postcondition.hpp"
 
 // Import packages from the C++ STL
 #include <string>

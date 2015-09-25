@@ -175,9 +175,11 @@ void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long
  */
 void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_ID) {
 	// Is there an edge in the set of incoming edges with given ID?
+/*
 	if() {
 	}else{
 	}
+*/
 }
 
 

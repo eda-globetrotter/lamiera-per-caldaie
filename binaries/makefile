@@ -133,6 +133,8 @@ ERRORTXT=			error_output.txt
 #
 # Module that defines the key components of a (hyper)graphs.
 GRAPHPATH=		../src/graph/
+DIRGRAPHPATH=	../src/graph/directed/
+UNDIRGRAPHPATH=	../src/graph/undirected/
 #
 # Module containing the input benchmarks that are used to test my software.
 BENCHMARKS=		../benchmarks/
@@ -158,6 +160,8 @@ MAINPATH=		../src/main/
 TESTPATH=		../src/test/
 # Submodules of the Test module
 TPGRAPH=		graph_t/
+TPDIRGRAPH=		directed/
+TPUNDIRGRAPH=	undirected/
 TPMAIN=			main_t/
 TPUTILITIES=	utilities_t/
 TPPARSERS=		parsers_t/
@@ -253,12 +257,13 @@ test:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Graph Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(GRAPHPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
 	@echo === Parsers Directory
 	@echo === Test/Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
 	@echo === Test/Graph Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
+	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(TPDIRGRAPH)$(SOURCE)
 	@echo === Test/Parsers Directory
 	@echo === Test Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(SOURCE)

@@ -39,7 +39,7 @@
  */
 
 // Import Header files from the current/other module(s) of AggieMC.
-#include "directed_graph_node_ut.hpp"
+#include "directed/directed_graph_node_ut.hpp"
 // Graph module
 /*
 #include "directed_graph_node_ut.hpp"

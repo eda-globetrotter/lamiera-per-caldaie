@@ -40,7 +40,7 @@
  */
 
 // Import Header files from the other modules of AggieMC.
-#include "../../graph/directed_graph_node.hpp"
+#include "../../../graph/directed/directed_graph_node.hpp"
 
 
 // Import appropriate header files from the C++ STL
