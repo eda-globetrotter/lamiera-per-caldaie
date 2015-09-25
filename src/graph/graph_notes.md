@@ -119,8 +119,7 @@ Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011} \\cit
 
 ### Adjacency Map
 
-It is very similar to the adjacency list representation
-\\cite[pp. 627]{Goodrich2013}
+It is **very similar to the adjacency list representation, except that a map is used as a secondary container (instead of a list) to store incident edges for each node. For a given incident edge of a given node, the adjacent node is used as the key for that incident edge (value)**, in the (key,value) pair for maps. This **allows a given edge (u,v) to be accessed in O(1) time** \\cite[pp. 627]{Goodrich2013}.
 
 
 
