@@ -128,9 +128,9 @@ It is very similar to the adjacency list representation
 
 ### Edge List
 
-+ Keep an unordered list of all edges \\cite[pp. 627]{Goodrich2013}.
-+ Difficult to find a given edge, *(u,v)*
-+ Difficult to find a set of all edges incident to a node *v*, which is important for deletion or modification of the node *v*
++ **Keep an unordered list of all edges** \\cite[pp. 627]{Goodrich2013}.
++ **Difficult to find a given edge, *(u,v)* **
++ **Difficult to find a set of all edges incident to a node *v***, which is important for deletion or modification of the node *v*
 + *|E| \approx |V|^{2}*
 + Number of edges in a directed graph: *n(n - 1)*.
 + Number of edges in a undirected graph: *\frac{n(n - 1)}{2}*.
