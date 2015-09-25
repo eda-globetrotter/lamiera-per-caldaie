@@ -67,7 +67,7 @@ The adjacency list is recommended for representing sparse graphs, while the adja
 + begin()
 + end()
 
-See Tables 14.1 of \\cite{Goodrich2013} (Python version) for the computational time complexities of these operations.
+See Tables 14.1 of \\cite{Goodrich2013} (Python version) for the computational time complexities of these operations. This table also indicates the computational time complexity for other operations/functions/methods of graphs.
 
 
 
@@ -121,6 +121,7 @@ Computational space complexity: **O(|V|^2)** \\cite[pp. 606]{Goodrich2011} \\cit
 
 It is **very similar to the adjacency list representation, except that a map is used as a secondary container (instead of a list) to store incident edges for each node. For a given incident edge of a given node, the adjacent node is used as the key for that incident edge (value)**, in the (key,value) pair for maps. This **allows a given edge (u,v) to be accessed in O(1) time** \\cite[pp. 627]{Goodrich2013}.
 
+Computational space complexity: **O(|V| + |E|)** \\cite[pp. 627]{Goodrich2013}.
 
 
 
