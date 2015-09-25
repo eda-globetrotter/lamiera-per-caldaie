@@ -2,13 +2,15 @@
  * Graph package:
  * Module to implement graphs and networks.
  *
- * directed_graph_node class:
- * Class to represent node of basic directed graph.
+ * directed_graph_edge class:
+ * Class to represent an edge of a basic directed graph.
  *
  * IMPORTANT NOTES:
- * Assume that the ID of each node is unique for all the nodes in
+ * Assume that the ID of each edge is unique for all the edges in
  *	the graph.
- * Hence, the node ID can be used to identify a given node.
+ * Hence, the edge ID can be used to identify a given edge.
+ *	This enables the distinction between edges connecting the same
+ *		pair/set of nodes.
  * The terms "node" and "vertex", of a graph, are used synonymously
  *	in our software AggieMC.
  * Enable support of multigraphs and hypergraphs.

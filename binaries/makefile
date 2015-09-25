@@ -246,7 +246,7 @@ all:
 ########################################################################
 # TEST THE SOFTWARE: UNIT, MODULE, INTEGRATION, AND REGRESSION TESTING
 ########################################################################
-# Build and test the latest software build 
+# Build and test the latest software build. 
 test:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
