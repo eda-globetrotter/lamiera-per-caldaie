@@ -35,6 +35,25 @@
 # IMPORTANT:: Paths to be modified!!!
 # Benchmark directory, relative from the working directory for Lamiera-per-caldaie
 BENCHMARKS=	./benchmarks/
+SOURCE=		hw4_q1.mod
+
+
+
+
+
+
+
+
+# Solvers...
+#	GNU Linear Programming Kit package, GLPK
+GLPK=		glpsol
+#	Flags for GLPK
+PRIMAL=		--primal	# Primal of mathematical programming problem.
+DUAL=		--dual		# Dual of mathematical programming problem.
+IPFILES=	-m			# Input file(s) for linear or mixed-integer programming.
+
+
+
 
 
 
@@ -64,14 +83,14 @@ BENCHMARKS=	./benchmarks/
 ########################################################################
 # Build and test the latest software build.
 
-@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+test:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	$(DATE)
-	$(TBBSETUP)
-	@echo === Compiling C++ source code in the...
-	@echo === Utilities Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	@echo === GNU Linear Programming Kit package, GLPK.
+	@echo === Call the GLPK solver package
+	$(GLPK)	$(PRIMAL)	$(IPFILES)$(SOURCE)
 
 
 

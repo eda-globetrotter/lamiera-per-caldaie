@@ -207,6 +207,15 @@ int main(int argc, char *argv[]) {
 	cout << "		- END OF TEST SUITE -"<<endl;
 	cout << "===============================================================" << endl;
 	
+	
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << "===============================================================" << endl;
+	cout << "		- Call the GLPK solver." << endl;
+	system("glpsol --primal -m glpk/hw4_q1.mod");
+	cout << "		Arrivederci!" << endl;
+	
 	// End of main function...
 	return 0;
 }
