@@ -14,7 +14,8 @@
  * Enable support of multigraphs and hypergraphs.
  * Other boolean comparisons can be implemented by overloading the
  *	operator child class.
- *
+ * Definition of the class directed_graph_node depends on the
+ *	definition of the class directed_graph_edge.
  *
  *
  *
@@ -56,10 +57,18 @@
 
 // ==================================================================
 
-// Default constructor.
+/**
+ * Default constructor.
+ *
+ * Values for private variables are set to invalid values.
+ */
 directed_graph_node::directed_graph_node() {
-	// Assign private instance variables to NULL.
+	/**
+	 * Assign node ID to the maxium unsigned long long int value,
+	 *	so that it represents an INVALID node ID.
+	 */
 	node_ID = ULLONG_MAX;
+	// Assign private instance variables to NULL.
 /*
 	outgoing_edges = NULL;
 	incoming_edges = NULL;
@@ -71,13 +80,14 @@ directed_graph_node::directed_graph_node() {
 */
 }
 
+// -----------------------------------------------------------------
 // Standard constructors.
 
 /**
  * Standard constructor.
  * @param node_id_num:	The ID number of the node.
  */
-directed_graph_node::directed_graph_node(unsigned long long node_id_num) {
+directed_graph_node::directed_graph_node(unsigned long long int node_id_num) {
 	// Assign the Node ID to be node_id_num.
 	node_ID = node_id_num;
 	// Assign other private instance variables to NULL.

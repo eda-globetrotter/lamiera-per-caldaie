@@ -14,7 +14,8 @@
  * Enable support of multigraphs and hypergraphs.
  * Other boolean comparisons can be implemented by overloading the
  *	operator child class.
- *
+ * Definition of the class directed_graph_node depends on the
+ *	definition of the class directed_graph_edge.
  *
  *
  *
@@ -52,6 +53,7 @@
 
 
 // Import packages from the software
+//	Importing from the Utility module.
 #include "../../utilities/printer.hpp"
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
@@ -134,13 +136,11 @@ class directed_graph_node {
 		/**
 		 * Function to get the incoming edges from this node.
 		 */
-//		set<pair<unsigned long long,bool> > get_incoming_edges();
-		set<unsigned long long int> get_incoming_edges();
+		set<directed_graph_edge> get_incoming_edges();
 		/**
 		 * Function to get the outgoing edges from this node.
 		 */
-//		set<pair<unsigned long long,bool> > get_outgoing_edges();
-		set<unsigned long long int> get_outgoing_edges();		
+		set<directed_graph_edge> get_outgoing_edges();		
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
 
