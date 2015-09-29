@@ -98,6 +98,7 @@ directed_graph_node::directed_graph_node(unsigned long long int node_id_num) {
 }
 
 
+// -----------------------------------------------------------------
 /**
  * Default destructor.
  *	Carry out dynamic memory management.
@@ -112,10 +113,10 @@ directed_graph_node::~directed_graph_node() {
 /**
  * Function to get the incoming edges from this node.
  * @param - None.
- * @return - The vector of incoming edges from this node.
+ * @return - The set of incoming edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_incoming_edges() {
-set<unsigned long long int> directed_graph_node::get_incoming_edges() {
+set<directed_graph_edge> directed_graph_node::get_incoming_edges() {
 	return incoming_edges;
 }
 
@@ -123,10 +124,10 @@ set<unsigned long long int> directed_graph_node::get_incoming_edges() {
 /**
  * Function to get the outgoing edges from this node.
  * @param - None.
- * @return - The vector of outgoing edges from this node.
+ * @return - The set of outgoing edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_outgoing_edges() {
-set<unsigned long long int> directed_graph_node::get_outgoing_edges() {
+set<directed_graph_edge> directed_graph_node::get_outgoing_edges() {
 	return outgoing_edges;
 }
 
@@ -194,6 +195,15 @@ void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_I
 
 
 /**
+ * Function to add an incoming edge to the current set of
+ *	incoming edges.
+ * @return - Nothing.
+ */
+void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_ID) {
+}
+
+
+/**
  * Function to add an outgoing edge to the current set of
  *	outgoing edges.
  * @return - Nothing.
@@ -203,7 +213,16 @@ void directed_graph_node::add_outgoing_edge(const unsigned long long &destn_node
 
 
 /**
- * Function to remove an incoming edge to the current set of
+ * Function to add an outgoing edge to the current set of
+ *	outgoing edges.
+ * @return - Nothing.
+ */
+void directed_graph_node::add_outgoing_edge(const unsigned long long &destn_node_ID) {
+}
+
+
+/**
+ * Function to remove an incoming edge from the current set of
  *	incoming edges.
  * @return - Nothing.
  */
@@ -212,13 +231,32 @@ void directed_graph_node::remove_incoming_edge(const unsigned long long &node_ID
 
 
 /**
- * Function to remove an outgoing edge to the current set of
+ * Function to remove an incoming edge from the current set of
+ *	incoming edges.
+ * @param incoming_edge_rm:		Incoming edge to be removed.
+ * @return - Nothing.
+ */
+void directed_graph_node::remove_incoming_edge(const directed_graph_edge &incoming_edge_rm) {
+}
+
+
+/**
+ * Function to remove an outgoing edge from the current set of
  *	outgoing edges.
+ * @param
  * @return - Nothing.
  */
 void directed_graph_node::remove_outgoing_edge(const unsigned long long &node_ID_removal) {
 }
 
 
+/**
+ * Function to remove an outgoing edge from the current set of
+ *	outgoing edges.
+ * @param outgoing_edge_rm:		Outgoing edge to be removed.
+ * @return - Nothing.
+ */
+void directed_graph_node::remove_outgoing_edge(const directed_graph_edge &outgoing_edge_rm) {
+}
 
 

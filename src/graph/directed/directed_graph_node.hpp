@@ -174,15 +174,17 @@ class directed_graph_node {
 		 */
 		void add_outgoing_edge(const unsigned long long int &destn_node_ID);
 		/**
-		 * Function to remove an incoming edge to the current set of
+		 * Functions to remove an incoming edge to the current set of
 		 *	incoming edges.
 		 */
 		void remove_incoming_edge(const unsigned long long int &node_ID_removal);
+		void remove_incoming_edge(const unsigned long long int &directed_graph_edge_rm);
 		/**
-		 * Function to remove an outgoing edge to the current set of
+		 * Functions to remove an outgoing edge to the current set of
 		 *	outgoing edges.
 		 */
 		void remove_outgoing_edge(const unsigned long long int &node_ID_removal);
+		void remove_outgoing_edge(const unsigned long long int &directed_graph_edge_rm);
 		
 
 	// =========================================================
@@ -223,10 +225,10 @@ class directed_graph_node {
 		unsigned long long int node_ID;
 		// Set of outgoing edges: pair(destination node, inverter flag).
 //		set<pair<unsigned long long,bool> > outgoing_edges;
-		set<unsigned long long int> outgoing_edges;
+		set<directed_graph_edge*> outgoing_edges;
 		// Set of incoming edges: pair(source node, inverter flag).
 //		set<pair<unsigned long long,bool> > incoming_edges;
-		set<unsigned long long int> incoming_edges;
+		set<directed_graph_edge*> incoming_edges;
 		
 		
 		// -------------------------------------------------------
