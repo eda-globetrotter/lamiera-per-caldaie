@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: data-structures-n_algor.aux
+The style file: plain.bst
+Database file #1: /Users/zhiyang/Documents/ricerca/antipastobibtex/references.bib
+Reallocated buffer (elt_size=1) to 40000 items from 20000.
+Reallocated sv_buffer (elt_size=1) to 40000 items from 20000.
+Reallocated ex_buf (elt_size=1) to 40000 items from 20000.
+Reallocated out_buf (elt_size=1) to 40000 items from 20000.
+Reallocated name_tok (elt_size=4) to 40000 items from 20000.
+Reallocated name_sep_char (elt_size=1) to 40000 items from 20000.
+Reallocated buffer (elt_size=1) to 60000 items from 40000.
+Reallocated sv_buffer (elt_size=1) to 60000 items from 40000.
+Reallocated ex_buf (elt_size=1) to 60000 items from 40000.
+Reallocated out_buf (elt_size=1) to 60000 items from 40000.
+Reallocated name_tok (elt_size=4) to 60000 items from 40000.
+Reallocated name_sep_char (elt_size=1) to 60000 items from 40000.
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            621 strings with 6706 characters,
+and the built_in function-call counts, 4725 in all, are:
+= -- 458
+> -- 169
+< -- 2
++ -- 72
+- -- 50
+* -- 227
+:= -- 842
+add.period$ -- 66
+call.type$ -- 20
+change.case$ -- 76
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 230
+empty$ -- 441
+format.name$ -- 50
+if$ -- 1018
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 36
+newline$ -- 103
+num.names$ -- 40
+pop$ -- 124
+preamble$ -- 1
+purify$ -- 65
+quote$ -- 0
+skip$ -- 126
+stack$ -- 0
+substring$ -- 102
+swap$ -- 22
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 0
+while$ -- 40
+width$ -- 22
+write$ -- 237

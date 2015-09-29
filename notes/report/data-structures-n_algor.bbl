@@ -1,0 +1,115 @@
+\begin{thebibliography}{10}
+
+\bibitem{Abrahams2005}
+David Abrahams and Aleksey Gurtovoy.
+\newblock {\em {C++} Template Metaprogramming: Concepts, Tools, and Techniques
+  from Boost and Beyond}.
+\newblock {C++} In-Depth Series. Pearson Education, Boston, {MA}, 2005.
+
+\bibitem{Alexandrescu2001}
+Andrei Alexandrescu.
+\newblock {\em Modern {C++} Design: Generic Programming and Design Patterns
+  Applied}.
+\newblock {C++} In-Depth Series. Addison-Wesley, Indianapolis, {IN}, 2001.
+
+\bibitem{Allain2012}
+Alex Allain.
+\newblock {\em Jumping into {C++}}.
+\newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
+
+\bibitem{CplusplusCom2014}
+cplusplus.com.
+\newblock The {C++} resources network.
+\newblock Available online at: \url{http://www.cplusplus.com/}; April 2, 2014
+  was the last accessed date, 2014.
+
+\bibitem{Eckel2000}
+Bruce Eckel.
+\newblock {\em Thinking in C++: Introduction to Standard C++}, volume~1.
+\newblock Prentice Hall, Upper Saddle River, {NJ}, second edition, 2000.
+
+\bibitem{Eckel2003}
+Bruce Eckel and Chuck Allison.
+\newblock {\em Thinking in C++: Practical Programming}, volume~2.
+\newblock Prentice Hall, Upper Saddle River, {NJ}, 2003.
+
+\bibitem{Gaddis2010}
+Tony Gaddis.
+\newblock {\em Starting Out With {C++}: From Control Structures Through
+  Objects}.
+\newblock Pearson Education, Boston, {MA}, sixth (brief) edition, 2010.
+
+\bibitem{Gregoire2014}
+Marc Gregoire.
+\newblock {\em Professional {C++}}.
+\newblock John Wiley {\rm \&} Sons, Indianapolis, {IN}, third edition, 2014.
+
+\bibitem{Lippman2013}
+Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
+\newblock {\em {C++} Primer}.
+\newblock Addison-Wesley, Upper Saddle River, {NJ}, fifth edition, 2013.
+
+\bibitem{Meyer2005}
+Scott Meyers.
+\newblock {\em Effective {C++}: 55 Specific Ways to Improve Your Programs and
+  Designs}.
+\newblock Addison-Wesley Professional Computing Series. Pearson Education,
+  Upper Saddle River, {NJ}, third edition, 2005.
+
+\bibitem{Mohtashim2015a}
+Mohtashim.
+\newblock {C++ STL} tutorial.
+\newblock Available online at {\it Tutorials Point: {C++} Tutorial: {C++ STL}
+  Tutorial}:
+  \url{http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm}; September
+  17, 2015 was the last accessed date, 2015.
+
+\bibitem{Oualline2003}
+Steve Oualline.
+\newblock {\em Practical {C++} Programming}.
+\newblock Programming Style Guidelines. O'Reilly Media, Sebastopol, {CA},
+  second edition, 2003.
+
+\bibitem{Prata2012}
+Stephen Prata.
+\newblock {\em {C++} Primer Plus: Developer's Library}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, sixth edition, 2012.
+
+\bibitem{Reese2006a}
+Greg Reese.
+\newblock {\em {C++} Standard Library Practical Tips}.
+\newblock Charles River Media Programming Series. Charles River Media, Hingham,
+  {MA}, 2006.
+
+\bibitem{Schildt2003}
+Herbert Schildt.
+\newblock {\em {C++}: The Complete Reference}.
+\newblock Osborne Complete Reference Series. {McGraw-Hill}/Osborne, Berkeley,
+  {CA}, fourth edition, 2003.
+
+\bibitem{Schildt2004a}
+Herbert Schildt.
+\newblock {\em The Art of {C++}}.
+\newblock {McGraw-Hill}/Osborne, Emeryville, {CA}, 2004.
+
+\bibitem{Stroustrup2009}
+Bjarne Stroustrup.
+\newblock {\em Programming: Principles and Practice Using {C++}}.
+\newblock Pearson Education, Boston, {MA}, 2009.
+
+\bibitem{Stroustrup2014}
+Bjarne Stroustrup.
+\newblock {\em Programming: Principles and Practice Using {C++}}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, second edition, 2014.
+
+\bibitem{Vandevoorde2003}
+David Vandevoorde and Nicolai~M. Josuttis.
+\newblock {\em {C++} Templates: The Complete Guide}.
+\newblock Pearson Education, Boston, {MA}, 2003.
+
+\bibitem{Vermeir2001}
+Dirk Vermeir.
+\newblock {\em Multi-Paradigm Programming using {C++}}.
+\newblock Springer-Verlag London Berlin Heidelberg, London, {U.K.}, 2001.
+
+\end{thebibliography}
