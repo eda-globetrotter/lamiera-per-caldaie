@@ -1,73 +1,3 @@
-BibTeX keys for C++ resources that I am using:
-[To be updated]
-
-
-
-
-Strings
-Eckel2003, Chp 1
-Stroustrup2014, Chp 23
-Stroustrup2009, Chp 23
-Allain2012, Chp 19
-Gregoire2014, Chp 18
-
-
-
-
-
-IO Streams
-Eckel2003, Chp 2
-Gaddis2010, Chp 12
-Stroustrup2014, Chp 10-11
-Stroustrup2009, Chp 10-11
-Qualline2003, Chp 16
-Vermeir2001, Chp 10
-Schildt2003, Chp 21
-Allain2012, Chp 28
-Gregoire2014, Chp 12
-Prata2012, Chp 17
-Lippman2013, Chp 8
-
-
-
-Templates
-Eckel2003, Chp 3
-Eckel2000, Chp 16
-Stroustrup2014, Chp 19
-Stroustrup2009, Chp 19
-Qualline2003, Chp 24
-Vermeir2001, Chp 6
-Alexandrescu2001, book; typelist - Chp 3
-Schildt2003, Chp 18
-Vandevoorde2003, book
-Abrahams2005, book
-Allain2012, Chp 29
-Gregoire2014, Chp 11,21
-Lippman2013, Chp 16
-
-
-
-STL containers
-Eckel2003, Chp 4
-Schildt2004a, Chp 8
-Qualline2003, Chp 25
-Vermeir2001, Chp 7
-Reese2006a, book
-Allain2012, Chp 18
-Gregoire2014, Chp 15-16
-Prata2012, Chp 16
-Lippman2013, Chp 9,11
-
-
-STL algorithms
-Eckel2003, Chp 5
-Qualline2003, Chp 25
-Vermeir2001, Chp 7
-Reese2006a, book
-Allain2012, Chp 18
-Gregoire2014, Chp 15,17
-Prata2012, Chp 16
-Lippman2013, Chp 10
 
 
 
@@ -76,16 +6,24 @@ Lippman2013, Chp 10
 
 
 
-Debugging
-Eckel2003, Chp 11 (especially memory management problems, pp. 533)
 
 
 
 
-Function addresses
-Eckel2000, Chp 3, pp. 213
-Stroustrup2014, Chp 8
-Stroustrup2009, Chp 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
