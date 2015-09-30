@@ -116,7 +116,7 @@ directed_graph_node::~directed_graph_node() {
  * @return - The set of incoming edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_incoming_edges() {
-set<directed_graph_edge> directed_graph_node::get_incoming_edges() {
+set<directed_graph_edge*> directed_graph_node::get_incoming_edges() {
 	return incoming_edges;
 }
 
@@ -127,7 +127,7 @@ set<directed_graph_edge> directed_graph_node::get_incoming_edges() {
  * @return - The set of outgoing edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_outgoing_edges() {
-set<directed_graph_edge> directed_graph_node::get_outgoing_edges() {
+set<directed_graph_edge*> directed_graph_node::get_outgoing_edges() {
 	return outgoing_edges;
 }
 
@@ -163,7 +163,7 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
-void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long int> &set_incoming_links) {
+void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edge*> &set_incoming_links) {
 	incoming_edges.insert(set_incoming_links.begin(), set_incoming_links.end());
 }
 
@@ -174,7 +174,7 @@ void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
-void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long int> &set_outgoing_links) {
+void directed_graph_node::add_set_of_outgoing_edges(const set<directed_graph_edge*> &set_outgoing_links) {
 	outgoing_edges.insert(set_outgoing_links.begin(), set_outgoing_links.end());
 }
 
@@ -184,7 +184,7 @@ void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long
  *	incoming edges.
  * @return - Nothing.
  */
-void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_ID) {
+void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_link) {
 	// Is there an edge in the set of incoming edges with given ID?
 /*
 	if() {
@@ -193,33 +193,13 @@ void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_I
 */
 }
 
-
-/**
- * Function to add an incoming edge to the current set of
- *	incoming edges.
- * @return - Nothing.
- */
-void directed_graph_node::add_incoming_edge(const unsigned long long &src_node_ID) {
-}
-
-
 /**
  * Function to add an outgoing edge to the current set of
  *	outgoing edges.
  * @return - Nothing.
  */
-void directed_graph_node::add_outgoing_edge(const unsigned long long &destn_node_ID) {
+void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_link) {
 }
-
-
-/**
- * Function to add an outgoing edge to the current set of
- *	outgoing edges.
- * @return - Nothing.
- */
-void directed_graph_node::add_outgoing_edge(const unsigned long long &destn_node_ID) {
-}
-
 
 /**
  * Function to remove an incoming edge from the current set of

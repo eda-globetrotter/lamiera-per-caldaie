@@ -156,35 +156,35 @@ class directed_graph_node {
 		 *	set of incoming edges.
 		 */
 //		void add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links);
-		void add_set_of_incoming_edges(const set<unsigned long long int> &set_incoming_links);
+		void add_set_of_incoming_edges(const set<directed_graph_edge> &set_incoming_links);
 		/**
 		 * Function to add a set of outgoing edges to the current
 		 *	set of outgoing edges.
 		 */
 //		void add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links);
-		void add_set_of_outgoing_edges(const set<unsigned long long int> &set_outgoing_links);
+		void add_set_of_outgoing_edges(const set<directed_graph_edge> &set_outgoing_links);
 		/**
 		 * Function to add an incoming edge to the current set of
 		 *	incoming edges.
 		 */
-		void add_incoming_edge(const unsigned long long int &src_node_ID);
+		void add_incoming_edge(const directed_graph_edge &incoming_link);
 		/**
 		 * Function to add an outgoing edge to the current set of
 		 *	outgoing edges.
 		 */
-		void add_outgoing_edge(const unsigned long long int &destn_node_ID);
+		void add_outgoing_edge(const directed_graph_edge &outgoing_link);
 		/**
 		 * Functions to remove an incoming edge to the current set of
 		 *	incoming edges.
 		 */
 		void remove_incoming_edge(const unsigned long long int &node_ID_removal);
-		void remove_incoming_edge(const unsigned long long int &directed_graph_edge_rm);
+		void remove_incoming_edge(const directed_graph_edge &directed_graph_edge_rm);
 		/**
 		 * Functions to remove an outgoing edge to the current set of
 		 *	outgoing edges.
 		 */
 		void remove_outgoing_edge(const unsigned long long int &node_ID_removal);
-		void remove_outgoing_edge(const unsigned long long int &directed_graph_edge_rm);
+		void remove_outgoing_edge(const directed_graph_edge &directed_graph_edge_rm);
 		
 
 	// =========================================================

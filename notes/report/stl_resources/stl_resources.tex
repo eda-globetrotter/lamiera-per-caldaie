@@ -50,7 +50,7 @@ C++ topics: \vspace{-0.3cm}
 \item IO Streams: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Eckel2003}, Chp 2
-	\item \cite{Gaddis2010}, Chp 12
+	\item \cite{Gaddis2010}, Chp 12. See all of \cite{Gaddis2010,Gaddis2011,Gaddis2012}.
 	\item \cite{Stroustrup2014}, Chp 10-11
 	\item \cite{Stroustrup2009}, Chp 10-11
 	\item \cite{Oualline2003}, Chp 16
@@ -113,7 +113,7 @@ C++ topics: \vspace{-0.3cm}
 \item Dynamic memory management problems: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Eckel2000}, Chp 6,13
-	\item \cite{Gaddis2010}, Chp 13
+	\item \cite{Gaddis2010}, Chp 13. See all of \cite{Gaddis2010,Gaddis2011,Gaddis2012}.
 	\item \cite{Meyer2005}, Chp 2-4
 	\item \cite{Schildt2003}, Chp 29
 	\item \cite{Allain2012}, Chp 14
@@ -124,7 +124,7 @@ C++ topics: \vspace{-0.3cm}
 \item Function overloading: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Eckel2000}, Chp 7
-	\item \cite{Gaddis2010}, Chp 6
+	\item \cite{Gaddis2010}, Chp 6. See all of \cite{Gaddis2010,Gaddis2011,Gaddis2012}.
 	\item \cite{Stroustrup2014}, Chp 8
 	\item \cite{Stroustrup2009}, Chp 8
 	\item \cite{Schildt2003}, Chp 14
@@ -160,14 +160,54 @@ C++ topics: \vspace{-0.3cm}
 	\item \cite{Lippman2013}, Chp 6
 	\item Elsewhere: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item \url{http://stackoverflow.com/questions/2382834/discards-qualifiers-error}
-		\item You cannot call a non-const method from a const method. That would 'discard' the const qualifier.
+		\item You cannot call a non-const method from a const method. That would 'discard' the const qualifier.: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://stackoverflow.com/questions/2382834/discards-qualifiers-error}
+			\end{enumerate}
+		\item Pointer to constant data: {\it const type$^{\ast}$ variable;} and {\it type const $^{\ast}$ variable;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\item Pointer with constant memory address: {\it type $^{\ast}$ const variable = some-memory-address;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\item Constant data with a constant pointer: {\it const type $^{\ast}$ const variable = some-memory-address;} and {\it type const $^{\ast}$ const variable = some-memory-address;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\item \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item The first {\it const} can be on either side of the type.
+			\item int$^{\ast}$ -- pointer to int
+			\item int const $^{\ast}$ == const int $^{\ast}$ -- pointer to const int
+			\item int $^{\ast}$ const -- const pointer to int
+			\item int const $^{\ast}$ const == const int $^{\ast}$ const -- const pointer to const int
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\item 
+			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
 \item OOD and inheritance: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Eckel2000}, Chp 14,15
-	\item \cite{Gaddis2010}, Chp 13,14,15
+	\item \cite{Gaddis2010}, Chp 13,14,15. See all of \cite{Gaddis2010,Gaddis2011,Gaddis2012}.
 	\item \cite{Stroustrup2014}, Chp 9
 	\item \cite{Stroustrup2009}, Chp 9
 	\item \cite{Oualline2003}, Chp 13-14,21
@@ -190,6 +230,16 @@ C++ topics: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Schildt2004a}, Chp 7
 	\end{enumerate}
+\end{enumerate}
+
+
+Books to classify: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item C++ programming: \cite{Horstmann2012,Katupitiya2006,Koenig2000,Pozrikidis2007,Prata2005,Romanik2003,Savitch2009,Scheinerman2006,Schildt1998a,Schildt2003a}
+\item C++ STL: \cite{Josuttis2012,Karlsson2006a,Robson2000}
+\item C++ -based MPI programming: \cite{Karniadakis2003}
+\item scientific computing: \cite{PittFrancis2012}
+\item Boost C++: \url{Polukhin2013,Schaling2012}
 \end{enumerate}
 
 
