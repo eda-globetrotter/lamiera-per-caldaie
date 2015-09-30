@@ -17,6 +17,11 @@ Alex Allain.
 \newblock {\em Jumping into {C++}}.
 \newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
 
+\bibitem{Bulka2000}
+Dov Bulka and David Mayhew.
+\newblock {\em Efficient {C++}: Performance Programming Techniques}.
+\newblock Addison Wesley Longman, Inc., Indianapolis, {IN}, 2000.
+
 \bibitem{CplusplusCom2014}
 cplusplus.com.
 \newblock The {C++} resources network.
@@ -59,6 +64,11 @@ Marc Gregoire.
 Cay~S. Horstmann.
 \newblock {\em {C++} for Everyone}.
 \newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, second edition, 2012.
+
+\bibitem{Josuttis1999a}
+Nicolai~M. Josuttis.
+\newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
+\newblock Addison-Wesley, Reading, {MA}, 1999.
 
 \bibitem{Josuttis2012}
 Nicolai~M. Josuttis.

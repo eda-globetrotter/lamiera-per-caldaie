@@ -178,16 +178,16 @@ C++ topics: \vspace{-0.3cm}
 			\end{enumerate}
 		\item \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const}: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
-			\item The first {\it const} can be on either side of the type.
+			\item Read it backwards; the first {\it const} can be on either side of the type.
 			\item int$^{\ast}$ -- pointer to int
 			\item int const $^{\ast}$ == const int $^{\ast}$ -- pointer to const int
 			\item int $^{\ast}$ const -- const pointer to int
 			\item int const $^{\ast}$ const == const int $^{\ast}$ const -- const pointer to const int
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
+			\item int $^{\ast}$$^{\ast}$ -- pointer to pointer to int
+			\item int $^{\ast}$$^{\ast}$ const -- A const pointer to a pointer to an int
+			\item int $^{\ast}$ const $^{\ast}$ -- A pointer to a const pointer to an int
+			\item int const $^{\ast}$$^{\ast}$ -- A pointer to a pointer to a const int
+			\item int $^{\ast}$ const $^{\ast}$ const -- A const pointer to a const pointer to an int
 			\item 
 			\item 
 			\item 
@@ -236,7 +236,7 @@ C++ topics: \vspace{-0.3cm}
 Books to classify: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item C++ programming: \cite{Horstmann2012,Katupitiya2006,Koenig2000,Pozrikidis2007,Prata2005,Romanik2003,Savitch2009,Scheinerman2006,Schildt1998a,Schildt2003a}
-\item C++ STL: \cite{Josuttis2012,Karlsson2006a,Robson2000}
+\item C++ STL: \cite{Josuttis2012,Karlsson2006a,Robson2000,HewlettPackardCompanyStaff1994a,HewlettPackardCompanyStaff1994}
 \item C++ -based MPI programming: \cite{Karniadakis2003}
 \item scientific computing: \cite{PittFrancis2012}
 \item Boost C++: \url{Polukhin2013,Schaling2012}
@@ -248,10 +248,10 @@ Books to classify: \vspace{-0.3cm}
 \label{sec:ComputationalComplexityofCppContainers}
 
 
-
+Table \ref{tab:ComputationalComplexityofCppContainers} shows a tabulated summary of containers in the {\it C++} Standard Template Library (STL) and the computational complexity for each of their common operations: add(element e), remove(element e), search(element e), size(), empty(), begin(), and end(). \\
 
 \begin{table}[htdp]
-\caption{Computational Complexity of C++ Containers}	\vspace{-0.2in}
+\caption{Computational Complexity of Basic Operations of Containers from the {\it C++ STL}.}	\vspace{-0.2in}
 \label{tab:ComputationalComplexityofCppContainers}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -260,11 +260,49 @@ Books to classify: \vspace{-0.3cm}
 		\hline
 		vector & O(1) & O(n) & O(n) & O(1) & O(1) & O(1) & O(1) \\
 		\hline
-%		Level & Use & Features & Abstraction \\
+		list & O(1) & O(n) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		queue & O(1) amortized & O(1) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		priority queue & O(log n) & O(log n) & O(n) & O(1) & O(1) & O(1) & ??? \\
+		\hline
+		set & O(log n) & O(log n) & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		multi-set & O(log n) & ??? & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		map & O(log n) & O(log n) & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		multi-map & O(log n) & ??? & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		stack & O(1) & O(1) & O(n) & O(1) & O(1) & O(1) & O(1) \\
 		\hline
 		\end{tabular}
 	\end{center}
 \end{table}
+
+
+To conclude, we can get some facts about each data structure: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\tt std::list} is very very slow to iterate through the collection due to its very poor spatial locality.
+\item {\tt std::vector} and {\tt std::deque} perform always faster than {\tt std::list} with very small data
+\item {\tt std::list} handles very well large elements
+\item {\tt std::deque} performs better than a {\tt std::vector} for inserting at random positions (especially at the front, which is constant time)
+\item {\tt std::deque} and {\tt std::vector} do not support very well data types with high cost of copy/assignment
+\end{enumerate}
+
+
+
+This draw simple conclusions on usage of each data structure \cite{Bulka2000,Josuttis1999a}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Number crunching: use std::vector or std::deque
+\item Linear search: use std::vector or std::deque
+\item Random Insert/Remove:
+\item Small data size: use std::vector
+\item Large element size: use std::list (unless if intended principally for searching)
+\item Non-trivial data type: use std::list unless you need the container especially for searching. But for multiple modifications of the container, it will be very slow.
+\item Push to front: use std::deque or std::list
+\end{enumerate}
+
 
 
 
