@@ -60,6 +60,23 @@ Marc Gregoire.
 \newblock {\em Professional {C++}}.
 \newblock John Wiley {\rm \&} Sons, Indianapolis, {IN}, third edition, 2014.
 
+\bibitem{HewlettPackardCompanyStaff1994}
+{Hewlett-Packard Company staff}.
+\newblock Standard template library programmer's guide.
+\newblock Available online in {\it {SGI} -- The Trusted Leader in High
+  Performance Computing: Tech Archive: Standard xTemplate Library Programmer's
+  Guide} at: \url{http://www.sgi.com/tech/stl/}; September 30, 2015 was the
+  last accessed date, 1994.
+
+\bibitem{HewlettPackardCompanyStaff2014}
+{Hewlett-Packard Company staff}.
+\newblock {STL} complexity specifications.
+\newblock Available online in {\it {SGI} -- The Trusted Leader in High
+  Performance Computing: Tech Archive: Standard Template Library Programmer's
+  Guide: Design documents: {STL} Complexity Specifications} at:
+  \url{http://www.sgi.com/tech/stl/complexity.html}; September 30, 2015 was the
+  last accessed date, http://www.sgi.com/tech/stl/complexity.html 2014.
+
 \bibitem{Horstmann2012}
 Cay~S. Horstmann.
 \newblock {\em {C++} for Everyone}.
@@ -128,6 +145,12 @@ Joe {Pitt-Francis} and Jonathan Whiteley.
 \newblock Undergraduate Topics in Computer Science. Springer-Verlag London,
   London, {U.K.}, 2012.
 
+\bibitem{Polukhin2013}
+Antony Polukhin.
+\newblock {\em Boost {C++} Application Development Cookbook: Over 80 practical,
+  task-based recipes to create applications using Boost libraries}.
+\newblock Packt Publishing, Birmingham, West Midlands, England, {U.K.}, 2013.
+
 \bibitem{Pozrikidis2007}
 Constantine Pozrikidis.
 \newblock {\em Introduction to {C++} Programming and Graphics}.
@@ -149,6 +172,17 @@ Greg Reese.
 \newblock Charles River Media Programming Series. Charles River Media, Hingham,
   {MA}, 2006.
 
+\bibitem{Riesbeck2009}
+Chris Riesbeck.
+\newblock Standard {C++} containers.
+\newblock Available online from {\it Prof. Chris Riesbeck's web page:
+  Programming: Useful {C++ / Unix} Resources}, Computer Science Division,
+  Department of Electrical Engineering and Computer Science, Robert R.
+  McCormick School of Engineering and Applied Science, Northwestern University
+  at:
+  \url{http://www.cs.northwestern.edu/~riesbeck/programming/c++/stl-summary.html};
+  September 30, 2015 was the last accessed date, July 3 2009.
+
 \bibitem{Robson2000}
 Robert Robson.
 \newblock {\em Using the {STL}: The {C++} Standard Template Library}.
@@ -165,6 +199,11 @@ Philip Romanik and Amy Muntz.
 Walter Savitch.
 \newblock {\em Problem Solving with {C++}}.
 \newblock Pearson Education, Boston, {MA}, seventh edition, 2009.
+
+\bibitem{Schaling2012}
+Boris Sch{\"{a}}ling.
+\newblock {\em The Boost {C++} Libraries}.
+\newblock Self-published, 2012.
 
 \bibitem{Scheinerman2006}
 Edward Scheinerman.
