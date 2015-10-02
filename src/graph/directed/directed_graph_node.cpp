@@ -169,15 +169,16 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  *		the current set of incoming edges.
  * @post		Ensure that the difference in the size of
  *					incoming links is the size of the set of
- *					added incoming links.
+ *					desired incoming links to be added.
+ *					#actually added unique links = #desired added links
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
 void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edge*> &set_incoming_links) {
 
 	// Set up checkers for testing postconditions.
-	// Current number of incoming edges.
-	int current_incoming_links_size = incoming_edges.size();
+	// Initial number of incoming edges.
+	int initial_incoming_links_size = incoming_edges.size();
 	
 	// Add the incoming edges.
 	incoming_edges.insert(set_incoming_links.begin(), set_incoming_links.end());
@@ -185,10 +186,13 @@ void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edg
 	// Final number of incoming edges.
 	int final_incoming_links_size = incoming_edges.size();
 	// Difference due to addition of set of incoming edges.
-	final_incoming_links_size = final_incoming_links_size - current_incoming_links_size;
+	final_incoming_links_size = final_incoming_links_size - initial_incoming_links_size;
 	
-	// Postcondition: Is (difference due to addition) = size of added set?
-	if(final_incoming_links_size != set_incoming_links.size()) {
+	/**
+	 * Postcondition:
+	 * Is (difference due to addition) = size of added set?
+	 */
+	if(final_incoming_links_size = set_incoming_links.size()) {
 		throw new violated_postcondition("=	Error in adding incoming links !!!!");
 	}
 }
@@ -197,32 +201,56 @@ void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edg
 /**
  * Function to add a set of outgoing edges to the current
  *	set of outgoing edges.
+ * @post		Ensure that the difference in the size of
+ *					outgoing links is < the size of the set of
+ *					desired outgoing links to be added.
+ *					#actually added unique links < #desired added links
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
 void directed_graph_node::add_set_of_outgoing_edges(const set<directed_graph_edge*> &set_outgoing_links) {
 
 	// Set up checkers for testing postconditions.
-	// Current number of incoming edges.
-	int current_incoming_links_size = incoming_edges.size();
+	// Initial number of outgoing edges.
+	int initial_outgoing_links_size = outgoing_edges.size();
 	
-	// Add the incoming edges.
+	// Add the outgoing edges.
 	outgoing_edges.insert(set_outgoing_links.begin(), set_outgoing_links.end());
+	
+	// Final number of outgoing edges.
+	int final_outgoing_links_size = outgoing_edges.size();
+	// Difference due to addition of set of outgoing edges.
+	final_outgoing_links_size = final_outgoing_links_size - initial_outgoing_links_size;
+	
+	/**
+	 * Postcondition:
+	 * Is (difference due to addition) = size of added set?
+	 */
+	if(final_outgoing_links_size = set_outgoing_links.size()) {
+		throw new violated_postcondition("=	Error in adding outgoing links !!!!");
+	}
 }
 
 
 /**
  * Function to add an incoming edge to the current set of
  *	incoming edges.
+ * If an incoming edge is added, the size should increase by 1.
+ * @post	If the edge is in the set of incoming edges, ignore it.
+ *				Else, add it to the set of incoming edges.
  * @return - Nothing.
  */
 void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_link) {
-	// Is there an edge in the set of incoming edges with given ID?
-/*
+	// Intial number of incoming edges.
+	int initial_num_incoming_edges = incoming_edges.size();
+	// Add the incoming edge.
+	incoming_edges.insert(incoming_link);
+
 	if() {
 	}else{
 	}
-*/
+	
+	initial
 }
 
 /**
