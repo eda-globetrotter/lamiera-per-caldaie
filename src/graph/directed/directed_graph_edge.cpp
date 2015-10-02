@@ -154,7 +154,7 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
-void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long int> &set_incoming_links) {
+void directed_graph_node::add_set_of_incoming_edges(const dg_edge_set &set_incoming_links) {
 	incoming_edges.insert(set_incoming_links.begin(), set_incoming_links.end());
 }
 
@@ -165,7 +165,7 @@ void directed_graph_node::add_set_of_incoming_edges(const set<unsigned long long
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
-void directed_graph_node::add_set_of_outgoing_edges(const set<unsigned long long int> &set_outgoing_links) {
+void directed_graph_node::add_set_of_outgoing_edges(const dg_edge_set &set_outgoing_links) {
 	outgoing_edges.insert(set_outgoing_links.begin(), set_outgoing_links.end());
 }
 

@@ -54,7 +54,6 @@
 // Import packages from the software
 #include "directed_graph_node.hpp"
 
-
 // ==================================================================
 
 /**
@@ -116,7 +115,7 @@ directed_graph_node::~directed_graph_node() {
  * @return - The set of incoming edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_incoming_edges() {
-set<directed_graph_edge*> directed_graph_node::get_incoming_edges() {
+dg_edge_set directed_graph_node::get_incoming_edges() {
 	return incoming_edges;
 }
 
@@ -127,7 +126,7 @@ set<directed_graph_edge*> directed_graph_node::get_incoming_edges() {
  * @return - The set of outgoing edges from this node.
  */
 //set<pair<unsigned long long,bool> > directed_graph_node::get_outgoing_edges() {
-set<directed_graph_edge*> directed_graph_node::get_outgoing_edges() {
+dg_edge_set directed_graph_node::get_outgoing_edges() {
 	return outgoing_edges;
 }
 
@@ -163,7 +162,7 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
 
 
 /**
- * Function to add a set of incoming edges to the current
+ * Function to add a set of incoming edges to the initial/current
  *	set of incoming edges.
  * @param set_incoming_links: A set of incoming edges to be added to
  *		the current set of incoming edges.
@@ -174,7 +173,7 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
-void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edge*> &set_incoming_links) {
+void directed_graph_node::add_set_of_incoming_edges(const dg_edge_set &set_incoming_links) {
 
 	// Set up checkers for testing postconditions.
 	// Initial number of incoming edges.
@@ -199,16 +198,18 @@ void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edg
 
 
 /**
- * Function to add a set of outgoing edges to the current
+ * Function to add a set of outgoing edges to the initial/current
  *	set of outgoing edges.
+ * @param set_outgoing_links: A set of outgoing edges to be added to
+ *		the current set of outgoing edges.
  * @post		Ensure that the difference in the size of
- *					outgoing links is < the size of the set of
+ *					outgoing links is the size of the set of
  *					desired outgoing links to be added.
  *					#actually added unique links < #desired added links
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
-void directed_graph_node::add_set_of_outgoing_edges(const set<directed_graph_edge*> &set_outgoing_links) {
+void directed_graph_node::add_set_of_outgoing_edges(const dg_edge_set &set_outgoing_links) {
 
 	// Set up checkers for testing postconditions.
 	// Initial number of outgoing edges.
@@ -243,22 +244,43 @@ void directed_graph_node::add_set_of_outgoing_edges(const set<directed_graph_edg
 void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_link) {
 	// Intial number of incoming edges.
 	int initial_num_incoming_edges = incoming_edges.size();
+	
 	// Add the incoming edge.
 	incoming_edges.insert(incoming_link);
 
-	if() {
-	}else{
+	// Final number of incoming edges.
+	int final_num_incoming_edges = incoming_edges.size();
+	// Difference due to addition of incoming edge.
+	final_num_incoming_edges = final_num_incoming_edges - initial_num_incoming_edges;
+	// Has number of incoming edges for this node increased by >1 ?
+	if(1 < final_num_incoming_edges) {
+		throw new violated_postcondition("=	Extra incoming edge(s) is/are added!!!!");
 	}
-	
-	initial
 }
 
 /**
  * Function to add an outgoing edge to the current set of
  *	outgoing edges.
+ * If an outgoing edge is added, the size should increase by 1.
+ * @post	If the edge is in the set of outgoing edges, ignore it.
+ *				Else, add it to the set of outgoing edges.
  * @return - Nothing.
  */
 void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_link) {
+	// Intial number of outgoing edges.
+	int initial_num_outgoing_edges = outgoing_edges.size();
+	
+	// Add the outgoing edge.
+	outgoing_edges.insert(outgoing_link);
+
+	// Final number of outgoing edges.
+	int final_num_outgoing_edges = outgoing_edges.size();
+	// Difference due to addition of outgoing edge.
+	final_num_outgoing_edges = final_num_outgoing_edges - initial_num_outgoing_edges;
+	// Has number of outgoing edges for this node increased by >1 ?
+	if(1 < final_num_outgoing_edges) {
+		throw new violated_postcondition("=	Extra outgoing edge(s) is/are added!!!!");
+	}
 }
 
 /**
