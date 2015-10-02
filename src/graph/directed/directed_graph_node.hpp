@@ -136,11 +136,11 @@ class directed_graph_node {
 		/**
 		 * Function to get the incoming edges from this node.
 		 */
-		set<directed_graph_edge> get_incoming_edges();
+		set<directed_graph_edge*> get_incoming_edges();
 		/**
 		 * Function to get the outgoing edges from this node.
 		 */
-		set<directed_graph_edge> get_outgoing_edges();		
+		set<directed_graph_edge*> get_outgoing_edges();		
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
 
@@ -156,13 +156,13 @@ class directed_graph_node {
 		 *	set of incoming edges.
 		 */
 //		void add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links);
-		void add_set_of_incoming_edges(const set<directed_graph_edge> &set_incoming_links);
+		void add_set_of_incoming_edges(const set<directed_graph_edge*> &set_incoming_links);
 		/**
 		 * Function to add a set of outgoing edges to the current
 		 *	set of outgoing edges.
 		 */
 //		void add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links);
-		void add_set_of_outgoing_edges(const set<directed_graph_edge> &set_outgoing_links);
+		void add_set_of_outgoing_edges(const set<directed_graph_edge*> &set_outgoing_links);
 		/**
 		 * Function to add an incoming edge to the current set of
 		 *	incoming edges.

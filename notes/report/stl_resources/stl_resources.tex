@@ -176,9 +176,11 @@ C++ topics: \vspace{-0.3cm}
 			\begin{enumerate} \itemsep -1pt
 			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
 			\end{enumerate}
-		\item \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const}: \vspace{-0.1cm}
+		\item \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const} \cite{Mortensen2015}: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
 			\item Read it backwards; the first {\it const} can be on either side of the type.
+			\item ``Read pointer declarations right-to-left.''
+			\item From the answer of Ted Dennison, July 17, 2009. {\bf Rule: The ``const'' goes after the thing it applies to. Putting const at the very front (e.g., const int $^{\ast}$) is an exception to the rule.}
 			\item int$^{\ast}$ -- pointer to int
 			\item int const $^{\ast}$ == const int $^{\ast}$ -- pointer to const int
 			\item int $^{\ast}$ const -- const pointer to int
@@ -188,19 +190,13 @@ C++ topics: \vspace{-0.3cm}
 			\item int $^{\ast}$ const $^{\ast}$ -- A pointer to a const pointer to an int
 			\item int const $^{\ast}$$^{\ast}$ -- A pointer to a pointer to a const int
 			\item int $^{\ast}$ const $^{\ast}$ const -- A const pointer to a const pointer to an int
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
-			\item 
+			\end{enumerate}
+		\item For the following \cite{Mortensen2015}, let: {\it int var0 = 0;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\it const int {\rm \&}ptr1 = var0;} // Constant reference
+			\item {\it int $^{\ast}$ const ptr2 = {\rm \&}var0;} // Constant pointer
+			\item {\it int const $^{\ast}$ ptr3 = {\rm \&}var0;} // Pointer to const
+			\item {\it const int $^{\ast}$ const ptr4 = {\rm \&}var0;} // Const pointer to a const
 			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
@@ -236,10 +232,10 @@ C++ topics: \vspace{-0.3cm}
 Books to classify: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item C++ programming: \cite{Horstmann2012,Katupitiya2006,Koenig2000,Pozrikidis2007,Prata2005,Romanik2003,Savitch2009,Scheinerman2006,Schildt1998a,Schildt2003a}
-\item C++ STL: \cite{Josuttis2012,Karlsson2006a,Robson2000,HewlettPackardCompanyStaff2014,HewlettPackardCompanyStaff1994,Riesbeck2009}
+\item C++ STL: \cite{Josuttis2012,Karlsson2006a,Robson2000,HewlettPackardCompanyStaff2014,HewlettPackardCompanyStaff1994,Riesbeck2009,Cline2000,Cline2003,Cline2011}
 \item C++ -based MPI programming: \cite{Karniadakis2003}
 \item scientific computing: \cite{PittFrancis2012}
-\item Boost C++: \cite{Polukhin2013,Schaling2012}
+\item Boost C++: \cite{Mukherjee2015,Polukhin2013,Schaling2012}
 \end{enumerate}
 
 

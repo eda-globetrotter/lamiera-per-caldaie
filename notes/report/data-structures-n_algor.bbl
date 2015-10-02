@@ -22,6 +22,32 @@ Dov Bulka and David Mayhew.
 \newblock {\em Efficient {C++}: Performance Programming Techniques}.
 \newblock Addison Wesley Longman, Inc., Indianapolis, {IN}, 2000.
 
+\bibitem{Cline2000}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the course web page of {\it CS210 Data
+  Structures and Abstractions Lab}(Spring 2015), Department of Computer
+  Science, Faculty of Science, University of Regina at:
+  \url{http://www.cs.uregina.ca/Links/class-info/210/C++FAQ/}; July 10, 2015
+  was the last accessed date, July 10 2000.
+
+\bibitem{Cline2003}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the Computer Science Department, B. Thomas
+  Golisano College of Computing and Information Sciences, Rochester Institute
+  of Technology at: \url{http://www.cs.rit.edu/~mjh/docs/c++-faq/}; July 10,
+  2015 was the last accessed date, May 2 2003.
+
+\bibitem{Cline2011}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the web page of Laura Mensi and Paolo Copello,
+  {\it Tiscali Italia S.p.A.: Tiscali Webspace: Fanelia Italy -- Computer
+  Programming, Psychiatry, Escaflowne, and much more} at:
+  \url{http://web.tiscali.it/fanelia/cpp-faq-en/}; July 10, 2015 was the last
+  accessed date, July 28 2011.
+
 \bibitem{CplusplusCom2014}
 cplusplus.com.
 \newblock The {C++} resources network.
@@ -132,6 +158,22 @@ Mohtashim.
   Tutorial}:
   \url{http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm}; September
   17, 2015 was the last accessed date, 2015.
+
+\bibitem{Mortensen2015}
+Peter Mortensen.
+\newblock What is the difference between const int$^{\ast}$, const int
+  $^{\ast}$ const, and int const $^{\ast}$?
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at:
+  \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const};
+  October 1, 2015 was the last accessed date, March 13 2015.
+
+\bibitem{Mukherjee2015}
+Arindam Mukherjee.
+\newblock {\em Learning {Boost C++} Libraries: Solve Practical Programming
+  Problems Using Powerful, Portable, and Expressive Libraries from {Boost}}.
+\newblock Packt Publishing, Birmingham, West Midlands, England, {U.K.}, July
+  2015.
 
 \bibitem{Oualline2003}
 Steve Oualline.

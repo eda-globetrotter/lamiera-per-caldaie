@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 	// seg fault - accessing something that isn't there
 	// bus error - accessing some thing (data element) that has been freed
 
-	unsigned long long temp_int;
+	unsigned long long *temp_int;
 	temp_int = NULL;
 	cout << "temp_int is::" << temp_int << "==" << endl;
 

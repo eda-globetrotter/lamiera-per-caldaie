@@ -148,10 +148,17 @@ unsigned long long int directed_graph_node::get_node_ID() {
 /**
  * Function to set the ID of the node.
  * @param temp_ID:	The new ID to replace the current ID of the node.
+ * @post			Ensure that the ID has been replaced.
  * @return - Nothing.
  */
 void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
+	// Modify the node ID to temp_ID.
 	node_ID = temp_ID;
+	
+	// Postcondition. Node ID should be replaced and equal to temp_ID.
+	if(node_ID != temp_ID) {
+		throw new violated_postcondition("=	Node ID is not modified !!!!");
+	}
 }
 
 
@@ -160,11 +167,30 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  *	set of incoming edges.
  * @param set_incoming_links: A set of incoming edges to be added to
  *		the current set of incoming edges.
+ * @post		Ensure that the difference in the size of
+ *					incoming links is the size of the set of
+ *					added incoming links.
  * @return - Nothing.
  */
 //void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
 void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edge*> &set_incoming_links) {
+
+	// Set up checkers for testing postconditions.
+	// Current number of incoming edges.
+	int current_incoming_links_size = incoming_edges.size();
+	
+	// Add the incoming edges.
 	incoming_edges.insert(set_incoming_links.begin(), set_incoming_links.end());
+	
+	// Final number of incoming edges.
+	int final_incoming_links_size = incoming_edges.size();
+	// Difference due to addition of set of incoming edges.
+	final_incoming_links_size = final_incoming_links_size - current_incoming_links_size;
+	
+	// Postcondition: Is (difference due to addition) = size of added set?
+	if(final_incoming_links_size != set_incoming_links.size()) {
+		throw new violated_postcondition("=	Error in adding incoming links !!!!");
+	}
 }
 
 
@@ -175,6 +201,12 @@ void directed_graph_node::add_set_of_incoming_edges(const set<directed_graph_edg
  */
 //void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
 void directed_graph_node::add_set_of_outgoing_edges(const set<directed_graph_edge*> &set_outgoing_links) {
+
+	// Set up checkers for testing postconditions.
+	// Current number of incoming edges.
+	int current_incoming_links_size = incoming_edges.size();
+	
+	// Add the incoming edges.
 	outgoing_edges.insert(set_outgoing_links.begin(), set_outgoing_links.end());
 }
 
