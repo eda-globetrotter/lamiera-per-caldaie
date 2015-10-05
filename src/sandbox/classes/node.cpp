@@ -120,7 +120,7 @@ void node::print_node() const {
  * @param temp_ID:	The ID of the node.
  * @return - Nothing.
  */
-void node::set_node_ID(const unsigned long long &temp_ID) {
+void node::set_node_ID(const unsigned long long int &temp_ID) {
 //void node::set_node_ID(unsigned long long &temp_ID) {
 //	*node_ID = temp_ID;
 //	node_ID = new int(temp_ID);
