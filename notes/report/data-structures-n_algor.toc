@@ -10,6 +10,6 @@
 \contentsline {chapter}{\numberline {3}Mathematics}{3}{chapter.3}
 \contentsline {chapter}{\numberline {4}Statistics}{5}{chapter.4}
 \contentsline {chapter}{\numberline {5}C++ Resources}{6}{chapter.5}
-\contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{9}{section.5.1}
+\contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{10}{section.5.1}
 \contentsline {chapter}{Acknowledgments}{11}{chapter*.4}
 \contentsline {chapter}{Bibliography}{15}{appendix*.5}
