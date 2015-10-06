@@ -79,10 +79,10 @@ element::~element() {
  * @param - None.
  * @return - The ID of this element.
  */
-unsigned long long node::get_element_ID() const {
+unsigned long long element::get_element_ID() const {
 	return element_ID;
 	
-	pair_int_bool
+	//pair_int_bool
 }
 
 
@@ -95,7 +95,7 @@ unsigned long long node::get_element_ID() const {
  * @param temp_ID:	The ID of the element.
  * @return - Nothing.
  */
-void node::set_element_ID(const unsigned long long int &temp_ID) {
+void element::set_element_ID(const unsigned long long int &temp_ID) {
 	element_ID = temp_ID;
 }
 

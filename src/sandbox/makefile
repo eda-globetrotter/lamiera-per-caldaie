@@ -317,10 +317,9 @@ typedef:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === C++ Classes Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node_swap.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)element.cpp
 	@echo === C++ STL Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_set.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_typedef.cpp
 	#$(GPLUSPLUS)	$(COMPILE)	test_set.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)

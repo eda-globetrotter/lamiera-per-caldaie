@@ -84,12 +84,17 @@ int main(int argc, char *argv[]) {
 		cout << "		Something Is Wrong!!!" << endl;
 	}else{
 		cout << "		(192,false) is the pair." << endl;
+		cout << "		First==" << one_pair.first << "==" << endl;
+		cout << "		Second==" << one_pair.second << "==" << endl;
 	}
 
 	if(another_pair.second) {
 		cout << "		(837,true) is the pair." << endl;
+		cout << "		First==" << another_pair.first << "==" << endl;
+		cout << "		Second==" << another_pair.second << "==" << endl;
 	}else{
 		cout << "		Something Is Really, Really Wrong!!!" << endl;
+		
 	}
 
 
