@@ -6,6 +6,7 @@
  * Class to represent node of basic directed graph.
  *
  * IMPORTANT NOTES:
+ * This is for an adjacency list implementation of a graph.
  * Assume that the ID of each node is unique for all the nodes in
  *	the graph.
  * Hence, the node ID can be used to identify a given node.

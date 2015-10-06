@@ -6,6 +6,7 @@
  * Class to represent an edge of a basic directed graph.
  *
  * IMPORTANT NOTES:
+ * This is for an adjacency list implementation of a graph.
  * Assume that the ID of each edge is unique for all the edges in
  *	the graph.
  * Hence, the edge ID can be used to identify a given edge.
@@ -16,7 +17,8 @@
  * Enable support of multigraphs and hypergraphs.
  * Other boolean comparisons can be implemented by overloading the
  *	operator child class.
- *
+ * Definition of the class directed_graph_edge depends on the
+ *	definition of the class directed_graph_node.
  *
  *
  *
