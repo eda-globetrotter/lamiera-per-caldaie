@@ -298,9 +298,20 @@ void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_
  * @param node_ID_removal:	The node ID of a node to be removed
  * @return - Nothing.
  */
-void directed_graph_node::remove_incoming_edge(const unsigned long long &node_ID_removal) {
-	// ew
-	pair_dgedgesetp_bool
+void directed_graph_node::remove_incoming_edge(const
+	unsigned long long int &node_ID_r]
+	// Enumerate all source nodes in the set of incoming edges.
+//	dg_edge_set_p desp = outgoing_edges.find(temp_node);
+	for(dg_edge_set_p desp = outgoing_edges.begin(); desp != outgoing_edges.end(); ++desp) {
+		// Check if its source node has the ID node_ID_r.
+		// Call function from the edge class.
+	}
+
+	/**
+	 * Remove node with the ID, node_ID_removal, if it is in
+	 *	the aforementioned set (set of incoming edges).
+	 */
+	pair_dgedgesetp_bool = outgoing_edges.erase();
 }
 
 
@@ -320,7 +331,7 @@ void directed_graph_node::remove_incoming_edge(const directed_graph_edge &incomi
  * @param
  * @return - Nothing.
  */
-void directed_graph_node::remove_outgoing_edge(const unsigned long long &node_ID_removal) {
+void directed_graph_node::remove_outgoing_edge(const unsigned long long int &node_ID_removal) {
 }
 
 
