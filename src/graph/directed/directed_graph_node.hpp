@@ -59,6 +59,8 @@
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
 #include "../../utilities/violated_postcondition.hpp"
+//	Importing from the Graph/Directed module
+#include "directed_graph_edge.hpp"
 
 // Import packages from the C++ STL
 #include <string>
@@ -82,7 +84,7 @@ typedef set<directed_graph_edge*> dg_edge_set;
  * Shortcut to represent an iterator to the container of
  *	directed_graph_edge pointers.
  */
-typedef set<directed_graph_node*>::iterator dg_edge_set_p;
+typedef set<directed_graph_edge*>::iterator dg_edge_set_p;
 /**
  * Shortcut to a pair representing an iterator to the
  *	container of directed_graph_edge pointers and a boolean

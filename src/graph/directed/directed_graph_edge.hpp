@@ -60,6 +60,8 @@
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
 #include "../../utilities/violated_postcondition.hpp"
+//	Importing from the Graph/Directed module
+#include "directed_graph_node.hpp"
 
 // Import packages from the C++ STL
 #include <string>
@@ -77,29 +79,19 @@ using namespace std;
 
 // =========================================================
 
-// Shortcut to container of directed edges in directed graphs.
-//typedef vector<pair<directed_graph_node,bool>> node_vec;
-// Shortcut to represent a pointer to the container of strings.
-//typedef vector<pair<directed_graph_node,bool>>::iterator node_vec_p;
-// Shortcut to container of node IDs.
-//typedef vector<unsigned long long> set_of_node_IDs;
-
-
-
-
-// Shortcut to container of node.
-//typedef set<directed_graph_node> dg_node_set;
-// Shortcut to represent an iterator to the container of nodes.
-//typedef set<directed_graph_node>::iterator dg_node_set_p;
+// Shortcut to container of directed_graph_edge pointers.
+typedef set<directed_graph_node*> dg_edge_set;
 /**
- * Shortcut to a pair representing an iterator to the container of
- *	nodes and a boolean flag representing the success of a set
- *	operation.
+ * Shortcut to represent an iterator to the container of
+ *	directed_graph_edge pointers.
  */
-//typedef pair<dg_node_set_p, bool> pair_nodesetp_bool;
-
-
-
+typedef set<directed_graph_node*>::iterator dg_edge_set_p;
+/**
+ * Shortcut to a pair representing an iterator to the
+ *	container of directed_graph_edge pointers and a boolean
+ *	flag representing the success of a set operation.
+ */
+typedef pair<dg_edge_set, bool> pair_dgedgesetp_bool;
 
 // =========================================================
 

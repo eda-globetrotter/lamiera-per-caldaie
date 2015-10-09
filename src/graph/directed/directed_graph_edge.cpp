@@ -54,7 +54,7 @@
  */
 
 // Import packages from the software
-#include "directed_graph_node.hpp"
+#include "directed_graph_edge.hpp"
 
 
 // ==================================================================
