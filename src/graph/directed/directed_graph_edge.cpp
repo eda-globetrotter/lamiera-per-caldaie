@@ -12,8 +12,7 @@
  * Hence, the edge ID can be used to identify a given edge.
  *	This enables the distinction between edges connecting the same
  *		pair/set of nodes.
- * The terms "node" and "vertex", of a graph, are used synonymously
- *	in our software AggieMC.
+ * The terms "node" and "vertex", of a graph, are used synonymously.
  * Enable support of multigraphs and hypergraphs.
  * Other boolean comparisons can be implemented by overloading the
  *	operator child class.

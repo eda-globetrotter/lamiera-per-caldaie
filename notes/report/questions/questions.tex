@@ -48,7 +48,7 @@ Difference between pointers and references: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item Yusuf Kemal {\"{O}}zcan (``BFaceCoder''), ``Is there any difference between pointers and references? [duplicate],'' Stack Exchange Inc., New York, NY, April 18, 2013. Available online from {\it Stack Exchange Inc.: Programmers Stack Exchange: Questions} at: \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references}; October 6, 2015 was the last accessed date. \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item 
+	\item Answer from {\it dan1111}, April 18, 2013: \url{http://programmers.stackexchange.com/a/195343} and \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references/195343#195343}. 
 	\end{enumerate}
 \item Macneil Shonle and Programmers Stack Exchange contributors, ``What's a nice explanation for pointers? [closed],'' Stack Exchange Inc., New York, NY, July 30, 2015. Available online from {\it Stack Exchange Inc.: Programmers Stack Exchange: Questions} at: \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers}; October 6, 2015 was the last accessed date. \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -84,7 +84,12 @@ Difference between pointers and references: \vspace{-0.3cm}
 	\end{enumerate}
 \item Prakash Rajendran, Theodore Logan (Commodore Jaeger), Josh Lee, sbi, Rob$_{\varphi}$, Sudhanshu Aggarwal, lpapp, Alf, Deduplicator, Sam, and Siddhant Saraf, ``What are the differences between a pointer variable and a reference variable in C++?,'' Stack Exchange Inc., New York, NY, March 2, 2015. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/57483/what-are-the-differences-between-a-pointer-variable-and-a-reference-variable-in}; October 8, 2015 was the last accessed date. \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item 
+	\item A pointer can be re-assigned any number of times while a reference can not be re-seated after binding.
+	\item Pointers can point nowhere (NULL), whereas reference always refer to an object.
+	\item You can't take the address of a reference like you can with pointers.
+	\item There's no ``reference arithmetics'' (but you can take the address of an object pointed by a reference and do pointer arithmetics on it as in \&obj + 5).
+	\item Use references in function parameters and return types to define useful and self-documenting interfaces.
+	\item Use pointers to implement algorithms and data structures.
 	\end{enumerate}
 \item  \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 OCT 2015 23:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 OCT 2015 08:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,11 +1033,10 @@ planation-[]for-[]pointers /
 Missing character: There is no  in font cmr12!
 Missing character: There is no  in font cmr12!
 [12]
-Overfull \hbox (406.14217pt too wide) in paragraph at lines 85--86
-\OT1/cmr/m/it/12 Stack Over-flow: Ques-tions \OT1/cmr/m/n/12 at: [][]$\OT1/cmtt
-/m/n/12 http : / / stackoverflow . com / questions / 57483 / what-[]are-[]the-[
-]differences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variabl
-e-[]in$[][]\OT1/cmr/m/n/12 ;
+Overfull \hbox (207.47714pt too wide) in paragraph at lines 85--86
+\OT1/cmtt/m/n/12 stackoverflow . com / questions / 57483 / what-[]are-[]the-[]d
+ifferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-
+[]in$[][]\OT1/cmr/m/n/12 ;
  []
 
 ) [13] (./data-structures-n_algor.bbl [14
@@ -1081,8 +1080,8 @@ Package rerunfilecheck Info: File `data-structures-n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 15795 strings out of 493089
- 224204 string characters out of 6134842
+ 15798 strings out of 493089
+ 224228 string characters out of 6134842
  333212 words of memory out of 5000000
  18656 multiletter control sequences out of 15000+600000
  19858 words of font info for 74 fonts, out of 8000000 for 9000
@@ -1104,10 +1103,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures-n_algor.pdf (22 pages, 247777 bytes).
+Output written on data-structures-n_algor.pdf (22 pages, 248272 bytes).
 PDF statistics:
- 803 PDF objects out of 1000 (max. 8388607)
- 755 compressed objects within 8 object streams
- 329 named destinations out of 1000 (max. 500000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 760 compressed objects within 8 object streams
+ 332 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
