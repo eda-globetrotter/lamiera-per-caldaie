@@ -64,6 +64,13 @@ Bruce Eckel and Chuck Allison.
 \newblock {\em Thinking in C++: Practical Programming}, volume~2.
 \newblock Prentice Hall, Upper Saddle River, {NJ}, 2003.
 
+\bibitem{EliteHussar2010}
+{EliteHussar}.
+\newblock Distinguish between pointers and references in {C++}.
+\newblock Available online from {\it cplusplus.com -- The C++ Resources
+  Network} at: \url{http://www.cplusplus.com/articles/ENywvCM9/}; October 8,
+  2015 was the last accessed date, August 20 2010.
+
 \bibitem{Gaddis2010}
 Tony Gaddis.
 \newblock {\em Starting Out With {C++}: From Control Structures Through
@@ -107,6 +114,15 @@ Marc Gregoire.
 Cay~S. Horstmann.
 \newblock {\em {C++} for Everyone}.
 \newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, second edition, 2012.
+
+\bibitem{Jensen2003}
+Ted Jensen.
+\newblock A tutorial on pointers and arrays in {C}.
+\newblock Available online as Version 1.2 at:
+  \url{http://pweb.netcom.com/~tjensen/ptr/cpoint.htm},
+  \url{http://pweb.netcom.com/~tjensen/ptr/pointers.htm}, and
+  \url{http://home.earthlink.net/~momotuk/pointers.pdf}; October 8, 2015 was
+  the last accessed date, September 2003.
 
 \bibitem{Josuttis1999a}
 Nicolai~M. Josuttis.

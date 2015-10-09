@@ -56,6 +56,7 @@
 
 
 // Import packages from the software
+//	Importing from the Utility module.
 #include "../../utilities/printer.hpp"
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
@@ -71,8 +72,8 @@
 #include <limits.h>			// For std::LONG_MIN
 #include <set>
 
-#ifndef __DIRECTED_GRAPH_NODE_H
-#define __DIRECTED_GRAPH_NODE_H
+#ifndef __DIRECTED_GRAPH_EDGE_H
+#define __DIRECTED_GRAPH_EDGE_H
 using namespace std;
 
 // =========================================================
