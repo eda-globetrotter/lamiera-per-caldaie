@@ -207,7 +207,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ values stored in the interconnect, which can be an object or a set of fields.
 
 			position in *E*.
-			unsigned long long int weight
+			weight
 	+ set\<node> destination_nodes
 	+ set\<node> source_nodes
 

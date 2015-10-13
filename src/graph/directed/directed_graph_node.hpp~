@@ -83,7 +83,7 @@ typedef set<directed_graph_edge*> dg_edge_set;
 /**
  * Shortcut to represent an iterator to the container of
  *	directed_graph_edge pointers.
- */
+ */w
 typedef set<directed_graph_edge*>::iterator dg_edge_set_p;
 /**
  * Shortcut to a pair representing an iterator to the
@@ -107,7 +107,7 @@ class directed_graph_node {
 
 		// -----------------------------------------------------
 		
-		// Define enums for the AggieMC.
+		// Define enums for the sofwtare.
 		
 		/**
 		 * Type of the logic cell (i.e., logic gate) that is used

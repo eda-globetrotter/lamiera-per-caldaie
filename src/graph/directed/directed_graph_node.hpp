@@ -107,7 +107,7 @@ class directed_graph_node {
 
 		// -----------------------------------------------------
 		
-		// Define enums for the AggieMC.
+		// Define enums for the software.
 		
 		/**
 		 * Type of the logic cell (i.e., logic gate) that is used
