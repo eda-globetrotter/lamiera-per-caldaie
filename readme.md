@@ -80,8 +80,6 @@ To get more information on "C++ statically linked binary compilation," see: <htt
 
 
 
-http://stackoverflow.com/questions/5563906/compiling-c-into-portable-linux-binaries
-http://stackoverflow.com/questions/37398/how-do-i-make-a-fully-statically-linked-exe-with-visual-studio-express-2005
 http://www.trilithium.com/johan/2005/06/static-libstdc/
 https://en.wikipedia.org/wiki/Static_library
 http://tschottdorf.github.io/linking-golang-go-statically-cgo-testing/
@@ -91,11 +89,21 @@ http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linu
 ### References:  
 Eloff, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, January 3, 2010. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
-Giovanni Funchal, "Compiling C++ into portable linux binaries," in *Stack Overflow*, Stack Exchange Inc., New York, NY, April 6, 2015. Available from *Stack Exchange: Stack Overflow* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
+Giovanni Funchal, "Compiling C++ into portable linux binaries," in *Stack Overflow*, Stack Exchange Inc., New York, NY, April 6, 2011. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/5563906/compiling-c-into-portable-linux-binaries; last viewed on October 13, 2015.
+
+Bill Forster, "How do I make a fully statically linked .exe with Visual Studio Express 2005?," in *Stack Overflow*, Stack Exchange Inc., New York, NY, September 10, 2008. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/37398/how-do-i-make-a-fully-statically-linked-exe-with-visual-studio-express-2005; last viewed on October 13, 2015.
+
+Johan Petersson, "Linking libstdc++ statically," in *Scatter/Gather thoughts*, *trilithium.com*, June 1, 2005. Available from *Scatter/Gather thoughts* at: http://www.trilithium.com/johan/2005/06/static-libstdc/; last viewed on October 13, 2015.
+
+Tobias Schottdorf, "Golang: Statically linked binary and tests for Cockroach," in *Tobias Schottdorf, PhD: Stuff I Ran Into*, GitHub, San Francisco, CA, November 10, 2014. Available from his Cologne, Germany -based web page at: http://tschottdorf.github.io/linking-golang-go-statically-cgo-testing/; last viewed on October 13, 2015.
+
+Wikipedia contributors, "Static library," in *Wikipedia, The Free Encyclopedia,* Wikimedia Foundation, San Francisco, CA, August 27, 2015. Available online in *Wikipedia, The Free Encyclopedia: Computer libraries* at: https://en.wikipedia.org/wiki/Static_library; last viewed on October 13, 2015.
+
+Eric Zhiqiang Ma, "How to Statically Link C and C++ Programs on Linux with gcc," in *SysTutorials: tutorials on Linux, systems and more,* January 1, 2014. Available online on *SysTutorials: tutorials on Linux, systems and more* at: http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/; last viewed on October 13, 2015.
 
 
 	References (to show me how to create box with scroll bar):
-	Stack Overflow contributors, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, February 12, 2015. Available from *Stack Exchange: Stack Overflow* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
+	Stack Overflow contributors, "Static linking vs dynamic linking," Stack Exchange Inc., New York, NY, September 10, 2008. Available from ** at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on October 13, 2015.
 
 
 
