@@ -78,7 +78,7 @@ To get more information on "C++ statically linked binary compilation," see: <htt
 
 
 
-
+http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking
 
 http://stackoverflow.com/questions/5563906/compiling-c-into-portable-linux-binaries
 http://stackoverflow.com/questions/37398/how-do-i-make-a-fully-statically-linked-exe-with-visual-studio-express-2005

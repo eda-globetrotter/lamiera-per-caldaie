@@ -239,9 +239,15 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ bool is_incident_on(node v)
 	
 		Return true if current edge is incident on *v*.
-	+ remove_node(v)
+	+ bool remove_node(v)
 	
 		Remove node v and all its incident edges.
+	+ unsigned long long int get_edge_weight();
+
+		Return the weight of the edge.
+	+ void set_edge_weight(unsigned long long int wt);
+	
+		Set the weight of the edge to wt.
 
 + If I do not use an edge class, I cannot represent information about an edge without using a pair or a struct. Hence, I used a class for representing the edges.
 

@@ -138,7 +138,7 @@ class directed_graph_node {
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
 		// Function to get the weight of the edge.
-		void get_edge_weight(unsigned long long int wt);
+		unsigned long long int get_edge_weight();
 
 		// -----------------------------------------------------
 
