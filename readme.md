@@ -91,7 +91,7 @@ http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linu
 ### References:  
 Eloff, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, January 3, 2010. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
-Giovanni Funchal, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, February 12, 2015. Available from *Stack Exchange: Stack Overflow* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
+Giovanni Funchal, "Compiling C++ into portable linux binaries," in *Stack Overflow*, Stack Exchange Inc., New York, NY, April 6, 2015. Available from *Stack Exchange: Stack Overflow* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
 
 	References (to show me how to create box with scroll bar):
