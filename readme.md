@@ -80,10 +80,6 @@ To get more information on "C++ statically linked binary compilation," see: <htt
 
 
 
-http://www.trilithium.com/johan/2005/06/static-libstdc/
-https://en.wikipedia.org/wiki/Static_library
-http://tschottdorf.github.io/linking-golang-go-statically-cgo-testing/
-http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/
 
 
 ### References:  
