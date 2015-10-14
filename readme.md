@@ -82,7 +82,7 @@ To get more information on "C++ statically linked binary compilation," see: <htt
 
 
 
-### References:  
+### References for Statically Linked Binary Compilation in C++:  
 Eloff, "Static linking vs dynamic linking," in *Stack Overflow*, Stack Exchange Inc., New York, NY, January 3, 2010. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on July 7, 2015.
 
 Giovanni Funchal, "Compiling C++ into portable linux binaries," in *Stack Overflow*, Stack Exchange Inc., New York, NY, April 6, 2011. Available from *Stack Exchange: Stack Overflow: Questions* at: http://stackoverflow.com/questions/5563906/compiling-c-into-portable-linux-binaries; last viewed on October 13, 2015.
@@ -98,6 +98,30 @@ Wikipedia contributors, "Static library," in *Wikipedia, The Free Encyclopedia,*
 Eric Zhiqiang Ma, "How to Statically Link C and C++ Programs on Linux with gcc," in *SysTutorials: tutorials on Linux, systems and more,* January 1, 2014. Available online on *SysTutorials: tutorials on Linux, systems and more* at: http://www.systutorials.com/5217/how-to-statically-link-c-and-c-programs-on-linux-with-gcc/; last viewed on October 13, 2015.
 
 
+
+
+
+
+
+
+
+### References for Markdown:
+Stack Overflow staff, "Markdown help," in *Stack Overflow*, Stack Exchange Inc., New York, NY, 2015. Available as *Stack Exchange: Stack Overflow (rev 2015.10.13.2885)* at: http://stackoverflow.com/editing-help; last viewed on October 14, 2015.
+
+John Gruber, "Markdown," The Daring Fireball Company LLC, December 17, 2004. Available as *The Daring Fireball Company LLC: Projects: Markdown, Version 1.0.1* at: http://daringfireball.net/projects/markdown/; last viewed on October 14, 2015.
+
+Adam Pritchard et al., "Markdown Cheatsheet," GitHub, San Francisco, CA, August 10, 2015. Available at: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet; last viewed on October 14, 2015.
+
+GitHub staff, "Writing on GitHub," in *GitHub Help,* GitHub, San Francisco, CA, 2015. Available from *GitHub: GitHub Help: Writing on GitHub category* at: https://help.github.com/articles/writing-on-github/; last viewed on October 14, 2015.
+
+GitHub staff, "Markdown Basics," in *GitHub Help,* GitHub, San Francisco, CA, 2015. Available from *GitHub: GitHub Help: Writing on GitHub category* at: https://help.github.com/articles/markdown-basics/; last viewed on October 14, 2015.
+
+GitHub staff, "GitHub Flavored Markdown," in *GitHub Help,* GitHub, San Francisco, CA, 2015. Available from *GitHub: GitHub Help: Writing on GitHub category* at: https://help.github.com/articles/github-flavored-markdown/; last viewed on October 14, 2015.
+
+Scott Boms, "Markdown 1.0.1 Syntax Cheatsheet," Wishingline, Menlo Park, CA. Available as Version 1.0.3 at: http://scottboms.com/downloads/documentation/markdown_cheatsheet.pdf; last viewed on October 14, 2015.
+
+
+
 	References (to show me how to create box with scroll bar):
 	Stack Overflow contributors, "Static linking vs dynamic linking," Stack Exchange Inc., New York, NY, September 10, 2008. Available from ** at: http://stackoverflow.com/questions/1993390/static-linking-vs-dynamic-linking; last viewed on October 13, 2015.
 
@@ -107,25 +131,15 @@ Eric Zhiqiang Ma, "How to Statically Link C and C++ Programs on Linux with gcc,"
 
 
 
-Stack Overflow staff, "Markdown help," in *Stack Overflow*, Stack Exchange Inc., New York, NY, 2015. Available as *Stack Exchange: Stack Overflow (rev 2015.10.13.2885)* at: http://stackoverflow.com/editing-help; last viewed on October 14, 2015.
-
-John Gruber, "Markdown," The Daring Fireball Company LLC, December 17, 2004. Available as *The Daring Fireball Company LLC: Projects: Markdown, Version 1.0.1* at: http://daringfireball.net/projects/markdown/; last viewed on October 14, 2015.
-
-Adam Pritchard et al., "Markdown Cheatsheet," GitHub, San Francisco, CA, August 10, 2015. Available at: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet; last viewed on October 14, 2015.
 
 
-in *GitHub Help,* GitHub, San Francisco, CA, 2015.
-https://help.github.com/articles/markdown-basics/
-https://help.github.com/articles/github-flavored-markdown/
-https://help.github.com/articles/writing-on-github/
 
 
-Daniel Greenfeld. Revision 0dfc38d3. 
-2012
-http://markdown-guide.readthedocs.org/en/latest/basics.html
+
+Daniel Greenfeld, "Markdown Basics," Revision 0dfc38d3, from the *Read the Docs* repository, 2012. Available at: http://markdown-guide.readthedocs.org/en/latest/basics.html; last viewed on October 14, 2015.
 
 
-Scott Boms, "Markdown 1.0.1 Syntax Cheatsheet," Wishingline, Menlo Park, CA. Available as Version 1.0.3 at: http://scottboms.com/downloads/documentation/markdown_cheatsheet.pdf; last viewed on October 14, 2015.
+
 
 
 
