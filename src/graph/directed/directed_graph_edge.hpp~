@@ -215,6 +215,8 @@ class directed_graph_node {
 	
 		// Declaration of instance variables...
 		
+		// Boolean function of the node
+//		bool logic_function;
 		// Index (as an integer) of the edge.
 		unsigned long long int edge_ID;
 		// Set of destination nodes.
