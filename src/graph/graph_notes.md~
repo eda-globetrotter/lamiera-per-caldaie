@@ -253,7 +253,6 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		Get the ID for the edge.
 	+void set_edge_id(int temp_id);
 	
-		Set the ID for the edge.
 
 + If I do not use an edge class, I cannot represent information about an edge without using a pair or a struct. Hence, I used a class for representing the edges.
 

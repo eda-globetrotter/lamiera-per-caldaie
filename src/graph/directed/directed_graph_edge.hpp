@@ -163,8 +163,8 @@ class directed_graph_edge {
 
 		// Mutator functions.
 		
-		// Function to set the ID of the node.
-		void set_node_ID(const unsigned long long int &temp_ID);
+		// Function to set the ID of the edge.
+		void set_edge_ID(const unsigned long long int &temp_ID);
 		
 		/**
 		 * Function to add a set of incoming edges to the current
