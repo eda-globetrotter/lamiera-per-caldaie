@@ -120,6 +120,8 @@ GitHub staff, "GitHub Flavored Markdown," in *GitHub Help,* GitHub, San Francisc
 
 Scott Boms, "Markdown 1.0.1 Syntax Cheatsheet," Wishingline, Menlo Park, CA. Available as Version 1.0.3 at: http://scottboms.com/downloads/documentation/markdown_cheatsheet.pdf; last viewed on October 14, 2015.
 
+Daniel Greenfeld, "Markdown Basics," Revision 0dfc38d3, from the *Read the Docs* repository, 2012. Available at: http://markdown-guide.readthedocs.org/en/latest/basics.html; last viewed on October 14, 2015.
+
 
 
 	References (to show me how to create box with scroll bar):
@@ -135,8 +137,6 @@ Scott Boms, "Markdown 1.0.1 Syntax Cheatsheet," Wishingline, Menlo Park, CA. Ava
 
 
 
-
-Daniel Greenfeld, "Markdown Basics," Revision 0dfc38d3, from the *Read the Docs* repository, 2012. Available at: http://markdown-guide.readthedocs.org/en/latest/basics.html; last viewed on October 14, 2015.
 
 
 
