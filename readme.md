@@ -35,7 +35,7 @@ Boilerplate code for my open source software projects. It will include implement
 	* *BibTeX* database for the documentation.
 - README.md: Readme file to describe the software project, and organization of the repository.
 - scripts: Scripts to perform miscellaneous tasks for the software project.
-- src: Source code of the software project, including test suites for automated regression testing.
+- src: Source code of the software project, including test suites for automated regression testing and a "sandbox" for testing concepts in EDA programming or VLSI design.
 
 
 
