@@ -95,16 +95,16 @@ typedef pair<dg_node_set, bool> pair_dgnodesetp_bool;
 
 // =========================================================
 
-// Class definition of the directed_graph_node class
-class directed_graph_node {
+// Class definition of the directed_graph_edge class
+class directed_graph_edge {
 	// Publicly accessible data members, constructors, and functions
 	public:
 		// Default constructor.
-		directed_graph_node();
+		directed_graph_edge();
 		// Standard constructors.
-		directed_graph_node(unsigned long long int node_id_num);
+		directed_graph_edge(unsigned long long int edge_id_num);
 		// Default destructor.
-		~directed_graph_node();
+		~directed_graph_edge();
 
 		// -----------------------------------------------------
 		
@@ -135,10 +135,29 @@ class directed_graph_node {
 		 * Function to get the destination nodes of outgoing edges.
 		 */
 		dg_node_set get_destination_nodes();
+		/**
+		 * Function to get nodes on the opposite side of this edge.
+		 * If (v == source node), return destination node(s).
+		 * Else If (v == destination node), return source node(s).
+		 * Else, throw an error/exception.
+		 *	This is because node v is neither a source nor
+		 *		destination node.
+		 */
+		dg_node_set get_opposite_nodes(const directed_graph_node &v);
 		// Function to get the ID of the edge.
 		unsigned long long int get_edge_ID();
 		// Function to get the weight of the edge.
 		unsigned long long int get_edge_weight();
+		/**
+		 * Function to determmine if this/current edge e is adjacent
+		 *	to edge f.
+		 */
+		bool is_adjacent_to(directed_graph_edge f);
+		/**
+		 * Function to determine if current edge e is incident on
+		 *	node v.
+		 */
+		bool is_incident_on(const directed_graph_node &v);
 
 		// -----------------------------------------------------
 
@@ -215,8 +234,6 @@ class directed_graph_node {
 	
 		// Declaration of instance variables...
 		
-		// Boolean function of the node
-//		bool logic_function;
 		// Index (as an integer) of the edge.
 		unsigned long long int edge_ID;
 		// Set of destination nodes.
