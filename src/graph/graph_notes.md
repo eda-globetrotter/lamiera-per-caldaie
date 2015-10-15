@@ -306,6 +306,8 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	
 		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return *NULL*.
 	+ unsigned long long int out_degree(v)
+	
+		Return the out-degree of node v. If v is an invalid node, return INT_MAX
 	+ unsigned long long int in_degree(v)
 	
 		Return the in-degree of node v. If v is an invalid node, return INT_MAX
@@ -315,9 +317,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ set\<edge> incoming_edges(node v)
 
 		Return set of incoming edges for the node v. Else, return empty set.
-	+ bool remove_node(v)
 	
-		Remove node v and all its incident edges.
 	
 
 
@@ -333,6 +333,21 @@ Goodrich2011
 
 
 
+
+
+Goodrich2013
+	Michael T. Goodrich, Roberto Tamassia, and Michael H. Goldwasser, "Data Structures and Algorithms in Python," John Wiley & Sons, Inc., Hoboken, NJ, 2013.
+
+
+
+
+
+
+
+
+Bibliography (not referenced):
+Drozdek2001
+	Adam Drozdek, "Data Structures and Algorithms in C++," Second Edition, Brooks/Cole, Pacific Grove, CA, 2001.
 
 
 
