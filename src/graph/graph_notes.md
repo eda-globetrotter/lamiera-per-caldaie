@@ -173,7 +173,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 
 
-#### Node class
+#### Node class (Goodrich2011, pp. 599)
 + Fields
 	+ int node_id
 	+ elem store in the node (object???/class)
@@ -196,13 +196,14 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ void set_outgoing_edge(edge e)
 	+ bool is_adjacent_to(node v)
 	
-		Return true iff *u* and *v* are adjacent.
+		Return true iff this node *u* and *v* are adjacent.
 	+ elem get_element()
+	+ void set_element(elem m)
 
 
 
 
-#### Edge class
+#### Edge class (Goodrich2011, pp. 599)
 + Fields
 	+ values stored in the interconnect, which can be an object or a set of fields.
 
@@ -215,9 +216,13 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ set\<node> get_destination_nodes()
 	
 		Return set of destination node(s)\.
+	+ bool is_destination_node(node v)
+	+ void set_destination_node(node v)
 	+ set\<node> get_source_nodes()
 	
 		Return set of source node(s)\.
+	+ bool is_source_node(node v)
+	+ void set_source_node(node v)
 	+ set\<node> get_opposite_nodes(node v)
 	
 		If (v = source node),
@@ -233,15 +238,18 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 			node is neither a source nor destination node.
 
 			throw an error/exception.
+			Or, return empty set.
 	+ bool is_adjacent_to(edge f)
 
 		Return true if this/current edge *e* is adjacent to edge *f*.
+		Check if a destination node of this edge is the source node
+			of edge f.
+			Or, check if a source node of this edge is the destination
+			node of edge f.
 	+ bool is_incident_on(node v)
 	
 		Return true if current edge is incident on *v*.
-	+ bool remove_node(v)
-	
-		Remove node v and all its incident edges.
+		Check if node v is a source/destination node of this edge.
 	+ unsigned long long int get_edge_weight();
 
 		Return the weight of the edge.
@@ -307,6 +315,10 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ set\<edge> incoming_edges(node v)
 
 		Return set of incoming edges for the node v. Else, return empty set.
+	+ bool remove_node(v)
+	
+		Remove node v and all its incident edges.
+	
 
 
 
@@ -315,8 +327,9 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 
 
-
-
+References:
+Goodrich2011
+	Michael T. Goodrich, Roberto Tamassia, and David M. Mount, "Data Structures and Algorithms in C++," Second Edition, John Wiley & Sons, Inc., Hoboken, NJ, 2011.
 
 
 
