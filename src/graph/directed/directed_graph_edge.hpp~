@@ -127,10 +127,6 @@ class directed_graph_edge {
 	
 		// Accessor functions.
 		
-		// Function to get the ID of the edge.
-		unsigned long long int get_edge_ID();
-		// Function to get the weight of the edge.
-		unsigned long long int get_edge_weight();
 		/**
 		 * Function to get the source nodes of incoming edges.
 		 */
@@ -148,6 +144,10 @@ class directed_graph_edge {
 		 *		destination node.
 		 */
 		dg_node_set get_opposite_nodes(const directed_graph_node &v);
+		// Function to get the ID of the edge.
+		unsigned long long int get_edge_ID();
+		// Function to get the weight of the edge.
+		unsigned long long int get_edge_weight();
 		/**
 		 * Function to determmine if this/current edge e is adjacent
 		 *	to edge f.

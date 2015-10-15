@@ -248,10 +248,10 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ void set_edge_weight(unsigned long long int wt);
 	
 		Set the weight of the edge to wt.
-	+ int get_edge_id()
+	+int get_edge_id()
 
 		Get the ID for the edge.
-	+ void set_edge_id(int temp_id)
+	+void set_edge_id(int temp_id)
 	
 		Set the ID for the edge.
 
