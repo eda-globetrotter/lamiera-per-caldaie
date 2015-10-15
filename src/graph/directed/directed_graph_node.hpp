@@ -133,7 +133,11 @@ class directed_graph_node {
 		/**
 		 * Function to get the outgoing edges from this node.
 		 */
-		dg_edge_set get_outgoing_edges();		
+		dg_edge_set get_outgoing_edges();
+		// Function to get incident edges.
+		dg_edge_set get_incident_edges();
+		// Function to determine if node v is adjacent to this node.
+		bool is_adjacent_to(directed_graph_node v);
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
 
