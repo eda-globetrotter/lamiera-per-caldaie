@@ -179,7 +179,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ elem store in the node (object???/class)
 	+ set\<edge> outgoing_edges
 	+ set\<edge> incoming_edges
-	+ \<set> outgoing_edges and \<set> incoming_edges avoids duplicate copies of an edge with the set container. However, multigraphs are still supported since duplicates are determined solely by the . This is implies that there are no parallel edges between *u* and *v*.
+	+ \<set> outgoing_edges and \<set> incoming_edges avoids duplicate copies of an edge with the set container. However, multigraphs are still supported since duplicates are determined solely by the edge ID. This is implies that there are no parallel edges between *u* and *v*.
 		
 		Enable implementation of hypergraphs, where an edge can connect any number of nodes.
 		
