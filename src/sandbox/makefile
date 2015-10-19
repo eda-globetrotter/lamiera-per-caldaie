@@ -208,8 +208,7 @@ emptyset:
 	@echo === C++ Classes Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
 	@echo === C++ STL Directory
-#	$(GPLUSPLUS)	$(COMPILE)	$(CPPMISC)test_empty_set.cpp
-	$(GPLUSPLUS)	$(COMPILE)	$(CPPMISC)test_empty_set.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_empty_set.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
@@ -228,12 +227,7 @@ emptyset:
 	@echo
 	@echo
 
-	@echo === Compiling C++ source code...
-	@echo === C++ Classes Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node_swap.cpp
-	@echo === C++ STL Directory
-zx
+
 
 
 

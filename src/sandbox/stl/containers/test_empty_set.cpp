@@ -73,6 +73,14 @@ int main(int argc, char *argv[]) {
 	set<node> nset1;
 	cout << "	Size of nset1:::" << nset1.size() << "===" << endl;
 	
+	/**
+	 * nset1 = NULL;
+	 *
+	 * The above statement would cause compilation of this program
+	 *	to fail.
+	 * I cannot assign an empty set to NULL.
+	 */
+	
 	node temp_node;
 	temp_node.set_node_ID(109);
 	temp_node.set_node_label("america");

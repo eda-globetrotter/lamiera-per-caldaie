@@ -47,7 +47,7 @@
 #include <set>
 
 // Import packages from the software
-#include "../classes/node.hpp"
+#include "../../classes/node.hpp"
 
 
 using namespace std;
@@ -72,6 +72,14 @@ int main(int argc, char *argv[]) {
 	// Test the size of empty set
 	set<node> nset1;
 	cout << "	Size of nset1:::" << nset1.size() << "===" << endl;
+	
+	/**
+	 * nset1 = NULL;
+	 *
+	 * The above statement would cause compilation of this program
+	 *	to fail.
+	 * I cannot assign an empty set to NULL
+	 */
 	
 	node temp_node;
 	temp_node.set_node_ID(109);
