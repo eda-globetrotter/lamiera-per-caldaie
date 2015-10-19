@@ -187,7 +187,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 			position in *V*.
 + Functions
-	+ set\<edge> get_incident_edges()
+	+ set\<edge> get_incident_edges() [**defined/not implemented**]
 		
 		Return incoming_edges *\cup* outgoing_edges.
 	+ set\<edge> get_incoming_edges() [**defined/not implemented**]
@@ -200,7 +200,6 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ void add_outgoing_edge(edge e) [**defined/not implemented**]
 	+ void remove_outgoing_edge(int nodeid) [**defined/not implemented**]
 	+ void remove_outgoing_edge(edge e) [**defined/not implemented**]
-	+ set\<edge> get_incident_edges() [**defined/not implemented**]
 	+ bool is_adjacent_to(node v) [**defined/not implemented**]
 	
 		Return true iff this node *u* and *v* are adjacent.
