@@ -190,7 +190,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ set\<edge> get_incident_edges()
 		
 		Return incoming_edges *\cup* outgoing_edges.
-	+ set\<edge> get_incoming_edges()		**defined/not implemented**
+	+ set\<edge> get_incoming_edges()             **defined/not implemented**
 	+ void add_incoming_edge(edge e)
 	+ void add_incoming_edge(set\<edge> se)
 	+ void remove_incoming_edge(edge e)
