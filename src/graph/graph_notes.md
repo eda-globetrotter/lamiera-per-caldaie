@@ -191,13 +191,13 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 		Return incoming_edges *\cup* outgoing_edges.
 	+ set\<edge> get_incoming_edges() [**defined/not implemented**]
+	+ void add_set_of_incoming_edge(set\<edge> se) [**defined/not implemented**]
 	+ void add_incoming_edge(edge e)
-	+ void add_incoming_edge(set\<edge> se)
 	+ void remove_incoming_edge(edge e)
 	+ void remove_incoming_edge(int nodeid)
 	+ set\<edge> get_outgoing_edges() [**defined/not implemented**]
+	+ void add_set_of_outgoing_edge(set\<edge> se)
 	+ void add_outgoing_edge(edge e)
-	+ void add_outgoing_edge(set\<edge> se)
 	+ void remove_outgoing_edge(edge e)
 	+ void remove_outgoing_edge(int nodeid)
 	+ set\<edge> get_incident_edges() [**defined/not implemented**]
@@ -207,7 +207,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ elem get_element()
 	+ void set_element(elem m)
 	+ int get_node_ID() [**defined/not implemented**]
-	+ void set_node_ID(int nid)
+	+ void set_node_ID(int nid) [**defined/not implemented**]
 
 
 
