@@ -152,13 +152,11 @@ class directed_graph_node {
 		 * Function to add a set of incoming edges to the current
 		 *	set of incoming edges.
 		 */
-//		void add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links);
 		void add_set_of_incoming_edges(const dg_edge_set &set_incoming_links);
 		/**
 		 * Function to add a set of outgoing edges to the current
 		 *	set of outgoing edges.
 		 */
-//		void add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links);
 		void add_set_of_outgoing_edges(const dg_edge_set &set_outgoing_links);
 		/**
 		 * Function to add an incoming edge to the current set of

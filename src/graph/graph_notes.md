@@ -191,15 +191,15 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 		Return incoming_edges *\cup* outgoing_edges.
 	+ set\<edge> get_incoming_edges() [**defined/not implemented**]
-	+ void add_set_of_incoming_edge(set\<edge> se) [**defined/not implemented**]
-	+ void add_incoming_edge(edge e)
-	+ void remove_incoming_edge(edge e)
-	+ void remove_incoming_edge(int nodeid)
+	+ void add_set_of_incoming_edges(set\<edge> se) [**defined/not implemented**]
+	+ void add_incoming_edge(edge e) [**defined/not implemented**]
+	+ void remove_incoming_edge(int nodeid) [**defined/not implemented**]
+	+ void remove_incoming_edge(edge e) [**defined/not implemented**]
 	+ set\<edge> get_outgoing_edges() [**defined/not implemented**]
-	+ void add_set_of_outgoing_edge(set\<edge> se)
-	+ void add_outgoing_edge(edge e)
-	+ void remove_outgoing_edge(edge e)
-	+ void remove_outgoing_edge(int nodeid)
+	+ void add_set_of_outgoing_edges(set\<edge> se) [**defined/not implemented**]
+	+ void add_outgoing_edge(edge e) [**defined/not implemented**]
+	+ void remove_outgoing_edge(int nodeid) [**defined/not implemented**]
+	+ void remove_outgoing_edge(edge e) [**defined/not implemented**]
 	+ set\<edge> get_incident_edges() [**defined/not implemented**]
 	+ bool is_adjacent_to(node v) [**defined/not implemented**]
 	
