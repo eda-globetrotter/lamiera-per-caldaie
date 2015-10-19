@@ -17,7 +17,12 @@
  *	operator child class.
  * Definition of the class directed_graph_node depends on the
  *	definition of the class directed_graph_edge.
- *
+ * The C++ STL set container is used to prevent duplicates of a
+ *	given edge, while allowing multiple edges to connect any pair
+ *	of nodes as long as each edge has a unique edge ID.
+ * Therefore, for multiple edges connecting a pair of edges, they
+ *	must each have a unique edge ID. Each edge connecting a given
+ *	pair of nodes, *v_1* and *v_2*, must have a unique edge ID.
  *
  *
  *

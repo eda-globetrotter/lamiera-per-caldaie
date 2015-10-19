@@ -44,10 +44,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 // Testing operations with the C++ STL set container.
-//#include <set>
+#include <set>
 
 // Import packages from the software
-//#include "../classes/node.hpp"
+#include "../../classes/node.hpp"
 
 
 using namespace std;
@@ -61,16 +61,15 @@ int main(int argc, char *argv[]) {
 
 	unsigned long long *temp_int;
 	temp_int = NULL;
-	cout << "	temp_int is::" << temp_int << "==" << endl;
+	cout << "temp_int is::" << temp_int << "==" << endl;
 
 	if (NULL == temp_int) {
-		cout << "	temp_int is NULL." << endl;
+		cout << "temp_int is NULL." << endl;
 	}
 	
 	// --------------------------------------------------------------
 	
 	// Test the size of empty set
-/*
 	set<node> nset1;
 	cout << "	Size of nset1:::" << nset1.size() << "===" << endl;
 	
@@ -83,7 +82,7 @@ int main(int argc, char *argv[]) {
 	}else{
 		cout << "	= Insertion operation failed." << endl;
 	}
-*/
+	
 	
 	// End of main function...
 	return 0;

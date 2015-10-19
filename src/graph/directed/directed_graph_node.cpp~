@@ -94,7 +94,7 @@ directed_graph_node::directed_graph_node(unsigned long long int node_id_num) {
 	// Assign node_id_num to be the Node ID.
 	node_ID = node_id_num;
 	// Assign other private instance variables to NULL.
-/*
+/*	
 	outgoing_edges = NULL;
 	incoming_edges = NULL;
 */

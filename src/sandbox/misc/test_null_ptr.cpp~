@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 
 	unsigned long long *temp_int;
 	temp_int = NULL;
-	cout << "	temp_int is::" << temp_int << "==" << endl;
+	cout << "temp_int is::" << temp_int << "==" << endl;
 
 	if (NULL == temp_int) {
 		cout << "	temp_int is NULL." << endl;
