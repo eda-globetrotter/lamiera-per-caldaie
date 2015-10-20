@@ -140,8 +140,13 @@ end
 # Start removing temporary files from the working directory
 remove_temp(search_dir, file_extension)
 
-#############system("git rm test-boilerplate-code")
-#############File.delete("test-boilerplate-code")
+=begin
+system("git rm test-boilerplate-code")
+File.delete("test-boilerplate-code")
+=end
+
+system("git rm play_in_sandbox")
+File.delete("play_in_sandbox")
 
 # Remove all generated output files
 #system("rm ../outputs/*")
