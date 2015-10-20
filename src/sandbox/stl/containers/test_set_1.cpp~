@@ -45,9 +45,10 @@
 #include <stdlib.h>
 // Testing operations with the C++ STL set container.
 #include <set>
+#include <utility>
 
 // Import packages from the software
-#include "../../classes/node.hpp"
+//#include "../../classes/node.hpp"
 
 
 using namespace std;
@@ -59,38 +60,57 @@ int main(int argc, char *argv[]) {
 	// seg fault - accessing something that isn't there
 	// bus error - accessing some thing (data element) that has been freed
 
-	unsigned long long *temp_int;
-	temp_int = NULL;
-	cout << "temp_int is::" << temp_int << "==" << endl;
+	// --------------------------------------------------------------
+	
+	// Iterator for a set of integers.
+	set<int>::iterator it;
+		
+	// Create sets of integers.
+//	set<int> nset1;
 
-	if (NULL == temp_int) {
-		cout << "temp_int is NULL." << endl;
+	// Set #1
+	set<int> nset1 = {10, 29, 38, 47, 56, 64, 73, 82, 91};
+	cout << "	Size of nset1:::" << nset1.size() << "===" << endl;
+	
+	// Set #2
+	set<int> nset2 = {11, 22, 33, 44, 55, 66, 77, 88, 99, 191, 282, 373, 464, 595, 616, 727, 838, 949};
+	cout << "	Size of nset2:::" << nset2.size() << "===" << endl;
+	
+	// Copy set#2 to set#3.
+	set<int> nset3 (nset2);
+	// Add set#1 to set#3.
+	pair<set<int>::iterator, bool> result;
+//	pair<set<int>::iterator, bool> result = nset3.insert(nset1,nset1.size());
+
+	//nset3.insert(nset1,nset1.size());
+	//nset3.insert(nset1);
+	result = nset3.insert(nset1.begin(),nset1.end());
+	if(result.second) {
+		cout << "	Set#3 has been added to Set#1." << endl;
 	}
+	cout << "	Size of nset3:::" << nset3.size() << "===" << endl;
 	
 	// --------------------------------------------------------------
 	
-	// Test the size of empty set
-	set<node> nset1;
-	cout << "	Size of nset1:::" << nset1.size() << "===" << endl;
+	// Iterate each of the sets.
 	
-	/**
-	 * nset1 = NULL;
-	 *
-	 * The above statement would cause compilation of this program
-	 *	to fail.
-	 * I cannot assign an empty set to NULL
-	 */
-	
-	node temp_node;
-	temp_node.set_node_ID(109);
-	temp_node.set_node_label("america");
-	pair<set<node>::iterator, bool> set_op_flag = nset1.insert(temp_node);
-	if(set_op_flag.second) {
-		cout << "	= Insertion operation passed." << endl;
-	}else{
-		cout << "	= Insertion operation failed." << endl;
+	// Enumerate set #1
+	for(it=nset1.begin(); it != nset1.end(); it++) {
+		cout << *it << "-";
 	}
+	cout << endl;
 	
+	// Enumerate set #2
+	for(it=nset2.begin(); it != nset2.end(); it++) {
+		cout << *it << "-";
+	}
+	cout << endl;
+	
+	// Enumerate set #3
+	for(it=nset3.begin(); it != nset3.end(); it++) {
+		cout << *it << "-";
+	}
+	cout << endl;
 	
 	// End of main function...
 	return 0;
