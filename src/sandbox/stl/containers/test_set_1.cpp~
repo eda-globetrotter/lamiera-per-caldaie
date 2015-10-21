@@ -78,16 +78,16 @@ int main(int argc, char *argv[]) {
 	cout << "	Size of nset2:::" << nset2.size() << "===" << endl;
 	
 	// Copy set#2 to set#3.
-	set<int> nset3 (nset2);
+	set<int> nset3(nset2);
 	// Add set#1 to set#3.
 	pair<set<int>::iterator, bool> result;
-	// This statement does not work. It causes compilation errors.
+// This statement does not work. It causes compilation errors.
 //	pair<set<int>::iterator, bool> result = nset3.insert(nset1,nset1.size());
 
-	// These statements do not work. They cause compilation errors.
-	//nset3.insert(nset1,nset1.size());
-	//nset3.insert(nset1);
-	//result = nset3.insert(nset1.begin(),nset1.end());
+// These statements do not work. They cause compilation errors.
+//nset3.insert(nset1,nset1.size());
+//nset3.insert(nset1);
+//result = nset3.insert(nset1.begin(),nset1.end());
 
 
 
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
 
 	// --------------------------------------------------------------
 	
-	// Tes
+	// Testing set operations...
 	
 	/**
 	 * Merge Set#1 with Set#3.

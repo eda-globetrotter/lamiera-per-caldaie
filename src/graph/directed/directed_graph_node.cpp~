@@ -165,8 +165,7 @@ dg_edge_set directed_graph_node::get_incident_edges() {
 /**
  * Function to determine if node v is adjacent to this node.
  */
-bool directed_graph_node::is_adjacent_to(directed_graph_node v) {
-}
+bool directed_graph_node::is_adjacent_to(directed_graph_node v);
 
 
 /**
