@@ -69,12 +69,28 @@ David Kushner.
   \url{http://spectrum.ieee.org/at-work/innovation/facebook-philosophy-move-fast-and-break-things/0};
   October 9, 2014 was the last accessed date, June 1 2011.
 
+\bibitem{Macdonald20XY}
+Ian Macdonald.
+\newblock The unofficial {Ruby} usage guide.
+\newblock Available online from {\it Caliban -- Opinion and Righteous Anger:
+  Ruby Projects: Recommended Tutorials} at:
+  \url{http://www.caliban.org/ruby/rubyguide.shtml}; October 20, 2015 was the
+  last accessed date.
+
 \bibitem{Patashnik1988}
 Oren Patashnik.
 \newblock {\sc Bib}{\TeX}ing.
 \newblock Available online at:
   \url{http://mirrors.ctan.org/biblio/bibtex/base/btxdoc.pdf}; September 24,
   2014 was the last accessed date, February 8 1988.
+
+\bibitem{vanRossum2013}
+Guido {van Rossum}, Barry Warsaw, and Nick Coghlan.
+\newblock Style guide for {Python} code.
+\newblock Available online as {\it {Python}: {Python} Developer's Guide:
+  {Python} Enhancement Proposals: {Python} Enhancement Proposal 0} at:
+  \url{https://www.python.org/dev/peps/pep-0008/}; October 20, 2015 was the
+  last accessed date, August 1 2013.
 
 \bibitem{Zuckerberg2012}
 Mark Zuckerberg.

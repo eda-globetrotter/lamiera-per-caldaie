@@ -61,7 +61,7 @@ Revision history: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item Version 1, October 2, 2014. Initial version of the guideline (for another project).
 \item Version 1.1, December 23, 2014. Version ported for this boilerplate code project.
-\item Version 2, October 20, 2014. Added guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard. This coding standard is also known as coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style.
+\item Version 2, October 20, 2015. Added guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard. This coding standard is also known as coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style.
 \end{enumerate}
 
 
@@ -278,19 +278,48 @@ The recommended fields for {\sc Bib}\TeX\ entries are: \vspace{-0.3cm}
 \section{Coding Standard}
 \label{sec:CodingStandard}
 
-This is a guideline for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard that shall be used for this boilerplate code project. This coding standard is also known as the coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. The documentation generator that shall be supported is: {\tt Doxygen}. Since I am using Doxygen for generating documentation, I can use \LaTeX\ to provide richer markup. \\
+This is a guideline for {\it Doxygen}-supported, {\it Javadoc}-based coding standard that shall be used for this boilerplate code project. This coding standard is also known as the coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. The documentation generator that shall be supported is: {\it Doxygen}. Since I am using {\it Doxygen} for generating documentation, I can use \LaTeX\ to provide richer markup. \\
 
-My indent style would be the {\tt 1TBS} variant of the {\tt K\&R} style, which is an abbreviation of ``{\tt The One True Brace Style}''. It is also equivalent to the {\tt Kernel Normal Form style} (or {\tt BSD KNF style}). \\
+{\bf Document the known bugs for each function/method.} \\
 
-For a suggested coding style for {\tt Python} scripts, see \url{http://www.python.org/dev/peps/pep-0008/}.
-For a suggested coding style for {\tt Ruby} scripts, see \url{http://www.caliban.org/ruby/rubyguide.shtml}.
+My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style, which is an abbreviation of ``{\it The One True Brace Style}''. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}). \\
 
-{\tt GNU coding standards}; see \url{http://www.gnu.org/prep/standards.html} and \url{http://en.wikipedia.org/wiki/GNU_Coding_Standards}; also see \url{http://www.ronancrowley.com/Eclipse_GNU_Style.xml} for ``{\tt Eclipse} Code Style Formatter for {\tt GNU Coding Standards}''
-FMG Programming Guidelines (FPG); see \url{http://www-ti.informatik.uni-tuebingen.de/~fmg/guidelines.html} ... Also, see \url{http://www.boost.org/development/requirements.html} and \url{http://cm.bell-labs.com/cm/cs/tpop/}
-{\tt Gnits Standards}: a collection of standards and recommendations for programming, maintaining, and distributing software; see \url{http://www.gnu.org/software/womb/gnits/} 
-{\tt Mozilla} Coding Style Guide; see \url{https://developer.mozilla.org/en/Mozilla_Coding_Style_Guide} or \url{http://www.mozilla.org/hacking/mozilla-style-guide.html}
-{\tt Linux} Kernel Coding Style (or Documentation/CodingStyle in the {\tt Linux} Kernel source tree); see \url{http://lxr.linux.no/source/Documentation/CodingStyle}
-code documentation guidelines; \\see \url{http://www-ti.informatik.uni-tuebingen.de/~fmg/guidelines.html}
+Classes, functions/methods, constants, macros, and static and instance variables shall be named using complete words or well-known abbreviations that are concatenated with an underscore in {\it C++}; this is a deviation from the {\it Hungarian notation} that uses an upper case letter to distinguish words/abbreviations in the name (i.e., the Start case style of writing; see letter case). \\
+
+For {\it C++} programs, the following tags shall be used in the comments: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item @author {\it Author's\_Name}: indicate the author ({\it Author's\_Name}) of the file/function
+\item @version {\it X.Y}: indicate the version ({\it X.Y}) of the file
+\item @section {\it SECTION\_NAME}: indicate the section ({\it SECTION\_NAME}) of the file, which can be: {\it LICENSE} or {\it DESCRIPTION}
+\item @param {\it x}: indicate the parameter ({\it x}) of the constructor or function
+\item @exception {\it Exception\_Name}, or @throws {\it Exception\_Name}: an exception that a function/method can throw
+\item @return {\it Return\_Statement}: indicate the return (type and) action of the function
+\item @see {\it reference}: a link to another element in the documentation; e.g., @see {\it Class\_Name}, or @see {\it Class\_Name\#member\_function\_name}
+\item @since {\it X.Y: Month-Day-Year}: This functionality has been added since version {\it X.Y} (and on the date {\it Month-Day-Year})
+\item @deprecated {\it description}: Describe an outdated function/method, and indicate when the function/method has deprecated
+\item ``@link {\it ... URL...} @endlink'' is used to include hyperlinks in the generated documentation for Doxygen
+\item \#\#\#\# IMPORTANT NOTES: Notes that are critical for helping the reader understanding assumptions and decisions made while developing the software
+\item @todo($<$message$>$, $<$version$>$) (or \#\#\#\# TO BE COMPLETED): Task to be finished at a later time
+\item \#\#\#\# TO BE FIXED: Task to be debugged at a later time
+\item @migration($<$message$>$, $<$version$>$): Code is being migrated to another function/method, or class.
+\item See \url{http://www.stack.nl/~dimitri/doxygen/commands.html} for more information of tags that are recognized by {\tt Doxygen}.
+\item @pre (or @precondition): Precondition(s) of the function.
+\item @assert: Assertion(s) of the function.
+\item @post (or @postcondition): Postcondition(s) of the function.
+\end{enumerate}
+
+The order of tags in different sections of the {\it C++} code is given as follows: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Headers/Interfaces and Classes: @version, @author, @since, @link, and @see
+\item Constructors: @param, @exception, @since, @link, and @see
+\item Functions/Methods: @param, @precondition, @postcondition, @return, @exception, @since, @link, and @see
+\item Variables can use the @see tags.
+\item The @deprecated tag can be used for headers/interfaces, classes, constructors, functions/methods, and variables.
+\end{enumerate}
+
+For a suggested coding style for {\tt Python} and {\it Ruby} scripts, see \cite{vanRossum2013} and \cite{Macdonald20XY}, respectively.
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
