@@ -93,6 +93,7 @@ directed_graph_node::directed_graph_node() {
 	node_ID = ULLONG_MAX;
 	// Assign pointer-based private instance variables to NULL.
 
+	// Assertion violated; default constructor shouldn't be used.
 	string err_msg = "Default constructor should not be used!!!";
 	throw new violated_assertion(err_msg);
 }
@@ -149,9 +150,10 @@ dg_edge_set directed_graph_node::get_outgoing_edges() {
  * Function to get the incident edges of this node.
  * @param - None.
  * @return - The set of incident edges of this node.
- * @postcondition - Size of incident edges must be the sum
- *	of the size of the set of incoming edges and the size
- *	of the set of outgoing edges. 
+ * @postcondition - Size of the set of incident edges must be
+ *	the sum of the size of the set of incoming edges and the
+ *	size of the set of outgoing edges.
+ * @exception violated_postcondition: Thrown
  */
 dg_edge_set directed_graph_node::get_incident_edges() {
 	/**
@@ -169,7 +171,23 @@ dg_edge_set directed_graph_node::get_incident_edges() {
 	 */
 
 	// Check postcondition; get size of the set of incoming edges
-	unsigned long long int 
+	unsigned long long int num_incident_edges = incoming_edges.size();
+	/**
+	 * size of the set of incident edges
+	 *	= 	size of the set of incoming edges
+	 *		+ size of the set of outgoing edges
+	 *
+	 * size of the set of incident edges =
+	 *	size of the set of incident edges
+	 *	+ size of the set of outgoing edges
+	 */
+	num_incident_edges = num_incident_edges + outgoing_edges.size();
+	if (incident_edges.size() != num_incident_edges) {
+		throw violated_postcondition();
+		
+		string err_msg = "Default constructor should not be used!!!";
+	throw new violated_assertion(err_msg);
+	}
 
 	return incident_edges;
 }
