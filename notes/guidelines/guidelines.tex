@@ -53,6 +53,26 @@ This is a set of guidelines for conduct while collaborating on open source proje
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Revision History}
+\label{sec:RevisionHistory}
+
+Revision history: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Version 1, October 2, 2014. Initial version of the guideline (for another project).
+\item Version 1.1, December 23, 2014. Version ported for this boilerplate code project.
+\item Version 2, October 20, 2014. Added guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard. This coding standard is also known as coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Guidelines for Conduct}
@@ -254,13 +274,23 @@ The recommended fields for {\sc Bib}\TeX\ entries are: \vspace{-0.3cm}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coding Standard}
+\label{sec:CodingStandard}
 
+This is a guideline for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard that shall be used for this boilerplate code project. This coding standard is also known as the coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. The documentation generator that shall be supported is: {\tt Doxygen}. Since I am using Doxygen for generating documentation, I can use \LaTeX\ to provide richer markup. \\
 
+My indent style would be the {\tt 1TBS} variant of the {\tt K\&R} style, which is an abbreviation of ``{\tt The One True Brace Style}''. It is also equivalent to the {\tt Kernel Normal Form style} (or {\tt BSD KNF style}). \\
 
+For a suggested coding style for {\tt Python} scripts, see \url{http://www.python.org/dev/peps/pep-0008/}.
+For a suggested coding style for {\tt Ruby} scripts, see \url{http://www.caliban.org/ruby/rubyguide.shtml}.
 
-
-
-
+{\tt GNU coding standards}; see \url{http://www.gnu.org/prep/standards.html} and \url{http://en.wikipedia.org/wiki/GNU_Coding_Standards}; also see \url{http://www.ronancrowley.com/Eclipse_GNU_Style.xml} for ``{\tt Eclipse} Code Style Formatter for {\tt GNU Coding Standards}''
+FMG Programming Guidelines (FPG); see \url{http://www-ti.informatik.uni-tuebingen.de/~fmg/guidelines.html} ... Also, see \url{http://www.boost.org/development/requirements.html} and \url{http://cm.bell-labs.com/cm/cs/tpop/}
+{\tt Gnits Standards}: a collection of standards and recommendations for programming, maintaining, and distributing software; see \url{http://www.gnu.org/software/womb/gnits/} 
+{\tt Mozilla} Coding Style Guide; see \url{https://developer.mozilla.org/en/Mozilla_Coding_Style_Guide} or \url{http://www.mozilla.org/hacking/mozilla-style-guide.html}
+{\tt Linux} Kernel Coding Style (or Documentation/CodingStyle in the {\tt Linux} Kernel source tree); see \url{http://lxr.linux.no/source/Documentation/CodingStyle}
+code documentation guidelines; \\see \url{http://www-ti.informatik.uni-tuebingen.de/~fmg/guidelines.html}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -299,7 +329,8 @@ Please kindly use the Markdown language for writing text documents. This is beca
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\linespread{1}
 \bibliographystyle{plain}
-\bibliography{/data/research/antipastobibtex/references}
+\bibliography{/Users/zhiyang/Documents/ricerca/antipastobibtex/references}
 }
+%\bibliography{/data/research/antipastobibtex/references}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
