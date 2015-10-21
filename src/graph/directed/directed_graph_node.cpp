@@ -163,7 +163,7 @@ dg_edge_set directed_graph_node::get_outgoing_edges() {
  * Function to get the incident edges of this node.
  * @param - None.
  * @return - The set of incident edges of this node.
- * @postcondition - Size of the set of incident edges must be
+ * @post - Size of the set of incident edges must be
  *	the sum of the size of the set of incoming edges and the
  *	size of the set of outgoing edges.
  * @exception violated_postcondition: Thrown
@@ -283,7 +283,7 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
 	node_ID = temp_ID;
 	
 	// Postcondition. Node ID should be replaced and equal to temp_ID.
-	if(node_ID != temp_ID) {
+	if(temp_ID != node_ID) {
 		throw new violated_postcondition("=	Node ID is not modified !!!!");
 	}
 }
