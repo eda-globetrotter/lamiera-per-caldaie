@@ -62,6 +62,7 @@ Revision history: \vspace{-0.3cm}
 \item Version 1, October 2, 2014. Initial version of the guideline (for another project).
 \item Version 1.1, December 23, 2014. Version ported for this boilerplate code project.
 \item Version 2, October 20, 2015. Added guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard. This coding standard is also known as coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style.
+\item Version 2.1, October 21, 2015. Finished guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard for {\it C++}.
 \end{enumerate}
 
 
@@ -304,15 +305,15 @@ For {\it C++} programs, the following tags shall be used in the comments: \vspac
 \item @migration($<$message$>$, $<$version$>$): Code is being migrated to another function/method, or class.
 \item See \url{http://www.stack.nl/~dimitri/doxygen/commands.html} for more information of tags that are recognized by {\tt Doxygen}.
 \item @pre (or @precondition): Precondition(s) of the function.
-\item @assert: Assertion(s) of the function.
+\item @assert (or @assertion): Assertion(s) of the function.
 \item @post (or @postcondition): Postcondition(s) of the function.
 \end{enumerate}
 
 The order of tags in different sections of the {\it C++} code is given as follows: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Headers/Interfaces and Classes: @version, @author, @since, @link, and @see
-\item Constructors: @param, @exception, @since, @link, and @see
-\item Functions/Methods: @param, @precondition, @postcondition, @return, @exception, @since, @link, and @see
+\item Headers/Interfaces and Classes: @version, @author, @since, @link, @todo, @deprecated, @migration, and @see
+\item Constructors: @param, @exception, @since, @link, @todo, @deprecated, @migration, and @see. For collaborators modifying or extending my code, they should include the @version and @author tags before the @param tag(s).
+\item Functions/Methods: @param, @precondition, @assertion, @postcondition, @return, @exception, @since, @link, @todo, @deprecated, @migration, and @see. For collaborators modifying or extending my code, they should include the @version and @author tags before the @param tag(s).
 \item Variables can use the @see tags.
 \item The @deprecated tag can be used for headers/interfaces, classes, constructors, functions/methods, and variables.
 \end{enumerate}

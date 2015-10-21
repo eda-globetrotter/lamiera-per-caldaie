@@ -66,6 +66,9 @@
  * Default constructor.
  *
  * Values for private variables are set to invalid values.
+ * @throws violated_exception: If the default constructor for
+ *	this class on directed graph nodes is used, throw an
+ *	exception to avoid usage of the default constructor.
  */
 directed_graph_node::directed_graph_node() {
 	/**
@@ -146,17 +149,27 @@ dg_edge_set directed_graph_node::get_outgoing_edges() {
  * Function to get the incident edges of this node.
  * @param - None.
  * @return - The set of incident edges of this node.
+ * @postcondition - Size of incident edges must be the sum
+ *	of the size of the set of incoming edges and the size
+ *	of the set of outgoing edges. 
  */
 dg_edge_set directed_graph_node::get_incident_edges() {
 	/**
 	 * set of incident edges
-	 *	= set of incoming edges Union set of outgoing edges
+	 *	= (set of incoming edges) Union (set of outgoing edges)
 	 *
 	 * Set of incident edges = copy of set of incoming edges.
 	 */
 	dg_edge_set incident_edges(incoming_edges);
 	// Include set of outgoing edges in set of incident edges.
 	incident_edges.insert(outgoing_edges.begin(),outgoing_edges.end());
+	/**
+	 * set of incident edges
+	 *	= (set of incoming edges) Union (set of outgoing edges)
+	 */
+
+	// Check postcondition; get size of the set of incoming edges
+	unsigned long long int 
 
 	return incident_edges;
 }
@@ -166,6 +179,7 @@ dg_edge_set directed_graph_node::get_incident_edges() {
  * Function to determine if node v is adjacent to this node.
  */
 bool directed_graph_node::is_adjacent_to(directed_graph_node v) {
+	
 }
 
 
