@@ -23,7 +23,10 @@
  * Therefore, for multiple edges connecting a pair of edges, they
  *	must each have a unique edge ID. Each edge connecting a given
  *	pair of nodes, *v_1* and *v_2*, must have a unique edge ID.
- *
+ * An immediate neighbor is a node that is connected to this node
+ *	by an incident edge (i.e., outgoing/incoming edge).
+ * Note that the node ID of this node is constant.
+ * Once a node ID has been set, it cannot be modified.
  *
  *
  *
@@ -142,7 +145,7 @@ class directed_graph_node {
 		// Function to get incident edges.
 		dg_edge_set get_incident_edges();
 		// Function to determine if node v is adjacent to this node.
-		bool is_adjacent_to(directed_graph_node v);
+		bool is_adjacent_to(const directed_graph_node &v);
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
 

@@ -23,7 +23,10 @@
  * Therefore, for multiple edges connecting a pair of edges, they
  *	must each have a unique edge ID. Each edge connecting a given
  *	pair of nodes, *v_1* and *v_2*, must have a unique edge ID.
- *
+ * An immediate neighbor is a node that is connected to this node
+ *	by an incident edge (i.e., outgoing/incoming edge).
+ * Note that the node ID of this node is constant.
+ * Once a node ID has been set, it cannot be modified.
  *
  *
  *
@@ -66,7 +69,7 @@
  * Default constructor.
  *
  * Values for private variables are set to invalid values.
- * @throws violated_exception: If the default constructor for
+ * @throws violated_assertion exception: If the default constructor for
  *	this class on directed graph nodes is used, throw an
  *	exception to avoid usage of the default constructor.
  */
@@ -104,10 +107,20 @@ directed_graph_node::directed_graph_node() {
 /**
  * Standard constructor.
  * @param node_id_num:	The ID number of the node.
+ * @throws violated_assertion exception: If the node ID has
+ *	been set (i.e., not ULLONG_MAX), throw the violated_assertion
+ *	exception to indicate that instantiating a new instance of
+ *	a node should not have the node ID been preset to ULLONG_MAX.
  */
 directed_graph_node::directed_graph_node(unsigned long long int node_id_num) {
-	// Assign node_id_num to be the Node ID.
-	node_ID = node_id_num;
+	// Has the node ID been preset to ULLONG_MAX?
+	if(ULLONG_MAX == node_ID) {
+		// Assign node ID to be: node_id_num.
+		node_ID = node_id_num;
+	}else{
+		string err_msg = "The node ID has been incorrectly preset!!!";
+		throw new violated_assertion(err_msg);
+	}
 	// Assign pointer-based private instance variables to NULL.
 }
 
@@ -183,10 +196,9 @@ dg_edge_set directed_graph_node::get_incident_edges() {
 	 */
 	num_incident_edges = num_incident_edges + outgoing_edges.size();
 	if (incident_edges.size() != num_incident_edges) {
-		throw violated_postcondition();
-		
-		string err_msg = "Default constructor should not be used!!!";
-	throw new violated_assertion(err_msg);
+		string err_msg = "Size of incident edges doesn't match";
+		err_msg = err_msg + "#outgoing edges + #incoming edges!!!";
+		throw new violated_postcondition(err_msg);		
 	}
 
 	return incident_edges;
@@ -195,9 +207,55 @@ dg_edge_set directed_graph_node::get_incident_edges() {
 
 /**
  * Function to determine if node v is adjacent to this node.
+ *
+ * Note that the node ID of a node is constant.
+ * Hence, I can traverse the sets of incoming and outgoing edges
+ *	for this node to determine if the node ID of v is found in
+ *	the source and destination nodes, for the respective
+ *	aforementioned sets.
+ * If there is >=1 match, return TRUE. Else, return FALSE.
+ * This supports the implementation of directed multigraphs.
+ *
+ * @param v:	A node that this function shall determine if it
+ *				is an immediate neighbor of this node.
+ *				That is, is there an incident edge connecting v
+ *				and this node?
+ *
  */
-bool directed_graph_node::is_adjacent_to(directed_graph_node v) {
-	
+bool directed_graph_node::is_adjacent_to(const directed_graph_node &v) {
+	// Get the node ID of v.
+	unsigned long long int v_node_ID = v.get_node_ID();
+
+	// Node ID of enumerate node.
+	unsigned long long int enum_node_ID;
+	// Pointer for a set of directed (graph) edges.
+	dg_edge_set_p des_ptr;
+	// Enumerate the set of incoming edges.
+	for(des_ptr = incoming_edges.begin(); des_ptr != incoming_edges.end(); des_ptr++) {
+
+		// Get the node ID of enumerated node.
+		enum_node_ID = (*des_ptr).get_node_ID();
+		// Is the node ID of this node equal to node ID of v?
+		if(v_node_ID == enum_node_ID) {
+			// Yes. v is an immediate neighbor.
+			return true;
+		}
+	}
+
+	// Enumerate the set of outgoing edges.
+	for(des_ptr = outgoing_edges.begin(); des_ptr != outgoing_edges.end(); des_ptr++) {
+
+		// Get the node ID of enumerated node.
+		enum_node_ID = (*des_ptr).get_node_ID();
+		// Is the node ID of this node equal to node ID of v?
+		if(v_node_ID == enum_node_ID) {
+			// Yes. v is an immediate neighbor.
+			return true;
+		}
+	}
+
+	// There is no incident edge connecting this ndoe and v.
+	return false;
 }
 
 
