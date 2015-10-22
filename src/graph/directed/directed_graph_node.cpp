@@ -301,8 +301,10 @@ void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
  *					desired incoming links to be added.
  *					#actually added unique links = #desired added links
  * @return - Nothing.
+ * @throws violated_postcondition exception: Thrown when the
+ *	difference in the size of incoming edges due to the addition
+ *	is not equal to the size of the added set.
  */
-//void directed_graph_node::add_set_of_incoming_edges(const set<pair<unsigned long long,bool> > &set_incoming_links) {
 void directed_graph_node::add_set_of_incoming_edges(const dg_edge_set &set_incoming_links) {
 
 	// Set up checkers for testing postconditions.
@@ -321,7 +323,8 @@ void directed_graph_node::add_set_of_incoming_edges(const dg_edge_set &set_incom
 	 * Postcondition:
 	 * Is (difference due to addition) = size of added set?
 	 */
-	if(final_incoming_links_size = set_incoming_links.size()) {
+	if(final_incoming_links_size == set_incoming_links.size()) {
+		// No.
 		throw new violated_postcondition("=	Error in adding incoming links !!!!");
 	}
 }
@@ -337,8 +340,10 @@ void directed_graph_node::add_set_of_incoming_edges(const dg_edge_set &set_incom
  *					desired outgoing links to be added.
  *					#actually added unique links = #desired added links
  * @return - Nothing.
+ * @throws violated_postcondition exception: Thrown when the
+ *	difference in the size of outgoing edges due to the addition
+ *	is not equal to the size of the added set.
  */
-//void directed_graph_node::add_set_of_outgoing_edges(const set<pair<unsigned long long,bool> > &set_outgoing_links) {
 void directed_graph_node::add_set_of_outgoing_edges(const dg_edge_set &set_outgoing_links) {
 
 	// Set up checkers for testing postconditions.
@@ -358,6 +363,7 @@ void directed_graph_node::add_set_of_outgoing_edges(const dg_edge_set &set_outgo
 	 * Is (difference due to addition) = size of added set?
 	 */
 	if(final_outgoing_links_size = set_outgoing_links.size()) {
+		// No.
 		throw new violated_postcondition("=	Error in adding outgoing links !!!!");
 	}
 }
@@ -373,6 +379,8 @@ void directed_graph_node::add_set_of_outgoing_edges(const dg_edge_set &set_outgo
  *				Else, add it to the set of incoming edges.
  *				Require: change_in_num_incoming_edges <= 1
  * @return - Nothing.
+ * @throws violated_postcondition exception: Thrown when more
+ *	than one incoming edge is added to the set of incoming edges.
  */
 void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_link) {
 	// Intial number of incoming edges.
@@ -387,6 +395,7 @@ void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_
 	final_num_incoming_edges = final_num_incoming_edges - initial_num_incoming_edges;
 	// Has number of incoming edges for this node increased by >1 ?
 	if(1 < final_num_incoming_edges) {
+		// Yes.
 		throw new violated_postcondition("=	Extra incoming edge(s) is/are added!!!!");
 	}
 }
@@ -402,6 +411,8 @@ void directed_graph_node::add_incoming_edge(const directed_graph_edge &incoming_
  *				Else, add it to the set of outgoing edges.
  *				Require: change_in_num_outgoing_edges <= 1
  * @return - Nothing.
+ * @throws violated_postcondition exception: Thrown when more
+ *	than one outgoing edge is added to the set of outgoing edges.
  */
 void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_link) {
 	// Intial number of outgoing edges.
@@ -416,6 +427,7 @@ void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_
 	final_num_outgoing_edges = final_num_outgoing_edges - initial_num_outgoing_edges;
 	// Has number of outgoing edges for this node increased by >1 ?
 	if(1 < final_num_outgoing_edges) {
+		// Yes.
 		throw new violated_postcondition("=	Extra outgoing edge(s) is/are added!!!!");
 	}
 }
