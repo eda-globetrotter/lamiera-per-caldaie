@@ -166,7 +166,10 @@ dg_edge_set directed_graph_node::get_outgoing_edges() {
  * @post - Size of the set of incident edges must be
  *	the sum of the size of the set of incoming edges and the
  *	size of the set of outgoing edges.
- * @exception violated_postcondition: Thrown
+ * @throws violated_postcondition: Thrown when the size
+ *	of the set of incident edges is not equal to the (size
+ *	of the set of incoming edges + size of the set of
+ *	outgoing edges).
  */
 dg_edge_set directed_graph_node::get_incident_edges() {
 	/**
@@ -183,16 +186,13 @@ dg_edge_set directed_graph_node::get_incident_edges() {
 	 *	= (set of incoming edges) Union (set of outgoing edges)
 	 */
 
+
 	// Check postcondition; get size of the set of incoming edges
 	unsigned long long int num_incident_edges = incoming_edges.size();
 	/**
 	 * size of the set of incident edges
 	 *	= 	size of the set of incoming edges
 	 *		+ size of the set of outgoing edges
-	 *
-	 * size of the set of incident edges =
-	 *	size of the set of incident edges
-	 *	+ size of the set of outgoing edges
 	 */
 	num_incident_edges = num_incident_edges + outgoing_edges.size();
 	if (incident_edges.size() != num_incident_edges) {
@@ -275,7 +275,9 @@ unsigned long long int directed_graph_node::get_node_ID() {
 /**
  * Function to set the ID of the node.
  * @param temp_ID:	The new ID to replace the current ID of the node.
- * @post			Ensure that the ID has been replaced.
+ * @post			Ensure that the ID has been replaced with temp_ID.
+ * @throws violated_postcondition exception: Thrown when node_ID
+ *	is not updated properly.
  * @return - Nothing.
  */
 void directed_graph_node::set_node_ID(const unsigned long long int &temp_ID) {
