@@ -432,7 +432,7 @@ void directed_graph_node::add_outgoing_edge(const directed_graph_edge &outgoing_
 	}
 }
 
-
+//	See code for hacking/refactoring with set of string-based nodes.
 /**
  * Function to remove an incoming edge from the current set of
  *	incoming edges.
