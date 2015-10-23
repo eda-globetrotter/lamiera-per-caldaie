@@ -283,12 +283,15 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 + Functions
 	+ set\<node> get_nodes()
 	+ set\<edge> get_edges()
-	+ node insert_node(elem x);
-	
-		Return node storing element *x*
 	+ node get_node(int node_id)
 	
 		Return node (in the graph) with the ID node_id, or an invalid node (no connections to other nodes)
+	+ edge get_edge(node u, node v)
+	
+		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return *NULL*.
+	+ node insert_node(elem x);
+	
+		Return node storing element *x*
 	+ edge insert_edge(node v, node w, elem x)
 	
 		If (*v = w*),
@@ -309,13 +312,10 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 	+ unsigned long long int node_count()
 	+ unsigned long long int edge_count()
-	+ edge get_edge(node u, node v)
-	
-		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return *NULL*.
-	+ unsigned long long int out_degree(v)
+	+ unsigned long long int out_degree(node v)
 	
 		Return the out-degree of node v. If v is an invalid node, return INT_MAX
-	+ unsigned long long int in_degree(v)
+	+ unsigned long long int in_degree(node v)
 	
 		Return the in-degree of node v. If v is an invalid node, return INT_MAX
 	+ set\<edge> outgoing_edges(node v)
@@ -334,13 +334,16 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 
 
 
+
+
+
+
+
+
+
 References:
 Goodrich2011
 	Michael T. Goodrich, Roberto Tamassia, and David M. Mount, "Data Structures and Algorithms in C++," Second Edition, John Wiley & Sons, Inc., Hoboken, NJ, 2011.
-
-
-
-
 
 Goodrich2013
 	Michael T. Goodrich, Roberto Tamassia, and Michael H. Goldwasser, "Data Structures and Algorithms in Python," John Wiley & Sons, Inc., Hoboken, NJ, 2013.

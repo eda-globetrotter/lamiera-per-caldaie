@@ -40,7 +40,8 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+// Testing operations with the C++ STL set container.
+#include <set>
 
 // Import packages from the software
 #include "../../classes/string_node.hpp"
@@ -114,7 +115,12 @@ int main(int argc, char *argv[]) {
 	string_node node_f = string_node(a_str.c_str(), b_str.c_str());
 	
 	
-	
+	/**
+	 * Create a set of string_nodes.
+	 *
+	 *
+	 */
+	//
 	
 	
 	
