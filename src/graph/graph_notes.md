@@ -300,6 +300,8 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 			return NULL (because self-loops are not allowed).
 
+				[Note that this if-statement is executed if I forbid self-loops.]
+
 		Else,
 
 			return new directed edge from node *v* to node *w*, storing element *x*.
