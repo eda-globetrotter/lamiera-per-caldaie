@@ -291,6 +291,8 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		Return edge *(u,v)* if edge from node *u* to node *v* exists. Else, return *NULL*.
 	+ node insert_node(elem x);
 	
+			Insert node into set\<node> nodes.
+	
 		Return node storing element *x*
 	+ edge insert_edge(node v, node w, elem x)
 	
@@ -303,10 +305,18 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 			return new directed edge from node *v* to node *w*, storing element *x*.
 
 	+ bool remove_node(node v)
+			Remove incoming edges to node.
+			Remove outgoing edges from node.
+			Remove node v from set\<node> nodes.
+
 
 		Remove node *v* and all its incident edges.
 		
 	+ bool remove_edge(edge e)
+			For the source node(s), remove pointer to edge e from the outgoing_edge set. 
+			For the destination node(s), remove pointer to edge e from the incoming_edge set. 
+			Remove edge e from set\<edge> edges.
+
 	
 		Remove edge *e*.
 		
