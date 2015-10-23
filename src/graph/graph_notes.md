@@ -315,7 +315,12 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 		
 	+ bool remove_edge(edge e)
 	
-			For the source node(s), remove pointer to edge e from the outgoing_edge set. 
+			For the source node(s), remove pointer to edge e from the outgoing_edge set.
+
+				That is, from the set of source nodes, visit each source node.
+				For each source node, search its outgoing_edge set for a pointer to edge e.
+				If and when edge e is found, remove edge e from the outgoing_edge set.
+
 			For the destination node(s), remove pointer to edge e from the incoming_edge set. 
 			Remove edge e from set\<edge> edges.
 
