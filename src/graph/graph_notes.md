@@ -181,7 +181,7 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ set\<edge> incoming_edges
 	+ \<set> outgoing_edges and \<set> incoming_edges avoids duplicate copies of an edge with the set container. However, multigraphs are still supported since duplicates are determined solely by the edge ID. This is implies that parallel edges between *u* and *v* can exist.
 		
-		Enable implementation of hypergraphs, where an edge can connect any number of nodes.
+		Enable implementation of hypergraphs, where an edge can connect any number of nodes (greater than one).
 		
 		Specifically, for directed graphs representing logic circuits, a directed hyperedge must have only one source node, and have at least one destination node. The number of destination nodes for a directed hyperedge must be a finite number. Directed hyperedges with multiple source edges are not allowed.
 		
@@ -271,6 +271,14 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 + Fields
 	+ set\<node> nodes
 	+ set\<edge> edges
+	+ bool hypergraph_flag
+	
+		Boolean flag to indicate if this graph is a hypergraph, which has hyperedges that can connect any number of nodes (greater than one).
+	+ bool multigraph_flag
+	
+		Boolean flag to indicate if this graph is a multigraph, which allows multiple edges between any pair of nodes/vertices and self-loops.
+		
+	**hypergraph_flag** and **multigraph_flag** shall be kept as public static variables of the directed graph class. 
 + Functions
 	+ set\<node> get_nodes()
 	+ set\<edge> get_edges()
