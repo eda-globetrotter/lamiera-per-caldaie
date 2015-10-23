@@ -232,20 +232,13 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 	+ void set_source_node(node v)
 	+ set\<node> get_opposite_nodes(node v)
 	
-		If (v = source node),
-
-			return destination nodes.
-
-		Else If (v = destination node),
-
-			return source node.
-
-		Else,
-
-			node is neither a source nor destination node.
-
-			throw an error/exception.
-			Or, return empty set.
+			If (v = source node),
+				return destination nodes.
+			Else If (v = destination node),
+				return source node.
+			Else,
+				node is neither a source nor destination node.
+				throw an error/exception. Or, return empty set.
 	+ bool is_adjacent_to(edge f)
 
 		Return true if this/current edge *e* is adjacent to edge *f*.
