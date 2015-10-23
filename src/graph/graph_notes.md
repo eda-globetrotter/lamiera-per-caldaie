@@ -240,10 +240,12 @@ sets and maps in the C++ STL are typically implemented as binary search trees (B
 				node is neither a source nor destination node.
 				throw an error/exception. Or, return empty set.
 	+ bool is_adjacent_to(edge f)
+
 			Return true if this/current edge *e* is adjacent to edge *f*.
 			Check if a destination node of this edge is the source node of edge f.
 			Or, check if a source node of this edge is the destination node of edge f.
 	+ bool is_incident_on(node v)
+
 			Return true if current edge is incident on *v*.
 			Check if node v is a source/destination node of this edge.
 	+ unsigned long long int get_edge_weight();
