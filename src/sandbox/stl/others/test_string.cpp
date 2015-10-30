@@ -201,17 +201,17 @@ int main(int argc, char *argv[]) {
 	set_op_flag
 		= set_sn.insert(string_node("cospargi di olio il mio capo","Il mio calice trabocca"));
 	if(set_op_flag.second) {
-		cout << "	= Insertion operation failed for repeated Psalm 23:5b." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:5b: Failed." << endl;
 	}else{
-		cout << "	= Insertion operation passed for repeated Psalm 23:5b." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:5b: Passed." << endl;
 	}
 	// Try to insert string_node object with node ID of string_node object #4.
 	set_op_flag
 		= set_sn.insert(string_node("Se dovessi camminare in una valle oscura","This is a test string."));
 	if(set_op_flag.second) {
-		cout << "	= Insertion operation failed for repeated node ID (Psalm 23:4a1)." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:4a1: Failed." << endl;
 	}else{
-		cout << "	= Insertion operation passed for repeated node ID (Psalm 23:4a1)." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:4a1: Passed." << endl;
 	}
 	
 	
