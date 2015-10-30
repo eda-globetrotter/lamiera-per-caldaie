@@ -42,6 +42,7 @@
 #include <stdlib.h>
 // Testing operations with the C++ STL set container.
 #include <set>
+#include <utility>      // std::pair, std::make_pair
 
 // Import packages from the software
 #include "../../classes/string_node.hpp"
@@ -121,18 +122,97 @@ int main(int argc, char *argv[]) {
 	
 	/**
 	 * Create a set of string_nodes.
-	 *
-	 *
+	 * This includes adding duplicates to set the insert operation.
 	 */
-	//
-	
-	
-	
-	
-	
-	
-	
-	
+	set<string_node> set_sn;
+	// Insert the string_node object #1.
+	pair<set<string_node>::iterator, bool> set_op_flag
+		= set_sn.insert(string_node("Il Signore è il mio pastore","non manco di nulla"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:1." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:1." << endl;
+	}
+	// Insert the string_node object #2.
+	set_op_flag
+		= set_sn.insert(string_node("su pascoli erbosi mi fa riposare","ad acque tranquille mi conduce"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:2." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:2." << endl;
+	}
+	// Insert the string_node object #3.
+	set_op_flag
+		= set_sn.insert(string_node("Mi rinfranca, mi guida per il giusto cammino","per amore del suo nome"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:3." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:3." << endl;
+	}
+	// Insert the string_node object #4.
+	set_op_flag
+		= set_sn.insert(string_node("Se dovessi camminare in una valle oscura","non temerei alcun male, perché tu sei con me"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:4a." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:4a." << endl;
+	}
+	// Insert the string_node object #5.
+	set_op_flag
+		= set_sn.insert(string_node("Il tuo bastone e il tuo vincastro","mi danno sicurezza"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:4b." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:4b." << endl;
+	}
+	// Insert the string_node object #6.
+	set_op_flag
+		= set_sn.insert(string_node("Davanti a me tu prepari una mensa","sotto gli occhi dei miei nemici"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:5a." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:5a." << endl;
+	}
+	// Insert the string_node object #7.
+	set_op_flag
+		= set_sn.insert(string_node("cospargi di olio il mio capo","Il mio calice trabocca"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:5b." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:5b." << endl;
+	}
+	// Insert the string_node object #8.
+	set_op_flag
+		= set_sn.insert(string_node("Felicità e grazia mi saranno compagne","tutti i giorni della mia vita"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:6a." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:6a." << endl;
+	}
+	// Insert the string_node object #9.
+	set_op_flag
+		= set_sn.insert(string_node("e abiterò nella casa del Signore","per lunghissimi anni"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:6b." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:6b." << endl;
+	}
+	// Try to insert duplicate of string_node object #7.
+	set_op_flag
+		= set_sn.insert(string_node("cospargi di olio il mio capo","Il mio calice trabocca"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation failed for repeated Psalm 23:5b." << endl;
+	}else{
+		cout << "	= Insertion operation passed for repeated Psalm 23:5b." << endl;
+	}
+	// Try to insert string_node object with node ID of string_node object #4.
+	set_op_flag
+		= set_sn.insert(string_node("Se dovessi camminare in una valle oscura","This is a test string."));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation failed for repeated node ID (Psalm 23:4a1)." << endl;
+	}else{
+		cout << "	= Insertion operation passed for repeated node ID (Psalm 23:4a1)." << endl;
+	}
 	
 	
 	
