@@ -203,7 +203,24 @@ C++ topics: \vspace{-0.3cm}
 			\item {\it int const $^{\ast}$ ptr3 = {\rm \&}var0;} // Pointer to const
 			\item {\it const int $^{\ast}$ const ptr4 = {\rm \&}var0;} // Const pointer to a const
 			\end{enumerate}
-		\item A pointer is dereferenced
+		\item A pointer is dereferenced via the explicit $^{\ast}$ operator. The $^{\ast}$ operator should not be used to dereference a reference (variable) \cite{Saks2001}.
+		\item \cite{Saks2001}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item int $^{\ast}$pi = {\&}i; // Indirect expression to dereference $pi$ to $i$. ``Declare $pi$ as an object of type `pointer to int' whose initial value is the address of object $i$'' \cite{Saks2001a}.
+			\item int {\&}ri = i; // $ri$ is dereferenced to refer to $i$. ``Declares $ri$ as an object of type `reference to int' referring to $i$'' \cite{Saks2001a}.
+			\item The {\it C++} standard does not dictate how compilers shall implement references. However, popular compilers tend to implement references as pointers. Therefore, there are no significant advantages of using references or pointers.
+			\end{enumerate}
+		\item \cite{Saks2001a}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``A valid reference must refer to an object; a pointer need not. A pointer, even a const pointer, can have a null value. A null pointer doesn't point to anything.''
+			\item I can bind a reference to a null pointer, but I cannot dereference a null pointer since it can ``produce undefined behavior''.
+			\end{enumerate}
+		\item \cite{Ozcan2013}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``A reference is a variable that refers to something else and can be used as an alias for that something else. A pointer is a variable that stores a memory address, for the purpose of acting as an alias to what is stored at that address. So, a pointer is a reference, but a reference is not necessarily a pointer. Pointers are a particular implementation of the concept of a reference, and the term tends to be used only for languages that give you direct access to the memory address. References can be implemented internally in a language using pointers, or using some other mechanism.'' Answer from dan1111.
+			\item ``Passing an object by value means making a copy of it. You can modify that copy without affecting the original. Making that copy can cost a lot of memory access though. Passing an object by reference means passing a handle to that object. This is cheaper because you don't need to make a copy. It also means that any changes you make will affect the original.'' Answer from Steve Rowe.
+			\item ``There is no such thing as a null reference. A reference must always refer to some object. As a result, if you have a variable whose purpose is to refer to another object, but it is possible that there might not be an object to refer to, you should make the variable a pointer, because then you can set it to null. On the other hand, if the variable must always refer to an object, i.e., if your design does not allow for the possibility that the variable is null, you should probably make the variable a reference.'' Answer from Harssh S. Shrivastava.
+			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
 \item OOD and inheritance: \vspace{-0.3cm}

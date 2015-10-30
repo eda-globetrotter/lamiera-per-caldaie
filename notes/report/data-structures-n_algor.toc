@@ -11,8 +11,9 @@
 \contentsline {chapter}{\numberline {4}Statistics}{5}{chapter.4}
 \contentsline {chapter}{\numberline {5}C++ Resources}{6}{chapter.5}
 \contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{10}{section.5.1}
+\contentsline {section}{\numberline {5.2}Notes About C++}{10}{section.5.2}
 \contentsline {chapter}{\numberline {6}Questions}{11}{chapter.6}
 \contentsline {section}{\numberline {6.1}Unresolved C++ Questions}{11}{section.6.1}
 \contentsline {section}{\numberline {6.2}Resolved C++ Questions}{11}{section.6.2}
-\contentsline {chapter}{Acknowledgments}{14}{chapter*.4}
-\contentsline {chapter}{Bibliography}{18}{appendix*.5}
+\contentsline {chapter}{Acknowledgments}{15}{chapter*.4}
+\contentsline {chapter}{Bibliography}{19}{appendix*.5}
