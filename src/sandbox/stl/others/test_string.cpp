@@ -105,7 +105,11 @@ int main(int argc, char *argv[]) {
 	// Declaring multiple variables at once. OK.
 	string_node node_a, node_b, node_c;
 	
-	// Does not work.
+	/**
+	 * Does not work.
+	 * node_d is of the type/class "string_node", and cannot
+	 *	be cast into a "string".
+	 */
 	//string_node node_d = string("Ciao", "Mondo");
 	//string_node node_d = string("Ciao".c_str(), "Mondo".c_str());
 	//string_node node_d = string(a_str.c_str(), b_str.c_str());
