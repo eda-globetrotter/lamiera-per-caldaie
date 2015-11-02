@@ -213,7 +213,21 @@ int main(int argc, char *argv[]) {
 	}else{
 		cout << "	= Repeated insertion operation for Psalm 23:4a1: Passed." << endl;
 	}
-	
+	// Try to insert string_node object with node label of string_node object #2.
+	set_op_flag
+		= set_sn.insert(string_node("This is another test string.","ad acque tranquille mi conduce."));
+	if(set_op_flag.second) {
+		cout << "	= Repeated insertion operation for Psalm 23:4a1: Failed." << endl;
+	}else{
+		cout << "	= Repeated insertion operation for Psalm 23:4a1: Passed." << endl;
+	}
+	set_op_flag
+		= set_sn.insert(string_node("su pascoli erbosi mi fa riposare","ad acque tranquille mi conduce"));
+	if(set_op_flag.second) {
+		cout << "	= Insertion operation passed for Psalm 23:2." << endl;
+	}else{
+		cout << "	= Insertion operation failed for Psalm 23:2." << endl;
+	}
 	
 	
 	
