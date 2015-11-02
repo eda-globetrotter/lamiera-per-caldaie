@@ -225,6 +225,25 @@ int main(int argc, char *argv[]) {
 	
 	cout << "== Set operations work for nodes that use a string as the node ID." << endl;
 	
+	// =======================================================
+	
+	// Test string concatenation.
+	
+	int prefix = 12345;
+	int suffix = 6789;
+	string concatenator = "+";
+	string node_ID_str =  prefix + concatenator + suffix;
+	cout << "== Node ID is:::" << node_ID_str << "-_-" << endl;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
