@@ -217,17 +217,20 @@ int main(int argc, char *argv[]) {
 	set_op_flag
 		= set_sn.insert(string_node("This is another test string.","ad acque tranquille mi conduce."));
 	if(set_op_flag.second) {
-		cout << "	= Repeated insertion operation for Psalm 23:4a1: Failed." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:2b: Passed." << endl;
 	}else{
-		cout << "	= Repeated insertion operation for Psalm 23:4a1: Passed." << endl;
+		cout << "	= Repeated insertion operation for Psalm 23:2b: Failed." << endl;
 	}
-	set_op_flag
-		= set_sn.insert(string_node("su pascoli erbosi mi fa riposare","ad acque tranquille mi conduce"));
-	if(set_op_flag.second) {
-		cout << "	= Insertion operation passed for Psalm 23:2." << endl;
-	}else{
-		cout << "	= Insertion operation failed for Psalm 23:2." << endl;
-	}
+
+	
+	cout << "== Set operations work for nodes that use a string as the node ID." << endl;
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
