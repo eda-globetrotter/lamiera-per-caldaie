@@ -119,7 +119,7 @@ C++ topics: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Eckel2000}, Chp 6,13
 	\item \cite{Gaddis2010}, Chp 13. See all of \cite{Gaddis2010,Gaddis2011,Gaddis2012}.
-	\item \cite{Meyer2005}, Chp 2-4
+	\item \cite{Meyers2005}, Chp 2-4
 	\item \cite{Schildt2003}, Chp 29
 	\item \cite{Allain2012}, Chp 14
 	\item \cite{Gregoire2014}, Chp 10,22
@@ -154,9 +154,38 @@ C++ topics: \vspace{-0.3cm}
 		\end{enumerate}
 	\item \cite{Stroustrup2014}, Chp 8: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item Pass-by-reference: e.g., void init(vector$<$double$>$ \&v)
+		\item Pass-by-reference: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item e.g., void init(vector$<$double$>$ \&v)
+			\item ``It is not possible to refer directly to a reference variable after it is defined; any occurrence of its name refers directly to the variable it references. ''
+			\item ``Once a reference is created, it cannot be later made to reference another variable. This is something that is often done with pointers.''
+			\item ``References cannot be null, whereas pointers can; every reference refers to some variable, although it may or may not be valid.''
+			\item ``References cannot be uninitialized. Because it is impossible to reinitialize a reference, they must be initialized as soon as they are created. In particular, local and global variables must be initialized where they are defined, and references which are data members of a class must be initialized in the initializer list of the class's constructor.''
+			\item Avoid mixing references and pointers in a block of code to avoid confusion, and make it easier for the {\it C++} code to be read and debug.
+			\item The required syntax for pointers make them prominent in comparison to that of references.
+			\item The number of operations on references is less than that on pointers. Hence, usage of references is easier to understand than that of pointers. Consequently, it is easier to use references than pointers without enbugging the code.
+			\item Pointers can be invalidated as follows: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``Carrying a null value''
+				\item ``Out-of-bounds [pointer] arithmetic''
+				\item Illegal casts on pointers
+				\item Produce pointers from random integers
+				\end{itemize}
+			\item References can be invalidated as follows: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``[Refer] to a variable with automatic allocation which goes out of scope''
+				\item ``[Refer] to an object inside a block of dynamic memory which has been freed''
+				\end{itemize}
+			\item ``Arrays are always passed by address. This includes C strings.''
+			\item ``Dynamic storage is allocated using pointers.''
+			\item Reference: Kurt McMahon, ``Passing Variables by Address,'' in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/pass_by_address.html}; last accessed on November 3, 2015.
+			\end{enumerate}
 		\item Pass-by-const-reference: e.g., void print(const vector$<$double$>$ \&v)
 		\item Pass-by-value: e.g., void fn(int x)
+		\item Pass-by-address: e.g., void print(int * ptr) \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Reference: Kurt McMahon, ``Passing Variables by Address,'' in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/pass_by_address.html}; last accessed on November 3, 2015.
+			\end{enumerate}
 		\end{enumerate}
 	\item \cite{Stroustrup2009}, Chp 8
 	\item \cite{Oualline2003}, Chp 15,20

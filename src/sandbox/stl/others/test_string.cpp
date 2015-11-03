@@ -29,9 +29,14 @@
  *
  * @author Zhiyang Ong
  *
+ *
+ *
+ *
+ * References:
+ *	Kurt McMahon, in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015)}, Northern Illinois University, DeKalb, IL, October 28, 2015.
  */
 
-// Import Header files from the C++ STL
+// Include Header files from the C++ STL
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -43,6 +48,8 @@
 // Testing operations with the C++ STL set container.
 #include <set>
 #include <utility>      // std::pair, std::make_pair
+// Test string conversion into integers.
+#include <sstream>
 
 // Import packages from the software
 #include "../../classes/string_node.hpp"
@@ -229,14 +236,49 @@ int main(int argc, char *argv[]) {
 	
 	// Test string concatenation.
 	
+	/**
+	 * Convert integers to strings.
+	 *
+	 * A string stream class "stringstream" is a string buffer
+	 *	that can "avoid dropping characters".
+	 *
+	 * Include header file for stringstream: #include <sstream>
+	 */
+	stringstream ss;
 	int prefix = 12345;
+	ss << prefix;		// Pipe a number into the string stream.
+	string prefix_str = ss.str();	// Convert contents of the stringstream into a string.
 	int suffix = 6789;
+	ss << suffix;
+	string suffix_str = ss.str();
 	string concatenator = "+";
-	string node_ID_str =  prefix + concatenator + suffix;
-	cout << "== Node ID is:::" << node_ID_str << "-_-" << endl;
-	
-	
-	
+//	concatenator = "+%^*";
+//	concatenator = "gduyasghfiwehjfnKNKBUYTFUYIHJLM@#$%^&*()";
+//	concatenator = "gduyasghfiwehj34758FUYIHJLM@#$%^&*()";
+//	concatenator = "79423gduyasghfiwehj34758FUYIHJLM@#$%^&*()";
+	concatenator = "79423gduyasghfiwehj34758FUYIHJLM@#$%^&*()423423";
+	/**
+	 * The function atoi() requires a C-string/C-style (or simply
+	 *	C string) string.
+	 *
+	 * If the string does not begin with a number, it will be
+	 *	converted to 0.
+	 * If the string begins with a number, followed by at least
+	 *	one non-numeric character, that number will be converted
+	 *	to 0.
+	 */
+	int concatenator_int = atoi(concatenator.c_str());
+	cout << "concatenator_int is:::"<<concatenator_int<<"###"<<endl;
+	string node_ID_str =  prefix_str + concatenator + suffix_str;
+	cout << "== Node ID is:::" << node_ID_str << "###" << endl;
+	/**
+	 * Integers cannot be concatenated to strings using the
+	 *	plus operator.
+	 */
+	// Erase the string buffer.
+	ss.str("");
+	//  
+	ss << "12345 67.89";
 	
 	
 	

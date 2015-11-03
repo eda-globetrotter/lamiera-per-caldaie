@@ -61,7 +61,7 @@ Bruce Eckel.
 
 \bibitem{Eckel2003}
 Bruce Eckel and Chuck Allison.
-\newblock {\em Thinking in C++: Practical Programming}, volume~2.
+\newblock {\em Thinking in {C++}: Practical Programming}, volume~2.
 \newblock Prentice Hall, Upper Saddle River, {NJ}, 2003.
 
 \bibitem{EliteHussar2010}
@@ -160,7 +160,7 @@ Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
 \newblock {\em {C++} Primer}.
 \newblock Addison-Wesley, Upper Saddle River, {NJ}, fifth edition, 2013.
 
-\bibitem{Meyer2005}
+\bibitem{Meyers2005}
 Scott Meyers.
 \newblock {\em Effective {C++}: 55 Specific Ways to Improve Your Programs and
   Designs}.
@@ -196,6 +196,14 @@ Steve Oualline.
 \newblock {\em Practical {C++} Programming}.
 \newblock Programming Style Guidelines. O'Reilly Media, Sebastopol, {CA},
   second edition, 2003.
+
+\bibitem{Ozcan2013}
+Yusuf~Kemal {\"{O}}zcan.
+\newblock Is there any difference between pointers and references?
+\newblock Available online from {\it Stack Exchange Inc.: Programmers Stack
+  Exchange: Questions} at:
+  \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references};
+  October 28, 2015 was the last accessed date, April 18 2013.
 
 \bibitem{PittFrancis2012}
 Joe {Pitt-Francis} and Jonathan Whiteley.
@@ -252,6 +260,24 @@ Philip Romanik and Amy Muntz.
 \newblock {\em Applied {C++}: Practical Techniques for Building Better
   Software}.
 \newblock {C++} In-Depth Series. Addison-Wesley, Boston, {MA}, 2003.
+
+\bibitem{Saks2001}
+Dan Saks.
+\newblock An introduction to references.
+\newblock Available online from {\it {UBM Electronics: UBM Canon Electronics
+  Engineering Communities: Embedded -- Cracking the Code to Systems
+  Development}} at: \url{http://www.embedded.com/print/4024641}; October 8,
+  2015 was the last accessed date, February 26 2001.
+
+\bibitem{Saks2001a}
+Dan Saks.
+\newblock References vs. pointers.
+\newblock Available online from {\it {UBM Electronics: UBM Canon Electronics
+  Engineering Communities: Embedded -- Cracking the Code to Systems
+  Development}} at:
+  \url{http://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers}
+  and \url{http://www.embedded.com/print/4023307}; October 28, 2015 was the
+  last accessed date, March 15 2001.
 
 \bibitem{Savitch2009}
 Walter Savitch.
