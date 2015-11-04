@@ -10,10 +10,10 @@
 \contentsline {chapter}{\numberline {3}Mathematics}{3}{chapter.3}
 \contentsline {chapter}{\numberline {4}Statistics}{5}{chapter.4}
 \contentsline {chapter}{\numberline {5}C++ Resources}{6}{chapter.5}
-\contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{11}{section.5.1}
-\contentsline {section}{\numberline {5.2}Notes About C++}{12}{section.5.2}
-\contentsline {chapter}{\numberline {6}Questions}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}Unresolved C++ Questions}{13}{section.6.1}
-\contentsline {section}{\numberline {6.2}Resolved C++ Questions}{13}{section.6.2}
-\contentsline {chapter}{Acknowledgments}{17}{chapter*.4}
-\contentsline {chapter}{Bibliography}{21}{appendix*.5}
+\contentsline {section}{\numberline {5.1}Computational Complexity of C++ Containers}{12}{section.5.1}
+\contentsline {section}{\numberline {5.2}Notes About C++}{13}{section.5.2}
+\contentsline {chapter}{\numberline {6}Questions}{14}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unresolved C++ Questions}{14}{section.6.1}
+\contentsline {section}{\numberline {6.2}Resolved C++ Questions}{14}{section.6.2}
+\contentsline {chapter}{Acknowledgments}{18}{chapter*.4}
+\contentsline {chapter}{Bibliography}{22}{appendix*.5}

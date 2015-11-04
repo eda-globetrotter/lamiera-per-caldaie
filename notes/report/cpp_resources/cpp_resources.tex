@@ -46,6 +46,36 @@ C++ topics: \vspace{-0.3cm}
 	\item \cite{Gregoire2014}, Chp 18
 	\item \cite{Allain2012}, Chp 19
 	\item \cite{Eckel2003}, Chp 1
+	\item \cite{McMahon20XY}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item C strings (or C-strings, or C-style strings) are null-terminated strings (arrays of characters that each end with a terminating ``null character'' with ASCII value 0) and are arrays of characters; the ``null character'' is usually represented by the literal character '$\backslash$0'. ``However, an array of {\tt char} is NOT by itself a C string.''
+		\item ``Since {\tt char} is a built-in data type, no header file is required to create a C string. The C library header file $<${\tt cstring}$>$ contains a number of utility functions that operate on C strings.''
+		\item ``It is also possible to declare a C string as a pointer to a {\tt char}: char$^{\ast}$ s3 = ``hello''; '' It creates a character array with just enough memory space (in the heap) to store the null-terminated string. The address of the string's first character is placed in the {\tt char} pointer {\it s3}. When this improperly used, it can corrupt program memory or cause run-time errors.
+		\item ``[Use] the {\tt C} library function {\tt strlen()}'' to determine ``the length of a {\tt C} string.'' It returns an unsigned integer representing the number of characters in the string, excluding the terminating null character.
+		\item Relational operators (such as $==, !=, >, <, >=, <=$) compare the addresses of the first characters in the two string operands (as the array names are treated as pointers), instead of the contents of these strings.
+		\item ``Use the {\tt C} library function {\tt strcmp()}'' ``to compare the contents of two {\tt C} strings.'' The input arguments of this function are two pointers to {\tt C} strings.
+		\item ``Use the {\tt C} library function {\tt strcpy()}'' to assign a string to a C string or change its contents. The {\tt strcpy()} function accepts a pointer to the C string as the first input argument, and a pointer to the contents of a valid C string or string literal (i.e., a character) as the second input argument. The {\tt C} library function {\tt strcat()} has the same input arguments as {\tt strcpy()}, and is used for concatenating two strings.
+		\item C strings can be used as input parameters or the return type. They are specified as {\tt char[]} or {\tt char$^{\ast}$}.
+		\item ``A {\tt C++} string is an object of the class string, which is defined in the header file $<$string$>$ and which is in the standard namespace.'' The variable name of a {\tt C++} string is a pointer to the first character of the string; the variable name contains the address of the string's first character. The {\tt C++} string is a dynamically-allocated array of characters.
+		\item ``[Use] the string class methods {\tt length()} or {\tt size()}'' to determine ``the length of the {\tt C++} strings.''
+		\item To improve memory efficiency and reduce memory usage, explicitly {\it pass a string object}. Else, the {\tt C++} string objects are pass and returned by value, which involves making a copy of the string object.
+		\item Concatenate C++ strings, C strings, and string literals in any order using the ``+'' operator.
+		\item Convert a C++ string into a C string via the {\tt c\_str()} function of the {\tt string} class. The {\tt c\_str()} function returns a pointer to the array of characters representing the string. If the C++ string is not null-terminated, a null character is appended to the new C string. The returned C string ``can be used, printed, copied, etc.'' but not be modified.
+		\item Since programming with arrays can enbug the code more easily, the use of C++ {string} is (strongly) recommended for use. This is because the properties of a2
+		\item When a C string is required by a function, convert the C++ string into a C string (as aforementioned). Instances in which a C string have to be converted into a C++ string are: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Strings passed into {\tt main()} as C strings from the command line argument.
+			\item Functions for file input/output operations require filenames to be specified as C strings.
+			\item The C++ string class does not have the equivalent functions of certain C string library functions.
+			\item Unlike C++ strings, C strings can be serialized in binary format without requiring a bunch of extra code to be written.
+			\end{enumerate}
+		\item The function {\tt atoi} converts a string to an integer. Similar functions for converting strings into numbers are: {\tt atol} and {\tt atof}. The C++ STL does not have a {\tt itoa} function to convert a number to an integer. However, some compilers supports this function in the {\it C Standard General Utilities Library}.
+		\end{enumerate}
+	\item The function {\tt strtol} converts a string into a long integer: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item See \url{http://www.cplusplus.com/reference/cstdlib/strtol/}.
+		\item \cite[$<$cstdlib$>$ (stdlib.h) -- C Standard General Utilities Library: {\tt strtol} function]{CplusplusCom2015}
+		\end{enumerate}
 	\end{enumerate}
 \item IO Streams: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt

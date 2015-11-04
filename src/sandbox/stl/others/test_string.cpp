@@ -246,9 +246,12 @@ int main(int argc, char *argv[]) {
 	 */
 	stringstream ss;
 	int prefix = 12345;
-	ss << prefix;		// Pipe a number into the string stream.
-	string prefix_str = ss.str();	// Convert contents of the stringstream into a string.
+	// Pipe a number into the string stream.
+	ss << prefix;
+	// Convert contents of the stringstream into a string.
+	string prefix_str = ss.str();
 	int suffix = 6789;
+	// Append another number into the string stream.
 	ss << suffix;
 	string suffix_str = ss.str();
 	string concatenator = "+";
@@ -265,7 +268,8 @@ int main(int argc, char *argv[]) {
 	 *	converted to 0.
 	 * If the string begins with a number, followed by at least
 	 *	one non-numeric character, that number will be converted
-	 *	to 0.
+	 *	to an integer. The character(s) following this number
+	 *	will be ignored.
 	 */
 	int concatenator_int = atoi(concatenator.c_str());
 	cout << "concatenator_int is:::"<<concatenator_int<<"###"<<endl;
@@ -275,24 +279,72 @@ int main(int argc, char *argv[]) {
 	 * Integers cannot be concatenated to strings using the
 	 *	plus operator.
 	 */
-	// Erase the string buffer.
-	ss.str("");
-	//  
+	// Empty the string stream (or string buffer).
+	cout << "	test_ss1===" << ss.str() << "+++" << endl;
+	ss.str("");		// Statement to empty the string stream.
+	string test_ss = ss.str();
+	cout << "	test_ss2===" << test_ss << "+++" << endl;
+	ss << 234234535.43253485;
+	cout << "	test_ss3===" << ss.str() << "+++" << endl;
+	ss.flush();
+	cout << "	test_ss4===" << ss.str() << "+++" << endl;
+	// Pipe 2 numbers into the string stream.
 	ss << "12345 67.89";
 	
+	/**
+	 * The function itoa() is not part of the standard C++ STL.
+	 * However, it is supported by some compilers.
+	 */
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	/**
+	 * Test function that converts numbers into strings.
+	 *	# int
+	 *	# long
+	 *	# long long
+	 *	# unsigned
+	 *	# unsigned long
+	 *	# unsigned long long
+	 *	# float
+	 *	# double
+	 *	# long double
+	 */
+	string a = to_string(19283.7465);
+	cout << "#	:::" << a << "+++" << endl;
+	a = to_string(918273645);
+	cout << "#	:::" << a << "+++" << endl;
+	// This works.
+
+
+	/**
+	 * Test other functions to convert strings to numbers.
+	 *
+	 * Test the strtol() function from the C Standard General
+	 *	Utilities Library, <cstdlib> (stdlib.h).
+	 */
+	char str_arr[] = "123456789";
+	char *str_arr_end;
+	long int l_i = strtol(str_arr,NULL,10);
+	l_i = l_i - 6789;
+	cout << "	===" << to_string(l_i) << "+++" << endl;
+	unsigned long long int ulli = strtoul(str_arr,NULL,10);
+	ulli = ulli - 3000000;
+	cout << "	===" << to_string(ulli) << "+++" << endl;
+	char str_arr1[] = "9821317.654343253453421";
+	double dxx = strtod(str_arr1,NULL);
+	cout << "	===" << to_string(dxx) << "+++" << endl;
+	int an_int = stoi("657483921",nullptr);
+	cout << "	===" << to_string(an_int) << "+++" << endl;
+	unsigned long long int an_ulli = stoull("6572348375921",nullptr);
+	cout << "	===" << to_string(an_ulli) << "+++" << endl;
+	long double a_ld = stold("743208.483752921",nullptr);
+	cout << "	===" << to_string(a_ld) << "+++" << endl;
+	/**
+	 * Alternate solutions to convert numbers into strings
+	 *	include "lexical_cast" from Boost C++ Libraries.
+	 * 
+	 */
 	
 	
 	

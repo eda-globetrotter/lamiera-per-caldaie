@@ -54,6 +54,12 @@ cplusplus.com.
 \newblock Available online at: \url{http://www.cplusplus.com/}; April 2, 2014
   was the last accessed date, 2014.
 
+\bibitem{CplusplusCom2015}
+cplusplus.com.
+\newblock Reference: {C++} reference.
+\newblock Available online at: \url{http://www.cplusplus.com/reference/};
+  November 2, 2015 was the last accessed date, 2015.
+
 \bibitem{Eckel2000}
 Bruce Eckel.
 \newblock {\em Thinking in C++: Introduction to Standard C++}, volume~1.
@@ -159,6 +165,13 @@ Andrew Koenig and Barbara Moo.
 Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
 \newblock {\em {C++} Primer}.
 \newblock Addison-Wesley, Upper Saddle River, {NJ}, fifth edition, 2013.
+
+\bibitem{McMahon20XY}
+Kurt {McMahon}.
+\newblock {C} strings and {C++} strings.
+\newblock Available online from {\it Kurt McMahon's web page: Notes} at:
+  \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 3, 2015
+  was the last accessed date.
 
 \bibitem{Meyers2005}
 Scott Meyers.
