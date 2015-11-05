@@ -289,7 +289,32 @@ int main(int argc, char *argv[]) {
 	ss.flush();
 	cout << "	test_ss4===" << ss.str() << "+++" << endl;
 	// Pipe 2 numbers into the string stream.
-	ss << "12345 67.89";
+	ss.str("");		// Statement to empty the string stream.
+	ss << "12345 67.89$ 297.30125 microarchitecture superscalar processor 736 29324";
+// Finish this!!!
+	char third_char;
+	int first_int, sixth_int, seventh_int;
+	double second_double, fourth_double;
+	string fifth_A_string, fifth_B_string, fifth_C_string;
+	ss >> first_int >> second_double >> third_char >> fourth_double;
+//	ss >> fifth_A_string >> sixth_int >> seventh_int;
+	ss >> fifth_A_string >> fifth_B_string >> fifth_C_string >> sixth_int >> seventh_int;
+	/**
+	 * The above two statements imply that if I do not match
+	 *	the instance/static variables with the tokens in the
+	 *	string stream properly, I would get garbage assigned
+	 *	to those instance/static variables.
+	 */
+	cout << "	first_int===" << first_int << "+++" << endl;
+	cout << "	second_double===" << second_double << "+++" << endl;
+	cout << "	third_char===" << third_char << "+++" << endl;
+	cout << "	fourth_double===" << fourth_double << "+++" << endl;
+	cout << "	fifth_A_string===" << fifth_A_string << "+++" << endl;
+	cout << "	fifth_B_string===" << fifth_B_string << "+++" << endl;
+	cout << "	fifth_C_string===" << fifth_C_string << "+++" << endl;
+	cout << "	sixth_int===" << sixth_int << "+++" << endl;
+	cout << "	seventh_int===" << seventh_int << "+++" << endl;
+
 	
 	/**
 	 * The function itoa() is not part of the standard C++ STL.
@@ -343,7 +368,6 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Alternate solutions to convert numbers into strings
 	 *	include "lexical_cast" from Boost C++ Libraries.
-	 * 
 	 */
 	
 	
