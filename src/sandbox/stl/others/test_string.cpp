@@ -239,19 +239,19 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Convert integers to strings.
 	 *
-	 * A string stream class "stringstream" is a string buffer
-	 *	that can "avoid dropping characters".
+	 * A class "stringstream" is a string buffer/stream that
+	 *	can "avoid dropping characters".
 	 *
 	 * Include header file for stringstream: #include <sstream>
 	 */
 	stringstream ss;
 	int prefix = 12345;
-	// Pipe a number into the string stream.
+	// Pipe a number into the stringstream.
 	ss << prefix;
 	// Convert contents of the stringstream into a string.
 	string prefix_str = ss.str();
 	int suffix = 6789;
-	// Append another number into the string stream.
+	// Append another number into the stringstream.
 	ss << suffix;
 	string suffix_str = ss.str();
 	string concatenator = "+";
@@ -279,17 +279,17 @@ int main(int argc, char *argv[]) {
 	 * Integers cannot be concatenated to strings using the
 	 *	plus operator.
 	 */
-	// Empty the string stream (or string buffer).
+	// Empty the stringstream (or string buffer).
 	cout << "	test_ss1===" << ss.str() << "+++" << endl;
-	ss.str("");		// Statement to empty the string stream.
+	ss.str("");		// Statement to empty the stringstream.
 	string test_ss = ss.str();
 	cout << "	test_ss2===" << test_ss << "+++" << endl;
 	ss << 234234535.43253485;
 	cout << "	test_ss3===" << ss.str() << "+++" << endl;
 	ss.flush();
 	cout << "	test_ss4===" << ss.str() << "+++" << endl;
-	// Pipe 2 numbers into the string stream.
-	ss.str("");		// Statement to empty the string stream.
+	// Pipe 2 numbers into the stringstream.
+	ss.str("");		// Statement to empty the stringstream.
 	ss << "12345 67.89$ 297.30125 microarchitecture superscalar processor 736 29324";
 // Finish this!!!
 	char third_char;
@@ -302,8 +302,10 @@ int main(int argc, char *argv[]) {
 	/**
 	 * The above two statements imply that if I do not match
 	 *	the instance/static variables with the tokens in the
-	 *	string stream properly, I would get garbage assigned
+	 *	stringstream properly, I would get garbage assigned
 	 *	to those instance/static variables.
+	 * Note that the first of the two statements above this
+	 *	block comment has been commented out.
 	 */
 	cout << "	first_int===" << first_int << "+++" << endl;
 	cout << "	second_double===" << second_double << "+++" << endl;
@@ -314,7 +316,30 @@ int main(int argc, char *argv[]) {
 	cout << "	fifth_C_string===" << fifth_C_string << "+++" << endl;
 	cout << "	sixth_int===" << sixth_int << "+++" << endl;
 	cout << "	seventh_int===" << seventh_int << "+++" << endl;
-
+	/**
+	 * Using the stringstream to convert strings to numbers.
+	 *
+	 * Number storing the conversion output as a number
+	 */
+	int op_num;
+	// A number-based string to be converted into a number.
+	string a_num = "732486";
+	/**
+	 * Create a stringstream with the text in a string.
+	 * That is, use the standard constructor of stringstream
+	 *	to instantiate an instance of stringstream to store
+	 *	an array of characters that are part of a string.
+	 */
+	stringstream convert_num_to_str(a_num);
+	// Did the stringstream pipe its contents to an integer?
+	if(!(convert_num_to_str >> op_num)) {
+		// No. Assign op_num to a default value of zero.
+		op_num = 0;
+	}
+	/**
+	 *		Else, yes.
+	 *		The contents of the stringstream is
+	 */
 	
 	/**
 	 * The function itoa() is not part of the standard C++ STL.
@@ -334,12 +359,17 @@ int main(int argc, char *argv[]) {
 	 *	# float
 	 *	# double
 	 *	# long double
+	 *
+	 * This to_string() function may be part of C++11 standard,
+	 *	and is not supported by compilers not fully compliant
+	 *	to the C++11 standard.
 	 */
 	string a = to_string(19283.7465);
 	cout << "#	:::" << a << "+++" << endl;
 	a = to_string(918273645);
 	cout << "#	:::" << a << "+++" << endl;
 	// This works.
+
 
 
 	/**
@@ -369,6 +399,15 @@ int main(int argc, char *argv[]) {
 	 * Alternate solutions to convert numbers into strings
 	 *	include "lexical_cast" from Boost C++ Libraries.
 	 */
+
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
