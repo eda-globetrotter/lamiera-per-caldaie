@@ -48,7 +48,7 @@
 // Testing operations with the C++ STL set container.
 #include <set>
 #include <utility>      // std::pair, std::make_pair
-// Test string conversion into integers.
+// Test string conversion into integers, via stringstream.
 #include <sstream>
 
 // Import packages from the software
@@ -243,6 +243,13 @@ int main(int argc, char *argv[]) {
 	 *	can "avoid dropping characters".
 	 *
 	 * Include header file for stringstream: #include <sstream>
+	 *
+	 * The inheritance hierarchy for stringstream is:
+	 *	# ios_base
+	 *	# ios
+	 *	# istream + ostream
+	 *	# stringstream + fstream
+	 *
 	 */
 	stringstream ss;
 	int prefix = 12345;
@@ -330,18 +337,17 @@ int main(int argc, char *argv[]) {
 	 *	to instantiate an instance of stringstream to store
 	 *	an array of characters that are part of a string.
 	 */
-	stringstream convert_num_to_str(a_num);
+	stringstream convert_str_to_num(a_num);
 	// Did the stringstream pipe its contents to an integer?
-	if(!(convert_num_to_str >> op_num)) {
+	if(!(convert_str_to_num >> op_num)) {
 		// No. Assign op_num to a default value of zero.
 		op_num = 0;
 	}
 	/**
-	 *		Else, yes.
-	 *		The contents of the stringstream is
-	 */
-	
-	/**
+	 *	Else, yes.
+	 *	The contents of the stringstream is piped to an integer.
+	 *
+	 *
 	 * The function itoa() is not part of the standard C++ STL.
 	 * However, it is supported by some compilers.
 	 */
