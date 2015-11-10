@@ -235,7 +235,7 @@ int main(int argc, char *argv[]) {
 	// =======================================================
 	
 	// Test string concatenation.
-	
+
 	/**
 	 * Convert integers to strings.
 	 *
@@ -248,7 +248,7 @@ int main(int argc, char *argv[]) {
 	 *	# ios_base
 	 *	# ios
 	 *	# istream + ostream
-	 *	# stringstream + fstream
+	 *	# stringstream + fstream 
 	 *
 	 */
 	stringstream ss;
