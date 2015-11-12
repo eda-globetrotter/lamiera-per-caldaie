@@ -66,9 +66,40 @@ int main(int argc, char *argv[]) {
 
 	
 	
-	string a_str = "An EECS Ph.D. degree is required for research positions at Intel";
+	string a_str = "An EECS Ph.D. degree is";
+//	string a_str = "An EECS Ph.D. degree is required.";
+//	string a_str = "An EECS Ph.D. degree is required for research positions at Intel";
 	string b_str = "Before you become a research fellow, you must be a research scientist at Intel";
 	string duplicate_str = "An EECS Ph.D. degree is required for research positions at Intel";
+	string empty_string_1;
+	string empty_string_2 = "";
+	/**
+	 * From \cite{RebbechiWXYZ}, strings are stored as
+	 *	automatically managed dynamic storage.
+	 * Test some basic string operations.
+	 *
+	 * ### IMPORTANT NOTES:
+	 * size():	Does not necessarily provide the number of
+	 *			characters in the string.
+	 *			Indicates size in number of bytes used.
+	 *			Synonymous with length().
+	 * length(): Does not necessarily provide the number of
+	 *			characters in the string.
+	 *			Indicates size in number of bytes used.
+	 *			Synonymous with size().
+	 *
+	 * A boolean TRUE is "1" and a boolean false is "0".
+	 */
+	cout << "==============================================" << endl;
+	cout << "	The size of a_str is:::" << a_str.size();
+	cout << "===" << endl;
+	cout << "	Is a_str empty:::" << a_str.empty() << "===" << endl;
+	cout << "	Is empty_string_1 empty:::" << empty_string_1.empty();
+	cout << "===" << endl;
+	cout << "	Is empty_string_2 empty:::" << empty_string_2.empty();
+	cout << "===" << endl;
+	cout << "==============================================" << endl;
+	a_str = "An EECS Ph.D. degree is required for research positions at Intel";
 	string copy_str = a_str;
 	string *ptr2str = &a_str;
 	
@@ -102,10 +133,20 @@ int main(int argc, char *argv[]) {
 		cout << "	a_str IS NOT equal to duplicate_str." << endl;
 	}
 	
+	/**
+	 * Changing a copy of a string does not affect the original
+	 *	string.
+	 */
 	copy_str = "A basketball player is tall.";
 	cout << "	copy_str is:::" << copy_str << "===" << endl;
 	cout << "	a_str is:::" << a_str << "===" << endl;
-	
+	/**
+	 * When you change the contents of the location that a
+	 *	pointer is pointing to, you change the contents of
+	 *	the original string.
+	 * The contents of the pointer is assigned to the
+	 *	address/location of a static/instance variable.
+	 */
 	(*ptr2str) = "I love the NBA.";
 	cout << "	*ptr2str is:::" << (*ptr2str) << "===" << endl;
 	cout << "	a_str is:::" << a_str << "===" << endl;
