@@ -77,13 +77,17 @@ C++ topics: \vspace{-0.3cm}
 		\item ``The type of the {\tt put} pointer'' does not matter to the software developer(s), since they ``cannot access it directly'' \cite[\S9.8]{Heller2003}.
 		\item ``The {\tt get} pointer holds the address of the next byte in the input area of the stream, or the next byte we get if we use $>>$ to read data from the {\tt stringstream}'' \cite[\S9.9]{Heller2003}.
 		\item ``The {\tt end} pointer indicates the end of the {\tt stringstream}. Attempting to read anything at or after this position will cause the read to fail because there is nothing else to read'' \cite[\S9.9]{Heller2003}.
-		\item Developers only have to know about how {\tt put}, {\tt get}, and {\tt end} pointers work. They do not have to know the actual representation of these pointers.
-		\item The {\tt stringstream} object acts as a buffer, and is ``an area of allocated memory''
+		\item Developers only have to know about how {\tt put}, {\tt get}, and {\tt end} pointers work. They do not have to know the actual representation of these pointers \cite[\S9.9]{Heller2003}.
+		\item The {\tt stringstream} object acts as a buffer, and is ``an area of allocated memory'' (``by the stringstream member functions'') \cite[\S9.9]{Heller2003}.
 		\end{enumerate}
 	\item The function {\tt strtol} converts a string into a long integer: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item See \url{http://www.cplusplus.com/reference/cstdlib/strtol/}.
 		\item \cite[$<$cstdlib$>$ (stdlib.h) -- C Standard General Utilities Library: {\tt strtol} function]{CplusplusCom2015}
+		\end{enumerate}
+	\item Danny Kalev, ``String Streams,'' in {\it {InformIT}: The Trusted Technology Learning Source: Articles: Programming: {C/C++} Articles: {InformIT C++} Reference Guide}, Pearson Education, Indianapolis, IN, January 1, 2003. Available online at: \url{http://www.informit.com/guides/content.aspx?g=cplusplus&seqNum=72}; last accessed on November 13, 2015. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Static buffers (via {\it atoi()}, {\it sprintf()}, or {\it sscanf()} from the {\it $<$stdio.h$>$}) for type conversions can cause buffer overflow and do not provide adequate type safety (i.e., adequate type checking mechanism). This can be mitigated via {\it stringstreams}.
 		\end{enumerate}
 	\end{enumerate}
 \item IO Streams: \vspace{-0.3cm}
