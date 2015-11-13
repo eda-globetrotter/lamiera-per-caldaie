@@ -71,6 +71,15 @@ C++ topics: \vspace{-0.3cm}
 			\end{enumerate}
 		\item The function {\tt atoi} converts a string to an integer. Similar functions for converting strings into numbers are: {\tt atol} and {\tt atof}. The C++ STL does not have a {\tt itoa} function to convert a number to an integer. However, some compilers supports this function in the {\it C Standard General Utilities Library}.
 		\end{enumerate}
+	\item \cite{Heller2003}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item The {\tt put} pointer points ``to the next free byte in the {\tt stringstream}.'' That is, it ``holds the address of the next byte in the output area of the'' {\tt stringstream}. When the {\tt stringstream} is empty, the {\tt put} pointer points to the beginning of the {\tt stringstream} buffer. \cite[\S9.8]{Heller2003}.
+		\item ``The type of the {\tt put} pointer'' does not matter to the software developer(s), since they ``cannot access it directly'' \cite[\S9.8]{Heller2003}.
+		\item ``The {\tt get} pointer holds the address of the next byte in the input area of the stream, or the next byte we get if we use $>>$ to read data from the {\tt stringstream}'' \cite[\S9.9]{Heller2003}.
+		\item ``The {\tt end} pointer indicates the end of the {\tt stringstream}. Attempting to read anything at or after this position will cause the read to fail because there is nothing else to read'' \cite[\S9.9]{Heller2003}.
+		\item Developers only have to know about how {\tt put}, {\tt get}, and {\tt end} pointers work. They do not have to know the actual representation of these pointers.
+		\item The {\tt stringstream} object acts as a buffer, and is ``an area of allocated memory''
+		\end{enumerate}
 	\item The function {\tt strtol} converts a string into a long integer: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item See \url{http://www.cplusplus.com/reference/cstdlib/strtol/}.

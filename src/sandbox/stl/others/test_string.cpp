@@ -446,9 +446,15 @@ int main(int argc, char *argv[]) {
 	 * Alternate solutions to convert numbers into strings
 	 *	include "lexical_cast" from Boost C++ Libraries.
 	 */
+// To be completed.
+
 
 	
 	
+	cout << "==============================================" << endl;
+	cout << "Test string concatenation." << endl;
+	
+	cout << "==============================================" << endl;
 	
 	
 	
