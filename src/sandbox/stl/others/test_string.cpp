@@ -275,7 +275,7 @@ int main(int argc, char *argv[]) {
 	
 	// =======================================================
 	
-	// Test string concatenation.
+	// Test string concatenation + string-to-number conversion.
 
 	/**
 	 * Convert integers to strings.
@@ -448,20 +448,23 @@ int main(int argc, char *argv[]) {
 	 */
 // To be completed.
 
+	cout << "==============================================" << endl;
+	cout << "Test string-to-number conversion." << endl;
+	
+	
+	cout << "==============================================" << endl;
 
 	
-	
-	cout << "==============================================" << endl;
-	cout << "Test string concatenation." << endl;
-	
-	cout << "==============================================" << endl;
-	
-	
-	
-	
-	
-	
-	
+	/**
+	 * Test string concatenation operation.
+	 *
+	 * Mattia Basaglia, "Cxx-MiscLib," in {\it GitHub: Mattia Basaglia}
+	 *	Available online at: \url{http://www.cplusplus.com/forum/articles/9645/};
+	 *	last accessed on November 13, 2015.
+	 *
+	 * Do not proceed.
+	 */
+
 	
 	
 	// End of main function...
