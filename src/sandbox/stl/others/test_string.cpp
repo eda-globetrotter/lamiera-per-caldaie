@@ -473,7 +473,26 @@ int main(int argc, char *argv[]) {
 	convert_bw_str_int << int_start;
 	str_end = convert_bw_str_int.str();
 	cout << "	stringstream() result:::" << str_end << "===" << endl;
+	/**
+	 * Use the to_string() function.
+	 *
+	 * This to_string() function may be part of C++11 standard,
+	 *	and is not supported by compilers not fully compliant
+	 *	to the C++11 standard.
+	 */
+	str_end = to_string(int_start);
+	cout<<"	to_string():::"<<str_end<<"==="<<endl;
 	
+
+
+
+
+
+
+
+
+
+
 	cout << "==============================================" << endl;
 
 	
