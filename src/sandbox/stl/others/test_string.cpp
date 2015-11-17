@@ -31,10 +31,30 @@
  *
  *
  *
+ * Notes on number-to-string operations.
+ * From \cite{Voigt2010}:
+ *	= Avoid string operations.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  * References:
- *	Kurt McMahon, in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015)}, Northern Illinois University, DeKalb, IL, October 28, 2015.
  *	Mattia Basaglia, "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
+ *	Kurt McMahon, in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015)}, Northern Illinois University, DeKalb, IL, October 28, 2015.
+ * Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
+ *
+ *
+ *
  */
 
 // Include Header files from the C++ STL
