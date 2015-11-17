@@ -415,9 +415,9 @@ int main(int argc, char *argv[]) {
 	 *	to the C++11 standard.
 	 */
 	string a = to_string(19283.7465);
-	cout << "#	:::" << a << "+++" << endl;
+	cout << "#A	:::" << a << "+++" << endl;
 	a = to_string(918273645);
-	cout << "#	:::" << a << "+++" << endl;
+	cout << "#B	:::" << a << "+++" << endl;
 	// This works.
 
 
@@ -432,19 +432,19 @@ int main(int argc, char *argv[]) {
 	char *str_arr_end;
 	long int l_i = strtol(str_arr,NULL,10);
 	l_i = l_i - 6789;
-	cout << "	===" << to_string(l_i) << "+++" << endl;
+	cout << "1	===" << to_string(l_i) << "+++" << endl;
 	unsigned long long int ulli = strtoul(str_arr,NULL,10);
 	ulli = ulli - 3000000;
-	cout << "	===" << to_string(ulli) << "+++" << endl;
+	cout << "2	===" << to_string(ulli) << "+++" << endl;
 	char str_arr1[] = "9821317.654343253453421";
 	double dxx = strtod(str_arr1,NULL);
-	cout << "	===" << to_string(dxx) << "+++" << endl;
+	cout << "3	===" << to_string(dxx) << "+++" << endl;
 	int an_int = stoi("657483921",nullptr);
-	cout << "	===" << to_string(an_int) << "+++" << endl;
+	cout << "4	===" << to_string(an_int) << "+++" << endl;
 	unsigned long long int an_ulli = stoull("6572348375921",nullptr);
-	cout << "	===" << to_string(an_ulli) << "+++" << endl;
+	cout << "5	===" << to_string(an_ulli) << "+++" << endl;
 	long double a_ld = stold("743208.483752921",nullptr);
-	cout << "	===" << to_string(a_ld) << "+++" << endl;
+	cout << "6	===" << to_string(a_ld) << "+++" << endl;
 	/**
 	 * Alternate solutions to convert numbers into strings
 	 *	include "lexical_cast" from Boost C++ Libraries.
@@ -467,6 +467,12 @@ int main(int argc, char *argv[]) {
 		int_end = 0;
 	}
 	cout << "	stringstream() result:::" << int_end << "===" << endl;
+	// Use the stoi() -type of options, which requires C-style strings as input.
+	unsigned long long int int_end_ulli = stoull("6572348375921",nullptr);
+	cout << "	stoull():::" << to_string(int_end_ulli) << "+++" << endl;
+	int_start = stoi("873951291",nullptr);
+	cout << "	stoi():::" << to_string(int_start) << "+++" << endl;
+
 
 	cout << "Test number-to-string conversion." << endl;
 	// Using the stringstream option.
