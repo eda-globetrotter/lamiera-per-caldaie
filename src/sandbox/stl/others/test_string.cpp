@@ -34,6 +34,7 @@
  *
  * References:
  *	Kurt McMahon, in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015)}, Northern Illinois University, DeKalb, IL, October 28, 2015.
+ *	Mattia Basaglia, "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
  */
 
 // Include Header files from the C++ STL
@@ -56,6 +57,46 @@
 
 
 using namespace std;
+
+// =======================================================================
+
+// A good template function for string-to-number conversion. TEST THIS!!!
+template <typename T>
+T StringToNumber(const string &Text, T defValue = T()) {
+	stringstream ss;
+	for (string::const_iterator i=Text.begin(); i!=Text.end(); ++i) {
+		if(isdigit(*i) || *i=='e' || *i=='-' || *i=='+' || *i=='.') {
+			ss << *i;
+		}
+	}
+	T result;
+	return ss >> result ? result : defValue;
+}	// \cite{Basaglia2009}
+
+/*
+Don't use "long"; use unsigned long long int.
+
+	template <typename T>
+	long atoi(const std::basic_string<T> &str){
+		std::basic_stringstream<T> stream(str);
+		long res;
+		return !(stream >>res)?0:res;
+	}
+	// \cite{Basaglia2009}
+*/
+
+
+// The fill() function is not needed by me.
+template <typename T>
+std::basic_string<T> itoa(long n,unsigned w=0){
+	std::basic_stringstream<T> stream;
+	if (w){
+		stream.fill('0');
+		stream.width(w);
+	}
+	stream <<n;
+	return stream.str();
+}	// \cite{Basaglia2009}
 
 // =======================================================================
 
@@ -448,6 +489,10 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Alternate solutions to convert numbers into strings
 	 *	include "lexical_cast" from Boost C++ Libraries.
+	 *
+	 * These alternate solutions can be encapsulated in
+	 *	functions to make the software more modular,
+	 *	maintainable, and extensible.
 	 */
 // To be completed.
 
@@ -489,16 +534,6 @@ int main(int argc, char *argv[]) {
 	str_end = to_string(int_start);
 	cout<<"	to_string():::"<<str_end<<"==="<<endl;
 	
-
-
-
-
-
-
-
-
-
-
 	cout << "==============================================" << endl;
 
 	
