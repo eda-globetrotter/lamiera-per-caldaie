@@ -167,6 +167,7 @@ int main(int argc, char *argv[]) {
 	string_node node_e = string_node("Ciao", "Mondo");
 	string_node node_f = string_node(a_str.c_str(), b_str.c_str());
 	
+	cout << "==============================================" << endl;
 	
 	/**
 	 * Create a set of string_nodes.
@@ -272,6 +273,7 @@ int main(int argc, char *argv[]) {
 
 	
 	cout << "== Set operations work for nodes that use a string as the node ID." << endl;
+	cout << "==============================================" << endl;
 	
 	// =======================================================
 	
@@ -334,12 +336,11 @@ int main(int argc, char *argv[]) {
 	cout << "	test_ss2===" << test_ss << "+++" << endl;
 	ss << 234234535.43253485;
 	cout << "	test_ss3===" << ss.str() << "+++" << endl;
-	ss.flush();
+	ss.flush();		// Flush cannot empty the stringstream.
 	cout << "	test_ss4===" << ss.str() << "+++" << endl;
 	// Pipe 2 numbers into the stringstream.
 	ss.str("");		// Statement to empty the stringstream.
 	ss << "12345 67.89$ 297.30125 microarchitecture superscalar processor 736 29324";
-// Finish this!!!
 	char third_char;
 	int first_int, sixth_int, seventh_int;
 	double second_double, fourth_double;
@@ -364,6 +365,8 @@ int main(int argc, char *argv[]) {
 	cout << "	fifth_C_string===" << fifth_C_string << "+++" << endl;
 	cout << "	sixth_int===" << sixth_int << "+++" << endl;
 	cout << "	seventh_int===" << seventh_int << "+++" << endl;
+	
+	cout << "==============================================" << endl;
 	/**
 	 * Using the stringstream to convert strings to numbers.
 	 *
@@ -392,8 +395,8 @@ int main(int argc, char *argv[]) {
 	 * The function itoa() is not part of the standard C++ STL.
 	 * However, it is supported by some compilers.
 	 */
-	
-	
+	cout << "op_num:::"<<op_num<<"==="<<endl;
+	cout << "==============================================" << endl;
 	
 	/**
 	 * Test function that converts numbers into strings.
@@ -450,7 +453,26 @@ int main(int argc, char *argv[]) {
 
 	cout << "==============================================" << endl;
 	cout << "Test string-to-number conversion." << endl;
-	
+	string str_start = "7364";
+	string str_end;
+	int int_start = 92834;
+	int int_end;
+	stringstream convert_bw_str_int;
+	// atoi() requires C++ string to be converted to C string first.
+	int_end = atoi(str_start.c_str());
+	cout << "	atoi() result:::" << int_end << "===" << endl;
+	// Using the stringstream option.
+	convert_bw_str_int << str_start;
+	if(!(convert_bw_str_int >> int_end)) {
+		int_end = 0;
+	}
+	cout << "	stringstream() result:::" << int_end << "===" << endl;
+
+	cout << "Test number-to-string conversion." << endl;
+	// Using the stringstream option.
+	convert_bw_str_int << int_start;
+	str_end = convert_bw_str_int.str();
+	cout << "	stringstream() result:::" << str_end << "===" << endl;
 	
 	cout << "==============================================" << endl;
 
