@@ -123,6 +123,24 @@ std::basic_string<T> itoa(long n,unsigned w=0){
 	return stream.str();
 }	// \cite{Basaglia2009}
 
+
+// Function to convert a number into a string
+string convertInt(int number)
+{
+	if (number == 0)
+		return "0";
+	string temp="";
+	string returnvalue="";
+	while (number>0)
+	{
+		temp+=number%10+48;
+		number/=10;
+	}
+	for(int i=0; i<temp.length(); i++)
+		returnvalue+=temp[temp.length()-i-1];
+	return returnvalue;
+}
+
 // =======================================================================
 
 // Start of main function...
@@ -546,7 +564,7 @@ int main(int argc, char *argv[]) {
 	try {
 		int x = boost::lexical_cast<int>( "123" );
 		cout << "	boost::lexical_cast=" << x << ":::" << endl;
-	} catch( boost::bad_lexical_cast const& ) {
+	}catch(boost::bad_lexical_cast const&) {
 		cout << "Error: input string was not valid" << endl;
 	}
 
@@ -565,7 +583,15 @@ int main(int argc, char *argv[]) {
 	 */
 	str_end = to_string(int_start);
 	cout<<"	to_string():::"<<str_end<<"==="<<endl;
-	
+	// Use Boost.Lexical_Cast, from the Boost C++ Libraries.
+	try {
+		string s = boost::lexical_cast<string>(3674.3478);
+		cout << "	boost::lexical_cast=" << s << ":::" << endl;
+		s = boost::lexical_cast<string>(9374421);
+		cout << "	boost::lexical_cast=" << s << ":::" << endl;
+	}catch(boost::bad_lexical_cast const&) {
+		cout << "Error: input string was not valid" << endl;
+	}
 	cout << "==============================================" << endl;
 
 	
