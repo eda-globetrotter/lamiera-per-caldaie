@@ -29,14 +29,13 @@ The following directory should be added to linker library paths:
 
     /Applications/apps/sw_dev_tools-not_gnu/boost/boost_1_59_0/stage/lib
 
-
+\cite{Hogan2007} shows us how to include the Boost C++ Libraries in the compilation step of the software development process.
 
 
 
 
 Reference:
-Alan J. Hogan, ""
-San Francisco, {CA}
+[Hogan2007] Alan J. Hogan, "Including the Boost C++ library in XCode," in his web page {\it Alan J. Hogan: Web Developer, Mac user, and more}, San Francisco, CA, November 27, 2007. Available online at: \url{http://alanhogan.com/code/boost-xcode}; last accessed on November 18, 2015.
 
 
 

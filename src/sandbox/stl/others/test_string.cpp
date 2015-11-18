@@ -49,12 +49,11 @@
  *
  *
  * References:
- *	Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
- *	Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, October 9, 2009 (Updated November 22, 2012). Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
- *	Kurt McMahon, in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015)}, Northern Illinois University, DeKalb, IL, October 28, 2015.
- * Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
- *
- *
+ *	[Basaglia2009a] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
+ *	[Basaglia2009] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, October 9, 2009 (Updated November 22, 2012). Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
+ *	[McMahon2015] Kurt McMahon, "C strings and C++ strings," in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Course Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 18, 2015 was the last accessed date.
+ * [Voigt2010] Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
+ * [jsmith2009] jsmith, answer to the post "convert between std::string and int," in {\it C++ Reference: C++ Forum: General C++ Programming}, July 31, 2009. Available online at: \url{http://www.cplusplus.com/forum/general/13135/#msg63239}; November 18, 2015 was the last accessed date.
  *
  */
 
