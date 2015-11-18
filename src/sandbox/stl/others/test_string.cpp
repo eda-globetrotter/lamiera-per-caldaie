@@ -54,6 +54,7 @@
  *	[McMahon2015] Kurt McMahon, "C strings and C++ strings," in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Course Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 18, 2015 was the last accessed date.
  * [Voigt2010] Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
  * [jsmith2009] jsmith, answer to the post "convert between std::string and int," in {\it C++ Reference: C++ Forum: General C++ Programming}, July 31, 2009. Available online at: \url{http://www.cplusplus.com/forum/general/13135/#msg63239}; November 18, 2015 was the last accessed date.
+ * [jsmith2009a] jsmith, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36020}; November 18, 2015 was the last accessed date.
  *
  */
 
@@ -560,7 +561,7 @@ int main(int argc, char *argv[]) {
 	cout << "	stoull():::" << to_string(int_end_ulli) << "+++" << endl;
 	int_start = stoi("873951291",nullptr);
 	cout << "	stoi():::" << to_string(int_start) << "+++" << endl;
-	// Use Boost.Lexical_Cast, from the Boost C++ Libraries.
+	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009}
 	try {
 		int x = boost::lexical_cast<int>( "123" );
 		cout << "	boost::lexical_cast=" << x << ":::" << endl;
@@ -583,7 +584,7 @@ int main(int argc, char *argv[]) {
 	 */
 	str_end = to_string(int_start);
 	cout<<"	to_string():::"<<str_end<<"==="<<endl;
-	// Use Boost.Lexical_Cast, from the Boost C++ Libraries.
+	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009a}
 	try {
 		string s = boost::lexical_cast<string>(3674.3478);
 		cout << "	boost::lexical_cast=" << s << ":::" << endl;
