@@ -34,6 +34,10 @@ The following directory should be added to linker library paths:
 
 
 
+Reference:
+Alan J. Hogan, ""
+San Francisco, {CA}
+
 
 
 
