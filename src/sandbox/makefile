@@ -36,6 +36,7 @@
 # IMPORTANT:: Paths to be modified!!!
 # Location of Boost C++ directory
 #BOOST_LOC=			~/whatever/boost_1_48_0
+BOOST_ROOT=			/Applications/apps/sw_dev_tools-not_gnu/boost/boost_1_59_0
 # Location of Intel TBB
 
 
