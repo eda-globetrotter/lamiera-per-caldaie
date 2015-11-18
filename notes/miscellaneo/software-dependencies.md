@@ -15,9 +15,9 @@
 
 ##	Boost C++
 
-	Installation process:
-	+	./bootstrap.sh
-	+	.b2		(or ./bjam)
+Installation process:
++	./bootstrap.sh
++	.b2		(or ./bjam)
 
 
 
