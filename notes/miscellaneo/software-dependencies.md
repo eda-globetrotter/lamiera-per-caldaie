@@ -19,8 +19,15 @@ Installation process:
 +	./bootstrap.sh
 +	.b2		(or ./bjam)
 
+### Note from the installation process
 
+The following directory should be added to compiler include paths:
 
+    /Applications/apps/sw_dev_tools-not_gnu/boost/boost_1_59_0
+
+The following directory should be added to linker library paths:
+
+    /Applications/apps/sw_dev_tools-not_gnu/boost/boost_1_59_0/stage/lib
 
 
 

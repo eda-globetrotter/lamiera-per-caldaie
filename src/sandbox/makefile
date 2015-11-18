@@ -277,6 +277,7 @@ dtypes:
 #	Target for string
 #####################################################################
 # Build and run C++ program to experiment with strings.
+# Includes 
 string:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
@@ -288,7 +289,7 @@ string:
 	@echo === C++ Classes Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)string_node.cpp
 	@echo === C++ STL Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLOTHERS)test_string.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(INCLUDE) $(BOOST_ROOT)	$(COMPILE)	$(CPPSTL)$(STLOTHERS)test_string.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
