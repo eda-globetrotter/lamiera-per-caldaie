@@ -294,7 +294,7 @@ C++ topics: \vspace{-0.3cm}
 			\item ``There is no such thing as a null reference. A reference must always refer to some object. As a result, if you have a variable whose purpose is to refer to another object, but it is possible that there might not be an object to refer to, you should make the variable a pointer, because then you can set it to null. On the other hand, if the variable must always refer to an object, i.e., if your design does not allow for the possibility that the variable is null, you should probably make the variable a reference.'' Answer from Harssh S. Shrivastava.
 			\end{enumerate}
 		\end{enumerate}
-	\item With shallow copying, I would only copy the memory references or pointers. The copy and the original reference the same object. On the other hand, with deep copying, I would copy the values. The copy and the original reference do not share objects; each of them references its own object.
+	\item With shallow copying, I would only copy the memory references or pointers. The copy and the original reference the same object. On the other hand, with deep copying, I would copy the values; this is also known as cloning. The copy and the original reference do not share objects; each of them references its own object. The default copy constructor carries out shallow copy.
 	\end{enumerate}
 \item OOD and inheritance: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt

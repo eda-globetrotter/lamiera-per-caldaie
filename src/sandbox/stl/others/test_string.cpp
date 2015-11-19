@@ -34,7 +34,11 @@
  * Notes on number-to-string operations.
  * From \cite{Voigt2010}:
  *	= Avoid string operations.
- *
+ *		[Answer to question written by "user434507"]
+ *	= Return the result of a function by reference, instead of
+ *		return by value.
+ *		This avoids an assignment, a constructor, and a destructor.
+ *		[Answer to question written by "user434507"]
  *
  *
  *
@@ -58,6 +62,10 @@
  * [jsmith2009a] jsmith, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36020}; November 18, 2015 was the last accessed date.
  * [Oromis2009] Oromis, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36007}; November 18, 2015 was the last accessed date.
  *	[Gonzalez2009] V{\'{i}}ctor M. Gonz{\'{a}}lez (Helios, or Helios-vmg), answer to the post "," in {\it C++ Reference: C++ Forum: Articles}, June 16, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg56762}; November 18, 2015 was the last accessed date.
+ *	[] Miscellaneous Technical Issues
+ *
+ *
+ *
  *
  * From my BibTeX database, the citation keys for references that I used are:
  *	Abrahams2015: http://www.boost.org/doc/libs/1_59_0/doc/html/boost_lexical_cast.html
