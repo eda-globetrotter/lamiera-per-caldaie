@@ -99,6 +99,11 @@ Marc Gregoire.
 \newblock {\em Professional {C++}}.
 \newblock John Wiley {\rm \&} Sons, Indianapolis, {IN}, third edition, 2014.
 
+\bibitem{Heller2003}
+Steve Heller.
+\newblock {\em C++: A Dialog: Programming with the C++ Standard Library}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, 2003.
+
 \bibitem{HewlettPackardCompanyStaff1994}
 {Hewlett-Packard Company staff}.
 \newblock Standard template library programmer's guide.

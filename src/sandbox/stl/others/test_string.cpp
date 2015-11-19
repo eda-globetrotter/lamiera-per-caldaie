@@ -49,12 +49,18 @@
  *
  *
  * References:
- *	[Basaglia2009a] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
- *	[Basaglia2009] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, October 9, 2009 (Updated November 22, 2012). Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
+ *	[Basaglia2009] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
+ *	[Basaglia2009a] Mattia Basaglia (Bazzy), response to "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 7, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg44792}; November 17, 2015 was the last accessed date.
+ *	[Basaglia2009b] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: Articles}, October 9, 2009 (Updated November 22, 2012). Available online at: \url{http://www.cplusplus.com/articles/D9j2Nwbp/}; November 19, 2015 was the last accessed date.
  *	[McMahon2015] Kurt McMahon, "C strings and C++ strings," in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Course Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 18, 2015 was the last accessed date.
  * [Voigt2010] Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
  * [jsmith2009] jsmith, answer to the post "convert between std::string and int," in {\it C++ Reference: C++ Forum: General C++ Programming}, July 31, 2009. Available online at: \url{http://www.cplusplus.com/forum/general/13135/#msg63239}; November 18, 2015 was the last accessed date.
  * [jsmith2009a] jsmith, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36020}; November 18, 2015 was the last accessed date.
+ * [Oromis2009] Oromis, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36007}; November 18, 2015 was the last accessed date.
+ *	[Gonzalez2009] V{\'{i}}ctor M. Gonz{\'{a}}lez (Helios, or Helios-vmg), answer to the post "," in {\it C++ Reference: C++ Forum: Articles}, June 16, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg56762}; November 18, 2015 was the last accessed date.
+ *
+ * From my BibTeX database, the citation keys for references that I used are:
+ *	Abrahams2015: http://www.boost.org/doc/libs/1_59_0/doc/html/boost_lexical_cast.html
  *
  */
 
@@ -70,7 +76,7 @@
 // Testing operations with the C++ STL set container.
 #include <set>
 #include <utility>      // std::pair, std::make_pair
-// Test string conversion into integers, via stringstream.
+// Test string conversion into integers, via stringstream. Required inclusion.
 #include <sstream>
 
 // Import modules from the Boost C++ Library.
@@ -97,7 +103,7 @@ T StringToNumber(const string &Text, T defValue = T()) {
 	}
 	T result;
 	return ss >> result ? result : defValue;
-}	// \cite{Basaglia2009}
+}	// \cite{Basaglia2009a}
 
 /*
 Don't use "long"; use unsigned long long int.
@@ -108,7 +114,7 @@ Don't use "long"; use unsigned long long int.
 		long res;
 		return !(stream >>res)?0:res;
 	}
-	// \cite{Basaglia2009}
+	// \cite{Gonzalez2009}
 */
 
 
@@ -122,10 +128,10 @@ std::basic_string<T> itoa(long n,unsigned w=0){
 	}
 	stream <<n;
 	return stream.str();
-}	// \cite{Basaglia2009}
+}	// \cite{Gonzalez2009}
 
 
-// Function to convert a number into a string
+// Function to convert a number into a string; \cite{Oromis2009}
 string convertInt(int number)
 {
 	if (number == 0)
@@ -465,6 +471,7 @@ int main(int argc, char *argv[]) {
 	 * That is, use the standard constructor of stringstream
 	 *	to instantiate an instance of stringstream to store
 	 *	an array of characters that are part of a string.
+	 * \cite{Basaglia2009}
 	 */
 	stringstream convert_str_to_num(a_num);
 	// Did the stringstream pipe its contents to an integer?
@@ -537,6 +544,11 @@ int main(int argc, char *argv[]) {
 	 * These alternate solutions can be encapsulated in
 	 *	functions to make the software more modular,
 	 *	maintainable, and extensible.
+	 *
+	 *
+	 * Note:
+	 * A switch statement can be used to convert a number
+	 *	into a string, and vice versa.
 	 */
 // To be completed.
 
@@ -550,18 +562,18 @@ int main(int argc, char *argv[]) {
 	// atoi() requires C++ string to be converted to C string first.
 	int_end = atoi(str_start.c_str());
 	cout << "	atoi() result:::" << int_end << "===" << endl;
-	// Using the stringstream option.
+	// Using the stringstream option. \cite{Basaglia2009b}
 	convert_bw_str_int << str_start;
 	if(!(convert_bw_str_int >> int_end)) {
 		int_end = 0;
 	}
 	cout << "	stringstream() result:::" << int_end << "===" << endl;
-	// Use the stoi() -type of options, which requires C-style strings as input.
+	// Use the stoi() -type of options, which requires C-style strings as input. \cite{Basaglia2009b}
 	unsigned long long int int_end_ulli = stoull("6572348375921",nullptr);
 	cout << "	stoull():::" << to_string(int_end_ulli) << "+++" << endl;
 	int_start = stoi("873951291",nullptr);
 	cout << "	stoi():::" << to_string(int_start) << "+++" << endl;
-	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009}
+	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009,Basaglia2009b}
 	try {
 		int x = boost::lexical_cast<int>( "123" );
 		cout << "	boost::lexical_cast=" << x << ":::" << endl;
@@ -569,9 +581,10 @@ int main(int argc, char *argv[]) {
 		cout << "Error: input string was not valid" << endl;
 	}
 
+	// -------------------------------------------------
 
 	cout << "Test number-to-string conversion." << endl;
-	// Using the stringstream option.
+	// Using the stringstream option. \cite{Basaglia2009}
 	convert_bw_str_int << int_start;
 	str_end = convert_bw_str_int.str();
 	cout << "	stringstream() result:::" << str_end << "===" << endl;
@@ -580,11 +593,11 @@ int main(int argc, char *argv[]) {
 	 *
 	 * This to_string() function may be part of C++11 standard,
 	 *	and is not supported by compilers not fully compliant
-	 *	to the C++11 standard.
+	 *	to the C++11 standard. \cite{Basaglia2009b}
 	 */
 	str_end = to_string(int_start);
 	cout<<"	to_string():::"<<str_end<<"==="<<endl;
-	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009a}
+	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009a,Basaglia2009b}
 	try {
 		string s = boost::lexical_cast<string>(3674.3478);
 		cout << "	boost::lexical_cast=" << s << ":::" << endl;
