@@ -62,14 +62,18 @@
  * [jsmith2009a] jsmith, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36020}; November 18, 2015 was the last accessed date.
  * [Oromis2009] Oromis, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36007}; November 18, 2015 was the last accessed date.
  *	[Gonzalez2009] V{\'{i}}ctor M. Gonz{\'{a}}lez (Helios, or Helios-vmg), answer to the post "," in {\it C++ Reference: C++ Forum: Articles}, June 16, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg56762}; November 18, 2015 was the last accessed date.
- *	[] Miscellaneous Technical Issues
- *
+ *	[StandardCppFoundationContributors2015] Standard C++ Foundation contributors, "How do I convert a value (a number, for example) to a std::string?," from {\it Standard C++: Wiki: C++ FAQ: Miscellaneous Technical Issues}, Standard C++ Foundation, 2015. Available online at: \url{https://isocpp.org/wiki/faq}; last accessed on November 19, 2015.
+ *	Lex Fridman
  *
  *
  *
  * From my BibTeX database, the citation keys for references that I used are:
- *	Abrahams2015: http://www.boost.org/doc/libs/1_59_0/doc/html/boost_lexical_cast.html
- *
+ *	Abrahams2015:
+ *		http://www.boost.org/doc/libs/1_59_0/doc/html/boost_lexical_cast.html
+ *		http://www.boost.org/doc/libs/1_59_0/doc/html/boost_lexical_cast/performance.html
+ *			lexical_cast
+ *			std::stringstream without construction or scanf/printf
+ *			std::stringstream with construction
  */
 
 // Include Header files from the C++ STL
