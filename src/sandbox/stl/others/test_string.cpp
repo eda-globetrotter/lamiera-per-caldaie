@@ -63,7 +63,17 @@
  * [Oromis2009] Oromis, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36007}; November 18, 2015 was the last accessed date.
  *	[Gonzalez2009] V{\'{i}}ctor M. Gonz{\'{a}}lez (Helios, or Helios-vmg), answer to the post "," in {\it C++ Reference: C++ Forum: Articles}, June 16, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg56762}; November 18, 2015 was the last accessed date.
  *	[StandardCppFoundationContributors2015] Standard C++ Foundation contributors, "How do I convert a value (a number, for example) to a std::string?," from {\it Standard C++: Wiki: C++ FAQ: Miscellaneous Technical Issues}, Standard C++ Foundation, 2015. Available online at: \url{https://isocpp.org/wiki/faq}; last accessed on November 19, 2015.
- *	Lex Fridman
+ *	[NieminenWXYZ] Juha Nieminen, "Comparison of several sorting algorithms: Conclusion," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/conclusion.html}; November 20, 2015 was the last accessed date.
+ *	[NieminenWXYZa] Juha Nieminen, "Comparison of several sorting algorithms," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/index.html}; November 20, 2015 was the last accessed date.
+ *	[NieminenWXYZb] Juha Nieminen, "Comparison of several sorting algorithms: Integers," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/integers.html}; November 20, 2015 was the last accessedFridman date.
+ *	[Fridman2011] Lex Fridman, "Sorting a Sorted List in C++," from his web page {\it Lex Fridman: Blogs: Research -- Projects, papers, and miscellaneous programming notes}, 2011. Available online at: \url{http://lexfridman.com/blogs/research/2011/07/04/sorting-a-sorted-list-in-c/}; November 20, 2015 was the last accessed date.
+ *	[AnonymousStackOverflowUser2011] Anonymous Stack Overflow user, "Does std::sort check if a vector is already sorted?," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, July 4, 2011. Available online at: \url{http://stackoverflow.com/questions/6567326/does-stdsort-check-if-a-vector-is-already-sorted}; November 20, 2015 was the last accessed date.
+ *	[Athanasiou2014] Nikos Athanasiou, "Comparing 3 modern c++ ways to convert integral values to strings," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, May 2, 2014. Available online at: \url{http://stackoverflow.com/questions/23437778/comparing-3-modern-c-ways-to-convert-integral-values-to-strings}; November 20, 2015 was the last accessed date.
+ *	[] from {\it Codexpert: I see native code}, Codexpert, Romania, 2012.
+ *
+ *
+ *
+ *
  *
  *
  *
