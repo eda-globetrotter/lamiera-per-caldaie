@@ -59,18 +59,25 @@
  *	[Basaglia2009] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 6, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/}; November 17, 2015 was the last accessed date.
  *	[Basaglia2009a] Mattia Basaglia (Bazzy), response to "Converting numbers to strings and strings to numbers," in {\it C++ Reference: C++ Forum: Articles}, April 7, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg44792}; November 17, 2015 was the last accessed date.
  *	[Basaglia2009b] Mattia Basaglia (Bazzy), "Converting numbers to strings and strings to numbers," in {\it C++ Reference: Articles}, October 9, 2009 (Updated November 22, 2012). Available online at: \url{http://www.cplusplus.com/articles/D9j2Nwbp/}; November 19, 2015 was the last accessed date.
+ *	[caa2010] caa (and wallyk (editor)), answer to the question "How to parse a string to an int in C++?," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, December 1, 2010 (edited August 5, 2011). Available online at: \url{ http://stackoverflow.com/a/4328610} and \url{http://stackoverflow.com/questions/194465/how-to-parse-a-string-to-an-int-in-c/4328610#4328610}; last accessed on November 23, 2015.
+ *	[chad2015] chad, comment to an answer by Amith Chinthaka (edited by MC93) for the question "Converting string to integer C," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, September 2, 2015. Available online at: \url{http://stackoverflow.com/a/18763083} and \url{http://stackoverflow.com/questions/7021725/converting-string-to-integer-c/18763083#18763083}; last accessed on November 24, 2015.
  *	[Fridman2011] Lex Fridman, "Sorting a Sorted List in C++," from his web page {\it Lex Fridman: Blogs: Research -- Projects, papers, and miscellaneous programming notes}, 2011. Available online at: \url{http://lexfridman.com/blogs/research/2011/07/04/sorting-a-sorted-list-in-c/}; November 20, 2015 was the last accessed date.
  *	[Gonzalez2009] V{\'{i}}ctor M. Gonz{\'{a}}lez (Helios, or Helios-vmg), answer to the post "," in {\it C++ Reference: C++ Forum: Articles}, June 16, 2009. Available online at: \url{http://www.cplusplus.com/forum/articles/9645/#msg56762}; November 18, 2015 was the last accessed date.
+ *	[jk.2008] jk (and Ferruccio Barletta (editor)), answer to the question "How to parse a string to an int in C++?," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, October 11, 2008. Available online at: \url{http://stackoverflow.com/a/194487} and \url{http://stackoverflow.com/questions/194465/how-to-parse-a-string-to-an-int-in-c/194487#194487}; last accessed on November 23, 2015.
  *	[jsmith2009] jsmith, answer to the post "convert between std::string and int," in {\it C++ Reference: C++ Forum: General C++ Programming}, July 31, 2009. Available online at: \url{http://www.cplusplus.com/forum/general/13135/#msg63239}; November 18, 2015 was the last accessed date.
  *	[jsmith2009a] jsmith, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36020}; November 18, 2015 was the last accessed date.
  *	[McMahon2015] Kurt McMahon, "C strings and C++ strings," in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Course Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 18, 2015 was the last accessed date.
+ *	[Moulding2011] Dan Moulding, answer to the question "How to parse a string to an int in C++?," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, May 27, 2011. Available online at: \url{http://stackoverflow.com/a/6154614} and \url{http://stackoverflow.com/questions/194465/how-to-parse-a-string-to-an-int-in-c/6154614#6154614}; last accessed on November 23, 2015.
  *	[NieminenWXYZ] Juha Nieminen, "Comparison of several sorting algorithms: Conclusion," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/conclusion.html}; November 20, 2015 was the last accessed date.
  *	[NieminenWXYZa] Juha Nieminen, "Comparison of several sorting algorithms," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/index.html}; November 20, 2015 was the last accessed date.
  *	[NieminenWXYZb] Juha Nieminen, "Comparison of several sorting algorithms: Integers," from {\it Warp} (personal web page). Available online at: \url{http://warp.povusers.org/SortComparison/integers.html}; November 20, 2015 was the last accessedFridman date.
  *	[Oromis2009] Oromis, answer to the post "Convert integer to string," in {\it C++ Reference: C++ Forum: General C++ Programming}, February 14, 2009. Available online at: \url{http://www.cplusplus.com/forum/beginner/7777/#msg36007}; November 18, 2015 was the last accessed date.
+ *	[Partow2014] Arash Partow, "C++ String Toolkit Library (StrTk)," from his personal web page {\it Arash Partow's Website}, 2014. Available online at: \url{http://www.partow.net/programming/strtk/index.html}; last accessed on November 23, 2015. Also, see: Arash Partow, "C++ String Toolkit (StrTk) Tokenizer," from {\it CodeProject -- For those who code: Articles}, CodeProject, Toronto, Canada, January 7, 2014. Available online at: \url{http://www.codeproject.com/Articles/23198/C-String-Toolkit-StrTk-Tokenizer}; last accessed on November 23, 2015.
  *	[spoulson2008] spoulson (author) and "bobobobo" (i.e., William Sherif), answer to "Alternative to itoa() for converting integer to string C++? [duplicate]," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY, October 14, 2008 (edited November 21, 2008w). Available online at: \url{http://stackoverflow.com/a/228039} and \url{http://stackoverflow.com/questions/228005/alternative-to-itoa-for-converting-integer-to-string-c/228039#228039}; November 20, 2015 was the last accessed date.
  *	[StandardCppFoundationContributors2015] Standard C++ Foundation contributors, "How do I convert a value (a number, for example) to a std::string?," from {\it Standard C++: Wiki: C++ FAQ: Miscellaneous Technical Issues}, Standard C++ Foundation, 2015. Available online at: \url{https://isocpp.org/wiki/faq}; last accessed on November 19, 2015.
+ *	[SynesisSoftwarePtyLtdStaff2010] Synesis Software Pty Ltd staff, "FastFormat -- The fastest, most robust C++ formatting library," Synesis Software Pty Ltd, Sydney, Australia, June 22, 2010. Available online at: \url{http://www.fastformat.org/} and \url{https://github.com/synesissoftware/FastFormat}; last accessed on November 24, 2015.
  *	[Voigt2010] Ben Voigt, "C++ performance challenge: integer to std::string conversion," Stack Exchange Inc., New York, NY, December 4, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4351371/c-performance-challenge-integer-to-stdstring-conversion}; November 17, 2015 was the last accessed date.
+ *	[user39259062014] user3925906, answer to the question "How to parse a string to an int in C++?," from {\it Stack Exchange Inc.: Stack Overflow: Questions}, Stack Exchange Inc., New York, NY,  August 9, 2014. Available online at: \url{http://stackoverflow.com/a/25223180} and \url{http://stackoverflow.com/questions/194465/how-to-parse-a-string-to-an-int-in-c/25223180#25223180}; last accessed on November 23, 2015.
  *
  *
  *
@@ -605,7 +612,11 @@ int main(int argc, char *argv[]) {
 		int_end = 0;
 	}
 	cout << "	stringstream() result:::" << int_end << "===" << endl;
-	// Use the stoi() -type of options, which requires C-style strings as input. \cite{Basaglia2009b}
+	/**
+	 * Use the stoi() -type of options, which requires C-style strings as input. \cite{Basaglia2009b}
+	 * See user39259062014 and \cite{Moulding2011} for better implementations.
+	 *	The former implementation is better.
+	 */
 	unsigned long long int int_end_ulli = stoull("6572348375921",nullptr);
 	cout << "	stoull():::" << to_string(int_end_ulli) << "+++" << endl;
 	int_start = stoi("873951291",nullptr);
@@ -617,6 +628,22 @@ int main(int argc, char *argv[]) {
 	}catch(boost::bad_lexical_cast const&) {
 		cout << "Error: input string was not valid" << endl;
 	}
+
+	/**
+	 * ### IMPORTANT NOTE:
+	 * Additional notes on converting between numbers and strings:
+	 *	= \cite{caa2010}
+	 *		Articles already mentioned show comparison between different methods of converting integers <-> strings. Following approaches make sense: old c-way, spirit.karma, fastformat, simple naive loop.
+	 *		Boost.Spirit.Karma seems to be the fastest library for converting integer to string.
+	 *	= \cite{chad2015}
+	 *		C++ (or C-type) functions of the category represented by "atoi" may overflow. Hence the use of these functions must involve the judicious checking of arithmetic overflow.
+	 *		C++ functions of the categeory represented by "strtol" do check for arithmetic overflow.
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
 
 	// -------------------------------------------------
 
