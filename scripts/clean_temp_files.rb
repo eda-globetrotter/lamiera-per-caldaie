@@ -145,7 +145,7 @@ system("git rm test-boilerplate-code")
 File.delete("test-boilerplate-code")
 =end
 
-system("git rm play_in_sandbox")
+system("git rm -f play_in_sandbox")
 File.delete("play_in_sandbox")
 
 # Remove all generated output files
