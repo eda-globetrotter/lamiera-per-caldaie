@@ -354,4 +354,9 @@ Dirk Vermeir.
 \newblock {\em Multi-Paradigm Programming using {C++}}.
 \newblock Springer-Verlag London Berlin Heidelberg, London, {U.K.}, 2001.
 
+\bibitem{Wilson2007}
+Matthew Wilson.
+\newblock {\em Extended {STL}: Collections and Iterators}, volume~1.
+\newblock Addison-Wesley, Upper Saddle River, {NJ}, 2007.
+
 \end{thebibliography}
