@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 DEC 2015 21:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 DEC 2015 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1002,15 +1002,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
-[13]
-Overfull \hbox (0.14946pt too wide) in paragraph at lines 441--442
+[13] [14]
+Overfull \hbox (0.14946pt too wide) in paragraph at lines 448--449
 \OT1/cmr/m/it/12 tions \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 Re-lated asymp-toti
 c no-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\OT1/cmr/m/n/12 , in \OT1
 /cmr/m/it/12 Wikipedia,
  []
 
-[14]
-Overfull \hbox (16.01257pt too wide) in paragraph at lines 442--443
+
+Overfull \hbox (16.01257pt too wide) in paragraph at lines 449--450
 \OT1/cmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ comm
 on _ time _ complexities$[][]\OT1/cmr/m/n/12 ; last ac-cessed
  []
@@ -1161,8 +1161,8 @@ Package rerunfilecheck Info: File `data-structures-n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 255.
  ) 
 Here is how much of TeX's memory you used:
- 16030 strings out of 493089
- 226582 string characters out of 6134842
+ 16038 strings out of 493089
+ 226646 string characters out of 6134842
  335285 words of memory out of 5000000
  18719 multiletter control sequences out of 15000+600000
  20195 words of font info for 75 fonts, out of 8000000 for 9000
@@ -1189,10 +1189,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures-n_algor.pdf (30 pages, 317754 bytes).
+Output written on data-structures-n_algor.pdf (30 pages, 320132 bytes).
 PDF statistics:
- 1112 PDF objects out of 1200 (max. 8388607)
- 1049 compressed objects within 11 object streams
- 497 named destinations out of 1000 (max. 500000)
+ 1122 PDF objects out of 1200 (max. 8388607)
+ 1059 compressed objects within 11 object streams
+ 505 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
