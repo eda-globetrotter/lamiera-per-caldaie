@@ -402,29 +402,35 @@ This draws simple conclusions on the usage of each data structure \cite{Bulka200
 
 Notes about asymptotic notations: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Comparison of big O notations, and other asymptotic notations, in general -- based on ``running time (T(n))'': \vspace{-0.3cm}
+\item Comparison of big O notations, and other asymptotic notations, in general -- based on ``running time (T(n))'' $[$Wikipedia 2015a$]$: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item O(1): constant time
-	\item O(log$^{\ast}$ n), log star: iterated logarithmic time. $\log^{\ast} n \coloneqq
+	\item $O(1)$: constant time
+	\item $O(\log^{\ast} n)$, log star: iterated logarithmic time.
+
+	Log star n is a recursive function; $\log^{\ast} n \coloneqq
 		\begin{cases}
 		0 &: \mathrm{if}\ n \leq 1 \\
-		1 &: \mathrm{if}\ n > 1 \\
-		\end{cases}$
-%	mathtools
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
-	\item O(1): 
+		1 + \log^{\ast}(\log n) &: \mathrm{if}\ n > 1 \\
+		\end{cases}$\ $[$Wikipedia 2015b$]$
+%	\usepackage{mathtools}
+%	Use the above/aforementioned package to use the symbol: \coloneqq \cite{Pakin2008}
+	\item $O(\log \log n)$: log-logarithmic
+	\item $O(\log n)$: logarithmic time, computational time complexity class DLOGTIME. E.g., $\log n^{2}$.
+	\item poly$(\log n)$: polylogarithmic time. E.g., $(\log n)^{2}$.
+	\item $O(n^{c})$, where $0 < c < 1$: fractional power. E.g., $n^{\frac{2}{3}}$.
+	\item $O(n)$: linear time
+	\item $O(n \log^{\ast} n)$: ``n log star n'' time
+	\item $O(n \log n)$: linearithmic time, including $\log n!$
+	\item $O(n^{2})$: quadratic time
+	\item $O(n^{3})$: cubic time
+	\item poly$(n)$, or $2^{O(\log n)}$: polynomial time, including $n, n \log n, n^{10}$. Computational time complexity class P.
+	\item $2^{{\rm poly}(\log n)}$: quasi-polynomial time, including $n^{\log \log n}, n^{\log n}$. Computational time complexity class QP.
+	\item $O(2^{n^{\varepsilon}}), \forall \varepsilon > 0$: sub-exponential time, including $O(2^{\log n^{\log \log n}})$. Computational time complexity class SUBEXP.
+	\item $2^{o(n)}$: sub-exponential time, including $2^{n^{\frac{1}{3}}}$. Computational time complexity class SUBEXP.
+	\item $2^{O(n)}$: exponential time (with linear exponent), including $1.1^{n}, 10^{n}$. Computational time complexity class E.
+	\item $2^{{\rm poly}(n)}$: exponential time, including $2^{n}, 2^{n^{2}}$. Computational time complexity class EXPTIME.
+	\item $O(n!)$: factorial time, including $n!$.
+	\item $2^{2^{{\rm poly}(n)}}$: double exponential time, including $2^{2^{n}}$. Computational time complexity class 2-EXPTIME.
 	\end{enumerate}
 \item Types of asymptotic notations: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -434,17 +440,11 @@ Notes about asymptotic notations: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item $[$Wikipedia 2015$]$ Wikipedia contributors, ``Big O notation,'' sections {\it Orders of common functions} and {\it Related asymptotic notations: Family of Bachmann?Landau notations}, in {\it Wikipedia, The Free Encyclopedia: Analysis of algorithms, or Asymptotic analysis}, Wikimedia Foundation, San Francisco, CA, November 29, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions}; last accessed on December 1, 2015.
 	\item $[$Wikipedia 2015a$]$ Wikipedia contributors, ``Time complexity,'' section {\it Table of common time complexities}, in {\it Wikipedia, The Free Encyclopedia: Computational complexity theory}, Wikimedia Foundation, San Francisco, CA, November 16, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities}; last accessed on December 1, 2015.
+	\item $[$Wikipedia 2015b$]$ Wikipedia contributors, ``Iterated logarithm,'' in {\it Wikipedia, The Free Encyclopedia: Asymptotic analysis}, Wikimedia Foundation, San Francisco, CA, December 1, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities}; last accessed on December 1, 2015.
 	\end{enumerate}
+\item Note that I denote ``is defined as'' as: $\equiv, \triangleq, \stackrel{\text{\tiny def}}{=}, \coloneqq$
 \end{enumerate}
 
-\begin{equation}
-\label{eqn:caseenv}
-f(n) = 
-	\begin{cases}
-	case-1 &: \mathrm{n\ is\ odd} \\
-	case-2 &: \mathrm{n\ is\ even} \\
-	\end{cases}
-\end{equation}
 
 
 
