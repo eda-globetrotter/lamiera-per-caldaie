@@ -405,15 +405,12 @@ Notes about asymptotic notations: \vspace{-0.3cm}
 \item Comparison of big O notations, and other asymptotic notations, in general -- based on ``running time (T(n))'': \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item O(1): constant time
-	\item O(log$^{\ast}$ n), log star: iterated logarithmic time. $\log^{\ast} n Cases of putting a bracket/parenthesis on the right side of the equation.
-\begin{gather*}
-	\left.\begin{aligned}
-	B'&=-\partial \times E,\\
-	E'&=\partial \times B - 4\pi j,
-	\end{aligned}
-	\right\}
-	\quad\text{Maxwell's equations}
-\end{gather*}$
+	\item O(log$^{\ast}$ n), log star: iterated logarithmic time. $\log^{\ast} n \coloneqq
+		\begin{cases}
+		0 &: \mathrm{if}\ n \leq 1 \\
+		1 &: \mathrm{if}\ n > 1 \\
+		\end{cases}$
+%	mathtools
 	\item O(1): 
 	\item O(1): 
 	\item O(1): 
@@ -439,6 +436,15 @@ Notes about asymptotic notations: \vspace{-0.3cm}
 	\item $[$Wikipedia 2015a$]$ Wikipedia contributors, ``Time complexity,'' section {\it Table of common time complexities}, in {\it Wikipedia, The Free Encyclopedia: Computational complexity theory}, Wikimedia Foundation, San Francisco, CA, November 16, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities}; last accessed on December 1, 2015.
 	\end{enumerate}
 \end{enumerate}
+
+\begin{equation}
+\label{eqn:caseenv}
+f(n) = 
+	\begin{cases}
+	case-1 &: \mathrm{n\ is\ odd} \\
+	case-2 &: \mathrm{n\ is\ even} \\
+	\end{cases}
+\end{equation}
 
 
 
