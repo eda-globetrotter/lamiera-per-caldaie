@@ -562,13 +562,66 @@ Notes about software development in {\it C++}: \vspace{-0.3cm}
 			\item ``Defensive code''
 			\item ``Fuzzy (or no!) abstraction borders''
 			\end{enumerate}
-		\item ``Key characteristics'' identified in situ: ``diagnostics, contracts, code coverge, and testing.''
+		\item ``Key characteristics'' identified in situ: ``diagnostics, contracts, code coverage, and testing.''
 		\item Remember the following ``when testing mud-balls'': ``automation; minimalism, incrementality, unit testing vs component testing; coverage (in realistic time); only change what you can test (and are testing!) -- [there are] exceptions to this rule; beyond salvation -- sometimes it's just mud.''
-		\item Islands of ``know Functionality'' are created as follows: Decomposition -- Identifying Units, Identifying Components, and Identifying Modules; Triage; Isolation; Striding two worlds;Transplantation; Separation; Versioning: Static and Dynamic; ``When to `throw it out'.''
-		\item ``Inconstant Environment'' handling: ``File system, Memory, User-interface, Time, and Data storage''
-		\item Concepts to review: \vspace{-0.1cm}
+		\item Islands of ``known Functionality'' are created as follows: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
-			\item Techniques to address/mitigate coupling
+			\item ``Decomposition -- Identifying Units, Identifying Components, and Identifying Modules''
+			\item ``Triage''
+			\item ``Isolation''
+			\item ``Striding two worlds''
+			\item ``Transplantation''
+			\item ``Separation''
+			\item ``Versioning -- Static and Dynamic''
+			\item ``When to `throw it out'.''
+			\end{enumerate}
+		\item ``Inconstant Environment'' handling: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``File system''
+			\item ``Memory''
+			\item ``User-interface''
+			\item ``Time''
+			\item ``Data storage''
+			\end{enumerate}
+		\item Techniques to address/mitigate coupling: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``Pre-processor'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item \#ifdef
+				\item \#define
+				\item \#include
+				\end{itemize}
+			\item ``linkage'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``interpositioning''
+				\item ``dynamic library redirection''
+				\end{itemize}
+			\item ``object-oriented techniques'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``overloading''
+				\item ``overriding''
+				\item ``inheritance''
+				\item ``interfaces''
+				\end{itemize}
+			\item ``patterns'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``class adaptor''
+				\item ``instance adaptor''
+				\item ``decorator''
+				\item ``visitor''
+				\end{itemize}
+			\item ``generic programming'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``policies''
+				\item ``shims''
+				\item ``traits''
+				\end{itemize}
+			\item ``Testing'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``Stubbing''
+				\item ``Mocking''
+				\item ``Versioned testing''
+				\end{itemize}
 			\end{enumerate}
 		\item 
 		\item 
