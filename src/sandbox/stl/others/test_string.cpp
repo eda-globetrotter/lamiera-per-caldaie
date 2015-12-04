@@ -624,9 +624,21 @@ int main(int argc, char *argv[]) {
 	// Use Boost.Lexical_Cast, from the Boost C++ Libraries. \cite{jsmith2009,Basaglia2009b}
 	try {
 		int x = boost::lexical_cast<int>( "123" );
-		cout << "	boost::lexical_cast=" << x << ":::" << endl;
+		cout << "	boost::lexical_cast for int==" << x << ":::" << endl;
 	}catch(boost::bad_lexical_cast const&) {
-		cout << "Error: input string was not valid" << endl;
+		cout << "Error: input string (integer) was not valid" << endl;
+	}
+	try {
+		double x = boost::lexical_cast<double>( "45678.91239816" );
+		cout << "	boost::lexical_cast for double1==" << x << ":::" << endl;
+		long double y = boost::lexical_cast<long double>( "45678.91239816" );
+		cout << "	boost::lexical_cast for long double1==" << y << ":::" << endl;
+		y = boost::lexical_cast<long double>( "98745678.9123" );
+		cout << "	boost::lexical_cast for long double2==" << y << ":::" << endl;
+		y = boost::lexical_cast<long double>( "987.456789123" );
+		cout << "	boost::lexical_cast for long double2==" << y << ":::" << endl;
+	}catch(boost::bad_lexical_cast const&) {
+		cout << "Error: input string (double) was not valid" << endl;
 	}
 
 	/**
