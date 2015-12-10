@@ -99,6 +99,16 @@ Marc Gregoire.
 \newblock {\em Professional {C++}}.
 \newblock John Wiley {\rm \&} Sons, Indianapolis, {IN}, third edition, 2014.
 
+\bibitem{Hammer1979}
+P.~L. Hammer, E.~L. Johnson, and B.~H. Korte.
+\newblock Conclusive remarks.
+\newblock In {\em Discrete Optimization {II}, Proceedings of the Advanced
+  Research Institute on Discrete Optimization and Systems Applications of the
+  Systems Science Panel of {NATO} and of the Discrete Optimization Symposium},
+  volume~5 of {\em Annals of Discrete Mathematics}, pages 427--453.
+  North-Holland, Banff, Alberta, Canada and Vancouver, {B.C.}, Canada, August
+  1979.
+
 \bibitem{Heller2003}
 Steve Heller.
 \newblock {\em C++: A Dialog: Programming with the C++ Standard Library}.
@@ -125,6 +135,17 @@ Steve Heller.
 Cay~S. Horstmann.
 \newblock {\em {C++} for Everyone}.
 \newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, second edition, 2012.
+
+\bibitem{Innovation24Staff2015a}
+{Innovation 24 staff}.
+\newblock {\em {LocalSolver} 5.5 documentation: Overview}.
+\newblock {Innovation 24}, Paris, France, 2015.
+
+\bibitem{Innovation24Staff2015}
+{Innovation 24 staff}.
+\newblock Localsolver: Mathematical optimization solver.
+\newblock Available online at: \url{http://www.localsolver.com/}; December 7,
+  2015 was the last accessed date, 2015.
 
 \bibitem{Jensen2003}
 Ted Jensen.
@@ -161,10 +182,24 @@ Jayantha Katupitiya and Kim Bentley.
 \newblock {\em Interfacing with {C++}: Programming Real-World Applications}.
 \newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2006.
 
+\bibitem{Koch2011a}
+Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
+  Berthold, Robert~E. Bixby, Emilie Danna, Gerald Gamrath, Ambros~M. Gleixner,
+  Stefan Heinz, Andrea Lodi, Hans Mittelmann, Ted Ralphs, Domenico Salvagnin,
+  Daniel~E. Steffy, and Kati Wolter.
+\newblock {MIPLIB 2010}: Mixed integer programming library version 5.
+\newblock {\em Mathematical Programming Computation}, 3(2):103--163, June 2011.
+
 \bibitem{Koenig2000}
 Andrew Koenig and Barbara Moo.
 \newblock {\em Accelerated C++: Practical Programming by Example}.
 \newblock {C++} In-Depth Series. Addison-Wesley, Boston, {MA}, 2000.
+
+\bibitem{Lee2004c}
+Jon Lee.
+\newblock {\em A First Course in Combinatorial Optimization}, volume~36 of {\em
+  Cambridge Texts in Applied Mathematics}.
+\newblock Cambridge University Press, New York, {NY}, 2004.
 
 \bibitem{Lippman2013}
 Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
@@ -353,6 +388,14 @@ David Vandevoorde and Nicolai~M. Josuttis.
 Dirk Vermeir.
 \newblock {\em Multi-Paradigm Programming using {C++}}.
 \newblock Springer-Verlag London Berlin Heidelberg, London, {U.K.}, 2001.
+
+\bibitem{WikipediaContributors2015h}
+{Wikipedia contributors}.
+\newblock Discrete optimization.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia:
+  Mathematical optimization} at:
+  \url{https://en.wikipedia.org/wiki/Discrete_optimization}; December 9, 2015
+  was the last accessed date, May 17 2015.
 
 \bibitem{Wilson2007}
 Matthew Wilson.
