@@ -9,16 +9,20 @@
 \contentsline {subsection}{\numberline {2.1.2}Undirected Graphs}{2}{subsection.2.1.2}
 \contentsline {chapter}{\numberline {3}Optimization}{3}{chapter.3}
 \contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{3}{section.3.1}
-\contentsline {section}{\numberline {3.2}Robust Linear Programming}{3}{section.3.2}
-\contentsline {section}{\numberline {3.3}Discrete Optimization}{4}{section.3.3}
-\contentsline {chapter}{\numberline {4}Mathematics}{5}{chapter.4}
-\contentsline {chapter}{\numberline {5}Statistics}{7}{chapter.5}
-\contentsline {chapter}{\numberline {6}C++ Resources}{8}{chapter.6}
-\contentsline {section}{\numberline {6.1}Computational Complexity of C++ Containers}{15}{section.6.1}
-\contentsline {section}{\numberline {6.2}Notes About C++}{17}{section.6.2}
-\contentsline {section}{\numberline {6.3}Software Development in C++}{18}{section.6.3}
-\contentsline {chapter}{\numberline {7}Questions}{21}{chapter.7}
-\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{21}{section.7.1}
-\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{21}{section.7.2}
-\contentsline {chapter}{Acknowledgments}{25}{chapter*.4}
-\contentsline {chapter}{Bibliography}{30}{appendix*.5}
+\contentsline {section}{\numberline {3.2}Notes on Using Optimization Tools}{3}{section.3.2}
+\contentsline {section}{\numberline {3.3}Robust Linear Programming}{5}{section.3.3}
+\contentsline {section}{\numberline {3.4}Discrete Optimization}{5}{section.3.4}
+\contentsline {section}{\numberline {3.5}Mathematical Programming Solvers}{5}{section.3.5}
+\contentsline {chapter}{\numberline {4}Mathematics}{7}{chapter.4}
+\contentsline {chapter}{\numberline {5}Statistics}{9}{chapter.5}
+\contentsline {chapter}{\numberline {6}C++ Resources}{10}{chapter.6}
+\contentsline {section}{\numberline {6.1}Computational Complexity of C++ Containers}{17}{section.6.1}
+\contentsline {section}{\numberline {6.2}Notes About C++}{19}{section.6.2}
+\contentsline {section}{\numberline {6.3}Software Development in C++}{20}{section.6.3}
+\contentsline {chapter}{\numberline {7}Questions}{23}{chapter.7}
+\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{23}{section.7.1}
+\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{23}{section.7.2}
+\contentsline {chapter}{\numberline {8}Miscellaneous}{27}{chapter.8}
+\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{27}{section.8.1}
+\contentsline {chapter}{Acknowledgments}{28}{chapter*.4}
+\contentsline {chapter}{Bibliography}{33}{appendix*.5}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 DEC 2015 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 JAN 2016 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -942,15 +942,19 @@ Chapter 3.
 LaTeX Warning: Citation `Achterberg2015a' on page 3 undefined on input line 30.
 
 
+
+LaTeX Warning: Citation `WikipediaContributors2015i' on page 3 undefined on inp
+ut line 46.
+
 [3
 
-]
-Overfull \hbox (7.34094pt too wide) in paragraph at lines 89--90
+] [4] [5]
+Overfull \hbox (7.34094pt too wide) in paragraph at lines 205--206
 []\OT1/cmr/m/n/12 Its tech-ni-cal doc-u-men-ta-tion can be found at: [][]$\OT1/
 cmtt/m/n/12 http : / / www . localsolver . com / documentation /
  []
 
-) (./numerical_comp/numerical_comp.tex [4]
+) (./numerical_comp/numerical_comp.tex [6]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--48
@@ -972,7 +976,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[5
+[7
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
@@ -984,52 +988,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-) (./statistics/statistical_comp.tex [6]
+) (./statistics/statistical_comp.tex [8]
 Chapter 5.
-) (./cpp_resources/cpp_resources.tex [7
+) (./cpp_resources/cpp_resources.tex [9
 
 ]
 Chapter 6.
-[8
 
-] [9] [10] [11]
-Overfull \hbox (6.61278pt too wide) in paragraph at lines 224--225
+Overfull \hbox (20.3728pt too wide) in paragraph at lines 23--24
+\OT1/cmr/m/n/12 Quick ad-vice: \OT1/cmtt/m/n/12 Learn how to use \OT1/cmr/m/it/
+12 C++1y \OT1/cmtt/m/n/12 features, including those of C++11, C++14, and C++17.
+
+ []
+
+[10
+
+] [11] [12] [13]
+Overfull \hbox (6.61278pt too wide) in paragraph at lines 225--226
+[][]$\OT1/cmtt/m/n/12 http : / / faculty . cs . niu . edu / []mcmahon / CS241 /
+ Notes / pass _ by _ address . html$[][]\OT1/cmr/m/n/12 ; last
+ []
+
+[14]
+Overfull \hbox (6.61278pt too wide) in paragraph at lines 231--232
 [][]$\OT1/cmtt/m/n/12 http : / / faculty . cs . niu . edu / []mcmahon / CS241 /
  Notes / pass _ by _ address . html$[][]\OT1/cmr/m/n/12 ; last
  []
 
 
-Overfull \hbox (6.61278pt too wide) in paragraph at lines 230--231
-[][]$\OT1/cmtt/m/n/12 http : / / faculty . cs . niu . edu / []mcmahon / CS241 /
- Notes / pass _ by _ address . html$[][]\OT1/cmr/m/n/12 ; last
- []
-
-[12]
-Overfull \hbox (252.03519pt too wide) in paragraph at lines 256--257
+Overfull \hbox (252.03519pt too wide) in paragraph at lines 257--258
 [][][]$\OT1/cmtt/m/n/12 http : / / stackoverflow . com / questions / 1143262 / 
 what-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]int-[]const-[]an
 d-[]int-[]const$[][]
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-[15] [16]
-Overfull \hbox (0.14946pt too wide) in paragraph at lines 448--449
+[17] [18]
+Overfull \hbox (0.14946pt too wide) in paragraph at lines 449--450
 \OT1/cmr/m/it/12 tions \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 Re-lated asymp-toti
 c no-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\OT1/cmr/m/n/12 , in \OT1
 /cmr/m/it/12 Wikipedia,
  []
 
 
-Overfull \hbox (16.01257pt too wide) in paragraph at lines 449--450
+Overfull \hbox (16.01257pt too wide) in paragraph at lines 450--451
 \OT1/cmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ comm
 on _ time _ complexities$[][]\OT1/cmr/m/n/12 ; last ac-cessed
  []
 
-[17] [18] [19]) (./questions/questions.tex [20]
+[19] [20] [21]) (./questions/questions.tex [22]
 Chapter 7.
 
 Overfull \hbox (230.5794pt too wide) in paragraph at lines 51--53
@@ -1071,7 +1082,7 @@ Overfull \hbox (145.74045pt too wide) in paragraph at lines 58--59
 planation-[]for-[]pointers /
  []
 
-[21
+[23
 
 ]
 Overfull \hbox (158.09045pt too wide) in paragraph at lines 59--60
@@ -1103,16 +1114,20 @@ planation-[]for-[]pointers /
 
 Missing character: There is no ù in font cmr12!
 Missing character: There is no ù in font cmr12!
-[22]
+[24]
 Overfull \hbox (207.47714pt too wide) in paragraph at lines 86--87
 \OT1/cmtt/m/n/12 stackoverflow . com / questions / 57483 / what-[]are-[]the-[]d
 ifferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-
 []in$[][]\OT1/cmr/m/n/12 ;
  []
 
-[23]) [24] (./data-structures-n_algor.bbl [25
+[25]) (./misc/misc.tex [26]
+Chapter 8.
+) [27
 
-] [26
+] (./data-structures-n_algor.bbl [28
+
+] [29
 
 ]
 Underfull \hbox (badness 3769) in paragraph at lines 151--158
@@ -1120,7 +1135,7 @@ Underfull \hbox (badness 3769) in paragraph at lines 151--158
 il-able on-line as Ver-
  []
 
-[27]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 232--239
 []\OT1/cmr/m/n/12 Peter Mortensen.  What is the dif-fer-ence be-tween const int
 $[]$, const int $[]$
@@ -1156,36 +1171,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--260
 ttp : / / programmers . stackexchange . com / questions / 195337 /
  []
 
-[28]
+[31]
 Underfull \hbox (badness 1502) in paragraph at lines 326--334
 \OT1/cmr/m/it/12 Elec-tron-ics En-gi-neer-ing Com-mu-ni-ties: Em-bed-ded -- Cra
 ck-ing the Code to Sys-tems De-vel-
  []
 
-[29])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
- [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
+[32])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
  (./data-structures-n_algor.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
 Package rerunfilecheck Info: File `data-structures-n_algor.out' has not changed
 .
-(rerunfilecheck)             Checksum: E743EB65A5F9938281C8B8C06CBA5711;1229.
+(rerunfilecheck)             Checksum: BF51A20FD804612A6A1CFE490863C28E;1523.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
  ) 
 Here is how much of TeX's memory you used:
- 16127 strings out of 493089
- 227658 string characters out of 6134842
- 336708 words of memory out of 5000000
- 18734 multiletter control sequences out of 15000+600000
+ 16210 strings out of 493089
+ 228479 string characters out of 6134842
+ 337936 words of memory out of 5000000
+ 18743 multiletter control sequences out of 15000+600000
  20195 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,96p,1262b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,96p,1262b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1207,10 +1222,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures-n_algor.pdf (34 pages, 332587 bytes).
+Output written on data-structures-n_algor.pdf (37 pages, 341743 bytes).
 PDF statistics:
- 1248 PDF objects out of 1440 (max. 8388607)
- 1180 compressed objects within 12 object streams
- 575 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1367 PDF objects out of 1440 (max. 8388607)
+ 1295 compressed objects within 13 object streams
+ 645 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
