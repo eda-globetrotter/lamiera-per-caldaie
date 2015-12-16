@@ -55,12 +55,8 @@
  *
  *
  *
- * This Class printer is used to enable software developers to determine
- *	the verbosity from standard output and standard error.
- * There are functions that prints the input string in standard output
- *	and standard error.
- * There are also functions that do these based on a variable flag,
- *	which is used to determine if the input strings shall be printed.
+ * This Class conversion_alphanumeric allows numbers to be converted
+ *	to strings.
  *
  * All the functions in this class are static.
  * This is because I do not want to instantiate any instances of this
