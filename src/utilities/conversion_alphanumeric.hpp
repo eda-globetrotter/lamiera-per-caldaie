@@ -61,7 +61,7 @@
  * All the functions in this class are static.
  * This is because I do not want to instantiate any instances of this
  *	class.
- * If I need an instance of this class in each other class to print a
+ * If I need an instance of this class in another class to print a
  *	string to standard output, standard error, or an output file, I
  *	would probably leave a lot of objects lying around that are not
  *	being subjected to any garbage collection.
