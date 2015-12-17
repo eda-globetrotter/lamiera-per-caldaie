@@ -61,15 +61,12 @@
  * All the functions in this class are static.
  * This is because I do not want to instantiate any instances of this
  *	class.
- * If I need an instance of this class in another class to print a
- *	string to standard output, standard error, or an output file, I
- *	would probably leave a lot of objects lying around that are not
- *	being subjected to any garbage collection.
+ * If I need an instance of this class in another class to convert a
+ *	number to a string, I would probably leave a lot of objects
+ *	lying around that are not being subjected to any garbage
+ *	collection.
  * Hence, to minimize dynamic memory usage, I would prevent the
  *	instantiation of objects of this class.
- * Enable the debugging and logging modes to be set independently.
- * This enables me to keep a log of messages in the log files, while
- *	still enabling me to read messages from the terminal's shell.
  *
  *
  *
