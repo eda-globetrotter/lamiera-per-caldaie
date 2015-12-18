@@ -70,11 +70,6 @@
  *
  *
  *
- *
- * Logging mode: Mode when messages are printed to separate files,
- *	instead of standard output and standard error. A file would contain
- *	messages that were intended for standard output, while another file
- *	would contain messages that were intended for standard error.
  */
 
 
