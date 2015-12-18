@@ -70,9 +70,6 @@
  *
  *
  *
- * Definition:
- * Debugging mode: Mode when messages are printed to standard output
- *	and standard error, instead of being suppressed.
  *
  * Logging mode: Mode when messages are printed to separate files,
  *	instead of standard output and standard error. A file would contain
