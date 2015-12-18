@@ -67,9 +67,6 @@
  *	collection.
  * Hence, to minimize dynamic memory usage, I would prevent the
  *	instantiation of objects of this class.
- *
- *
- *
  */
 
 
