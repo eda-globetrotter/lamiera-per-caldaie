@@ -95,12 +95,11 @@ class conversion_alphanumeric {
 
 		// -----------------------------------------------------
 		
-		// Define headers for functions...
+		// Define headers for functions to convert numbers to strings.
 	
-		// Accessor functions.
 		
 		// Function to determine if mode is debugging or otherwise
-		static bool is_debugging_mode();
+		static string num_to_str(int an_int);
 	
 		// Function to get the number of test cases.
 		static int get_num_test_cases();
