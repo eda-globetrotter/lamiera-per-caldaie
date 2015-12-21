@@ -101,7 +101,6 @@ class conversion_alphanumeric {
 		// Function to determine if mode is debugging or otherwise
 		static string num_to_str(int an_int);
 	
-		static int get_num_test_cases();
 		
 		// Function to get the number of passed test cases.
 		static int get_num_passed_test_cases();
