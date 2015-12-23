@@ -102,7 +102,6 @@ class conversion_alphanumeric {
 		static string num_to_str(int an_int);
 	
 		
-		static int get_num_passed_test_cases();
 				
 		// -----------------------------------------------------
 
