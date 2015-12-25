@@ -113,7 +113,6 @@ class conversion_alphanumeric {
 		// Function to update the number of test cases.
 		static void num_test_cases_eval();
 		
-		// Function to update the number of passed test cases.
 
 	
 		// -----------------------------------------------------
