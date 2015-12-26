@@ -111,8 +111,6 @@ class conversion_alphanumeric {
 		static void set_debugging_mode(const bool &debug_mode);
 	
 		// Function to update the number of test cases.
-		static void num_test_cases_eval();
-		
 
 	
 		// -----------------------------------------------------
