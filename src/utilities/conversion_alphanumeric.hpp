@@ -109,7 +109,6 @@ class conversion_alphanumeric {
 		
 		// Function to enter/exit debugging mode
 		static void set_debugging_mode(const bool &debug_mode);
-	
 
 	
 		// -----------------------------------------------------
