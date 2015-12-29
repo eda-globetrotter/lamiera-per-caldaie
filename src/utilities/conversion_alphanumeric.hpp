@@ -108,7 +108,7 @@ class conversion_alphanumeric {
 		// Mutator functions.
 		
 		// Function to enter/exit debugging mode
-		static void set_debugging_mode(const bool &debug_mode);
+		static void set_debugging_mode(const bool 
 
 	
 		// -----------------------------------------------------
