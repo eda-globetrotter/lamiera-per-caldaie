@@ -100,9 +100,6 @@ class conversion_alphanumeric {
 		
 		// Function to determine if mode is debugging or otherwise
 		static string num_to_str(int an_int);
-	
-		
-				
 
 	
 		// -----------------------------------------------------
