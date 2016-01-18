@@ -102,9 +102,6 @@ class conversion_alphanumeric {
 		static string num_to_str(int an_int);
 
 	
-
-
-		/**
 		 * Function to print message in standard output while
 		 * in debugging mode
 		 */
