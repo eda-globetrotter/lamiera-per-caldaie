@@ -102,8 +102,6 @@ class conversion_alphanumeric {
 		static string num_to_str(int an_int);
 
 	
- in standard output while
-		 * in debugging mode
 		 */
 		static void debug_std_op(const string &msg);
 		/**
