@@ -102,9 +102,7 @@ class conversion_alphanumeric {
 		static string num_to_str(int an_int);
 
 	
-ror message in standard error
-		 * while in debugging mode
-		 */
+
 		static void debug_std_err(const string &err_msg);
 
 	// =========================================================
