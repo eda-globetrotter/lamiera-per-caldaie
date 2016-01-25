@@ -103,8 +103,6 @@ class conversion_alphanumeric {
 
 	
 
-		static void debug_std_err(const string &err_msg);
-
 	// =========================================================
 	
 	// Privately accessible data members and functions.
