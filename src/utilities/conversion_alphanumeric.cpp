@@ -102,7 +102,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
  * @param - None
  * @return - boolean TRUE, if in debugging mode; else, return FALSE.
  */
-bool conversion_alphanumeric::num_to_str() {
+bool conversion_alphanumeric::num_to_str(int an_int) {
 	if(is_debugging) {
 		return true;
 	}else{
