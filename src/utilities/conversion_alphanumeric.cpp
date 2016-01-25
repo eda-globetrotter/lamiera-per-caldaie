@@ -82,13 +82,13 @@ using namespace std;
 // ==================================================================
 
 // Define the static variables of the class conversion_alphanumeric.
-bool printer::flag = false;
+bool conversion_alphanumeric::flag = false;
 
 // ==================================================================
 
-// Default constructor
-printer::printer() {
-	string err_msg = "==u	printers shouldn't be instantiated!";
+// Default constructor.
+conversion_alphanumeric::conversion_alphanumeric() {
+	string err_msg = "==u	conversion_alphanumeric shouldn't be instantiated!";
 	throw new violated_assertion(err_msg);
 }
 
