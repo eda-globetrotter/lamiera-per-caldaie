@@ -95,7 +95,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
 
 // -----------------------------------------------------
 
-// Accessor functions.
+// Functions to convert numbers to strings.
 
 /**
  * Function to determine if mode is debugging or otherwise.
