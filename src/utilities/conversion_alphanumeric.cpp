@@ -3,72 +3,70 @@
  * Module to carry out miscellaneous tasks to facilitate software
  *	development.
  *
- * Printer class:
- * Class to print messages to standard output/error, while allowing
- *	such print statements to be switched on/off.
- * The functions provided in this class for printing messages shall
- *	be used for all print statements in this C++ program, so that
- *	these print statements can be switched off outside of debugging
- *	mode (rather than commented out) in the optimized version.
+ * conversion_alphanumeric class:
+ * Class to convert numbers to strings.
+ * The C++ STL provides 2 functions to convert strings to numbers.
+ * However, the functions for converting numbers to strings are not
+ *	provided by the C++ STL (as part of the C++14 standard).
+ * Hence, this class provides some functions for converting numbers
+ *	to strings.
+ * 
  *
  *
  *
  *
  *
- * Copyright	(C)	<2010-2011>	<Zhiyang Ong>
+ *
+ *
+ *
  * @author Zhiyang Ong
  * @version 1.0.0
- * @since January 1, 2011
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * @since January 1, 2016
  *
  *
+ * The MIT License (MIT)
+ *
+ * Copyright	(C)	<2010-2016>	<Zhiyang Ong>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"		Don't compromise my computing accounts. You have been warned.
  *
  *
  *
  *
  *
- * This Class printer is used to enable software developers to determine
- *	the verbosity from standard output and standard error.
- * There are functions that prints the input string in standard output
- *	and standard error.
- * There are also functions that do these based on a variable flag,
- *	which is used to determine if the input strings shall be printed.
+ *
+ *
+ *
+ * This Class conversion_alphanumeric allows numbers to be converted
+ *	to strings.
  *
  * All the functions in this class are static.
  * This is because I do not want to instantiate any instances of this
  *	class.
- * If I need an instance of this class in each other class to print a
- *	string to standard output, standard error, or an output file, I
- *	would probably leave a lot of objects lying around that are not
- *	being subjected to any garbage collection.
+ * If I need an instance of this class in another class to convert a
+ *	number to a string, I would probably leave a lot of objects
+ *	lying around that are not being subjected to any garbage
+ *	collection.
  * Hence, to minimize dynamic memory usage, I would prevent the
  *	instantiation of objects of this class.
- * Enable the debugging and logging modes to be set independently.
- * This enables me to keep a log of messages in the log files, while
- *	still enabling me to read messages from the terminal's shell.
- *
- *
- *
- * Definition:
- * Debugging mode: Mode when messages are printed to standard output
- *	and standard error, instead of being suppressed.
- *
- * Logging mode: Mode when messages are printed to separate files,
- *	instead of standard output and standard error. A file would contain
- *	messages that were intended for standard output, while another file
- *	would contain messages that were intended for standard error.
  */
 
 // Import packages from the software
@@ -83,10 +81,8 @@ using namespace std;
 
 // ==================================================================
 
-// Define the static variables of the class printer.
-bool printer::is_debugging = false;
-int printer::num_test_cases = 0;
-int printer::num_passed_test_cases = 0;
+// Define the static variables of the class conversion_alphanumeric.
+bool printer::flag = false;
 
 // ==================================================================
 

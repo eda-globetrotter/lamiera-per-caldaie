@@ -110,12 +110,8 @@ class conversion_alphanumeric {
 	private:
 		// Declaration of static variables...
 		
-		// Flag to indicate that the software is in debugging mode
-		static bool is_debugging;
-		// Number of test cases.
-		static int num_test_cases;
-		// Number of passed test cases.
-		static int num_passed_test_cases;
+		// Boolean FLAG.
+//		static bool flag;
 	
 		// -------------------------------------------------------
 		
