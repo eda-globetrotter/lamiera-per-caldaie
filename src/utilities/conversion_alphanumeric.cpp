@@ -102,7 +102,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
  * @param - None
  * @return - boolean TRUE, if in debugging mode; else, return FALSE.
  */
-bool printer::is_debugging_mode() {
+bool conversion_alphanumeric::num_to_str() {
 	if(is_debugging) {
 		return true;
 	}else{
@@ -110,106 +110,3 @@ bool printer::is_debugging_mode() {
 	}
 }
 
-
-// -----------------------------------------------------
-
-// Mutator functions.
-
-
-/**
- * Function to enter/exit debugging mode.
- * @param debug_mode:	Indicator for entering the debugging mode
- *		(when true); false, otherwise.
- * @return - Nothing.
- */
-void printer::set_debugging_mode(const bool &debug_mode) {
-	// Enter the debugging mode
-	is_debugging = debug_mode;
-	
-	if(is_debugging_mode()) {
-		cout << "==u	In the debugging mode" << endl;
-	}else{
-		cout << "==u	Not in the debugging mode" << endl;
-	}
-	
-	return;
-}
-
-
-// -----------------------------------------------------
-
-// Output functions
-
-/**
- * Function to print message in standard output while
- * in debugging mode
- * @param msg:	Message to be printed to standard output
- * @return - Nothing.
- */
-void printer::debug_std_op(const string &msg) {
-	if(is_debugging_mode()) {
-		cout << msg << endl;
-	}
-	
-	return;
-}
-
-
-
-/**
- * Function to print error message in standard error while
- * in debugging mode
- * @param msg:	Error message to be printed to standard error
- * @return - Nothing.
- */
-void printer::debug_std_err(const string &err_msg) {
-	if(is_debugging_mode()) {
-		cerr << err_msg << endl;
-	}
-
-	return;
-}
-
-
-
-/**
- * Function to update the number of test cases.
- * @param - None.
- * @return - Nothing.
- */
-void printer::num_test_cases_eval() {
-	num_test_cases = num_test_cases + 1;
-}
-
-
-/**
- * Function to update the number of passed test cases.
- * @param - None.
- * @return - Nothing.
- */
-void printer::num_passed_test_cases_eval() {
-	num_passed_test_cases = num_passed_test_cases + 1;
-}
-
-
-
-/**
- * Function to get the number of test cases.
- * @param - None.
- * @return - Nothing.
- */
-int printer::get_num_test_cases() {
-	return num_test_cases;
-}
-
-
-
-
-/**
- * Function to get the number of passed test cases.
- * @param - None.
- * @return - Nothing.
- */
-int printer::get_num_passed_test_cases() {
-	return num_passed_test_cases;
-}
