@@ -1,4 +1,11 @@
 /**
+ * Test/Utilities_t package:
+ * Submodule of Test package to test classes in the Utilities package.
+ *
+ * printer_ut class:
+ * Class that tests the printer class.
+ * The constructors and functions of the printer class shall be tested.
+ * 
  * Utilities package:
  * Module to carry out miscellaneous tasks to facilitate software
  *	development.
