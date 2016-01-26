@@ -60,26 +60,8 @@ using namespace std;
 
 // Class definition of the conversion_alphanumeric_ut class
 class conversion_alphanumeric_ut {
-	// Publicly accessible data members, constructors, and functions
-	public:
-		// Default constructor
-		conversion_alphanumeric();
-
-		// -----------------------------------------------------
-		
-		// Define headers for functions to convert numbers to strings.
-	
-		
-		// Function to determine if mode is debugging or otherwise
-		static string num_to_str(int an_int);
-
-	
-
-	// =========================================================
-	
 	// Privately accessible data members and functions.
-	
-	private:
+//	private:
 		// Declaration of static variables...
 		
 		// Boolean FLAG.
@@ -89,5 +71,34 @@ class conversion_alphanumeric_ut {
 		
 		// Define headers for private functions...
 
+	// =========================================================
+
+	// Publicly accessible data members, constructors, and functions
+
+	public:
+		// Default constructor
+		conversion_alphanumeric_ut();
+
+		// -----------------------------------------------------
+		
+		/**
+		 * Define headers for functions to test the conversion of
+		 *	numbers to strings.
+		 */
+		
+		/**
+		 * Function to test the default constructor of the class
+		 *	conversion_alphanumeric.
+		 */
+		static void test_conversion_alphanumeric_constructor();
+	
+		// Function to test functions to convert numbers to strings.
+		static void test_numbers_to_strings();
+		
+		// Function to test functions to convert numbers to strings.
+		static void test_numbers_to_strings();
+		
+		// Function to test functions to convert numbers to strings.
+		static void test_numbers_to_strings();
 };
 #endif

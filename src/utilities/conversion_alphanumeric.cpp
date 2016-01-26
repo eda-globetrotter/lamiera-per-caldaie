@@ -105,7 +105,36 @@ conversion_alphanumeric::conversion_alphanumeric() {
 
 // -----------------------------------------------------
 
-// Functions to convert numbers to strings.
+/**
+ * Functions to convert numbers to strings.
+ *
+ * From \cite[C library: cfloat]{CplusplusCom2015}, C++ does not have
+ *	fixed-point numbers.
+ *
+ * Reference:
+ *	\cite[C library: cfloat]{CplusplusCom2015}
+ *
+ *
+ *
+ * Comments:
+ *	While fixed-point computation can be faster and use less memory
+ *		than floating-point computation, I would have to implement
+ *		fixed-point computation using integers.
+ *	My implementation for fixed-point computation may not be that
+ *		efficient.
+ *	Hence, any theoretical gains of fixed-point computation over
+ *		floating-point computation may not be realized in my
+ *		implementation.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
 
 
 /**
@@ -124,7 +153,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *
  * Reference:
  *	\cite[string: to_string]{CplusplusCom2015}
- *
+ *	\cite[C library: cfloat]{CplusplusCom2015}
  *
  *
  *
@@ -134,7 +163,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
 /**
  * Function to convert an int to a string.
  * @param a_num:	An int to be converted to a string.
- * @return string representation of a_num.
+ * @return string representation of a_num, the integer.
  */
 //string conversion_alphanumeric::num_to_str(int a_num) {
 string conversion_alphanumeric::int_to_str(int a_num) {

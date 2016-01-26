@@ -37,9 +37,9 @@ using namespace std;
 
 // Default constructor of the unit test for the class printer
 printer_ut::printer_ut() {
-	cerr << "==tu	Don't instantiate the tester for printer";
+	cerr << "==tu	Don't instantiate the tester for printer.";
 	cerr << endl;
-	string err_msg = "==tu	Don't use printer's default constructor";
+	string err_msg = "==tu	Don't use printer_ut's default constructor.";
 	throw new violated_assertion(err_msg);
 }
 

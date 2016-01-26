@@ -1,22 +1,11 @@
 /**
- * Utilities package:
- * Module to carry out miscellaneous tasks to facilitate software
- *	development.
+ * Test/Utilities_t package:
+ * Submodule of Test package to test classes in the Utilities package.
  *
- * conversion_alphanumeric class:
- * Class to convert numbers to strings.
- * The C++ STL provides 2 functions to convert strings to numbers.
- * However, the functions for converting numbers to strings are not
- *	provided by the C++ STL (as part of the C++14 standard).
- * Hence, this class provides some functions for converting numbers
- *	to strings.
+ * conversion_alphanumeric_ut class:
+ * Class that tests the conversion_alphanumeric class.
+ * The constructors and functions of the conversion_alphanumeric class shall be tested.
  * 
- *
- *
- *
- *
- *
- *
  *
  *
  * @author Zhiyang Ong
@@ -48,44 +37,18 @@
  *
  * Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"		Don't compromise my computing accounts. You have been warned.
  *
- *
- *
- *
- *
- *
- *
- *
- * This Class conversion_alphanumeric allows numbers to be converted
- *	to strings.
- *
- * All the functions in this class are static.
- * This is because I do not want to instantiate any instances of this
- *	class.
- * If I need an instance of this class in another class to convert a
- *	number to a string, I would probably leave a lot of objects
- *	lying around that are not being subjected to any garbage
- *	collection.
- * Hence, to minimize dynamic memory usage, I would prevent the
- *	instantiation of objects of this class.
- *
- *
- *
- *
- * References:
- *	CplusplusCom2015. cplusplus.com, "Reference: C++ Reference," Version 3.1, cplusplus.com, 2015. Available online at: \url{http://www.cplusplus.com/reference/}; November 2, 2015 was the last accessed date.
- *
- *
- *
- *
  */
 
-// Import packages from the software
-#include "printer.hpp"
+
+// Import Header files from the other modules of lamiera-per-caldaie.
+#include "conversion_alphanumeric_ut.hpp"
 
 // Import packages from the C++ STL
+/*
 #include <iostream>
 #include <string>
 #include <cstring>
+*/
 
 using namespace std;
 
@@ -96,9 +59,15 @@ using namespace std;
 
 // ==================================================================
 
-// Default constructor.
-conversion_alphanumeric::conversion_alphanumeric() {
-	string err_msg = "==u	conversion_alphanumeric shouldn't be instantiated!";
+/**
+ * Default constructor of the unit test for the class
+ *	conversion_alphanumeric_ut.
+ */
+conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
+	cerr << "==tu	Don't instantiate the tester for conversion_alphanumeric.";
+	cerr << endl;
+	string err_msg = "==tu	Don't use conversion_alphanumeric_ut's default constructor.";
+	string err_msg = "==tu	conversion_alphanumeric_ut shouldn't be instantiated!";
 	throw new violated_assertion(err_msg);
 }
 
@@ -108,38 +77,6 @@ conversion_alphanumeric::conversion_alphanumeric() {
 // Functions to convert numbers to strings.
 
 
-/**
- * For C++11 (and other C++1y) compliant compilers.
- *
- * The following functions can be used:
- *	string to_string (int val);
- *	string to_string (long val);
- *	string to_string (long long val);
- *	string to_string (unsigned val);
- *	string to_string (unsigned long val);
- *	string to_string (unsigned long long val);
- *	string to_string (float val);
- *	string to_string (double val);
- *	string to_string (long double val);
- *
- * Reference:
- *	\cite[string: to_string]{CplusplusCom2015}
- *
- *
- *
- *
- */
-
-
-/**
- * Function to convert an int to a string.
- * @param a_num:	An int to be converted to a string.
- * @return string representation of a_num.
- */
-//string conversion_alphanumeric::num_to_str(int a_num) {
-string conversion_alphanumeric::int_to_str(int a_num) {
-	to_string(a_num);
-}
 
 
 

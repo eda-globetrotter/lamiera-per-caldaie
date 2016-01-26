@@ -58,7 +58,7 @@ class printer_ut {
 	
 		/**
 		 * Function to test the default constructor of the class
-		 * printer.
+		 *	printer.
 		 */
 		static void test_printer_constructor();
 	
