@@ -80,7 +80,7 @@
  */
 
 // Import packages from the software
-#include "printer.hpp"
+#include "conversion_alphanumeric.hpp"
 
 // Import packages from the C++ STL
 #include <iostream>
@@ -117,6 +117,9 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *
  *
  * Comments:
+ *	For processors without a floating-point unit, fixed-point
+ *		computation can be faster and use less memory than
+ *		floating-point computation.
  *	While fixed-point computation can be faster and use less memory
  *		than floating-point computation, I would have to implement
  *		fixed-point computation using integers.
@@ -126,8 +129,8 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *		floating-point computation may not be realized in my
  *		implementation.
  *
- *
- *
+ *	In C++, I can change the format in which floating-point
+ *		numbers are represented.
  *
  *
  *
@@ -167,7 +170,7 @@ conversion_alphanumeric::conversion_alphanumeric() {
  */
 //string conversion_alphanumeric::num_to_str(int a_num) {
 string conversion_alphanumeric::int_to_str(int a_num) {
-	to_string(a_num);
+	return to_string(a_num);
 }
 
 

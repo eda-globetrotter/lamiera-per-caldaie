@@ -55,13 +55,15 @@
 
 
 // Import packages from the software
+//	Importing from the Graph/Directed module
+#include "directed_graph_node.hpp"
 //	Importing from the Utility module.
+/*
 #include "../../utilities/printer.hpp"
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
 #include "../../utilities/violated_postcondition.hpp"
-//	Importing from the Graph/Directed module
-#include "directed_graph_node.hpp"
+*/
 
 // Import packages from the C++ STL
 #include <string>

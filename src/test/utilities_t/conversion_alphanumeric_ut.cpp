@@ -71,18 +71,62 @@ conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
 	throw new violated_assertion(err_msg);
 }
 
+// ==================================================================
+
+/**
+ * Functions to test the default constructor and functions to
+ *	convert numbers to strings.
+ */
+void conversion_alphanumeric_ut::test_numbers_to_strings() {
+	cout << "==tu	Testing: printer..." << endl;
+	
+	// Test the default constructor of conversion_alphanumeric.
+	test_conversion_alphanumeric_constructor();
+	
+	// Test functions to convert integers to strings.
+	test_integers_to_strings();
+	
+	// Test functions to convert floating-point numbers to strings.
+	test_floating_point_numbers_to_strings();
+	
+	cout << endl;
+}
 
 // -----------------------------------------------------
 
-// Functions to convert numbers to strings.
+/**
+ * Function to test the default constructor of the class
+ *	conversion_alphanumeric.
+ * @param - None.
+ * @return - Nothing.
+ */
+void conversion_alphanumeric_ut::test_conversion_alphanumeric_constructor() {
+	// Check if printer should not be instantiated.
+	try {
+		printer::num_test_cases_eval();
+		cout << "==tu	>>	Testing: default constructor." << endl;
+		conversion_alphanumeric *num_conv = new conversion_alphanumeric();
+	}
+	catch (violated_assertion *va_ex) {
+		cout << "==tu	==>	default constructor works." << endl;
+		printer::num_passed_test_cases_eval();
+	}
+}
 
+/**
+ * Function to test functions to convert integers to strings.
+ * @param - None.
+ * @return - Nothing.
+ */
+void conversion_alphanumeric_ut::test_integers_to_strings() {
+}
 
-
-
-
-
-
-
-
-
+/**
+ * Function to test functions to convert floating-point numbers
+ *	to strings.
+ * @param - None.
+ * @return - Nothing.
+ */
+void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
+}
 

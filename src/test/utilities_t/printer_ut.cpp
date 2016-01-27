@@ -52,10 +52,10 @@ void printer_ut::test_printer() {
 	//	Test the default and standard constructors of printer.
 	test_printer_constructor();
 	
-	// Function to test the debugging mode
+	// Test the debugging mode
 	test_debugging_mode();
 	
-	// Function to test the output print functions
+	// Test the output print functions
 	test_print_fn();
 	
 	cout << endl;

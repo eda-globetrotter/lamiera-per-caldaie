@@ -87,18 +87,24 @@ class conversion_alphanumeric_ut {
 		 */
 		
 		/**
+		 * Function to test the default constructor and functions
+		 *	to convert numbers to strings.
+		 */
+		static void test_numbers_to_strings();
+		
+		/**
 		 * Function to test the default constructor of the class
 		 *	conversion_alphanumeric.
 		 */
 		static void test_conversion_alphanumeric_constructor();
-	
-		// Function to test functions to convert numbers to strings.
-		static void test_numbers_to_strings();
 		
-		// Function to test functions to convert numbers to strings.
-		static void test_numbers_to_strings();
+		// Function to test functions to convert integers to strings.
+		static void test_integers_to_strings();
 		
-		// Function to test functions to convert numbers to strings.
-		static void test_numbers_to_strings();
+		/**
+		 * Function to test functions to convert floating-point
+		 *	numbers to strings.
+		 */
+		static void test_floating_point_numbers_to_strings();
 };
 #endif
