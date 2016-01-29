@@ -73,8 +73,12 @@
 
 
 // Import packages from the software
+/*
 #include "violated_assertion.hpp"
 #include "violated_precondition.hpp"
+*/
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/violated_assertion.hpp"
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/violated_precondition.hpp"
 
 
 // Import packages from the C++ STL

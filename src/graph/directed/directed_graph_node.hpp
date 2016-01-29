@@ -60,23 +60,6 @@
  * Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"		Don't compromise my computing accounts. You have been warned.
  */
 
-
-// Import packages from the software
-//	Importing from the Utility module.
-/*
-#include "../../utilities/printer.hpp"
-#include "../../utilities/violated_assertion.hpp"
-#include "../../utilities/violated_precondition.hpp"
-#include "../../utilities/violated_postcondition.hpp"
-*/
-#include "./utilities/printer.hpp"
-#include "./utilities/violated_assertion.hpp"
-#include "./utilities/violated_precondition.hpp"
-#include "./utilities/violated_postcondition.hpp"
-
-//	Importing from the Graph/Directed module
-#include "directed_graph_edge.hpp"
-
 // Import packages from the C++ STL
 #include <string>
 #include <cstring>
@@ -86,6 +69,35 @@
 #include <utility>
 #include <limits.h>			// For std::LONG_MIN
 #include <set>
+
+// Import packages from the software
+//	Importing from the Utility module.
+/*
+#include "../../utilities/printer.hpp"
+#include "../../utilities/violated_assertion.hpp"
+#include "../../utilities/violated_precondition.hpp"
+#include "../../utilities/violated_postcondition.hpp"
+*/
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/printer.hpp"
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/violated_assertion.hpp"
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/violated_precondition.hpp"
+#include "/Applications/apps/others/comune/lamiera-per-caldaie/src/utilities/violated_postcondition.hpp"
+
+/*
+#include "./utilities/printer.hpp"
+#include "./utilities/violated_assertion.hpp"
+#include "./utilities/violated_precondition.hpp"
+#include "./utilities/violated_postcondition.hpp"
+*/
+/*
+#include "printer.hpp"
+#include "violated_assertion.hpp"
+#include "violated_precondition.hpp"
+#include "violated_postcondition.hpp"
+*/
+
+//	Importing from the Graph/Directed module
+#include "directed_graph_edge.hpp"
 
 #ifndef __DIRECTED_GRAPH_NODE_H
 #define __DIRECTED_GRAPH_NODE_H
