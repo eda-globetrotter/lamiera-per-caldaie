@@ -41,6 +41,7 @@
 
 
 // Import packages from the software
+#include "../../utilities/conversion_alphanumeric.hpp"
 // Import Header files from the other modules of lamiera-per-caldaie.
 #include "../../utilities/printer.hpp"
 #include "../../utilities/violated_assertion.hpp"

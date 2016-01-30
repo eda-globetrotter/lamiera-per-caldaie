@@ -66,8 +66,8 @@ using namespace std;
 conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
 	cerr << "==tu	Don't instantiate the tester for conversion_alphanumeric.";
 	cerr << endl;
+	cerr << "==tu	conversion_alphanumeric_ut shouldn't be instantiated!"<< endl;
 	string err_msg = "==tu	Don't use conversion_alphanumeric_ut's default constructor.";
-	string err_msg = "==tu	conversion_alphanumeric_ut shouldn't be instantiated!";
 	throw new violated_assertion(err_msg);
 }
 

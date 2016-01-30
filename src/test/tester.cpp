@@ -91,7 +91,7 @@
 #include "utilities_t/utilities_mt.hpp"
 */
 // Graph module
-#include "graph_t/graph_mt.hpp"
+//#include "graph_t/graph_mt.hpp"
 
 
 
@@ -184,7 +184,7 @@ int main(int argc, char *argv[]) {
 	
 	
 	// Testing the graph package
-	graph_mt::test_graph();
+//	graph_mt::test_graph();
 
 
 

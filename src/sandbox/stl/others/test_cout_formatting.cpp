@@ -59,7 +59,7 @@
 
 using namespace std;
 
-// =======================================================================
+// ===================================================================
 
 // A good template function for string-to-number conversion. TEST THIS!!!
 template <typename T>

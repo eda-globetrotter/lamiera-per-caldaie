@@ -257,13 +257,13 @@ test:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Graph Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
+#	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
 	@echo === Parsers Directory
 	@echo === Test/Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
 	@echo === Test/Graph Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
-	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(TPDIRGRAPH)$(SOURCE)
+#	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
+#	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(TPDIRGRAPH)$(SOURCE)
 	@echo === Test/Parsers Directory
 	@echo === Test Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(SOURCE)
