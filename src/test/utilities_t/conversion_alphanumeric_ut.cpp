@@ -78,7 +78,7 @@ conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
  *	convert numbers to strings.
  */
 void conversion_alphanumeric_ut::test_numbers_to_strings() {
-	cout << "==tu	Testing: printer..." << endl;
+	cout << "==tu	Testing: conversion_alphanumeric ..." << endl;
 	
 	// Test the default constructor of conversion_alphanumeric.
 	test_conversion_alphanumeric_constructor();

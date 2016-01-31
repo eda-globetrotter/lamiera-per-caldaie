@@ -31,15 +31,16 @@
 // Utilities module
 #include "../../utilities/printer.hpp"
 #include "printer_ut.hpp"
-//#include "../../utilities/file_io.h"
-//#include "file_io_ut.h"
 #include "../../utilities/violated_assertion.hpp"
 #include "violated_assertion_ut.hpp"
 #include "../../utilities/violated_precondition.hpp"
 #include "violated_precondition_ut.hpp"
 #include "../../utilities/violated_postcondition.hpp"
 #include "violated_postcondition_ut.hpp"
+#include "../../utilities/file_io.hpp"
 #include "file_io_ut.hpp"
+#include "../../utilities/conversion_alphanumeric.hpp"
+#include "conversion_alphanumeric_ut.hpp"
 
 
 // Import appropriate header files from the C++ STL
