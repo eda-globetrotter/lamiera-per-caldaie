@@ -132,6 +132,10 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *	In C++, I can change the format in which floating-point
  *		numbers are represented.
  *
+ *
+ *
+ *
+ *
  *	From \cite[pp. 444-445]{Stephens2006},
  *		Fixed-point numbers (and floating-point) numbers are
  *			approximate representations of real numbers. [pp. 444]
@@ -151,14 +155,17 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *		When integer representations of fixed-point numbers is
  *			used for arithmetic operations, the performance of
  *			arithmetic computation (especially addition/subtraction)
- *			is improved.
+ *			is better than floating-point computation. [pp. 444]
+ *		Comparing fixed-point computation with floating-point
+ *			computation, fixed-point computation can only represent
+ *			a small range of values. [pp. 444]
  *
- *
- *
- *
- *
- *
- *
+ *		To implement the addition/subtraction of fixed-point numbers,
+ *			add/subtract the underlying representations.
+ *		To implement the multiplication/division of fixed-point
+ *			numbers, add/subtract the underlying representations
+ *			and shift the mantissa left/right to adjust for the
+ *			binary point. [pp. 444]
  *
  *
  *
