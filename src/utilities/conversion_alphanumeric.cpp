@@ -132,6 +132,32 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *	In C++, I can change the format in which floating-point
  *		numbers are represented.
  *
+ *	From \cite[pp. 444-445]{Stephens2006},
+ *		Fixed-point numbers (and floating-point) numbers are
+ *			approximate representations of real numbers. [pp. 444]
+ *		
+ *		Floating-point representation/format:
+ *			# mantissa (m),
+ *			# exponent (e),
+ *			# base (b) - constant,
+ *			# m^(b)^e. [pp. 444]
+ *
+ *		Fixed-point representation/format:
+ *			# mantissa (m),
+ *			# exponent (e) - constant,
+ *			# base (b) - constant,
+ *			# m^(b)^e. [pp. 444]
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  *
  *
