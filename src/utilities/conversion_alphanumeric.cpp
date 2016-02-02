@@ -148,8 +148,10 @@ conversion_alphanumeric::conversion_alphanumeric() {
  *			# base (b) - constant,
  *			# m^(b)^e. [pp. 444]
  *
- *
- *
+ *		When integer representations of fixed-point numbers is
+ *			used for arithmetic operations, the performance of
+ *			arithmetic computation (especially addition/subtraction)
+ *			is improved.
  *
  *
  *
