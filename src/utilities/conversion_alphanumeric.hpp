@@ -67,6 +67,145 @@
  *	collection.
  * Hence, to minimize dynamic memory usage, I would prevent the
  *	instantiation of objects of this class.
+ *
+ *
+ *
+ *
+ * References:
+ *	CplusplusCom2015. cplusplus.com, "Reference: C++ Reference," Version 3.1, cplusplus.com, 2015. Available online at: \url{http://www.cplusplus.com/reference/}; November 2, 2015 was the last accessed date.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * ---------------------------------------------------------------
+ *
+ * From \cite[C library: cfloat]{CplusplusCom2015}, C++ does not have
+ *	fixed-point numbers.
+ *
+ * Reference:
+ *	\cite[C library: cfloat]{CplusplusCom2015}
+ *
+ *
+ *
+ * Comments:
+ *	For processors without a floating-point unit, fixed-point
+ *		computation can be faster and use less memory than
+ *		floating-point computation.
+ *	While fixed-point computation can be faster and use less memory
+ *		than floating-point computation, I would have to implement
+ *		fixed-point computation using integers.
+ *	My implementation for fixed-point computation may not be that
+ *		efficient.
+ *	Hence, any theoretical gains of fixed-point computation over
+ *		floating-point computation may not be realized in my
+ *		implementation.
+ *
+ *	In C++, I can change the format in which floating-point
+ *		numbers are represented.
+ *
+ *
+ *
+ *
+ *
+ *	From \cite[pp. 444-445]{Stephens2006},
+ *		Fixed-point numbers (and floating-point) numbers are
+ *			approximate representations of real numbers. [pp. 444]
+ *		
+ *		Floating-point representation/format:
+ *			# mantissa (m),
+ *			# exponent (e),
+ *			# base (b) - constant,
+ *			# m^(b)^e. [pp. 444]
+ *
+ *		Fixed-point representation/format:
+ *			# mantissa (m),
+ *			# exponent (e) - constant,
+ *			# base (b) - constant,
+ *			# m^(b)^e. [pp. 444]
+ *
+ *		When integer representations of fixed-point numbers is
+ *			used for arithmetic operations, the performance of
+ *			fixed-point arithmetic computation (especially
+ *			addition/subtraction) is better than floating-point
+ *			computation. [pp. 444]
+ *		Comparing fixed-point computation with floating-point
+ *			computation, fixed-point computation can only represent
+ *			a small range of values. [pp. 444]
+ *
+ *		To implement the addition/subtraction of fixed-point numbers,
+ *			add/subtract the underlying representations.
+ *		To implement the multiplication/division of fixed-point
+ *			numbers, add/subtract the underlying representations
+ *			and shift the mantissa left/right to adjust for the
+ *			binary point. [pp. 444]
+ *
+ *
+ *
+ *
+ *	From [Condron, 2016]
+ *		The decimal point for the fixed-point number can be chosen
+ *			such that less digits can represent the integer part of
+ *			the number and more digits can represent the fractional
+ *			part of the number.
+ *			This allows the fixed-point number to be highly precise.
+ *		The addition, subtraction, and comparison of fixed-point
+ *			numbers is simple, due to the alignment of the decimal
+ *			points of the fixed-point numbers.
+ *		However, the range of numbers that can be represented by
+ *			fixed-point numbers is (much) smaller than the range
+ *			of numbers that can be represented by floating-point
+ *			numbers.
+ *		Under division, the fixed-point number system "is not
+ *			necessarily closed."
+ *			Given two fixed-point numbers a and b, c = a/b is not
+ *			a valid fixed-point number.
+ *			Consequences of this are overflow and underflow
+ *			conditions.
+ *
+ *	Reference:
+ *		Michael Condron, "Floating Point Arithmetic," in {\it High-Precision Deep Zoom -- Fractal Animations and Images: Technical Info}. Available online at: \url{http://www.hpdz.net/TechInfo/FloatingPoint.htm}; last accessed on February 2, 2016.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *	From [Alamia, 20XY]
+ *		Algorithms for fixed-point computation are provided, along
+ *			with the advantage and disadvantage of fixed-point
+ *			numbers are discussed.
+ *		An advantage of fixed-point numbers is: high-precision
+ *			numbers for a given position for the decimal point.
+ *		A disadvantage is the small range of numbers that can be
+ *			represented as a fixed-point number compared to the
+ *			large range of numbers that can be represented as a
+ *			floating-point number.
+ *
+ *	Reference:
+ *		Marco Alamia, "Floating Point -- Theory and Practice," from the web page of {\it Coding Labs: Articles}. Available online at: \url{http://www.codinglabs.net/article_floating_point_numbers.aspx}; last accessed on February 2, 2016. The date/year of publication is unknown.
+ *
+ *
+ *
+ *	From \cite{DSPRelated.comContributors2016}
+ *		See \cite[in Free Books: Mathematics of the DFT: Binary Integer Fixed-Point Numbers]{DSPRelated.comContributors2016} and \cite[in Free Books: Mathematics of the DFT: Fractional Binary Fixed-Point Numbers]{DSPRelated.comContributors2016}.
+ *		It describes how fixed-point numbers are represented.
+ *
+ *
+ *
+ *	From [Guntheroth, 2005]
+ *
+ *
+ *	Reference:
+ *		Kurt Guntheroth, "Fixed-Point Arithmetic Types for C++," from {\it Dr. Dobb's: {C/C++}: {C/C++} Feature Articles}, UBM Tech, San Francisco, CA, August 1, 2005. Available online at: \url{http://www.drdobbs.com/cpp/fixed-point-arithmetic-types-for-c/184401992}; February 3, 2016 was the last accessed date.
+ *
  */
 
 
