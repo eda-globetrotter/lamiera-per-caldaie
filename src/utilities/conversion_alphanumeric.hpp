@@ -206,7 +206,7 @@
  *
  *
  *	Reference:
- *		AUTHOR, "," from {\it Open Standards: }, PUBLISHER, DATE. Available online at: \url{}; hosted by Technical University of Denmark, Lyngby, Denmark; and February 5, 2016 was the last accessed date
+ *		AUTHOR, "," from {\it Open Standards (International Organization for Standardization and International Electrotechnical Commission): Joint {ISO/IEC} Technical Committee 2 ({JTC 2}): {JTC 1} Subcommittee 22 -- ``The Portability Subcommittee'' ({ISO/ IEC JTC1/SC22}): {JTC1/SC22/WG21 -- The C++ Standards Committee - {ISOCPP}} working group}, PUBLISHER, Gen{\`{e}}va, Switzerland, DATE. Available online at: \url{}; hosted by Technical University of Denmark, Lyngby, Denmark; and February 5, 2016 was the last accessed date.
  *
  *
  *
