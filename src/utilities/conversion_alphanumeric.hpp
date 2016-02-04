@@ -69,20 +69,8 @@
  *	instantiation of objects of this class.
  *
  *
- *
- *
  * References:
  *	CplusplusCom2015. cplusplus.com, "Reference: C++ Reference," Version 3.1, cplusplus.com, 2015. Available online at: \url{http://www.cplusplus.com/reference/}; November 2, 2015 was the last accessed date.
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
  *
  * ---------------------------------------------------------------
  *
@@ -91,8 +79,6 @@
  *
  * Reference:
  *	\cite[C library: cfloat]{CplusplusCom2015}
- *
- *
  *
  * Comments:
  *	For processors without a floating-point unit, fixed-point
@@ -110,9 +96,7 @@
  *	In C++, I can change the format in which floating-point
  *		numbers are represented.
  *
- *
- *
- *
+ *	--------------------------------------------------------------
  *
  *	From \cite[pp. 444-445]{Stephens2006},
  *		Fixed-point numbers (and floating-point) numbers are
@@ -146,8 +130,7 @@
  *			and shift the mantissa left/right to adjust for the
  *			binary point. [pp. 444]
  *
- *
- *
+ *	--------------------------------------------------------------
  *
  *	From [Condron, 2016]
  *		The decimal point for the fixed-point number can be chosen
@@ -172,11 +155,7 @@
  *	Reference:
  *		Michael Condron, "Floating Point Arithmetic," in {\it High-Precision Deep Zoom -- Fractal Animations and Images: Technical Info}. Available online at: \url{http://www.hpdz.net/TechInfo/FloatingPoint.htm}; last accessed on February 2, 2016.
  *
- *
- *
- *
- *
- *
+ *	--------------------------------------------------------------
  *
  *	From [Alamia, 20XY]
  *		Algorithms for fixed-point computation are provided, along
@@ -192,19 +171,65 @@
  *	Reference:
  *		Marco Alamia, "Floating Point -- Theory and Practice," from the web page of {\it Coding Labs: Articles}. Available online at: \url{http://www.codinglabs.net/article_floating_point_numbers.aspx}; last accessed on February 2, 2016. The date/year of publication is unknown.
  *
- *
+ *	--------------------------------------------------------------
  *
  *	From \cite{DSPRelated.comContributors2016}
  *		See \cite[in Free Books: Mathematics of the DFT: Binary Integer Fixed-Point Numbers]{DSPRelated.comContributors2016} and \cite[in Free Books: Mathematics of the DFT: Fractional Binary Fixed-Point Numbers]{DSPRelated.comContributors2016}.
  *		It describes how fixed-point numbers are represented.
  *
- *
+ *	--------------------------------------------------------------
  *
  *	From [Guntheroth, 2005]
- *
+ *		Floating-point arithmetic is (much) slower than
+ *			integer-based arithmetic.
+ *		However, fixed-point arithmetic is faster than floating-point
+ *			arithmetic.
+ *		This reference provides a description of template design
+ *			of C++ -based fixed-point arithmetic (including the
+ *			fixed-point data type).
  *
  *	Reference:
  *		Kurt Guntheroth, "Fixed-Point Arithmetic Types for C++," from {\it Dr. Dobb's: {C/C++}: {C/C++} Feature Articles}, UBM Tech, San Francisco, CA, August 1, 2005. Available online at: \url{http://www.drdobbs.com/cpp/fixed-point-arithmetic-types-for-c/184401992}; February 3, 2016 was the last accessed date.
+ *
+ *	--------------------------------------------------------------
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *	Reference:
+ *		AUTHOR, "," from {\it Open Standards: }, PUBLISHER, DATE. Available online at: \url{}; hosted by Technical University of Denmark, Lyngby, Denmark; and February 5, 2016 was the last accessed date
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  */
 
