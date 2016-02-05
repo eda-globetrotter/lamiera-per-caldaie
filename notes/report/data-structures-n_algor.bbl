@@ -6,6 +6,19 @@ David Abrahams and Aleksey Gurtovoy.
   from Boost and Beyond}.
 \newblock {C++} In-Depth Series. Pearson Education, Boston, {MA}, 2005.
 
+\bibitem{Achterberg2015a}
+Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo Berthold, Robert~E.
+  Bixby, E.~A. Boyd, Sebastian Ceria, Emilie Danna, Gerald Gamrath, Ambros~M.
+  Gleixner, Stefan Heinz, R.~R. Indovina, Thorsten Koch, Andrea Lodi, Alexander
+  Martin, Cassandra~M. {McZeal}, Hans Mittelmann, Ted Ralphs, Daniel Rehfeldt,
+  Domenico Salvagnin, Martin W.~P. Savelsbergh, Daniel~E. Steffy, and Kati
+  Wolter.
+\newblock {MIPLIB 2010} bibliography.
+\newblock Available online from {\it Konrad-Zuse-Zentrum f{\"{u}}r
+  Informationstechnik Berlin: {MIPLIB} -- Mixed Integer Problem Library} at:
+  \url{http://miplib.zib.de/biblio.html}; December 9, 2015 was the last
+  accessed date, December 1 2015.
+
 \bibitem{Alexandrescu2001}
 Andrei Alexandrescu.
 \newblock {\em Modern {C++} Design: Generic Programming and Design Patterns
@@ -16,6 +29,11 @@ Andrei Alexandrescu.
 Alex Allain.
 \newblock {\em Jumping into {C++}}.
 \newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
+
+\bibitem{Bertsimas2004}
+Dimitris Bertsimas and Melvyn Sim.
+\newblock The price of robustness.
+\newblock {\em Operations Research}, 52(1):35--53, January--February 2004.
 
 \bibitem{Bulka2000}
 Dov Bulka and David Mayhew.
@@ -49,16 +67,42 @@ Marshall Cline.
   accessed date, July 28 2011.
 
 \bibitem{CplusplusCom2014}
-cplusplus.com.
+{cplusplus.com}.
 \newblock The {C++} resources network.
 \newblock Available online at: \url{http://www.cplusplus.com/}; April 2, 2014
   was the last accessed date, 2014.
 
+\bibitem{CplusplusCom2015b}
+{cplusplus.com}.
+\newblock {C++} language.
+\newblock Available online from {\it The {C++} Resources Network: Tutorials}
+  at: \url{http://www.cplusplus.com/doc/tutorial/}; February 5, 2016 was the
+  last accessed date, 2015.
+
 \bibitem{CplusplusCom2015}
-cplusplus.com.
+{cplusplus.com}.
 \newblock Reference: {C++} reference.
 \newblock Available online at: \url{http://www.cplusplus.com/reference/};
   November 2, 2015 was the last accessed date, 2015.
+
+\bibitem{CplusplusCom2015a}
+{cplusplus.com}.
+\newblock Tutorials.
+\newblock Available online from {\it The {C++} Resources Network} at:
+  \url{http://www.cplusplus.com/doc/}; February 5, 2016 was the last accessed
+  date, 2015.
+
+\bibitem{cppreference2015}
+{cppreference.com contributors}.
+\newblock {C++} reference.
+\newblock Available online at: \url{http://en.cppreference.com/w/cpp};
+  September 17, 2015 was the last accessed date, June 16 2015.
+
+\bibitem{Dongarra2016}
+Jack Dongarra and Eric Grosse.
+\newblock Netlib repository.
+\newblock Available online at: \url{http://www.netlib.org/}; February 3, 2016
+  was the last accessed date, 2016.
 
 \bibitem{Eckel2000}
 Bruce Eckel.
@@ -205,6 +249,11 @@ Jon Lee.
 Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
 \newblock {\em {C++} Primer}.
 \newblock Addison-Wesley, Upper Saddle River, {NJ}, fifth edition, 2013.
+
+\bibitem{Lu2004}
+Mi~Lu.
+\newblock {\em Arithmetic and Logic in Computer Systems}.
+\newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, 2004.
 
 \bibitem{McMahon20XY}
 Kurt {McMahon}.
@@ -369,6 +418,11 @@ Herbert Schildt.
 \newblock {\em The Art of {C++}}.
 \newblock {McGraw-Hill}/Osborne, Emeryville, {CA}, 2004.
 
+\bibitem{Soulie2007}
+Juan Souli{\'{e}}.
+\newblock {\em {C++} Language Tutorial}.
+\newblock cplusplus.com, June 2007.
+
 \bibitem{Stroustrup2009}
 Bjarne Stroustrup.
 \newblock {\em Programming: Principles and Practice Using {C++}}.
@@ -388,6 +442,14 @@ David Vandevoorde and Nicolai~M. Josuttis.
 Dirk Vermeir.
 \newblock {\em Multi-Paradigm Programming using {C++}}.
 \newblock Springer-Verlag London Berlin Heidelberg, London, {U.K.}, 2001.
+
+\bibitem{WikipediaContributors2015i}
+{Wikipedia contributors}.
+\newblock Algebraic modeling language.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia:
+  Specification languages} at:
+  \url{https://en.wikipedia.org/wiki/Algebraic_modeling_language}; December 11,
+  2015 was the last accessed date, May 3 2015.
 
 \bibitem{WikipediaContributors2015h}
 {Wikipedia contributors}.
