@@ -193,6 +193,12 @@
  *
  *	--------------------------------------------------------------
  *
+ *	From [Crowl, 2015]
+ *		"C++ supports integer arithmetic and floating-point
+ *			arithmetic, but it does not support fixed-point
+ *			arithmetic."
+ *		"We propose support for fixed-point arithmetic via standard
+ *			library facilities."
  *
  *
  *
@@ -203,12 +209,10 @@
  *
  *
  *
- *
- *
- *	Reference:
+ *	References:
  *		Lawrence Crowl, "{C++} Binary Fixed-Point Arithmetic," from {\it Open Standards (International Organization for Standardization, ISO, and International Electrotechnical Commission, IEC): Joint {ISO/IEC} Technical Committee 1 ({JTC 1}): {JTC 1} Subcommittee 22 -- ``The Portability Subcommittee'' ({ISO/ IEC JTC1/SC22}): {JTC1/SC22/WG21 -- The C++ Standards Committee -- {ISOCPP}} working group: {C++} Standards Committee Papers}, Number P0106R0, International Organization for Standardization and International Electrotechnical Commission, Gen{\`{e}}va, Switzerland, September 27, 2015. Available online at: \url{http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0106r0.html}; hosted by Technical University of Denmark, Lyngby, Denmark; and February 5, 2016 was the last accessed date.
  *
- *
+ *		Lawrence Crowl, "{C++} Binary Fixed-Point Arithmetic," from {\it Open Standards (International Organization for Standardization, ISO, and International Electrotechnical Commission, IEC): Joint {ISO/IEC} Technical Committee 1 ({JTC 1}): {JTC 1} Subcommittee 22 -- ``The Portability Subcommittee'' ({ISO/ IEC JTC1/SC22}): {JTC1/SC22/WG21 -- The C++ Standards Committee -- {ISOCPP}} working group: {C++} Standards Committee Papers}, Number N3352, International Organization for Standardization and International Electrotechnical Commission, Gen{\`{e}}va, Switzerland, January 15, 2012. Available online at: \url{http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3352.html}; hosted by Technical University of Denmark, Lyngby, Denmark; and February 5, 2016 was the last accessed date.
  *
  *
  *
