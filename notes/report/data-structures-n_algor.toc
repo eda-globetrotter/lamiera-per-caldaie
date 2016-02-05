@@ -13,6 +13,8 @@
 \contentsline {section}{\numberline {3.3}Robust Linear Programming}{3}{section.3.3}
 \contentsline {section}{\numberline {3.4}Discrete Optimization}{4}{section.3.4}
 \contentsline {section}{\numberline {3.5}Optimization Solvers}{4}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Accessible Optimization Solvers}{4}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Not Accessible Optimization Solvers}{5}{subsection.3.5.2}
 \contentsline {chapter}{\numberline {4}Mathematics}{7}{chapter.4}
 \contentsline {chapter}{\numberline {5}Statistics}{9}{chapter.5}
 \contentsline {chapter}{\numberline {6}C++ Resources}{10}{chapter.6}
