@@ -138,5 +138,15 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
  * @return - Nothing.
  */
 void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
+	/**
+	 * Test the to_string() functions from the C++1y STL, for
+	 *	signed and unsigned integers.
+	 *
+	 * Assume that the compiler being used is C++11 (and other
+	 *	C++1y) compliant.
+	 */
+	
+	// For floating-point numbers.
+	// For large floating-point numbers.
 }
 
