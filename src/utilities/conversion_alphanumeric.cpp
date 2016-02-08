@@ -65,21 +65,66 @@ conversion_alphanumeric::conversion_alphanumeric() {
  */
 
 
+// === Signed integers
+
 /**
- * Function to convert an int to a string.
+ * Function to convert a signed integer to a string.
  * @param a_num:	An int to be converted to a string.
  * @return string representation of a_num, the integer.
  */
-//string conversion_alphanumeric::num_to_str(int a_num) {
-string conversion_alphanumeric::int_to_str(int a_num) {
-	return to_string(a_num);
+//string conversion_alphanumeric::num_to_str(int an_int) {
+string conversion_alphanumeric::int_to_str(int an_int) {
+	return to_string(an_int);
 }
 
 
 
+/**
+ * Function to convert a large signed integer to a string.
+ *
+ */
+string conversion_alphanumeric::int_to_str(long long int an_int) {
+	return to_string(an_int);
+}
 
 
 
+// === Unsigned integers
+/**
+ * Function to convert an unsigned integer to a string.
+ *
+ */
+string conversion_alphanumeric::int_to_str(unsigned int an_int) {
+	return to_string(an_int);
+}
 
 
 
+/**
+ * Function to convert a large unsigned integer to a string.
+ * @param
+ */
+string conversion_alphanumeric::int_to_str(unsigned long long int an_int) {
+	return to_string(an_int);
+}
+
+
+
+// === Floating-point numbers.
+/**
+ * Function to convert a floating-point number to a string.
+ *
+ */
+string conversion_alphanumeric::double_to_str(double a_fp_num) {
+	return to_string(a_fp_num);
+}
+
+
+		
+/**
+ * Function to convert a large floating-point number to a
+ *	string.
+ */
+string conversion_alphanumeric::long_double_to_str(long double a_fp_num) {
+	return to_string(a_fp_num);
+}

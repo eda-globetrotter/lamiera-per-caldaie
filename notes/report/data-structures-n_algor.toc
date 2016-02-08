@@ -23,10 +23,10 @@
 \contentsline {section}{\numberline {6.3}Additional Notes About C++}{19}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{20}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Software Development in C++}{20}{section.6.4}
-\contentsline {chapter}{\numberline {7}Questions}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{23}{section.7.1}
-\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{23}{section.7.2}
-\contentsline {chapter}{\numberline {8}Miscellaneous}{27}{chapter.8}
-\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{27}{section.8.1}
-\contentsline {chapter}{Acknowledgments}{28}{chapter*.4}
-\contentsline {chapter}{Bibliography}{34}{appendix*.5}
+\contentsline {chapter}{\numberline {7}Questions}{24}{chapter.7}
+\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{24}{section.7.1}
+\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{24}{section.7.2}
+\contentsline {chapter}{\numberline {8}Miscellaneous}{28}{chapter.8}
+\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{28}{section.8.1}
+\contentsline {chapter}{Acknowledgments}{29}{chapter*.4}
+\contentsline {chapter}{Bibliography}{35}{appendix*.5}

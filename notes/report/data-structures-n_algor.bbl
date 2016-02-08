@@ -314,6 +314,12 @@ Yusuf~Kemal {\"{O}}zcan.
   \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references};
   October 28, 2015 was the last accessed date, April 18 2013.
 
+\bibitem{Pierce2016}
+Rod Pierce.
+\newblock Maths is fun: Maths resources.
+\newblock Available online at: \url{https://www.mathsisfun.com/}; February 5,
+  2016 was the last accessed date, 2016.
+
 \bibitem{PittFrancis2012}
 Joe {Pitt-Francis} and Jonathan Whiteley.
 \newblock {\em Guide to Scientific Computing in {C++}}.
@@ -470,5 +476,11 @@ Dirk Vermeir.
 Matthew Wilson.
 \newblock {\em Extended {STL}: Collections and Iterators}, volume~1.
 \newblock Addison-Wesley, Upper Saddle River, {NJ}, 2007.
+
+\bibitem{WolframResearchStaff2016}
+{Wolfram Research staff}.
+\newblock {Wolfram MathWorld}: The web's most extensive mathematics resource.
+\newblock Available online at: \url{http://mathworld.wolfram.com/}; February 5,
+  2016 was the last accessed date, January 29 2016.
 
 \end{thebibliography}
