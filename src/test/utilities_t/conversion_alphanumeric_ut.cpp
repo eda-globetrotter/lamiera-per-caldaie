@@ -64,9 +64,9 @@ using namespace std;
  *	conversion_alphanumeric_ut.
  */
 conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
-	cerr << "==tu	Don't instantiate the tester for conversion_alphanumeric.";
-	cerr << endl;
-	cerr << "==tu	conversion_alphanumeric_ut shouldn't be instantiated!"<< endl;
+	printer::debug_std_err("==tu	Don't instantiate the tester for conversion_alphanumeric.");
+	printer::debug_std_err();
+	printer::debug_std_err("==tu	conversion_alphanumeric_ut shouldn't be instantiated!");
 	string err_msg = "==tu	Don't use conversion_alphanumeric_ut's default constructor.";
 	throw new violated_assertion(err_msg);
 }
@@ -78,7 +78,7 @@ conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
  *	convert numbers to strings.
  */
 void conversion_alphanumeric_ut::test_numbers_to_strings() {
-	cout << "==tu	Testing: conversion_alphanumeric ..." << endl;
+	printer::debug_std_op("==tu	Testing: conversion_alphanumeric ...");
 	
 	// Test the default constructor of conversion_alphanumeric.
 	test_conversion_alphanumeric_constructor();
@@ -104,11 +104,11 @@ void conversion_alphanumeric_ut::test_conversion_alphanumeric_constructor() {
 	// Check if printer should not be instantiated.
 	try {
 		printer::num_test_cases_eval();
-		cout << "==tu	>>	Testing: default constructor." << endl;
+		printer::debug_std_op("==tu	>>	Testing: default constructor.");
 		conversion_alphanumeric *num_conv = new conversion_alphanumeric();
 	}
 	catch (violated_assertion *va_ex) {
-		cout << "==tu	==>	default constructor works." << endl;
+		printer::debug_std_op("==tu	==>	default constructor works.");
 		printer::num_passed_test_cases_eval();
 	}
 }
@@ -128,6 +128,8 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	 */
 	
 	// For signed integers.
+	
+	
 	// For unsigned integers.
 }
 
