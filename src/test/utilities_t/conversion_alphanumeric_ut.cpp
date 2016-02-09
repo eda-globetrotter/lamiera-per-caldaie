@@ -89,7 +89,7 @@ void conversion_alphanumeric_ut::test_numbers_to_strings() {
 	// Test functions to convert floating-point numbers to strings.
 	test_floating_point_numbers_to_strings();
 	
-	cout << endl;
+	printer::debug_std_op("");
 }
 
 // -----------------------------------------------------
