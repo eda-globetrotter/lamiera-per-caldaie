@@ -56,11 +56,18 @@ Other languages that I want to pass are:
 Input/output of compilers are specified, and implement the compiler/interpreter (or emulator for a virtual machine, such as the *Java* virtual machine) and the linker.
 
 
+
+
+
+*****
+
 #	References.
 
-##	Helpful References.
+##	Helpful References. (4)
 
 - \cite{Cooper2012}:	Cooper, K. D., and Torczon, L. Engineering a Compiler, second ed. Morgan Kaufmann, Burlington, MA, 2012.
+
+- \cite{Aho2007}:		Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. Compilers: Principles, Techniques, & Tools, second ed. Pearson Education, Boston, MA, 2007.
 
 - \cite{Muchnick1997}:	Muchnick, S. S. Advanced Compiler Design and Implementation. Academic Press, San Diego, CA, 1997.
 
@@ -68,102 +75,74 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-##	Other References.
 
-###	Theoretical Approach.
+
+
+
+
+##	Other References. (????)
+
+###	Theoretical Approach. (1)
 
 - \cite{Mozgovoy2010}:	Mozgovoy, M. Algorithms, Languages, Automata, and Compilers: A Practical Approach. Jones and Bartlett Publishers, Sudbury, MA, 2010.
 
-###	Parallel Compilers.
+
+
+###	Parallel Compilers. (4)
 
 - \cite{Midkiff2012}:	Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
+
+- \cite{Adve2001}:		Adve, V., and Sakellariou, R. Compiler synthesis of task graphs for parallel program performance prediction. In Proceedings of the 13th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2000) (Yorktown Heights, NY, August 10–12 2001), vol. 2017 of Lecture Notes in Computer Science, Springer-Verlag Berlin Heidelberg, pp. 208–226.
 
 - \cite{Wolfe1995}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1995.
 
 - \cite{Haghighat1995}:	Haghighat, M. R. Symbolic Analysis for Parallelizing Compilers. Kluwer Academic Publishers, Nor- well, MA, 1995.
 
-- \cite{Adve2001}:		Adve, V., and Sakellariou, R. Compiler synthesis of task graphs for parallel program performance prediction. In Proceedings of the 13th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2000) (Yorktown Heights, NY, August 10–12 2001), vol. 2017 of Lecture Notes in Computer Science, Springer-Verlag Berlin Heidelberg, pp. 208–226.
+
+
+
 
 
 
 ###	Decent Introductory Books on Compilers.
 
-- \cite{Mogensen2010}:	Mogensen, T. Æ. Basics of Compiler Design, anniversary ed. Lulu Enterprises, Copenhagen, Denmark, 2010.
-
-- \cite{Morgan1998}:	Morgan, R. Building an Optimizing Compiler. Butterworth-Heinemann, Burlington, MA, 1998.
-
-- \cite{Teufel1993}:	Teufel, B., Schmidt, S., and Teufel, T. C2 Compiler Concepts. Springer-Verlag/Wien, Vienna, Austria, 1993.
-
-- \cite{Waite1984}:		Waite, W. M., and Goos, G. Compiler Construction. Texts and Monographs in Computer Science. Springer-Verlag New York, New York, NY, 1984.
-
-- \cite{Bauer1974}:		Bauer, F. L., De Remer, F. L., Griffiths, M., Hill, U., Horning, J. J., Koster, C. H. A., McKeeman, W. M., Poole, P. C., and Waite, W. M. Compiler Construction: An Advanced Course, vol. 21 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1974.
-
-- \cite{Louden1997}:	Louden, K. C. Compiler Construction: Principles and Practice. PWS Publishing Company, Boston, MA, 1997.
-
-- \cite{DosReis2012}:	Dos Reis, A. J. Compiler Construction Using Java, JavaCC, and Yacc. John Wiley & Sons, Hoboken, NJ, 2012.
+- \cite{Campbell2013}:	Campbell, B., Iyer, S., and Akbal-Deliba ̧s, B. Introduction to Compiler Construction in a Java World. CRC Press, Boca Raton, FL, 2013.
 
 - \cite{Seidl2012}:		Seidl, H., Wilhelm, R., and Hack, S. Compiler Design: Analysis and Transformation. Springer- Verlag Berlin Heidelberg, Heidelberg, Germany, 2012.
 
-- \cite{Pyster1987}:	Pyster, A. B. Compiler Design and Construction: Tools and Techniques with C and Pascal. Uses UNIX Tools. Van Nostrand Reinhold, New York, NY, 1987.
-
-- \cite{Wilhelm2011}:	Wilhelm, R., Seidl, H., and Hack, S. Compiler Design: Syntactic and Semantic Analysis. Springer- Verlag Berlin Heidelberg, Heidelberg, Germany, November 8 2011.
-
-- \cite{Bergmann2007}:	Bergmann, S. D. Compiler Design: Theory, Tools, and Examples, Java ed. Self-published, Glassboro, NJ, 2007.
-
-- \cite{Bergmann2010}:	Bergmann, S. D. Compiler Design: Theory, Tools, and Examples, C/C++ ed. Self-published, Glass- boro, NJ, 2010.
-
-- \cite{Tofte1990}:		Tofte, M. Compiler Generators: What They Can Do, What They Might Do, and What They Will Probably Never Do, vol. 19 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1990.
-
-- \cite{Pande2001}:		Pande, S., and Agrawal, D. P. Compiler Optimizations for Scalable Parallel Systems: Languages, Compilation Techniques, and Run Time Systems, vol. 1808 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2001.
-
-- \cite{Polak1981}:		Polak, W. Compiler Specification and Verification, vol. 124 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1981.
-
-- \cite{Kiong1997}:		Kiong, D. B. K. Compiler Technology: Tools, Translators and Language Implementation, vol. 422 of The Kluwer International Series in Engineering and Computer Science. Kluwer Academic Publishers, Norwell, MA, 1997.
-
-- \cite{Terry1997}:		Terry, P. D. Compilers and Compiler Generators: An Introduction with C++. International Thomson Computer Press, Stamford, CT, 1997.
-
-- \cite{Fischer2010}:	Fischer, C. N., Cytron, R. K., and LeBlanc Jr., R. J. Crafting A Compiler. Addison-Wesley, Boston, MA, 2010.
-
-- \cite{Meduna2008}:	Meduna, A. Elements of Compiler Design. Auerbach Publications, Boca Raton, FL, 2008.
-
-- \cite{Reghizzi2009}:	Reghizzi, S. C. Formal Languages and Compilation. Texts in Computer Science. Springer-Verlag London, London, U.K., 2009.
-
-- \cite{Kastens1982}:	Kastens, U., Hutt, B., and Zimmermann, E. GAG: A Practical Compiler Generator, vol. 141 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1982.
-
-- \cite{Copeland2007}:	Copeland, T. Generating Parsers with JavaCC: An Easy-to-Use Guide for Developers, second ed. Centennial Books, Alexandria, VA, 2007.
-
-- \cite{Parsons1992}:	Parsons, T. W. Introduction to Compiler Construction. W. H. Freeman & Company, New York, NY, 1992.
-
-- \cite{Campbell2013}:	Campbell, B., Iyer, S., and Akbal-Deliba ̧s, B. Introduction to Compiler Construction in a Java World. CRC Press, Boca Raton, FL, 2013.
+- \cite{Grune2012}:		Grune, D., van Reeuwijk, K., Bal, H. E., Jacobs, C. J., and Langendoen, K. Modern Compiler Design, second ed. Springer Science+Business Media New York, New York, NY, 2012.
 
 - \cite{Mogensen2011}:	Mogensen, T. Æ. Introduction to Compiler Design. Undergraduate Topics in Computer Science. Springer-Verlag London, London, U.K., 2011.
 
-- \cite{Galles2005}:	Galles, D. Modern Compiler Design. Addison-Wesley, Reading, MA, 2005. Also, see \cite{Galles2004}.
-
-- \cite{Grune2000}:		Grune, D., Bal, H. E., Jacobs, C. J. H., and Langendoen, K. G. Modern Compiler Design. Worldwide Series in Computer Science. John Wiley & Sons, Chichester, West Sussex, England, U.K., 2000.
-
-- \cite{Grune2012}:		Grune, D., van Reeuwijk, K., Bal, H. E., Jacobs, C. J., and Langendoen, K. Modern Compiler Design, second ed. Springer Science+Business Media New York, New York, NY, 2012.
-
-- \cite{Appel1998}:		Appel, A. W., and Ginsburg, M. Modern Compiler Implementation in C. Cambridge University Press, Cambridge, U.K., 1998.
-
-- \cite{Appel2002}:		Appel, A. W., and Palsberg, J. Modern Compiler Implementation in Java, second ed. Cambridge University Press, New York, NY, 2002.
-
-- \cite{Holmes1995}:	Holmes, J. Object-Oriented Compiler Construction. Prentice Hall, Englewood Cliffs, NJ, 1995.
-
 - \cite{Su2011}:		Su, Y., and Yan, S. Y. Principles of Compilers: A New Approach to Compilers Including the Algebraic Method. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2011.
 
-- \cite{Srikant2003}:	Srikant, Y. N., and Shankar, P. The Compiler Design Handbook: Optimizations & Machine Code Generation. CRC Press, Boca Raton, FL, 2003.
+- \cite{Mogensen2010}:	Mogensen, T. Æ. Basics of Compiler Design, anniversary ed. Lulu Enterprises, Copenhagen, Denmark, 2010.
 
-- \cite{Srikant2008}:	Srikant, Y. N., and Shankar, P. The Compiler Design Handbook: Optimizations & Machine Code Generation, second ed. CRC Press, Boca Raton, FL, 2008.
+- \cite{Fischer2010}:	Fischer, C. N., Cytron, R. K., and LeBlanc Jr., R. J. Crafting A Compiler. Addison-Wesley, Boston, MA, 2010.
 
-- \cite{Parr2012}:		Parr, T. The Definitive ANTLR 4 Reference. Pragmatic Bookshelf, Raleigh, NC, 2012.
+- \cite{Bergmann2010}:	Bergmann, S. D. Compiler Design: Theory, Tools, and Examples, C/C++ ed. Self-published, Glass- boro, NJ, 2010.
 
-- \cite{Parr2007}:		Parr, T. The Definitive ANTLR Reference: Building Domain-Specific Languages. Pragmatic Bookshelf, Raleigh, NC, May 17 2007.
+- \cite{Bergmann2007}:	Bergmann, S. D. Compiler Design: Theory, Tools, and Examples, Java ed. Self-published, Glassboro, NJ, 2007.
 
 - \cite{Mak2009}:		Mak, R. Writing Compilers and Interpreters: A Modern Software Engineering Approach Using JavaR , third ed. Wiley Publishing, Indianapolis, IN, 2009.
 
 - \cite{Mak2009a}:		Mak, R. Writing Compilers and Interpreters: A Software Engineering Approach, third ed. Wiley Publishing, Indianapolis, IN, 2009.
 
+- \cite{Srikant2008}:	Srikant, Y. N., and Shankar, P. The Compiler Design Handbook: Optimizations & Machine Code Generation, second ed. CRC Press, Boca Raton, FL, 2008.
+
+- \cite{Srikant2003}:	Srikant, Y. N., and Shankar, P. The Compiler Design Handbook: Optimizations & Machine Code Generation. CRC Press, Boca Raton, FL, 2003.
+
+- \cite{Meduna2008}:	Meduna, A. Elements of Compiler Design. Auerbach Publications, Boca Raton, FL, 2008.
+
+- \cite{Galles2005}:	Galles, D. Modern Compiler Design. Addison-Wesley, Reading, MA, 2005. Also, see \cite{Galles2004}.
+
+- \cite{Grune2000}:		Grune, D., Bal, H. E., Jacobs, C. J. H., and Langendoen, K. G. Modern Compiler Design. Worldwide Series in Computer Science. John Wiley & Sons, Chichester, West Sussex, England, U.K., 2000.
+
+- \cite{Appel2002}:		Appel, A. W., and Palsberg, J. Modern Compiler Implementation in Java, second ed. Cambridge University Press, New York, NY, 2002.
+
+- \cite{Appel1998}:		Appel, A. W., and Ginsburg, M. Modern Compiler Implementation in C. Cambridge University Press, Cambridge, U.K., 1998.
+
+- \cite{Louden1997}:	Louden, K. C. Compiler Construction: Principles and Practice. PWS Publishing Company, Boston, MA, 1997.
 
 
 
@@ -172,7 +151,35 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-- \cite{Lorho1984}:		Lorho, B. Methods and Tools for Compiler Construction: An Advanced Course. Cambridge University Press, Cambridge, U.K., 1984.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -187,15 +194,66 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 ###	Other Introductory Books on Compilers.
 
+
+**Generic Compiler Design**
+
+- \cite{Reghizzi2009}:	Reghizzi, S. C. Formal Languages and Compilation. Texts in Computer Science. Springer-Verlag London, London, U.K., 2009.
+
+- \cite{Kiong1997}:		Kiong, D. B. K. Compiler Technology: Tools, Translators and Language Implementation, vol. 422 of The Kluwer International Series in Engineering and Computer Science. Kluwer Academic Publishers, Norwell, MA, 1997.
+
+- \cite{Holmes1995}:	Holmes, J. Object-Oriented Compiler Construction. Prentice Hall, Englewood Cliffs, NJ, 1995.
+
+- \cite{Parsons1992}:	Parsons, T. W. Introduction to Compiler Construction. W. H. Freeman & Company, New York, NY, 1992.
+
+
+- \cite{Pyster1987}:	Pyster, A. B. Compiler Design and Construction: Tools and Techniques with C and Pascal. Uses UNIX Tools. Van Nostrand Reinhold, New York, NY, 1987.
+
+- \cite{Lorho1984}:		Lorho, B. Methods and Tools for Compiler Construction: An Advanced Course. Cambridge University Press, Cambridge, U.K., 1984.
+
+- \cite{Waite1984}:		Waite, W. M., and Goos, G. Compiler Construction. Texts and Monographs in Computer Science. Springer-Verlag New York, New
+
+- \cite{Bauer1974}:		Bauer, F. L., De Remer, F. L., Griffiths, M., Hill, U., Horning, J. J., Koster, C. H. A., McKeeman, W. M., Poole, P. C., and Waite, W. M. Compiler Construction: An Advanced Course, vol. 21 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1974.
+
+
+
+
+**Compiler Front-End**
+- \cite{Wilhelm2011}:	Wilhelm, R., Seidl, H., and Hack, S. Compiler Design: Syntactic and Semantic Analysis. Springer- Verlag Berlin Heidelberg, Heidelberg, Germany, November 8 2011.
+
+- \cite{DosReis2012}:	Dos Reis, A. J. Compiler Construction Using Java, JavaCC, and Yacc. John Wiley & Sons, Hoboken, NJ, 2012.
+
+- \cite{Copeland2007}:	Copeland, T. Generating Parsers with JavaCC: An Easy-to-Use Guide for Developers, second ed. Centennial Books, Alexandria, VA, 2007.
+
+- \cite{Terry1997}:		Terry, P. D. Compilers and Compiler Generators: An Introduction with C++. International Thomson Computer Press, Stamford, CT, 1997.
+
+- \cite{Kastens1982}:	Kastens, U., Hutt, B., and Zimmermann, E. GAG: A Practical Compiler Generator, vol. 141 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1982.
+
+
+
+
+**Others**
 - \cite{Rastello2015}:	Rastello, F. SSA-based Compiler Design. Springer-Verlag New York, New York, NY, 2015.
 
-###	Parser Development
+
+
+- \cite{Teufel1993}:	Teufel, B., Schmidt, S., and Teufel, T. C2 Compiler Concepts. Springer-Verlag/Wien, Vienna, Austria, 1993.
+
+
+
+
+
+
+
+###	Parser Development (4)
 
 - \cite{Grune2008}:		Grune, D., and Jacobs, C. J. H. Parsing Techniques: A Practical Guide, second ed. Monographs in Computer Science. Springer Science+Business Media, LCC, New York, NY, 2008.
 
 - \cite{Leermakers1993}:	Leermakers, R. The Functional Treatment of Parsing, vol. 242 of The Kluwer International Series in Engineering and Computer Science: Natural Language Processing and Machine Translation. Kluwer Academic Publishers, Norwell, MA, 1993.
 
 - \cite{Sippu1988}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume I Languages and Parsing, vol. 15 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1988.
+
+
+- \cite{Tofte1990}:		Tofte, M. Compiler Generators: What They Can Do, What They Might Do, and What They Will Probably Never Do, vol. 19 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1990.
 
 - \cite{Sippu1990}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume II LR(k) and LL(k) Parsing, vol. 20 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg New York, Heidelberg, Germany, 1990.
 
@@ -204,23 +262,57 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+### Compiler Design Tools. (7)
+
+- \cite{Preiss2004}:	Preiss, B. R. Lexical Analysis and Parsing using C++. Self-published, Waterloo, Ontario, Canada, 2004.
+
+**ANTLR** (2)
+- \cite{Parr2012}:		Parr, T. The Definitive ANTLR 4 Reference. Pragmatic Bookshelf, Raleigh, NC, 2012.
+
+- \cite{Parr2007}:		Parr, T. The Definitive ANTLR Reference: Building Domain-Specific Languages. Pragmatic Bookshelf, Raleigh, NC, May 17 2007.
 
 
-###	Compiler Optimization
+**Flex and Bison** (2)
+- \cite{Levine2009}:	Levine, J. R. flex & bison: UNIX Text Processing Tools. O’Reilly Media, Sebastopol, CA, 2009.
+
+- \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date.
 
 
-- \cite{Allen2001}:		Allen, R., and Kennedy, K. Optimizing Compilers for Modern Architectures: A Dependence-Based Approach. Morgan Kaufmann, San Francisco, CA, 2001.
+**Lex and Yacc** (2)
+- \cite{Niemann20XY}:	Niemann, T. Lex & Yacc Tutorial. ePaperPress, Portland, OR.
+
+- \cite{Levine1992}:	Levine, J. R., Mason, T., and Brown, D. lex & yacc: UNIX Programming Tools, second ed. O’Reilly Media, Sebastopol, CA, 1992.
+
+
+
+
+
+
+
+
+
+###	Compiler Optimization (5)
+
+**Generic Compiler Optimization** (4)
+- \cite{Pande2001}:		Pande, S., and Agrawal, D. P. Compiler Optimizations for Scalable Parallel Systems: Languages, Compilation Techniques, and Run Time Systems, vol. 1808 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2001.
+
+- \cite{Allen2001}:		Allen, R., and Kennedy, K. Optimizing Compilers for Modern Architectures: A Dependencwe-Based Approach. Morgan Kaufmann, San Francisco, CA, 2001.
+
+- \cite{Morgan1998}:	Morgan, R. Building an Optimizing Compiler. Butterworth-Heinemann, Burlington, MA, 1998.
+
+- \cite{Polak1981}:		Polak, W. Compiler Specification and Verification, vol. 124 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1981.
+
+**Garbage Collection** (1)
 
 - \cite{Jones2011}:		Jones, R., Hosking, A., and Moss, E. The Garbage Collection Handbook: The Art of Automatic Memory Management. Chapman & Hall/CRC Applied Algorithms and Data Structures. Chapman & Hall/CRC, Boca Raton, FL, 2011.
 
 
 
 
-###	Compiler Design for Embedded Software.
+
+###	Compiler Design for Embedded Software. (5)
 
 - \cite{Cardoso2009}:	Cardoso, J. M. P., and Diniz, P. C. Compilation Techniques for Reconfigurable Architectures. Springer Science+Business Media, LCC, New York, NY, 2009.
-
-- \cite{Aho2007}:		Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. Compilers: Principles, Techniques, & Tools, second ed. Pearson Education, Boston, MA, 2007.
 
 - \cite{Mamidi2005}:	Mamidi, S., Blem, E. R., Schulte, M. J., Glossner, J., Iancu, D., Iancu, A., Moudgill, M., and Jinturkar, S. Instruction set extensions for software defined radio on a multithreaded processor. In Proceedings of the International Conference on Compilers, architectures and synthesis for embedded systems (CASES ’05) (San Francisco, CA, September 24–27 2005), ACM Press, pp. 266–273.
 
@@ -234,7 +326,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-###	Compilers for Domain-Specific Languages.
+###	Compilers for Domain-Specific Languages. (2)
 
 - \cite{Fowler2011}:	Fowler, M., and Parsons, R. Domain-Specific Languages. Addison-Wesley Signature Series. Addison- Wesley, Boston, MA, 2011.
 
@@ -246,19 +338,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-### Compiler Design Tools. (5)
 
-- \cite{Preiss2004}:	Preiss, B. R. Lexical Analysis and Parsing using C++. Self-published, Waterloo, Ontario, Canada, 2004.
-
-**Flex and Bison** (2)
-- \cite{Levine2009}:	Levine, J. R. flex & bison: UNIX Text Processing Tools. O’Reilly Media, Sebastopol, CA, 2009.
-
-- \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date.
-
-**Lex and Yacc** (2)
-- \cite{Niemann20XY}:	Niemann, T. Lex & Yacc Tutorial. ePaperPress, Portland, OR.
-
-- \cite{Levine1992}:	Levine, J. R., Mason, T., and Brown, D. lex & yacc: UNIX Programming Tools, second ed. O’Reilly Media, Sebastopol, CA, 1992.
 
 
 
