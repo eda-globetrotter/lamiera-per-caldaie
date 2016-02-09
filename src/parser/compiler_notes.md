@@ -19,6 +19,7 @@ Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" |
 
 
 
+
 #	Compiler Front-End
 
 ##	Syntax Analysis
@@ -44,11 +45,16 @@ Code generation
 
 
 
+#	Miscellaneous Notes
 
 
 
 
+#	References
 
+\cite{Wirth1996}: 
+
+\cite{Muchnick1997}:	Muchnick, S. S. Advanced Compiler Design and Implementation. Academic Press, San Diego, CA, 1997.
 
 
 
