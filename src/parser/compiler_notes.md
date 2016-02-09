@@ -76,35 +76,12 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+*****
+
+##	Other References. (78)
 
 
-
-
-##	Other References. (????)
-
-###	Theoretical Approach. (1)
-
-- \cite{Mozgovoy2010}:	Mozgovoy, M. Algorithms, Languages, Automata, and Compilers: A Practical Approach. Jones and Bartlett Publishers, Sudbury, MA, 2010.
-
-
-
-###	Parallel Compilers. (4)
-
-- \cite{Midkiff2012}:	Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
-
-- \cite{Adve2001}:		Adve, V., and Sakellariou, R. Compiler synthesis of task graphs for parallel program performance prediction. In Proceedings of the 13th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2000) (Yorktown Heights, NY, August 10–12 2001), vol. 2017 of Lecture Notes in Computer Science, Springer-Verlag Berlin Heidelberg, pp. 208–226.
-
-- \cite{Wolfe1995}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1995.
-
-- \cite{Haghighat1995}:	Haghighat, M. R. Symbolic Analysis for Parallelizing Compilers. Kluwer Academic Publishers, Nor- well, MA, 1995.
-
-
-
-
-
-
-
-###	Decent Introductory Books on Compilers.
+###	Decent Introductory Books on Compilers. (19)
 
 - \cite{Campbell2013}:	Campbell, B., Iyer, S., and Akbal-Deliba ̧s, B. Introduction to Compiler Construction in a Java World. CRC Press, Boca Raton, FL, 2013.
 
@@ -148,54 +125,10 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+###	Other Introductory Books on Compilers. (15)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###	Other Introductory Books on Compilers.
-
-
-**Generic Compiler Design**
+**Generic Compiler Design** (8)
 
 - \cite{Reghizzi2009}:	Reghizzi, S. C. Formal Languages and Compilation. Texts in Computer Science. Springer-Verlag London, London, U.K., 2009.
 
@@ -204,7 +137,6 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 - \cite{Holmes1995}:	Holmes, J. Object-Oriented Compiler Construction. Prentice Hall, Englewood Cliffs, NJ, 1995.
 
 - \cite{Parsons1992}:	Parsons, T. W. Introduction to Compiler Construction. W. H. Freeman & Company, New York, NY, 1992.
-
 
 - \cite{Pyster1987}:	Pyster, A. B. Compiler Design and Construction: Tools and Techniques with C and Pascal. Uses UNIX Tools. Van Nostrand Reinhold, New York, NY, 1987.
 
@@ -216,8 +148,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-
-**Compiler Front-End**
+**Compiler Front-End** (5)
 - \cite{Wilhelm2011}:	Wilhelm, R., Seidl, H., and Hack, S. Compiler Design: Syntactic and Semantic Analysis. Springer- Verlag Berlin Heidelberg, Heidelberg, Germany, November 8 2011.
 
 - \cite{DosReis2012}:	Dos Reis, A. J. Compiler Construction Using Java, JavaCC, and Yacc. John Wiley & Sons, Hoboken, NJ, 2012.
@@ -231,10 +162,8 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-**Others**
+**Others** (2)
 - \cite{Rastello2015}:	Rastello, F. SSA-based Compiler Design. Springer-Verlag New York, New York, NY, 2015.
-
-
 
 - \cite{Teufel1993}:	Teufel, B., Schmidt, S., and Teufel, T. C2 Compiler Concepts. Springer-Verlag/Wien, Vienna, Austria, 1993.
 
@@ -244,19 +173,17 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-###	Parser Development (4)
+###	Parser Development (5)
 
 - \cite{Grune2008}:		Grune, D., and Jacobs, C. J. H. Parsing Techniques: A Practical Guide, second ed. Monographs in Computer Science. Springer Science+Business Media, LCC, New York, NY, 2008.
 
 - \cite{Leermakers1993}:	Leermakers, R. The Functional Treatment of Parsing, vol. 242 of The Kluwer International Series in Engineering and Computer Science: Natural Language Processing and Machine Translation. Kluwer Academic Publishers, Norwell, MA, 1993.
 
-- \cite{Sippu1988}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume I Languages and Parsing, vol. 15 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1988.
-
-
 - \cite{Tofte1990}:		Tofte, M. Compiler Generators: What They Can Do, What They Might Do, and What They Will Probably Never Do, vol. 19 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1990.
 
 - \cite{Sippu1990}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume II LR(k) and LL(k) Parsing, vol. 20 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg New York, Heidelberg, Germany, 1990.
 
+- \cite{Sippu1988}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume I Languages and Parsing, vol. 15 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1988.
 
 
 
@@ -309,6 +236,17 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+###	Parallel Compilers. (4)
+
+- \cite{Midkiff2012}:	Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
+
+- \cite{Adve2001}:		Adve, V., and Sakellariou, R. Compiler synthesis of task graphs for parallel program performance prediction. In Proceedings of the 13th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2000) (Yorktown Heights, NY, August 10–12 2001), vol. 2017 of Lecture Notes in Computer Science, Springer-Verlag Berlin Heidelberg, pp. 208–226.
+
+- \cite{Wolfe1995}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1995.
+
+- \cite{Haghighat1995}:	Haghighat, M. R. Symbolic Analysis for Parallelizing Compilers. Kluwer Academic Publishers, Nor- well, MA, 1995.
+
+
 
 ###	Compiler Design for Embedded Software. (5)
 
@@ -336,7 +274,9 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+###	Theoretical Approach. (1)
 
+- \cite{Mozgovoy2010}:	Mozgovoy, M. Algorithms, Languages, Automata, and Compilers: A Practical Approach. Jones and Bartlett Publishers, Sudbury, MA, 2010.
 
 
 
