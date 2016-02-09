@@ -283,26 +283,14 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{IntelCorporationStaff2015}:	Intel Corporation staff. Intel 64 and IA-32 Architectures Optimization Reference Manual. Intel Corporation, Santa Clara, CA, September 2015.
 
-- \cite{Fog2014a}:		Fog, Agner. Calling Conventions: For Different {C++} Compilers and Operating Systems, Technical University of Denmark, Copenhagen, Denmark, August 7, 2014. Available online at: \url{http://www.agner.org/optimize/calling_conventions.pdf}; July 1, 2015 was the last accessed date.
+- \cite{Fog2014a}:		Fog, Agner. Calling Conventions: For Different C++ Compilers and Operating Systems, Technical University of Denmark, Copenhagen, Denmark, August 7, 2014. Available online at: http://www.agner.org/optimize/calling_conventions.pdf; July 1, 2015 was the last accessed date.
 
-- \cite{Somenzi2003}:	Somenzi, Fabio. Debugging and Tuning, University of Colorado at Boulder, Boulder, {CO}, November 9, 2003. Available online at: \url{http://www.cs.columbia.edu/~sedwards/presentations/iccad2003-somenzi.pdf}; September 1, 2013 was the last accessed date. DOI: http://dx.doi.org/10.1109/ICCAD.2003.144.
+- \cite{Somenzi2003}:	Somenzi, Fabio. Debugging and Tuning, University of Colorado at Boulder, Boulder, CO, November 9, 2003. Available online at: http://www.cs.columbia.edu/~sedwards/presentations/iccad2003-somenzi.pdf; September 1, 2013 was the last accessed date. DOI: http://dx.doi.org/10.1109/ICCAD.2003.144.
 
-- \cite{Walker2013}:	Walker, Ben. Compiler-Generated Functions in {C++}, October 30, 2013. Available online at the ``The walkerb.net Blog'': \url{http://www.walkerb.net/blog/compiler-gen-functions/}; November 2, 2013 was the last accessed date.
+- \cite{Walker2013}:	Walker, Ben. Compiler-Generated Functions in *C++*, October 30, 2013. Available online at the "The walkerb.net Blog": http://www.walkerb.net/blog/compiler-gen-functions/; November 2, 2013 was the last accessed date.
 
-- \cite{}:
-\cite{gcovContributors2015}
+- \cite{gcovContributors2015}:	gcov contributors. gcov--A Test Coverage Program, Free Software Foundation, Boston, MA, 2008. Available online from *Using the GNU Compiler Collection (GCC)* at: https://gcc.gnu.org/onlinedocs/gcc/Gcov.html; February 18, 2015 was the last accessed date.
 
-@misc{gcovContributors2015,
-	Address = {Boston, {MA}},
-	Author = {{gcov contributors}},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2015-04-14 14:22:37 +0000},
-	Howpublished = {Available online from {\it Using the {GNU} Compiler Collection ({GCC})} at: \url{https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}; February 18, 2015 was the last accessed date},
-	Keywords = {test coverage},
-	Publisher = {Free Software Foundation},
-	Title = {{gcov}--a Test Coverage Program},
-	Year = {2008},
-	Bdsk-Url-1 = {https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}}
 
 
 
