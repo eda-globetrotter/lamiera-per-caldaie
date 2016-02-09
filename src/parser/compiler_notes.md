@@ -19,15 +19,28 @@ Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" |
 
 
 
+#	Compiler Front-End
+
+##	Syntax Analysis
+
+###	Lexical Analysis
+
+###	Parsing
+
+
+##	Semantic Analysis
+
+Check the types and scope(s).
+
+
+#	Intermediate Compiler Optimization
 
 
 
 
+#	Compiler Back-End
 
-
-
-
-
+Code generation
 
 
 
