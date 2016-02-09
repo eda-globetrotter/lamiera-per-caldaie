@@ -53,6 +53,8 @@ Other languages that I want to pass are:
 - LEF
 - DEF
 
+Input/output of compilers are specified, and implement the compiler/interpreter (or emulator for a virtual machine, such as the *Java* virtual machine) and the linker.
+
 
 #	References.
 
@@ -75,6 +77,14 @@ Other languages that I want to pass are:
 ###	Parallel Compilers.
 
 - \cite{Midkiff2012}:	Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
+
+- \cite{Wolfe1995}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1995.
+
+
+
+
+
+
 
 ###	Decent Introductory Books on Compilers.
 
@@ -116,11 +126,11 @@ Other languages that I want to pass are:
 
 - \cite{Meduna2008}:	Meduna, A. Elements of Compiler Design. Auerbach Publications, Boca Raton, FL, 2008.
 
-- \cite{Reghizzi2009}:	
+- \cite{Reghizzi2009}:	Reghizzi, S. C. Formal Languages and Compilation. Texts in Computer Science. Springer-Verlag London, London, U.K., 2009.
 
+- \cite{Kastens1982}:	Kastens, U., Hutt, B., and Zimmermann, E. GAG: A Practical Compiler Generator, vol. 141 of Lecture Notes in Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1982.
 
-
-
+- \cite{Copeland2007}:	Copeland, T. Generating Parsers with JavaCC: An Easy-to-Use Guide for Developers, second ed. Centennial Books, Alexandria, VA, 2007.
 
 
 
