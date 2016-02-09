@@ -172,6 +172,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+- \cite{Lorho1984}:		Lorho, B. Methods and Tools for Compiler Construction: An Advanced Course. Cambridge University Press, Cambridge, U.K., 1984.
 
 
 
@@ -192,11 +193,12 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Grune2008}:		Grune, D., and Jacobs, C. J. H. Parsing Techniques: A Practical Guide, second ed. Monographs in Computer Science. Springer Science+Business Media, LCC, New York, NY, 2008.
 
+- \cite{Leermakers1993}:	Leermakers, R. The Functional Treatment of Parsing, vol. 242 of The Kluwer International Series in Engineering and Computer Science: Natural Language Processing and Machine Translation. Kluwer Academic Publishers, Norwell, MA, 1993.
+
 - \cite{Sippu1988}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume I Languages and Parsing, vol. 15 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 1988.
 
 - \cite{Sippu1990}:		Sippu, S., and Soisalon-Soininen, E. Parsing Theory: Volume II LR(k) and LL(k) Parsing, vol. 20 of EATCS Monographs on Theoretical Computer Science. Springer-Verlag Berlin Heidelberg New York, Heidelberg, Germany, 1990.
 
-- \cite{Leermakers1993}:	Leermakers, R. The Functional Treatment of Parsing, vol. 242 of The Kluwer International Series in Engineering and Computer Science: Natural Language Processing and Machine Translation. Kluwer Academic Publishers, Norwell, MA, 1993.
 
 
 
@@ -211,7 +213,6 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Jones2011}:		Jones, R., Hosking, A., and Moss, E. The Garbage Collection Handbook: The Art of Automatic Memory Management. Chapman & Hall/CRC Applied Algorithms and Data Structures. Chapman & Hall/CRC, Boca Raton, FL, 2011.
 
-- \cite{Mamidi2005}:	Mamidi, S., Blem, E. R., Schulte, M. J., Glossner, J., Iancu, D., Iancu, A., Moudgill, M., and Jinturkar, S. Instruction set extensions for software defined radio on a multithreaded processor. In Proceedings of the International Conference on Compilers, architectures and synthesis for embedded systems (CASES ’05) (San Francisco, CA, September 24–27 2005), ACM Press, pp. 266–273.
 
 
 
@@ -219,15 +220,18 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Cardoso2009}:	Cardoso, J. M. P., and Diniz, P. C. Compilation Techniques for Reconfigurable Architectures. Springer Science+Business Media, LCC, New York, NY, 2009.
 
-- \cite{Benini2003}:	Benini, L., Kandemir, M., and Ramanujam, J. Compilers and Operating Systems for Low Power. Kluwer Academic Publishers, Norwell, MA, 2003.
-
 - \cite{Aho2007}:		Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. Compilers: Principles, Techniques, & Tools, second ed. Pearson Education, Boston, MA, 2007.
 
-- \cite{Lorho1984}:		Lorho, B. Methods and Tools for Compiler Construction: An Advanced Course. Cambridge University Press, Cambridge, U.K., 1984.
+- \cite{Mamidi2005}:	Mamidi, S., Blem, E. R., Schulte, M. J., Glossner, J., Iancu, D., Iancu, A., Moudgill, M., and Jinturkar, S. Instruction set extensions for software defined radio on a multithreaded processor. In Proceedings of the International Conference on Compilers, architectures and synthesis for embedded systems (CASES ’05) (San Francisco, CA, September 24–27 2005), ACM Press, pp. 266–273.
+
+- \cite{Leupers2001}:	Leupers, R., and Marwedel, P. Retargetable Compiler Technology for Embedded Systems – Tools and Applications. Kluwer Academic Publishers, Dordrecht, The Netherlands, 2001.
 
 - \cite{Leupers1997}:	Leupers, R. Retargetable Code Generation for Digital Signal Processors. Kluwer Academic Publishers, Dordrecht, The Netherlands, 1997.
 
-- \cite{Leupers2001}:	Leupers, R., and Marwedel, P. Retargetable Compiler Technology for Embedded Systems – Tools and Applications. Kluwer Academic Publishers, Dordrecht, The Netherlands, 2001.
+- \cite{Benini2003}:	Benini, L., Kandemir, M., and Ramanujam, J. Compilers and Operating Systems for Low Power. Kluwer Academic Publishers, Norwell, MA, 2003.
+
+
+
 
 
 ###	Compilers for Domain-Specific Languages.
@@ -253,6 +257,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Preiss2004}:	Preiss, B. R. Lexical Analysis and Parsing using C++. Self-published, Waterloo, Ontario, Canada, 2004.
 
+- \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date.
 
 
 ### Other Topics in Compiler Design.
@@ -271,33 +276,36 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-### Other References Related to Compilers.
+### Other References Related to Compilers. (13)
 
+**Compiler Interactions with Microarchitecture** (2)
 - \cite{Lee2001}:		Lee, G., and Yew, P. Interaction between Compilers and Computer Architectures, vol. 613 of The Kluwer International Series in Engineering and Computer Science. Kluwer Academic Publishers, Norwell, MA, 2001.
 
 - \cite{Lilja1994}:		Lilja, D. J., and Bird, P. L. The Interaction of Compilation Technology and Computer Architecture. Kluwer Academic Publishers, Norwell, MA, 1994.
 
+**Working with Legacy Code** (1)
 - \cite{Feathers2005}:	Feathers, M. C. Working Effectively with Legacy Code. Robert C. Martin Series. Pearson Education, Upper Saddle River, NJ, 2005.
 
+**Embedded Software** (1)
 - \cite{Hyde2006}:		Hyde, R. Write Great Code: Thinking Low-Level, Writing High-Level, vol. 2. No Starch Press, Inc., San Francisco, CA, 2006.
 
+**Microarchitecture for Embedded Software Developers** (1)
 - \cite{IntelCorporationStaff2015}:	Intel Corporation staff. Intel 64 and IA-32 Architectures Optimization Reference Manual. Intel Corporation, Santa Clara, CA, September 2015.
+
+**Advanced C++ Software Development (on UNIX-like Operating Systems)** (8)
+- \cite{gcovContributors2015}:	gcov contributors. gcov--A Test Coverage Program, Free Software Foundation, Boston, MA, 2008. Available online from *Using the GNU Compiler Collection (GCC)* at: https://gcc.gnu.org/onlinedocs/gcc/Gcov.html; February 18, 2015 was the last accessed date.
 
 - \cite{Fog2014a}:		Fog, Agner. Calling Conventions: For Different C++ Compilers and Operating Systems, Technical University of Denmark, Copenhagen, Denmark, August 7, 2014. Available online at: http://www.agner.org/optimize/calling_conventions.pdf; July 1, 2015 was the last accessed date.
 
-- \cite{Somenzi2003}:	Somenzi, Fabio. Debugging and Tuning, University of Colorado at Boulder, Boulder, CO, November 9, 2003. Available online at: http://www.cs.columbia.edu/~sedwards/presentations/iccad2003-somenzi.pdf; September 1, 2013 was the last accessed date. DOI: http://dx.doi.org/10.1109/ICCAD.2003.144.
-
 - \cite{Walker2013}:	Walker, Ben. Compiler-Generated Functions in *C++*, October 30, 2013. Available online at the "The walkerb.net Blog": http://www.walkerb.net/blog/compiler-gen-functions/; November 2, 2013 was the last accessed date.
 
-- \cite{gcovContributors2015}:	gcov contributors. gcov--A Test Coverage Program, Free Software Foundation, Boston, MA, 2008. Available online from *Using the GNU Compiler Collection (GCC)* at: https://gcc.gnu.org/onlinedocs/gcc/Gcov.html; February 18, 2015 was the last accessed date.
+- \cite{Somenzi2003}:	Somenzi, Fabio. Debugging and Tuning, University of Colorado at Boulder, Boulder, CO, November 9, 2003. Available online at: http://www.cs.columbia.edu/~sedwards/presentations/iccad2003-somenzi.pdf; September 1, 2013 was the last accessed date. DOI: http://dx.doi.org/10.1109/ICCAD.2003.144.
 
-- \cite{AppleIncStaff2009}:		Apple Inc. staff. C++ Runtime Environment Programming Guide: Compiler Tools, Apple Inc., Cupertino, CA, October 9, 2009.
-
-- \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date, 
+- \cite{AppleIncStaff2009}:		Apple Inc. staff. C++ Runtime Environment Programming Guide: Compiler Tools, Apple Inc., Cupertino, CA, October 9, 2009. 
 
 - \cite{AppleIncStaff2006a}:	Apple Inc. staff. GCC Porting Guide: Compiler Tools, Apple Inc., Cupertino, CA, October 3, 2006.
 
-- \cite{AppleIncStaff2001a}:	Apple Inc. staff. The GNU Compiler Collection on Mac OS X, Apple Inc., Cupertino, CA, December 7, 2001. Available online from *Apple Inc: Developer Connection* at: http://developer.apple.com/tools/gcc_overview.html; March 30, 2010 was the last accessed date,
+- \cite{AppleIncStaff2001a}:	Apple Inc. staff. The GNU Compiler Collection on Mac OS X, Apple Inc., Cupertino, CA, December 7, 2001. Available online from *Apple Inc: Developer Connection* at: http://developer.apple.com/tools/gcc_overview.html; March 30, 2010 was the last accessed date.
 
 - \cite{Parlante2001}:	Parlante, N., Zelenski, J., and et al.. *Unix* Programming Tools, Stanford University, Stanford, CA, April, 2001. Available online from the *Stanford CS Education Library*, Computer Science Department, School of Engineering, Stanford University at: http://cslibrary.stanford.edu/107/UnixProgrammingTools.pdf and http://cslibrary.stanford.edu/107/; October 7, 2015 was the last accessed date.
 
