@@ -295,68 +295,11 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date, 
 
+- \cite{AppleIncStaff2006a}:	Apple Inc. staff. GCC Porting Guide: Compiler Tools, Apple Inc., Cupertino, CA, October 3, 2006.
 
+- \cite{AppleIncStaff2001a}:	Apple Inc. staff. The GNU Compiler Collection on Mac OS X, Apple Inc., Cupertino, CA, December 7, 2001. Available online from *Apple Inc: Developer Connection* at: http://developer.apple.com/tools/gcc_overview.html; March 30, 2010 was the last accessed date,
 
-
-
-
-
-
-
-
-
-
-
-@techreport{AppleIncStaff2006a,
-	Address = {Cupertino, {CA}},
-	Author = {{Apple Inc. staff}},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2014-03-30 00:11:00 +0200},
-	Institution = {Apple Inc.},
-	Keywords = {GNU Compiler Collection, GCC, compilers},
-	Month = {October 3},
-	Title = {{GCC} Porting Guide: Compiler Tools},
-	Year = {2006},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QQy4uL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9nY2MgcG9ydGluZyBndWlkZSBjb21waWxlciB0b29scy5wZGbSFwsYGVdOUy5kYXRhTxECMAAAAAACMAACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAA0T81ikgrAAAAFOa6H2djYyBwb3J0aW5nIGd1aWRlIGNvIzE0RTZCQy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU5rzH1zw1AAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAABBhcHBsZSBpbmMuIHN0YWZmABAACAAA0T972gAAABEACAAAx9eChQAAAAEAGAAU5roAFMxCABTL4wAQO/MAEDtuABA7aQACAG5NYWNpbnRvc2ggSEQ6VXNlcnM6AHpoaXlhbmc6AERvY3VtZW50czoAcmljZXJjYToAcmVmZXJlbmNlczoAYXBwbGUgaW5jLiBzdGFmZjoAZ2NjIHBvcnRpbmcgZ3VpZGUgY28jMTRFNkJDLnBkZgAOAEoAJABnAGMAYwAgAHAAbwByAHQAaQBuAGcAIABnAHUAaQBkAGUAIABjAG8AbQBwAGkAbABlAHIAIAB0AG8AbwBsAHMALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAGBVc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9nY2MgcG9ydGluZyBndWlkZSBjb21waWxlciB0b29scy5wZGYAEwABLwAAFQACAA7//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDUANkA4QMVAxcDHAMnAzADPgNCA0kDUgNXA2QDZwN5A3wDgQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAOD}}
-
-
-
-
-@techreport{AppleIncStaff2001a,
-	Address = {Cupertino, {CA}},
-	Author = {{Apple Inc. staff}},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2016-01-08 04:16:30 +0000},
-	Howpublished = {Available online from {\it Apple Inc: Developer Connection} at: \url{http://developer.apple.com/tools/gcc_overview.html}; March 30, 2010 was the last accessed date},
-	Institution = {Apple Inc.},
-	Keywords = {GNU Compiler Collection, GCC, C++},
-	Month = {December 7},
-	Title = {The {GNU} Compiler Collection on {Mac OS X}},
-	Url = {http://developer.apple.com/tools/gcc_overview.html},
-	Year = {2001},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YW8QTAAuAC4ALwByAGUAZgBlAHIAZQBuAGMAZQBzAC8AYQBwAHAAbABlACAAaQBuAGMALgAgAHMAdABhAGYAZgAv//z//AB0AGgAZQAgAGcAbgB1ACAAYwBvAG0AcABpAGwAZQByACAAYwBvAGwAbABlAGMAdABpAG8AbgAgAG8AbgAgAG0AYQBjACAAbwBzACAAeAAuAHAAZABm0hcLGBlXTlMuZGF0YU8RAkAAAAAAAkAAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAANE/NYpIKwAAABTmug4/Pz8jMTRFNkM0LnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFObEx9c8yQAAAAAAAAAAAAEAAwAACSAAAAAAAAAAAAAAAAAAAAAQYXBwbGUgaW5jLiBzdGFmZgAQAAgAANE/e9oAAAARAAgAAMfXgxkAAAABABgAFOa6ABTMQgAUy+MAEDvzABA7bgAQO2kAAgBdTWFjaW50b3NoIEhEOlVzZXJzOgB6aGl5YW5nOgBEb2N1bWVudHM6AHJpY2VyY2E6AHJlZmVyZW5jZXM6AGFwcGxlIGluYy4gc3RhZmY6AD8/PyMxNEU2QzQucGRmAAAOAFwALf/8//wAdABoAGUAIABnAG4AdQAgAGMAbwBtAHAAaQBsAGUAcgAgAGMAbwBsAGwAZQBjAHQAaQBvAG4AIABvAG4AIABtAGEAYwAgAG8AcwAgAHgALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAG1Vc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi/vv7zvv7x0aGUgZ251IGNvbXBpbGVyIGNvbGxlY3Rpb24gb24gbWFjIG9zIHgucGRmAAATAAEvAAAVAAIADv//AACABtIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNNdXRhYmxlRGF0YaMdHyBWTlNEYXRhWE5TT2JqZWN00hscIiNcTlNEaWN0aW9uYXJ5oiIgXxAPTlNLZXllZEFyY2hpdmVy0SYnVHJvb3SAAQAIABEAGgAjAC0AMgA3AEAARgBNAFUAYABnAGoAbABuAHEAcwB1AHcAhACOASkBLgE2A3oDfAOBA4wDlQOjA6cDrgO3A7wDyQPMA94D4QPmAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA+g=},
-	Bdsk-Url-1 = {http://developer.apple.com/tools/gcc_overview.html}}
-
-
-
-
-
-
-
-
-@techreport{Parlante2001,
-	Address = {Stanford, {CA}},
-	Author = {Nick Parlante and Julie Zelenski and {et al.}},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2014-03-30 00:11:00 +0200},
-	Howpublished = {Available online from the {\it Stanford {CS} Education Library}, Computer Science Department, School of Engineering, Stanford University at: \url{http://cslibrary.stanford.edu/107/UnixProgrammingTools.pdf} and \url{http://cslibrary.stanford.edu/107/}; October 7, 2015 was the last accessed date},
-	Institution = {Stanford University},
-	Keywords = {UNIX programming, UNIX, UNIX shells, UNIX shell scripts, UNIX system administration, Emacs, GDB, Make, GCC, GNU Compiler Collection},
-	Month = {April},
-	Title = {{Unix} Programming Tools},
-	Url = {http://cslibrary.stanford.edu/107/},
-	Year = {2001},
-	Bdsk-Url-1 = {http://cslibrary.stanford.edu/107/}}
+- \cite{Parlante2001}:	Parlante, N., Zelenski, J., and et al.. *Unix* Programming Tools, Stanford University, Stanford, CA, April, 2001. Available online from the *Stanford CS Education Library*, Computer Science Department, School of Engineering, Stanford University at: http://cslibrary.stanford.edu/107/UnixProgrammingTools.pdf and http://cslibrary.stanford.edu/107/; October 7, 2015 was the last accessed date.
 
 
 
