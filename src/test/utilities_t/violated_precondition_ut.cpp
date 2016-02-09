@@ -37,19 +37,18 @@
 using namespace std;
 
 violated_precondition_ut::violated_precondition_ut() {
-	cerr << "==tu	Don't instantiate the tester for violated_precondition";
-	cerr << endl;
+	printer::debug_std_err("==tu	Don't instantiate the tester for violated_precondition");
+	printer::debug_std_err("");
 }
 
 
 void violated_precondition_ut::test_violated_precondition() {
 	try{
 		printer::num_test_cases_eval();
-		cout << "==tu	Testing: violated_precondition..." << endl;
+		printer::debug_std_err("==tu	Testing: violated_precondition..." << endl;
 		throw new violated_precondition("==tu	>>	Testing: violated_precondition");
 	}catch(violated_precondition *err) {
-		cout << "==tu	==>	violated_precondition works." << endl;
+		printer::debug_std_err("==tu	==>	violated_precondition works." << endl;
 		printer::num_passed_test_cases_eval();
-		cout << endl << endl;
 	}
 }

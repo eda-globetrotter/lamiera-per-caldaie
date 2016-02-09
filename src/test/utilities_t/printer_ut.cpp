@@ -130,7 +130,7 @@ void printer_ut::test_print_fn() {
 	cout << "	Yes." << endl;
 	printer::num_passed_test_cases_eval();
 	printer::set_debugging_mode(true);
-	printer::debug_std_op("==tu		Message shall be printed.");
+	printer::debug_std_op_ln("==tu		Message shall be printed.");
 	printer::debug_std_err("==tu		Error Message shall be printed.");
 	cout << "==tu	>>	Print a message in debugging mode?";
 	printer::num_test_cases_eval();

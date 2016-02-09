@@ -50,7 +50,7 @@ file_io_ut::file_io_ut() {
  * @return - Nothing
  */
 void file_io_ut::test_file_io() {
-	printer::debug_std_op("==tu	Testing: file_io...");
+	printer::debug_std_op_ln("==tu	Testing: file_io...");
 	/**
 	 * Function to test the default constructor of the class
 	 *	file_io.
@@ -73,7 +73,7 @@ void file_io_ut::test_file_io() {
 	 */
 	test_open_io_fs();
 
-	printer::debug_std_op("");
+	printer::debug_std_op_ln("");
 }
 
 
@@ -88,10 +88,10 @@ void file_io_ut::test_file_io_constructor() {
 	// Check if file_io should not be instantiated.
 	try {
 		printer::num_test_cases_eval();
-		printer::debug_std_op("==tu	>>	Testing: default constructor.");
+		printer::debug_std_op_ln("==tu	>>	Testing: default constructor.");
 		file_io *my_file_io = new file_io();
 	}catch (violated_assertion *va_ex) {
-		printer::debug_std_op("==tu	==>	default constructor works.");
+		printer::debug_std_op_ln("==tu	==>	default constructor works.");
 		printer::num_passed_test_cases_eval();
 	}
 }
@@ -109,10 +109,10 @@ void file_io_ut::test_logging_mode() {
 	printer::debug_std_op("==tu	>>	Is the default debugging mode FALSE?");
 	printer::num_test_cases_eval();
 	if(!file_io::is_logging_mode()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Set the debugging mode to TRUE.
 	file_io::set_logging_mode(true);
@@ -120,10 +120,10 @@ void file_io_ut::test_logging_mode() {
 	printer::debug_std_op("==tu	>>	Is program in debugging mode?");
 	printer::num_test_cases_eval();
 	if(file_io::is_logging_mode()) {
-		printer::debug_std_op("			Yes.");
+		printer::debug_std_op_ln("			Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("			NO!!!");
+		printer::debug_std_op_ln("			NO!!!");
 	}
 
 	// Check if the logging mode is TRUE.
@@ -135,10 +135,10 @@ void file_io_ut::test_logging_mode() {
 	printer::debug_std_op("==tu	>>	Can logging mode be set to FALSE?");
 	printer::num_test_cases_eval();
 	if(!file_io::is_logging_mode()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("	NO!!!");
+		printer::debug_std_op_ln("	NO!!!");
 	}
 	// Set the debugging mode to TRUE again.
 	file_io::set_logging_mode(true);
@@ -158,19 +158,19 @@ void file_io_ut::test_log_filenames() {
 	printer::debug_std_op("==tu	>>	Default filename for std o/p isn't empty?");
 	printer::num_test_cases_eval();
 	if(!file_io::get_std_log_filename().empty()) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Check if default filename for standard error is empty.
 	printer::debug_std_op("==tu	>>	Default filename for std err isn't empty?");
 	printer::num_test_cases_eval();
 	if(!file_io::get_err_log_filename().empty()) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	string temp_std_op_fname = file_io::get_std_log_filename();
 	string temp_std_err_fname = file_io::get_err_log_filename();
@@ -182,19 +182,19 @@ void file_io_ut::test_log_filenames() {
 	printer::debug_std_op("==tu	>>	Default filename for std o/p is ok?");
 	printer::num_test_cases_eval();
 	if(0 == file_io::get_std_log_filename().compare(temp_std_op_fname)) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Check if default filename for standard error is acceptable.
 	printer::debug_std_op("==tu	>>	Default filename for std err is ok?");
 	printer::num_test_cases_eval();
 	if(0 == file_io::get_err_log_filename().compare(temp_std_err_fname)) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 
 
@@ -204,19 +204,19 @@ void file_io_ut::test_log_filenames() {
 	printer::debug_std_op("==tu	>>	Filename for std o/p cannot be empty?");
 	printer::num_test_cases_eval();
 	if(!file_io::get_std_log_filename().empty()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Check if filename for standard error is not empty.
 	printer::debug_std_op("==tu	>>	Filename for std err cannot be empty?");
 	printer::num_test_cases_eval();
 	if(!file_io::get_err_log_filename().empty()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 
 
@@ -228,19 +228,19 @@ void file_io_ut::test_log_filenames() {
 	printer::debug_std_op("==tu	>>	Filename for std o/p is changed correctly?");
 	printer::num_test_cases_eval();
 	if(0 == file_io::get_std_log_filename().compare(good_fname)) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Check if filename for standard error is changed correctly.
 	printer::debug_std_op("==tu	>>	Filename for std err is changed correctly?");
 	printer::num_test_cases_eval();
 	if(0 == file_io::get_err_log_filename().compare(bad_fname)) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 
 
@@ -267,19 +267,19 @@ void file_io_ut::test_open_io_fs() {
 	printer::debug_std_op("==tu	>>	o/p file stream for std o/p closed by default?");
 	printer::num_test_cases_eval();
 	if(!file_io::std_op_ofs_is_open()) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("	NO!!!");
+		printer::debug_std_op_ln("	NO!!!");
 	}
 	// Is the output file stream for standard error open?
 	printer::debug_std_op("==tu	>>	o/p file stream for std err closed by default?");
 	printer::num_test_cases_eval();
 	if(!file_io::err_op_ofs_is_open()) {
-		printer::debug_std_op("	Yes.");
+		printer::debug_std_op_ln("	Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("	NO!!!");
+		printer::debug_std_op_ln("	NO!!!");
 	}
 
 
@@ -292,19 +292,19 @@ void file_io_ut::test_open_io_fs() {
 	printer::debug_std_op("==tu	>>	o/p file stream for std o/p opened?");
 	printer::num_test_cases_eval();
 	if(file_io::std_op_ofs_is_open()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Is the output file stream for standard error open?
 	printer::debug_std_op("==tu	>>	o/p file stream for std err opened?");
 	printer::num_test_cases_eval();
 	if(file_io::err_op_ofs_is_open()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 
 
@@ -328,18 +328,18 @@ void file_io_ut::test_open_io_fs() {
 	printer::debug_std_op("==tu	>>	o/p file stream for std o/p closed?");
 	printer::num_test_cases_eval();
 	if(!file_io::std_op_ofs_is_open()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 	// Is the output file stream for standard error open?
 	printer::debug_std_op("==tu	>>	o/p file stream for std err closed?");
 	printer::num_test_cases_eval();
 	if(!file_io::err_op_ofs_is_open()) {
-		printer::debug_std_op("		Yes.");
+		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		printer::debug_std_op("		NO!!!");
+		printer::debug_std_op_ln("		NO!!!");
 	}
 }
