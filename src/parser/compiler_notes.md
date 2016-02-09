@@ -246,30 +246,27 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
-### Compiler Design Tools.
-
-- \cite{Levine2009}:	Levine, J. R. flex & bison: UNIX Text Processing Tools. O’Reilly Media, Sebastopol, CA, 2009.
-
-- \cite{Niemann20XY}:	Niemann, T. Lex & Yacc Tutorial. ePaperPress, Portland, OR.
-
-
-- \cite{Levine1992}:	Levine, J. R., Mason, T., and Brown, D. lex & yacc: UNIX Programming Tools, second ed. O’Reilly Media, Sebastopol, CA, 1992.
+### Compiler Design Tools. (5)
 
 - \cite{Preiss2004}:	Preiss, B. R. Lexical Analysis and Parsing using C++. Self-published, Waterloo, Ontario, Canada, 2004.
 
+**Flex and Bison** (2)
+- \cite{Levine2009}:	Levine, J. R. flex & bison: UNIX Text Processing Tools. O’Reilly Media, Sebastopol, CA, 2009.
+
 - \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date.
 
+**Lex and Yacc** (2)
+- \cite{Niemann20XY}:	Niemann, T. Lex & Yacc Tutorial. ePaperPress, Portland, OR.
 
-### Other Topics in Compiler Design.
+- \cite{Levine1992}:	Levine, J. R., Mason, T., and Brown, D. lex & yacc: UNIX Programming Tools, second ed. O’Reilly Media, Sebastopol, CA, 1992.
+
+
+
+### Other Topics in Compiler Design. (2)
 
 - \cite{Levine2000}:	Levine, J. R. Linkers and Loaders. Academic Press, San Diego, CA, 2000.
 
 - \cite{Banerjee1993}:	Banerjee, U. Loop Transformations for Restructuring Compilers: The Foundations. Kluwer Academic Publishers, Norwell, MA, 1993.
-
-
-
-
-
 
 
 
