@@ -112,11 +112,11 @@ using namespace std;
 
 // Start of main function...
 int main(int argc, char *argv[]) {
-	cout << "===============================================================" << endl;
-	cout << "		- START OF TEST SUITE -"<<endl;
-	cout << "===============================================================" << endl;
-	cout << "Run the automated regression test suite..."<<endl;
-	cout <<endl;
+	printer::debug_std_op_ln("===============================================================");
+	printer::debug_std_op_ln("		- START OF TEST SUITE -");
+	printer::debug_std_op_ln("===============================================================");
+	printer::debug_std_op_ln("Run the automated regression test suite...");
+	printer::debug_std_op_ln("");
 
 	
 	
@@ -191,30 +191,40 @@ int main(int argc, char *argv[]) {
 	
 	//file_io::open_io_streams();
 	
+	
+	// Dummy variable to temporarily store numbers.
+	int dummy = INT_MIN;
+	
 	// Tally up the software testing score.
-	cout << "--------------------------------------------------------" << endl;
-	cout << "		Summary of Automated Regression Testing";
-	cout << endl << endl;
-	cout << "Number of test cases: "<<printer::get_num_test_cases()<<endl;
-	cout << "Number of passed test cases: ";
-	cout << printer::get_num_passed_test_cases()<<endl;
+	printer::debug_std_op_ln("--------------------------------------------------------");
+	printer::debug_std_op_ln("		Summary of Automated Regression Testing");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op("Number of test cases: ");
+	printer::debug_std_op_ln(to_string(printer::get_num_test_cases()));
+	printer::debug_std_op("Number of passed test cases: ");
+	printer::debug_std_op_ln(to_string(printer::get_num_passed_test_cases()));
 	double results = (double) printer::get_num_passed_test_cases() / printer::get_num_test_cases();
 	results = results * 100;
-	cout << "	Success Rate: " << results << "%" << endl << endl;
+	printer::debug_std_op("	Success Rate: ");
+	printer::debug_std_op_ln(to_string(results));
+	printer::debug_std_op_ln("%");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
 	
 
-	cout << "===============================================================" << endl;
-	cout << "		- END OF TEST SUITE -"<<endl;
-	cout << "===============================================================" << endl;
+	printer::debug_std_op_ln("===============================================================");
+	printer::debug_std_op_ln("		- END OF TEST SUITE -");
+	printer::debug_std_op_ln("===============================================================");
 	
 	
-	cout << endl;
-	cout << endl;
-	cout << endl;
-	cout << "===============================================================" << endl;
-	cout << "		- Call the GLPK solver." << endl;
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("===============================================================");
+	printer::debug_std_op_ln("		- Call the GLPK solver.");
 	system("glpsol --primal -m glpk/hw4_q1.mod");
-	cout << "		Arrivederci!" << endl;
+	printer::debug_std_op_ln("		Arrivederci!");
 	
 	// End of main function...
 	return 0;

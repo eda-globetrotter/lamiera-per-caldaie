@@ -128,10 +128,16 @@ class printer {
 		// Output functions
 
 		/**
+		 * Function to print message in standard output, while
+		 * in debugging mode and creating a new line.
+		 */
+		static void debug_std_op_ln(const string &msg);
+		/**
 		 * Function to print message in standard output while
-		 * in debugging mode
+		 * in debugging mode, without creating a new line.
 		 */
 		static void debug_std_op(const string &msg);
+		
 		/**
 		 * Function to print error message in standard error
 		 * while in debugging mode

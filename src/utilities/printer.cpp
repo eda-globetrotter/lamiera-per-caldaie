@@ -146,13 +146,29 @@ void printer::set_debugging_mode(const bool &debug_mode) {
 
 /**
  * Function to print message in standard output while
- * in debugging mode
+ * in debugging mode and creating a new line.
+ * @param msg:	Message to be printed to standard output
+ * @return - Nothing.
+ */
+void printer::debug_std_op_ln(const string &msg) {
+	if(is_debugging_mode()) {
+		cout << msg << endl;
+	}
+	
+	return;
+}
+
+
+
+/**
+ * Function to print message in standard output while
+ * in debugging mode, without creating a new line.
  * @param msg:	Message to be printed to standard output
  * @return - Nothing.
  */
 void printer::debug_std_op(const string &msg) {
 	if(is_debugging_mode()) {
-		cout << msg << endl;
+		cout << msg;
 	}
 	
 	return;

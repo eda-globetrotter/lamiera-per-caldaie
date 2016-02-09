@@ -78,7 +78,7 @@ conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
  *	convert numbers to strings.
  */
 void conversion_alphanumeric_ut::test_numbers_to_strings() {
-	printer::debug_std_op("==tu	Testing: conversion_alphanumeric ...");
+	printer::debug_std_op_ln("==tu	Testing: conversion_alphanumeric ...");
 	
 	// Test the default constructor of conversion_alphanumeric.
 	test_conversion_alphanumeric_constructor();
@@ -89,7 +89,7 @@ void conversion_alphanumeric_ut::test_numbers_to_strings() {
 	// Test functions to convert floating-point numbers to strings.
 	test_floating_point_numbers_to_strings();
 	
-	printer::debug_std_op("");
+	printer::debug_std_op_ln("");
 }
 
 // -----------------------------------------------------
@@ -104,11 +104,11 @@ void conversion_alphanumeric_ut::test_conversion_alphanumeric_constructor() {
 	// Check if printer should not be instantiated.
 	try {
 		printer::num_test_cases_eval();
-		printer::debug_std_op("==tu	>>	Testing: default constructor.");
+		printer::debug_std_op_ln("==tu	>>	Testing: default constructor.");
 		conversion_alphanumeric *num_conv = new conversion_alphanumeric();
 	}
 	catch (violated_assertion *va_ex) {
-		printer::debug_std_op("==tu	==>	default constructor works.");
+		printer::debug_std_op_ln("==tu	==>	default constructor works.");
 		printer::num_passed_test_cases_eval();
 	}
 }
