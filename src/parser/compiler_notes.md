@@ -138,7 +138,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Mogensen2011}:	Mogensen, T. Æ. Introduction to Compiler Design. Undergraduate Topics in Computer Science. Springer-Verlag London, London, U.K., 2011.
 
-- \cite{Galles2005}:	Galles, D. Modern Compiler Design. Addison-Wesley, Reading, MA, 2005.
+- \cite{Galles2005}:	Galles, D. Modern Compiler Design. Addison-Wesley, Reading, MA, 2005. Also, see \cite{Galles2004}.
 
 - \cite{Grune2000}:		Grune, D., Bal, H. E., Jacobs, C. J. H., and Langendoen, K. G. Modern Compiler Design. Worldwide Series in Computer Science. John Wiley & Sons, Chichester, West Sussex, England, U.K., 2000.
 
@@ -283,11 +283,26 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{IntelCorporationStaff2015}:	Intel Corporation staff. Intel 64 and IA-32 Architectures Optimization Reference Manual. Intel Corporation, Santa Clara, CA, September 2015.
 
-- \cite{Hubert2002}:	Hubert, B. Lex and YACC primer/HOWTO. PowerDNS BV, April 20 2002.
+- \cite{Fog2014a}:		Fog, Agner. Calling Conventions: For Different {C++} Compilers and Operating Systems, Technical University of Denmark, Copenhagen, Denmark, August 7, 2014. Available online at: \url{http://www.agner.org/optimize/calling_conventions.pdf}; July 1, 2015 was the last accessed date.
 
-- \cite{Fog2014a}:		
+- \cite{Somenzi2003}:	Somenzi, Fabio. Debugging and Tuning, University of Colorado at Boulder, Boulder, {CO}, November 9, 2003. Available online at: \url{http://www.cs.columbia.edu/~sedwards/presentations/iccad2003-somenzi.pdf}; September 1, 2013 was the last accessed date. DOI: http://dx.doi.org/10.1109/ICCAD.2003.144.
 
-- \cite{Somenzi2003}:	
+- \cite{Walker2013}:	Walker, Ben. Compiler-Generated Functions in {C++}, October 30, 2013. Available online at the ``The walkerb.net Blog'': \url{http://www.walkerb.net/blog/compiler-gen-functions/}; November 2, 2013 was the last accessed date.
+
+- \cite{}:
+\cite{gcovContributors2015}
+
+@misc{gcovContributors2015,
+	Address = {Boston, {MA}},
+	Author = {{gcov contributors}},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2015-04-14 14:22:37 +0000},
+	Howpublished = {Available online from {\it Using the {GNU} Compiler Collection ({GCC})} at: \url{https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}; February 18, 2015 was the last accessed date},
+	Keywords = {test coverage},
+	Publisher = {Free Software Foundation},
+	Title = {{gcov}--a Test Coverage Program},
+	Year = {2008},
+	Bdsk-Url-1 = {https://gcc.gnu.org/onlinedocs/gcc/Gcov.html}}
 
 
 
@@ -299,6 +314,95 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 
 
+
+
+
+
+@techreport{AppleIncStaff2009,
+	Address = {Cupertino, {CA}},
+	Author = {{Apple Inc. staff}},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2014-03-30 00:11:00 +0200},
+	Institution = {Apple Inc.},
+	Keywords = {C++ runtime environment},
+	Month = {October 9},
+	Title = {C++ Runtime Environment Programming Guide: Compiler Tools},
+	Year = {2009},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QVS4uL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9jKysgcnVudGltZSBlbnZpcm9ubWVudCBwcm9ncmFtbWluZyBndWlkZSBjb21waWxlci5wZGbSFwsYGVdOUy5kYXRhTxECZgAAAAACZgACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAA0T81ikgrAAAAFOa6H2MrKyBydW50aW1lIGVudmlyb25tIzE0RTZCQi5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU5rvH1y6iAAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAABBhcHBsZSBpbmMuIHN0YWZmABAACAAA0T972gAAABEACAAAx9d08gAAAAEAGAAU5roAFMxCABTL4wAQO/MAEDtuABA7aQACAG5NYWNpbnRvc2ggSEQ6VXNlcnM6AHpoaXlhbmc6AERvY3VtZW50czoAcmljZXJjYToAcmVmZXJlbmNlczoAYXBwbGUgaW5jLiBzdGFmZjoAYysrIHJ1bnRpbWUgZW52aXJvbm0jMTRFNkJCLnBkZgAOAG4ANgBjACsAKwAgAHIAdQBuAHQAaQBtAGUAIABlAG4AdgBpAHIAbwBuAG0AZQBuAHQAIABwAHIAbwBnAHIAYQBtAG0AaQBuAGcAIABnAHUAaQBkAGUAIABjAG8AbQBwAGkAbABlAHIALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAHJVc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9jKysgcnVudGltZSBlbnZpcm9ubWVudCBwcm9ncmFtbWluZyBndWlkZSBjb21waWxlci5wZGYAEwABLwAAFQACAA7//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDmAOsA8wNdA18DZANvA3gDhgOKA5EDmgOfA6wDrwPBA8QDyQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAPL}}
+
+@techreport{Aaby2004,
+	Address = {Redmond, {WA}},
+	Author = {Aaby, Anthony A.},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2015-04-14 14:22:38 +0000},
+	Howpublished = {Available online from the web page of Ran Gal, ``Hardware, Devices, and Experiences Group,'' Microsoft Research, Microsoft Corporation at: \url{http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf}; October 9, 2014 was the last accessed date},
+	Institution = {Walla Walla College},
+	Keywords = {compilers, compiler design},
+	Month = {February 25},
+	Title = {Compiler Construction using {Flex} and {Bison}},
+	Year = {2004},
+	Bdsk-Url-1 = {http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf}}
+
+
+
+
+
+
+
+
+
+
+
+@techreport{AppleIncStaff2006a,
+	Address = {Cupertino, {CA}},
+	Author = {{Apple Inc. staff}},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2014-03-30 00:11:00 +0200},
+	Institution = {Apple Inc.},
+	Keywords = {GNU Compiler Collection, GCC, compilers},
+	Month = {October 3},
+	Title = {{GCC} Porting Guide: Compiler Tools},
+	Year = {2006},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QQy4uL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9nY2MgcG9ydGluZyBndWlkZSBjb21waWxlciB0b29scy5wZGbSFwsYGVdOUy5kYXRhTxECMAAAAAACMAACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAA0T81ikgrAAAAFOa6H2djYyBwb3J0aW5nIGd1aWRlIGNvIzE0RTZCQy5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU5rzH1zw1AAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAABBhcHBsZSBpbmMuIHN0YWZmABAACAAA0T972gAAABEACAAAx9eChQAAAAEAGAAU5roAFMxCABTL4wAQO/MAEDtuABA7aQACAG5NYWNpbnRvc2ggSEQ6VXNlcnM6AHpoaXlhbmc6AERvY3VtZW50czoAcmljZXJjYToAcmVmZXJlbmNlczoAYXBwbGUgaW5jLiBzdGFmZjoAZ2NjIHBvcnRpbmcgZ3VpZGUgY28jMTRFNkJDLnBkZgAOAEoAJABnAGMAYwAgAHAAbwByAHQAaQBuAGcAIABnAHUAaQBkAGUAIABjAG8AbQBwAGkAbABlAHIAIAB0AG8AbwBsAHMALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAGBVc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9nY2MgcG9ydGluZyBndWlkZSBjb21waWxlciB0b29scy5wZGYAEwABLwAAFQACAA7//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDUANkA4QMVAxcDHAMnAzADPgNCA0kDUgNXA2QDZwN5A3wDgQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAOD}}
+
+
+
+
+@techreport{AppleIncStaff2001a,
+	Address = {Cupertino, {CA}},
+	Author = {{Apple Inc. staff}},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2016-01-08 04:16:30 +0000},
+	Howpublished = {Available online from {\it Apple Inc: Developer Connection} at: \url{http://developer.apple.com/tools/gcc_overview.html}; March 30, 2010 was the last accessed date},
+	Institution = {Apple Inc.},
+	Keywords = {GNU Compiler Collection, GCC, C++},
+	Month = {December 7},
+	Title = {The {GNU} Compiler Collection on {Mac OS X}},
+	Url = {http://developer.apple.com/tools/gcc_overview.html},
+	Year = {2001},
+	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YW8QTAAuAC4ALwByAGUAZgBlAHIAZQBuAGMAZQBzAC8AYQBwAHAAbABlACAAaQBuAGMALgAgAHMAdABhAGYAZgAv//z//AB0AGgAZQAgAGcAbgB1ACAAYwBvAG0AcABpAGwAZQByACAAYwBvAGwAbABlAGMAdABpAG8AbgAgAG8AbgAgAG0AYQBjACAAbwBzACAAeAAuAHAAZABm0hcLGBlXTlMuZGF0YU8RAkAAAAAAAkAAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAANE/NYpIKwAAABTmug4/Pz8jMTRFNkM0LnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFObEx9c8yQAAAAAAAAAAAAEAAwAACSAAAAAAAAAAAAAAAAAAAAAQYXBwbGUgaW5jLiBzdGFmZgAQAAgAANE/e9oAAAARAAgAAMfXgxkAAAABABgAFOa6ABTMQgAUy+MAEDvzABA7bgAQO2kAAgBdTWFjaW50b3NoIEhEOlVzZXJzOgB6aGl5YW5nOgBEb2N1bWVudHM6AHJpY2VyY2E6AHJlZmVyZW5jZXM6AGFwcGxlIGluYy4gc3RhZmY6AD8/PyMxNEU2QzQucGRmAAAOAFwALf/8//wAdABoAGUAIABnAG4AdQAgAGMAbwBtAHAAaQBsAGUAcgAgAGMAbwBsAGwAZQBjAHQAaQBvAG4AIABvAG4AIABtAGEAYwAgAG8AcwAgAHgALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAG1Vc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi/vv7zvv7x0aGUgZ251IGNvbXBpbGVyIGNvbGxlY3Rpb24gb24gbWFjIG9zIHgucGRmAAATAAEvAAAVAAIADv//AACABtIbHB0eWiRjbGFzc25hbWVYJGNsYXNzZXNdTlNNdXRhYmxlRGF0YaMdHyBWTlNEYXRhWE5TT2JqZWN00hscIiNcTlNEaWN0aW9uYXJ5oiIgXxAPTlNLZXllZEFyY2hpdmVy0SYnVHJvb3SAAQAIABEAGgAjAC0AMgA3AEAARgBNAFUAYABnAGoAbABuAHEAcwB1AHcAhACOASkBLgE2A3oDfAOBA4wDlQOjA6cDrgO3A7wDyQPMA94D4QPmAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA+g=},
+	Bdsk-Url-1 = {http://developer.apple.com/tools/gcc_overview.html}}
+
+
+
+
+
+
+
+
+@techreport{Parlante2001,
+	Address = {Stanford, {CA}},
+	Author = {Nick Parlante and Julie Zelenski and {et al.}},
+	Date-Added = {2014-03-30 00:11:00 +0200},
+	Date-Modified = {2014-03-30 00:11:00 +0200},
+	Howpublished = {Available online from the {\it Stanford {CS} Education Library}, Computer Science Department, School of Engineering, Stanford University at: \url{http://cslibrary.stanford.edu/107/UnixProgrammingTools.pdf} and \url{http://cslibrary.stanford.edu/107/}; October 7, 2015 was the last accessed date},
+	Institution = {Stanford University},
+	Keywords = {UNIX programming, UNIX, UNIX shells, UNIX shell scripts, UNIX system administration, Emacs, GDB, Make, GCC, GNU Compiler Collection},
+	Month = {April},
+	Title = {{Unix} Programming Tools},
+	Url = {http://cslibrary.stanford.edu/107/},
+	Year = {2001},
+	Bdsk-Url-1 = {http://cslibrary.stanford.edu/107/}}
 
 
 
