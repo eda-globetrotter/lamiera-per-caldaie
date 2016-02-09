@@ -64,10 +64,10 @@ Other languages that I want to pass are:
 ##	Other References
 
 - \cite{Mozgovoy2010}:	Mozgovoy, M. Algorithms, Languages, Automata, and Compilers: A Practical Approach. Jones and Bartlett Publishers, Sudbury, MA, 2010.
-- \cite{Midkiff2012}:		Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
+- \cite{Midkiff2012}:	Midkiff, S. P. Automatic Parallelization: An Overview of Fundamental Compiler Techniques. Synthesis Lectures on Computer Architecture. Morgan & Claypool Publishers, San Rafael, CA, January 2012.
 - \cite{Mogensen2010}:	Mogensen, T. Æ. Basics of Compiler Design, anniversary ed. Lulu Enterprises, Copenhagen, Denmark, 2010.
-- \cite{Morgan1998}:		Morgan, R. Building an Optimizing Compiler. Butterworth-Heinemann, Burlington, MA, 1998.
+- \cite{Morgan1998}:	Morgan, R. Building an Optimizing Compiler. Butterworth-Heinemann, Burlington, MA, 1998.
 
-
+- \cite{Teufel1993}:	Teufel, B., Schmidt, S., and Teufel, T. C2 Compiler Concepts. Springer-Verlag/Wien, Vienna, Austria, 1993.
 
 
