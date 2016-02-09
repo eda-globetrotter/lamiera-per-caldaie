@@ -291,45 +291,11 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{gcovContributors2015}:	gcov contributors. gcov--A Test Coverage Program, Free Software Foundation, Boston, MA, 2008. Available online from *Using the GNU Compiler Collection (GCC)* at: https://gcc.gnu.org/onlinedocs/gcc/Gcov.html; February 18, 2015 was the last accessed date.
 
+- \cite{AppleIncStaff2009}:		Apple Inc. staff. C++ Runtime Environment Programming Guide: Compiler Tools, Apple Inc., Cupertino, CA, October 9, 2009.
+
+- \cite{Aaby2004}:		Aaby, Anthony A. Compiler Construction using *Flex* and *Bison*, Walla Walla College, Redmond, WA, February 25, 2004. Available online from the web page of Ran Gal, "Hardware, Devices, and Experiences Group," Microsoft Research, Microsoft Corporation at: http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf; October 9, 2014 was the last accessed date, 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@techreport{AppleIncStaff2009,
-	Address = {Cupertino, {CA}},
-	Author = {{Apple Inc. staff}},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2014-03-30 00:11:00 +0200},
-	Institution = {Apple Inc.},
-	Keywords = {C++ runtime environment},
-	Month = {October 9},
-	Title = {C++ Runtime Environment Programming Guide: Compiler Tools},
-	Year = {2009},
-	Bdsk-File-1 = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QVS4uL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9jKysgcnVudGltZSBlbnZpcm9ubWVudCBwcm9ncmFtbWluZyBndWlkZSBjb21waWxlci5wZGbSFwsYGVdOUy5kYXRhTxECZgAAAAACZgACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAA0T81ikgrAAAAFOa6H2MrKyBydW50aW1lIGVudmlyb25tIzE0RTZCQi5wZGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU5rvH1y6iAAAAAAAAAAAAAQADAAAJIAAAAAAAAAAAAAAAAAAAABBhcHBsZSBpbmMuIHN0YWZmABAACAAA0T972gAAABEACAAAx9d08gAAAAEAGAAU5roAFMxCABTL4wAQO/MAEDtuABA7aQACAG5NYWNpbnRvc2ggSEQ6VXNlcnM6AHpoaXlhbmc6AERvY3VtZW50czoAcmljZXJjYToAcmVmZXJlbmNlczoAYXBwbGUgaW5jLiBzdGFmZjoAYysrIHJ1bnRpbWUgZW52aXJvbm0jMTRFNkJCLnBkZgAOAG4ANgBjACsAKwAgAHIAdQBuAHQAaQBtAGUAIABlAG4AdgBpAHIAbwBuAG0AZQBuAHQAIABwAHIAbwBnAHIAYQBtAG0AaQBuAGcAIABnAHUAaQBkAGUAIABjAG8AbQBwAGkAbABlAHIALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAHJVc2Vycy96aGl5YW5nL0RvY3VtZW50cy9yaWNlcmNhL3JlZmVyZW5jZXMvYXBwbGUgaW5jLiBzdGFmZi9jKysgcnVudGltZSBlbnZpcm9ubWVudCBwcm9ncmFtbWluZyBndWlkZSBjb21waWxlci5wZGYAEwABLwAAFQACAA7//wAAgAbSGxwdHlokY2xhc3NuYW1lWCRjbGFzc2VzXU5TTXV0YWJsZURhdGGjHR8gVk5TRGF0YVhOU09iamVjdNIbHCIjXE5TRGljdGlvbmFyeaIiIF8QD05TS2V5ZWRBcmNoaXZlctEmJ1Ryb290gAEACAARABoAIwAtADIANwBAAEYATQBVAGAAZwBqAGwAbgBxAHMAdQB3AIQAjgDmAOsA8wNdA18DZANvA3gDhgOKA5EDmgOfA6wDrwPBA8QDyQAAAAAAAAIBAAAAAAAAACgAAAAAAAAAAAAAAAAAAAPL}}
-
-@techreport{Aaby2004,
-	Address = {Redmond, {WA}},
-	Author = {Aaby, Anthony A.},
-	Date-Added = {2014-03-30 00:11:00 +0200},
-	Date-Modified = {2015-04-14 14:22:38 +0000},
-	Howpublished = {Available online from the web page of Ran Gal, ``Hardware, Devices, and Experiences Group,'' Microsoft Research, Microsoft Corporation at: \url{http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf}; October 9, 2014 was the last accessed date},
-	Institution = {Walla Walla College},
-	Keywords = {compilers, compiler design},
-	Month = {February 25},
-	Title = {Compiler Construction using {Flex} and {Bison}},
-	Year = {2004},
-	Bdsk-Url-1 = {http://research.microsoft.com/en-us/um/people/rgal/ar_language/external/compiler.pdf}}
 
 
 
