@@ -65,7 +65,7 @@ using namespace std;
  */
 conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
 	printer::debug_std_err("==tu	Don't instantiate the tester for conversion_alphanumeric.");
-	printer::debug_std_err();
+	printer::debug_std_err("");
 	printer::debug_std_err("==tu	conversion_alphanumeric_ut shouldn't be instantiated!");
 	string err_msg = "==tu	Don't use conversion_alphanumeric_ut's default constructor.";
 	throw new violated_assertion(err_msg);
