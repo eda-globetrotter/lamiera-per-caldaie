@@ -661,6 +661,76 @@ Notes about software development in {\it C++}: \vspace{-0.3cm}
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Using ``Design By Contract''}
+\label{ssec:UsingDesignByContract}
+
+The ``Design By Contract'' approach shall be used in software development. This approach is also known as: ``contract programming, programming by contract, and design-by-contract programming.'' Adhere strongly to Hoare logic. \\
+
+References: \\
+Wikipedia contributors, ``Design by contract,'' in {\it Wikipedia, The Free Encyclopedia: Software design}, Wikimedia Foundation, San Francisco, CA, January 20, 2016. Available online at: \url{https://en.wikipedia.org/wiki/Design_by_contract}; last accessed on February 9, 2016. \\
+
+Wikipedia contributors, ``Hoare logic,'' in {\it Wikipedia, The Free Encyclopedia: Static program analysis}, Wikimedia Foundation, San Francisco, CA, November 8, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Hoare_logic}; last accessed on February 10, 2016. \\
+
+That is, at the start of an implementation of a ({\it C++}) function, check that its precondition(s) is (/are) met; preconditions shall be chosen to be as weak as possible. Within the implementation of the function, check if the assertions (properties that must be true during execution of the function) hold. Lastly, at the end of the implementation, check that its postcondition(s) is (/are) met; postconditions shall be chosen to be as strong as possible. \\
+
+Reference: \\
+Wikipedia contributors, ``Predicate transformer semantics,'' in {\it Wikipedia, The Free Encyclopedia: Formal methods}, Wikimedia Foundation, San Francisco, CA, November 25, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Predicate_transformer_semantics}; last accessed on February 10, 2016.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Hoare Logic for Computer Arithmetic}
+\label{sssec:HoareLogicForComputerArithmetic}
+
+Check if arithmetic and logical operations cause overflows or underflows \cite{Crowl2015,Crowl2012}. When faced with a constrained range for representing real numbers with bits in computer hardware, a constrained resolution such that a representation smaller than single-precision floating-point numbers is required, or low-cost and/or low-power electronic/computer systems that do not have floating-point arithmetic circuits, use a circuit-based implementation of fixed-point arithmetic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

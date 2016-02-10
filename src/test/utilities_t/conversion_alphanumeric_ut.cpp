@@ -44,6 +44,7 @@
 #include "conversion_alphanumeric_ut.hpp"
 
 // Import packages from the C++ STL
+#include <vector>
 /*
 #include <iostream>
 #include <string>
@@ -128,13 +129,25 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	 * Assume that the compiler being used is C++11 (and other
 	 *	C++1y) compliant.
 	 */
+
+	/**
+	 * Create a vector of strings to store results of the conversion
+	 *	from integers to strings.
+	 */
+	
 	
 	// For signed integers.
-	printer::debug_std_op_ln("==tu	Test conversion from integers to strings.");
-	printer::debug_std_op_ln("==tu	>>	Start time for to_string() function.");
-	printer::debug_std_op_ln("==tu	>>	End time for to_string() function.");
+	printer::debug_std_op_ln("==tu	Test conversion from signed integers to strings.");
+	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	for (int i=1000; i<10000; i++) {
+		to_string(i);
+	}
+	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 	
 	// For unsigned integers.
+	printer::debug_std_op_ln("==tu	Test conversion from unsigned integers to strings.");
+	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 }
 
 /**
@@ -153,6 +166,12 @@ void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
 	 */
 	
 	// For floating-point numbers.
+	printer::debug_std_op_ln("==tu	Test conversion from floating-point numbers to strings.");
+	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 	// For large floating-point numbers.
+	printer::debug_std_op_ln("==tu	Test conversion from large floating-point numbers to strings.");
+	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 }
 
