@@ -57,8 +57,12 @@ utilities_mt::utilities_mt() {
  */
 void utilities_mt::test_utilities() {
 	// Testing the utilities package
-	cout << "--------------------------------------------------------" << endl;
-	cout << "		TESTING the Utilities package" << endl << endl << endl;
+	printer::set_debugging_mode(true);
+	printer::debug_std_op_ln("--------------------------------------------------------");
+	printer::debug_std_op_ln("		TESTING the Utilities package");
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
+	printer::set_debugging_mode(false);
 	// Test the class violated_assertion.
 	violated_assertion_ut::test_violated_assertion();
 	// Test the class violated_precondition.

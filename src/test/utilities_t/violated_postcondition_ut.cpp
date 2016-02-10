@@ -37,19 +37,24 @@
 using namespace std;
 
 violated_postcondition_ut::violated_postcondition_ut() {
-	cerr << "==tu	Don't instantiate the tester for violated_postcondition";
-	cerr << endl;
+	printer::debug_std_op_ln("==tu	Don't instantiate the tester for violated_postcondition");
+	printer::debug_std_op_ln("");
 }
 
 
 void violated_postcondition_ut::test_violated_postcondition() {
+	printer::set_debugging_mode(true);
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
 	try{
 		printer::num_test_cases_eval();
-		cout << "==tu	Testing: violated_postcondition..." << endl;
-		throw new violated_postcondition("==tu	>>	Testing: violated_postcondition");
+		printer::debug_std_op_ln("==tu	Testing: violated_postcondition...");
+		throw new violated_postcondition("==tu	>>	Tested: violated_postcondition.");
 	}catch(violated_postcondition *err) {
-		cout << "==tu	==>	violated_postcondition works." << endl;
+		printer::debug_std_op_ln("==tu	==>	violated_postcondition works.");
+		printer::debug_std_op_ln("");
+		printer::debug_std_op_ln("");
 		printer::num_passed_test_cases_eval();
-		cout << endl << endl;
 	}
+	printer::set_debugging_mode(false);
 }
