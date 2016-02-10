@@ -146,14 +146,35 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	int final_int					= 10000;
 	long long int final_ll_int		= 1000000;
 	printer::debug_std_op_ln("==tu	Test conversion from signed integers to strings.");
-	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	printer::debug_std_op("==tu	>>	int_to_str(int x works?)");
+	printer::num_test_cases_eval();
 	for(int i=initial_int; i<final_int; i++) {
-		to_string(i);
+		/**
+		 * Check if the function int_to_str(int x) returns the same
+		 *	output as the to_string(int x) function from the C++ STL.
+		 */
+		if(0 != to_string(i).compare(conversion_alphanumeric::int_to_str(i))) {
+			// Test case failed for integer "i".
+			printer::debug_std_err("		NO!!!");
+			int_to_str_sgn_int_flag = false;
+		}
 	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_u_int, final_u_int], the testing of the function
+	 *	int_to_str(int x) works for the specified range.
+	 */
+	if(int_to_str_sgn_int_flag) {
+		printer::debug_std_op_ln("		Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+	
+	
+	// -------------------
 	for(long long int j=initial_ll_int; j<final_ll_int; j++) {
 		to_string(j);
 	}
-	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
+	printer::debug_std_op_ln("==tu	>>	End time for to_string() function.");
 	
 	
 	// For unsigned integers.
@@ -173,7 +194,7 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	for(unsigned int k=initial_u_int; k<final_u_int; k++) {
 		/**
 		 * Check if the function int_to_str(unsigned int x) returns the same output
-		 *	as the to_string(int x) function from the C++ STL.
+		 *	as the to_string(unsigned int x) function from the C++ STL.
 		 */
 		if(0 != to_string(k).compare(conversion_alphanumeric::int_to_str(k))) {
 			// Test case failed for integer "k".
@@ -209,7 +230,7 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	}
 	/**
 	 * If mini test cases passed for the range of integers used,
-	 *	[initial_u_int, final_u_int], the testing of the function
+	 *	[initial_ull_int, final_ull_int], the testing of the function
 	 *	int_to_str(unsigned long long int x) works for the specified
 	 *	range.
 	 */
