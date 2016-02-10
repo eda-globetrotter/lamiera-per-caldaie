@@ -97,7 +97,7 @@
 */
 
 //	Importing from the Graph/Directed module
-#include "directed_graph_edge.hpp"
+//#include "directed_graph_edge.hpp"
 
 #ifndef __DIRECTED_GRAPH_NODE_H
 #define __DIRECTED_GRAPH_NODE_H
@@ -106,18 +106,35 @@ using namespace std;
 // =========================================================
 
 // Shortcut to container of directed_graph_edge pointers.
-typedef set<directed_graph_edge*> dg_edge_set;
+//typedef set<directed_graph_edge*> dg_edge_set;
 /**
  * Shortcut to represent an iterator to the container of
  *	directed_graph_edge pointers.
- */w
-typedef set<directed_graph_edge*>::iterator dg_edge_set_p;
+ */
+//typedef set<directed_graph_edge*>::iterator dg_edge_set_p;
 /**
  * Shortcut to a pair representing an iterator to the
  *	container of directed_graph_edge pointers and a boolean
  *	flag representing the success of a set operation.
  */
-typedef pair<dg_edge_set, bool> pair_dgedgesetp_bool;
+//typedef pair<dg_edge_set, bool> pair_dgedgesetp_bool;
+
+
+
+// Shortcut to container of directed_graph_node pointers.
+typedef set<directed_graph_node*> dg_node_set;
+/**
+ * Shortcut to represent an iterator to the container of
+ *	directed_graph_node pointers.
+ */
+typedef set<directed_graph_node*>::iterator dg_node_set_p;
+/**
+ * Shortcut to a pair representing an iterator to the
+ *	container of directed_graph_node pointers and a boolean
+ *	flag representing the success of a set operation.
+ */
+typedef pair<dg_node_set, bool> pair_dgnodesetp_bool;
+
 
 // =========================================================
 
@@ -153,17 +170,18 @@ class directed_graph_node {
 	
 		// Accessor functions.
 		
+		// Function to get the destination nodes from this node.
+		dg_node_set get_destination_nodes();
+		// Function to get source nodes for this node.
+		dg_node_set get_source_nodes();
 		/**
-		 * Function to get the incoming edges from this node.
+		 * Function to get neighboring nodes (or "incident nodes").
+		 * This effectively determines the incident edges of this
+		 *	node, by performing a union operation on the set of
+		 *	destination and source nodes.
 		 */
-		dg_edge_set get_incoming_edges();
-		/**
-		 * Function to get the outgoing edges from this node.
-		 */
-		dg_edge_set get_outgoing_edges();
-		// Function to get incident edges.
-		dg_edge_set get_incident_edges();
-		// Function to determine if node v is adjacent to this node.
+		dg_node_set get_neighboring_nodes();
+		// Function to determine if node v is a neighbor of this node.
 		bool is_adjacent_to(const directed_graph_node &v);
 		// Function to get the ID of the node.
 		unsigned long long int get_node_ID();
@@ -176,15 +194,17 @@ class directed_graph_node {
 		void set_node_ID(const unsigned long long int &temp_ID);
 		
 		/**
-		 * Function to add a set of incoming edges to the current
-		 *	set of incoming edges.
+		 * Function to add a set of source nodes to the current
+		 *	set of source nodes.
+		 * Effectively, I am adding an incoming edge.
 		 */
-		void add_set_of_incoming_edges(const dg_edge_set &set_incoming_links);
+		void add_set_of_incoming_edges(const dg_node_set &set_incoming_edges);
 		/**
-		 * Function to add a set of outgoing edges to the current
-		 *	set of outgoing edges.
+		 * Function to add a set of destination nodes to the current
+		 *	set of destination nodes.
+		 * Effectively, I am adding an outgoing edge.
 		 */
-		void add_set_of_outgoing_edges(const dg_edge_set &set_outgoing_links);
+		void add_set_of_destination_nodes(const dg_node_set &set_destination_nodes);
 		/**
 		 * Function to add an incoming edge to the current set of
 		 *	incoming edges.
@@ -245,10 +265,10 @@ class directed_graph_node {
 //		bool logic_function;
 		// Index (as an integer) of the node.
 		unsigned long long int node_ID;
-		// Set of outgoing edges
-		dg_edge_set outgoing_edges;
-		// Set of incoming edges
-		dg_edge_set incoming_edges;
+		// Set of destination nodes.
+		dg_node_set destination_nodes;
+		// Set of source nodes.
+		dg_node_set source_nodes;
 		
 		
 		// -------------------------------------------------------

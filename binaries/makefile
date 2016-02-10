@@ -257,7 +257,7 @@ test:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Graph Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
+#	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
 	@echo === Parsers Directory
 	@echo === Test/Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)

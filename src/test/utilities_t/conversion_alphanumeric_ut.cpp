@@ -153,22 +153,37 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	
 	
 	// For unsigned integers.
-/*
+
 	unsigned int initial_u_int				= 1000;
 	unsigned long long int initial_ull_int	= 1000;
 	unsigned int final_u_int				= 10000;
 	unsigned long long int final_ull_int	= 100000000;
-*/
+/*
 	unsigned int initial_u_int				= 1000;
 	unsigned long long int initial_ull_int	= 1000;
 	unsigned int final_u_int				= 1001;
 	unsigned long long int final_ull_int	= 1001;
-
+*/
 	printer::debug_std_op_ln("==tu	Test conversion from unsigned integers to strings.");
 	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	printer::debug_std_op("==tu	>>	int_to_str(int x) works?");
+	printer::num_test_cases_eval();
 	for(unsigned int k=initial_u_int; k<final_u_int; k++) {
-		to_string(k);
+		/**
+		 * Check if the function int_to_str(int x) returns the same output
+		 *	as the to_string(int x) function from the C++ STL.
+		 */
+		if(0 != to_string(k).compare(conversion_alphanumeric::int_to_str(k))) {
+			// Test case failed for integer "k".
+			printer::debug_std_err("	NO!!!");
+		}
 	}
+	printer::debug_std_op_ln("	Yes.");
+	/**
+	 * Test case passed for the range of integers used:
+	 *	[initial_u_int, final_u_int].
+	 */
+	printer::num_passed_test_cases_eval();
 	for(unsigned long long int m=initial_ull_int; m<final_ull_int; m++) {
 		to_string(m);
 	}

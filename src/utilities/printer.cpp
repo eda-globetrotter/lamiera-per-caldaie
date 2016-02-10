@@ -131,9 +131,9 @@ void printer::set_debugging_mode(const bool &debug_mode) {
 	is_debugging = debug_mode;
 	
 	if(is_debugging_mode()) {
-		cout << "==u	In the debugging mode" << endl;
+		cout << "==u	In the debugging mode." << endl;
 	}else{
-		cout << "==u	Not in the debugging mode" << endl;
+		cout << "==u	Not in the debugging mode." << endl;
 	}
 	
 	return;
