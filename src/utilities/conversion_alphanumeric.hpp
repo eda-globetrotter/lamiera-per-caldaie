@@ -265,14 +265,14 @@ class conversion_alphanumeric {
 		
 		// Define headers for functions to convert numbers to strings.
 	
-		// === Signed integers
+		// === Signed integers.
 		// Function to convert a signed integer to a string.
 		static string int_to_str(int an_int);
 		
 		// Function to convert a large signed integer to a string.
 		static string int_to_str(long long int an_int);
 		
-		// === Unsigned integers
+		// === Unsigned integers.
 		// Function to convert an unsigned integer to a string.
 		static string int_to_str(unsigned int an_int);
 		
