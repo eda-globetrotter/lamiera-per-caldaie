@@ -257,7 +257,7 @@ test:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Graph Directory
-#	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
 	@echo === Parsers Directory
 	@echo === Test/Utilities Directory
 	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
@@ -270,7 +270,7 @@ test:
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
-	$(EXECUTABLE) $(BENCHMARKS)$(STACK1)	$(OPRESULTS)
+	$(TIME) $(EXECUTABLE) $(BENCHMARKS)$(STACK1)	$(OPRESULTS)
 	@echo
 	@echo
 	@echo

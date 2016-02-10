@@ -137,16 +137,41 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	
 	
 	// For signed integers.
+	int initial_int					= -1000;
+	long long int initial_ll_int	= -100000;
+	int final_int					= 10000;
+	long long int final_ll_int		= 1000000;
 	printer::debug_std_op_ln("==tu	Test conversion from signed integers to strings.");
 	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
-	for (int i=1000; i<10000; i++) {
+	for(int i=initial_int; i<final_int; i++) {
 		to_string(i);
+	}
+	for(long long int j=initial_ll_int; j<final_ll_int; j++) {
+		to_string(j);
 	}
 	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 	
+	
 	// For unsigned integers.
+/*
+	unsigned int initial_u_int				= 1000;
+	unsigned long long int initial_ull_int	= 1000;
+	unsigned int final_u_int				= 10000;
+	unsigned long long int final_ull_int	= 100000000;
+*/
+	unsigned int initial_u_int				= 1000;
+	unsigned long long int initial_ull_int	= 1000;
+	unsigned int final_u_int				= 1001;
+	unsigned long long int final_ull_int	= 1001;
+
 	printer::debug_std_op_ln("==tu	Test conversion from unsigned integers to strings.");
 	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+	for(unsigned int k=initial_u_int; k<final_u_int; k++) {
+		to_string(k);
+	}
+	for(unsigned long long int m=initial_ull_int; m<final_ull_int; m++) {
+		to_string(m);
+	}
 	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 }
 

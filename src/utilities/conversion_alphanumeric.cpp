@@ -29,16 +29,17 @@ conversion_alphanumeric::conversion_alphanumeric() {
 /**
  * Functions to convert numbers to strings.
  *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
+ * Categories of numbers are:
+ *	=>	integers:
+ *		>>	signed integers:
+ *				> int
+ *				> long long int
+ *		>>	unsigned integers:
+ *				> unsigned int
+ *				> unsigned long long int
+ *	=>	floating-point numbers:
+ *		>>	double
+ *		>>	long double
  */
 
 
