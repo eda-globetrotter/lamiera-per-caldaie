@@ -44,7 +44,6 @@
 #include "conversion_alphanumeric_ut.hpp"
 
 // Import packages from the C++ STL
-#include <vector>
 /*
 #include <iostream>
 #include <string>
@@ -130,12 +129,6 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	 *	C++1y) compliant.
 	 */
 
-	/**
-	 * Create a vector of strings to store results of the conversion
-	 *	from integers to strings.
-	 */
-	
-	
 	// For signed integers.
 	int initial_int					= -1000;
 	long long int initial_ll_int	= -100000;
@@ -154,6 +147,13 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	
 	// For unsigned integers.
 
+	/**
+	 * Flag to indicate if set of test cases is successfully passed.
+	 * If flag is false, at least one test case failed.
+	 * If flag is true, all the test case passed.
+	 */
+	bool int_to_str_int_flag = true;
+
 	unsigned int initial_u_int				= 1000;
 	unsigned long long int initial_ull_int	= 1000;
 	unsigned int final_u_int				= 10000;
@@ -165,7 +165,7 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	unsigned long long int final_ull_int	= 1001;
 */
 	printer::debug_std_op_ln("==tu	Test conversion from unsigned integers to strings.");
-	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
+//	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
 	printer::debug_std_op("==tu	>>	int_to_str(int x) works?");
 	printer::num_test_cases_eval();
 	for(unsigned int k=initial_u_int; k<final_u_int; k++) {
@@ -175,19 +175,23 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 		 */
 		if(0 != to_string(k).compare(conversion_alphanumeric::int_to_str(k))) {
 			// Test case failed for integer "k".
-			printer::debug_std_err("	NO!!!");
+			printer::debug_std_err("			NO!!!");
+			int_to_str_int_flag = false;
 		}
 	}
-	printer::debug_std_op_ln("	Yes.");
 	/**
-	 * Test case passed for the range of integers used:
+	 * If test cases passed for the range of integers used:
 	 *	[initial_u_int, final_u_int].
 	 */
-	printer::num_passed_test_cases_eval();
+	if(int_to_str_int_flag) {
+		printer::debug_std_op_ln("			Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+
 	for(unsigned long long int m=initial_ull_int; m<final_ull_int; m++) {
 		to_string(m);
 	}
-	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
+//	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
 }
 
 /**
