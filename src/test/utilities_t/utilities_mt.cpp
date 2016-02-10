@@ -43,8 +43,8 @@
  * Do NOT allow people to use it.
  */
 utilities_mt::utilities_mt() {
-	cerr << "==tm	Don't instantiate utilities_mt!";
-	cerr << endl;
+	printer::debug_std_err("==tm	Don't instantiate utilities_mt!");
+	printer::debug_std_err("");
 }
 
 

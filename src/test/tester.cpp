@@ -112,12 +112,14 @@ using namespace std;
 
 // Start of main function...
 int main(int argc, char *argv[]) {
+	printer::set_debugging_mode(true);
 	printer::debug_std_op_ln("===============================================================");
 	printer::debug_std_op_ln("		- START OF TEST SUITE -");
 	printer::debug_std_op_ln("===============================================================");
 	printer::debug_std_op_ln("Run the automated regression test suite...");
 	printer::debug_std_op_ln("");
-
+	// Switch off debugging mode for testing the Utilities module.
+	printer::set_debugging_mode(false);
 	
 	
 	
@@ -180,7 +182,8 @@ int main(int argc, char *argv[]) {
 	
 	// Testing the utilities package
 	utilities_mt::test_utilities();
-	
+	// Switch on debugging mode to test other modules.
+	printer::set_debugging_mode(true);
 	
 	
 	// Testing the graph package

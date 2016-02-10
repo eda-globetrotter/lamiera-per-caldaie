@@ -36,8 +36,8 @@
 
 // Default constructor of the unit test for the class file_io
 file_io_ut::file_io_ut() {
-	cerr << "==tu	Don't instantiate the tester for file_io";
-	cerr << endl;
+	printer::debug_std_err("==tu	Don't instantiate the tester for file_io");
+	printer::debug_std_err("");
 	string err_msg = "==tu	Don't use file_io's default constructor";
 	throw new violated_assertion(err_msg);
 }
@@ -50,6 +50,7 @@ file_io_ut::file_io_ut() {
  * @return - Nothing
  */
 void file_io_ut::test_file_io() {
+	printer::set_debugging_mode(true);
 	printer::debug_std_op_ln("==tu	Testing: file_io...");
 	/**
 	 * Function to test the default constructor of the class
@@ -74,6 +75,7 @@ void file_io_ut::test_file_io() {
 	test_open_io_fs();
 
 	printer::debug_std_op_ln("");
+	printer::set_debugging_mode(false);
 }
 
 

@@ -37,8 +37,8 @@
 using namespace std;
 
 violated_precondition_ut::violated_precondition_ut() {
-	printer::debug_std_op_ln("==tu	Don't instantiate the tester for violated_precondition");
-	printer::debug_std_op_ln("");
+	printer::debug_std_err("==tu	Don't instantiate the tester for violated_precondition");
+	printer::debug_std_err("");
 }
 
 

@@ -51,5 +51,5 @@ violated_postcondition::violated_postcondition(string error_message) {
 }
 
 void violated_postcondition::print_err_msg() {
-	cerr << "==u	A postcondition has been violated" << endl;
+	cerr << "==u	A postcondition has been violated." << endl;
 }

@@ -78,6 +78,7 @@ conversion_alphanumeric_ut::conversion_alphanumeric_ut() {
  *	convert numbers to strings.
  */
 void conversion_alphanumeric_ut::test_numbers_to_strings() {
+	printer::set_debugging_mode(true);
 	printer::debug_std_op_ln("==tu	Testing: conversion_alphanumeric ...");
 	
 	// Test the default constructor of conversion_alphanumeric.
@@ -90,6 +91,7 @@ void conversion_alphanumeric_ut::test_numbers_to_strings() {
 	test_floating_point_numbers_to_strings();
 	
 	printer::debug_std_op_ln("");
+	printer::set_debugging_mode(false);
 }
 
 // -----------------------------------------------------
@@ -128,7 +130,9 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	 */
 	
 	// For signed integers.
-	
+	printer::debug_std_op_ln("==tu	Test conversion from integers to strings.");
+	printer::debug_std_op_ln("==tu	>>	Start time for to_string() function.");
+	printer::debug_std_op_ln("==tu	>>	End time for to_string() function.");
 	
 	// For unsigned integers.
 }

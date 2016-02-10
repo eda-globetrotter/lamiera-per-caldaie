@@ -51,5 +51,5 @@ violated_precondition::violated_precondition(string error_message) {
 }
 
 void violated_precondition::print_err_msg() {
-	cerr << "==u	A precondition has been violated" << endl;
+	cerr << "==u	A precondition has been violated." << endl;
 }

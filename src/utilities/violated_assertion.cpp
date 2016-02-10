@@ -51,5 +51,5 @@ violated_assertion::violated_assertion(string error_message) {
 }
 
 void violated_assertion::print_err_msg() {
-	cerr << "==u	An assertion has been violated" << endl;
+	cerr << "==u	An assertion has been violated." << endl;
 }

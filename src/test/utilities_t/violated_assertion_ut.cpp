@@ -37,8 +37,8 @@
 using namespace std;
 
 violated_assertion_ut::violated_assertion_ut() {
-	printer::debug_std_op_ln("==tu	Don't instantiate the tester for violated_assertion");
-	printer::debug_std_op_ln("");
+	printer::debug_std_err("==tu	Don't instantiate the tester for violated_assertion");
+	printer::debug_std_err("");
 }
 
 

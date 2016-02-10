@@ -37,8 +37,8 @@ using namespace std;
 
 // Default constructor of the unit test for the class printer
 printer_ut::printer_ut() {
-	cerr << "==tu	Don't instantiate the tester for printer.";
-	cerr << endl;
+	printer::debug_std_err("==tu	Don't instantiate the tester for printer.");
+	printer::debug_std_err("");
 	string err_msg = "==tu	Don't use printer_ut's default constructor.";
 	throw new violated_assertion(err_msg);
 }
@@ -47,7 +47,8 @@ printer_ut::printer_ut() {
 
 // Function to test the constructor and functions of printer
 void printer_ut::test_printer() {
-	cout << "==tu	Testing: printer..." << endl;
+	printer::set_debugging_mode(true);
+	printer::debug_std_op_ln("==tu	Testing: printer...");
 	
 	//	Test the default and standard constructors of printer.
 	test_printer_constructor();
@@ -58,7 +59,8 @@ void printer_ut::test_printer() {
 	// Test the output print functions
 	test_print_fn();
 	
-	cout << endl;
+	printer::debug_std_op_ln("");
+	printer::set_debugging_mode(false);
 }
 
 
@@ -73,11 +75,11 @@ void printer_ut::test_printer_constructor() {
 	// Check if printer should not be instantiated.
 	try {
 		printer::num_test_cases_eval();
-		cout << "==tu	>>	Testing: default constructor." << endl;
+		printer::debug_std_op_ln("==tu	>>	Testing: default constructor.");
 		printer *my_printer = new printer();
 	}
 	catch (violated_assertion *va_ex) {
-		cout << "==tu	==>	default constructor works." << endl;
+		printer::debug_std_op_ln("==tu	==>	default constructor works.");
 		printer::num_passed_test_cases_eval();
 	}
 }
@@ -91,25 +93,29 @@ void printer_ut::test_printer_constructor() {
  * @return - Nothing.
  */
 void printer_ut::test_debugging_mode() {
+	printer::set_debugging_mode(false);
 	// Check if the default debugging mode is FALSE.
-	cout << "==tu	>>	Is the default debugging mode FALSE?";
+//	printer::debug_std_op("==tu	>>	Is the default debugging mode FALSE?");
+cout << "==tu	>>	Is the default debugging mode FALSE?";
 	printer::num_test_cases_eval();
 	if(!printer::is_debugging_mode()) {
-		cout << "		Yes." << endl;
+//		printer::debug_std_op_ln("		Yes.");
+cout << "		Yes." << endl;
 		printer::num_passed_test_cases_eval();
 	}else{
-		cout << "		NO!!!" << endl;
+//		printer::debug_std_op_ln("		NO!!!");
+cout << "		NO!!!" << endl;
 	}
 	// Set the debugging mode to TRUE.
 	printer::set_debugging_mode(true);
 	// Check if the debugging mode is now set to TRUE.
-	cout << "==tu	>>	Is program in debugging mode?";
+	printer::debug_std_op("==tu	>>	Is program in debugging mode?");
 	printer::num_test_cases_eval();
 	if(printer::is_debugging_mode()) {
-		cout << "			Yes." << endl;
+		printer::debug_std_op_ln("			Yes.");
 		printer::num_passed_test_cases_eval();
 	}else{
-		cout << "			NO!!!" << endl;
+		printer::debug_std_op_ln("			NO!!!");
 	}
 }
 
@@ -123,17 +129,18 @@ void printer_ut::test_debugging_mode() {
  */
 void printer_ut::test_print_fn() {
 	printer::set_debugging_mode(false);
-	cout << "==tu	>>	Print message outside debugging mode fail?";
+	printer::debug_std_op("==tu	>>	PRINT MESSAGE outside DEBUGGING mode FAIL?");
 	printer::num_test_cases_eval();
 	printer::debug_std_op("Message shall not be printed.");
 	printer::debug_std_err("Error Message shall not be printed.");
-	cout << "	Yes." << endl;
+	printer::debug_std_op_ln("	Yes.");
 	printer::num_passed_test_cases_eval();
 	printer::set_debugging_mode(true);
+printer::debug_std_op_ln("==tu	>>	Print message outside debugging mode fail?	Yes.");
 	printer::debug_std_op_ln("==tu		Message shall be printed.");
 	printer::debug_std_err("==tu		Error Message shall be printed.");
-	cout << "==tu	>>	Print a message in debugging mode?";
+	printer::debug_std_op("==tu	>>	Print a message in debugging mode?");
 	printer::num_test_cases_eval();
-	cout << "		Yes." << endl;
+	printer::debug_std_op_ln("		Yes.");
 	printer::num_passed_test_cases_eval();
 }

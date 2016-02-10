@@ -37,8 +37,8 @@
 using namespace std;
 
 violated_postcondition_ut::violated_postcondition_ut() {
-	printer::debug_std_op_ln("==tu	Don't instantiate the tester for violated_postcondition");
-	printer::debug_std_op_ln("");
+	printer::debug_std_err("==tu	Don't instantiate the tester for violated_postcondition");
+	printer::debug_std_err("");
 }
 
 
