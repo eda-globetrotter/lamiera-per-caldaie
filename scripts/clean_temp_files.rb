@@ -110,8 +110,8 @@ def remove_temp(s_dir, file_ext)
 			# Is this file a temporary backup file?
 			if temp_i[-1].chr.eql?("~")
 				# Delete the file
-				File.delete(temp_i)
 				system("git rm -f #{temp_i}")
+				File.delete(temp_i)
 			else
 				# For each type of file extension
 				for f_ext in file_ext

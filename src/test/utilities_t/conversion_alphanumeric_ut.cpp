@@ -280,8 +280,16 @@ void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
 	 * If flag is false, at least one test case failed.
 	 * If flag is true, all the test case passed.
 	 */
-	bool int_to_str_sgn_int_flag	= true;
-	bool int_to_str_sgn_llint_flag	= true;
+	bool dbl_to_str_flag		= true;
+	bool long_dbl_to_str_flag	= true;
+	/**
+	 * Limits on the intervals for testing the floating-point
+	 *	numbers.
+	 */
+	int initial_dbl					= -1;
+	long double initial_long_dbl	= -100000;
+	int final_dbl					= 10000;
+	long double final_long_dbl		= 1000000;
 	
 	// For floating-point numbers.
 	printer::debug_std_op_ln("==tu	Test conversion from floating-point numbers to strings.");
