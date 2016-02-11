@@ -4,7 +4,8 @@
  *
  * conversion_alphanumeric_ut class:
  * Class that tests the conversion_alphanumeric class.
- * The constructors and functions of the conversion_alphanumeric class shall be tested.
+ * The constructors and functions of the conversion_alphanumeric class
+ *	shall be tested.
  * 
  *
  *
@@ -146,7 +147,7 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	int final_int					= 10000;
 	long long int final_ll_int		= 1000000;
 	printer::debug_std_op_ln("==tu	Test conversion from signed integers to strings.");
-	printer::debug_std_op("==tu	>>	int_to_str(int x works?)");
+	printer::debug_std_op("==tu	>>	int_to_str(int x) works?");
 	printer::num_test_cases_eval();
 	for(int i=initial_int; i<final_int; i++) {
 		/**
@@ -193,8 +194,9 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 	printer::num_test_cases_eval();
 	for(unsigned int k=initial_u_int; k<final_u_int; k++) {
 		/**
-		 * Check if the function int_to_str(unsigned int x) returns the same output
-		 *	as the to_string(unsigned int x) function from the C++ STL.
+		 * Check if the function int_to_str(unsigned int x) returns
+		 *	the same output as the to_string(unsigned int x) function
+		 *	from the C++ STL.
 		 */
 		if(0 != to_string(k).compare(conversion_alphanumeric::int_to_str(k))) {
 			// Test case failed for integer "k".
