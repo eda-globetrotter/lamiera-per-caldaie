@@ -1,7 +1,7 @@
 # lamiera-per-caldaie
 
 
-*C++* boilerplate code for my open source software projects. It will include implementations of common data structures and algorithms, including those for electronic design automation (such as AND-Inverter Graphs and Binary Decision Diagrams)
+*C++1y* boilerplate code for my open source software projects. It will include implementations of common data structures and algorithms, including those for electronic design automation (such as AND-Inverter Graphs and Binary Decision Diagrams)
 
 
 

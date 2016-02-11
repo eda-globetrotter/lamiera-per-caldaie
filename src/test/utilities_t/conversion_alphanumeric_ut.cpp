@@ -156,27 +156,45 @@ void conversion_alphanumeric_ut::test_integers_to_strings() {
 		 */
 		if(0 != to_string(i).compare(conversion_alphanumeric::int_to_str(i))) {
 			// Test case failed for integer "i".
-			printer::debug_std_err("		NO!!!");
+			printer::debug_std_err("			NO!!!");
 			int_to_str_sgn_int_flag = false;
 		}
 	}
 	/**
 	 * If mini test cases passed for the range of integers used,
-	 *	[initial_u_int, final_u_int], the testing of the function
+	 *	[initial_int, final_int], the testing of the function
 	 *	int_to_str(int x) works for the specified range.
 	 */
 	if(int_to_str_sgn_int_flag) {
+		printer::debug_std_op_ln("			Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+
+	printer::debug_std_op("==tu	>>	int_to_str(long long int x) works?");
+	printer::num_test_cases_eval();
+	for(long long int j=initial_ll_int; j<final_ll_int; j++) {
+		/**
+		 * Check if the function int_to_str(long long int x) returns
+		 *	the same output as the to_string(long long int x)
+		 *	function from the C++ STL.
+		 */
+		if(0 != to_string(j).compare(conversion_alphanumeric::int_to_str(j))) {
+			// Test case failed for integer "j".
+			printer::debug_std_err("		NO!!!");
+			int_to_str_sgn_llint_flag = false;
+		}
+	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_ll_int, final_ll_int], the testing of the function
+	 *	int_to_str(long long int x) works for the specified range.
+	 */
+	if(int_to_str_sgn_llint_flag) {
 		printer::debug_std_op_ln("		Yes.");
 		printer::num_passed_test_cases_eval();
 	}
 	
-	
-	// -------------------
-	for(long long int j=initial_ll_int; j<final_ll_int; j++) {
-		to_string(j);
-	}
-	printer::debug_std_op_ln("==tu	>>	End time for to_string() function.");
-	
+	// -----------------------------------------------------------
 	
 	// For unsigned integers.
 	unsigned int initial_u_int				= 1000;
@@ -256,6 +274,14 @@ void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
 	 * Assume that the compiler being used is C++11 (and other
 	 *	C++1y) compliant.
 	 */
+
+	/**
+	 * Flag to indicate if set of test cases is successfully passed.
+	 * If flag is false, at least one test case failed.
+	 * If flag is true, all the test case passed.
+	 */
+	bool int_to_str_sgn_int_flag	= true;
+	bool int_to_str_sgn_llint_flag	= true;
 	
 	// For floating-point numbers.
 	printer::debug_std_op_ln("==tu	Test conversion from floating-point numbers to strings.");
