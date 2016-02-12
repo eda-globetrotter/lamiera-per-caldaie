@@ -73,19 +73,52 @@ int main(int argc, char *argv[]) {
 	cout << "===========================================" << endl;
 	
 	/**
-	 * Playing with "compound assignments"
+	 * Playing with "compound assignments".
+	 * Operators for compound assignments: +=, -=, *=, /=, %=, >>=,
+	 *	<<=, &=, ^=, |=
+	 * Examples:
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
 	 *
 	 *
 	 * References:
 	 *	\cite[pp. 22-23]{Soulie2007}.
 	 */
 	int test_int = 23;
-	cout << "	test_int is	:::" << test_int << "===" << endl;
-	test_int+=7;
-	cout << "	test_int+=7 is			:::" << test_int << "===" << endl;
-	test_int =+4;
-	cout << "	test_int =+4 is	:::" << test_int << "===" << endl;
-	cout << "	After test_int=+4:	:::" << test_int << "===" << endl;
+	cout << "	test_int is		:::" << test_int << "===" << endl;
+	test_int += 7;		// test_int = test_int + 7;
+	cout << "	test_int += 7 is	:::" << test_int << "===" << endl;
+	/**
+	 * "=+" is not an operator used for compound assignment.
+	 * "=+ number_i" refers to an assignment, via "=", or a positive
+	 *	number named "number_i".
+	 */ 
+	test_int =+ 4;		// test_int = test_int + 4;
+	cout << "	test_int =+ 4 is	:::" << test_int << "===" << endl;
+	/**
+	 * "=-" is not an operator used for compound assignment.
+	 * "=- number_i" refers to an assignment, via "=", or a negative
+	 *	number denoted by "-number_i".
+	 */ 
+	test_int =- 9;		// test_int = test_int - 9;
+	cout << "	test_int =- 9 is	:::" << test_int << "===" << endl;
+	test_int -= 43;		// test_int = test_int - 43;
+	cout << "	test_int -= 43 is	:::" << test_int << "===" << endl;
+	
+	test_int += 20;
+	cout << "	test_int += 20 is	:::" << test_int << "===" << endl;
+	test_int =+ -14;	// test_int = -14;
+	cout << "	test_int =+ -14 is	:::" << test_int << "===" << endl;
+	test_int = +97;		// test_int = 97;
+	cout << "	test_int = +97 is	:::" << test_int << "===" << endl;
+	
 	
 	
 	// End of main function...
