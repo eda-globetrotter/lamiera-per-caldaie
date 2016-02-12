@@ -504,6 +504,31 @@ fcreturn:
 
 
 
+#####################################################################
+#	Target for testing "for loop" implementations
+#####################################################################
+# Build and run C++ program to test "for loop" implementations.
+forloop:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)test_for_loops.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "You daft compiler, stop whinging!!!"
+	@echo "-- Mr. David Knight"
+	@echo
+	@echo "It compiles. Ship it!"
+	@echo
+	@echo
 
 
 
@@ -525,12 +550,9 @@ fcreturn:
 
 
 
-
-
-
-
-
-
+########################################################################
+########################################################################
+########################################################################
 
 
 
