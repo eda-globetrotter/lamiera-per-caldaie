@@ -77,15 +77,10 @@ int main(int argc, char *argv[]) {
 	 * Operators for compound assignments: +=, -=, *=, /=, %=, >>=,
 	 *	<<=, &=, ^=, |=
 	 * Examples:
-	 *
-	 *
-	 *
-	 *
-	 *
-	 *
-	 *
-	 *
-	 *
+	 *	value += increase; "is equivalent to" value = value + increase;
+	 *	a -= 5; "is equivalent to" a = a - 5;
+	 *	a /= b; "is equivalent to" a = a / b;
+	 *	price *= units + 1; "is equivalent to" price = price * (units + 1);
 	 *
 	 *
 	 * References:
@@ -118,6 +113,28 @@ int main(int argc, char *argv[]) {
 	cout << "	test_int =+ -14 is	:::" << test_int << "===" << endl;
 	test_int = +97;		// test_int = 97;
 	cout << "	test_int = +97 is	:::" << test_int << "===" << endl;
+	
+	cout << "===========================================" << endl;
+	
+	int incre_decre_operations = 47;
+	incre_decre_operations++;
+	cout << "	incre_decre_operations++:::" << incre_decre_operations;
+	cout << "===" << endl;
+	++incre_decre_operations;
+	cout << "	++incre_decre_operations:::" << incre_decre_operations;
+	cout << "===" << endl;
+	int temp_num =++incre_decre_operations;
+	cout << "	temp_num = ++incre_decre_operations:::" << temp_num;
+	cout << "===" << endl;
+	cout << "	incre_decre_operations:::" << incre_decre_operations;
+	cout << "===" << endl;
+	temp_num =incre_decre_operations++;
+	cout << "	temp_num = incre_decre_operations++:::" << temp_num;
+	cout << "===" << endl;
+	cout << "	incre_decre_operations:::" << incre_decre_operations;
+	cout << "===" << endl;
+	
+	
 	
 	
 	
