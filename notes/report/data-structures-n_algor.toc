@@ -23,6 +23,8 @@
 \contentsline {section}{\numberline {6.3}Additional Notes About C++}{19}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{20}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Software Development in C++}{20}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{23}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{23}{subsubsection.6.4.1.1}
 \contentsline {chapter}{\numberline {7}Questions}{24}{chapter.7}
 \contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{24}{section.7.1}
 \contentsline {section}{\numberline {7.2}Resolved C++ Questions}{24}{section.7.2}

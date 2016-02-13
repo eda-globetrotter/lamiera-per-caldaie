@@ -286,18 +286,62 @@ void conversion_alphanumeric_ut::test_floating_point_numbers_to_strings() {
 	 * Limits on the intervals for testing the floating-point
 	 *	numbers.
 	 */
-	int initial_dbl					= -1;
-	long double initial_long_dbl	= -100000;
-	int final_dbl					= 10000;
-	long double final_long_dbl		= 1000000;
+	double initial_dbl				= -7.2345;
+	long double initial_long_dbl	= -302.3435459;
+	double final_dbl				= 34.4575;
+	long double final_long_dbl		= 1704.21398654;
 	
 	// For floating-point numbers.
 	printer::debug_std_op_ln("==tu	Test conversion from floating-point numbers to strings.");
-	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
-	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
+	printer::debug_std_op("==tu	>>	floating_pt_to_str(double x) works?");
+	printer::num_test_cases_eval();
+	for(double i=initial_dbl; i<final_dbl; i=i+3.1236459) {
+		/**
+		 * Check if the function int_to_str(double x) returns the
+		 *	same output as the to_string(double x) function from the
+		 *	C++ STL.
+		 */
+		if(0 != to_string(i).compare(conversion_alphanumeric::floating_pt_to_str(i))) {
+			// Test case failed for integer "i".
+			printer::debug_std_err("		NO!!!");
+			dbl_to_str_flag = false;
+		}
+	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_dbl, final_dbl], the testing of the function
+	 *	int_to_str(double x) works for the specified range.
+	 */
+	if(dbl_to_str_flag) {
+		printer::debug_std_op_ln("		Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+	
+	
 	// For large floating-point numbers.
 	printer::debug_std_op_ln("==tu	Test conversion from large floating-point numbers to strings.");
-	printer::debug_std_op_ln("==tu	>	Start time for to_string() function.");
-	printer::debug_std_op_ln("==tu	>	End time for to_string() function.");
+	printer::debug_std_op("==tu	>>	int_to_str(long double x) works?");
+	printer::num_test_cases_eval();
+	for(double j=initial_long_dbl; j<final_long_dbl; j=j+97.1236459) {
+		/**
+		 * Check if the function int_to_str(long double x) returns
+		 *	the same output as the to_string(long double x) function
+		 *	from the C++ STL.
+		 */
+		if(0 != to_string(j).compare(conversion_alphanumeric::floating_pt_to_str(j))) {
+			// Test case failed for integer "j".
+			printer::debug_std_err("		NO!!!");
+			dbl_to_str_flag = false;
+		}
+	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_long_dbl, final_long_dbl], the testing of the function
+	 *	int_to_str(long double x) works for the specified range.
+	 */
+	if(long_dbl_to_str_flag) {
+		printer::debug_std_op_ln("		Yes.");
+		printer::num_passed_test_cases_eval();
+	}
 }
 
