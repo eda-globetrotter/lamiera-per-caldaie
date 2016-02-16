@@ -111,7 +111,11 @@ def remove_temp(s_dir, file_ext)
 			if temp_i[-1].chr.eql?("~")
 				# Delete the file
 				system("git rm -f #{temp_i}")
-				File.delete(temp_i)
+				begin
+					File.delete(temp_i)
+				rescue
+					#	Do nothing.
+				end
 			else
 				# For each type of file extension
 				for f_ext in file_ext
@@ -119,7 +123,11 @@ def remove_temp(s_dir, file_ext)
 					if (File.extname(temp_i)).eql?(f_ext)
 						# Delete the file
 						system("git rm -f #{temp_i}")
-						File.delete(temp_i)
+						begin
+							File.delete(temp_i)
+						rescue
+							#	Do nothing.
+						end
 						# Ignore remaining file extensions
 						break
 					end
@@ -146,7 +154,11 @@ File.delete("test-boilerplate-code")
 =end
 
 system("git rm -f play_in_sandbox")
-File.delete("play_in_sandbox")
+begin
+	File.delete("play_in_sandbox")
+rescue
+	#	Do nothing.
+end
 
 # Remove all generated output files
 #system("rm ../outputs/*")
