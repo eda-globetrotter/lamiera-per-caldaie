@@ -66,6 +66,20 @@ conversion_alphanumeric::conversion_alphanumeric() {
  */
 
 
+/**
+ * Function templates (or template functions) for converting numbers
+ *	to strings.
+ * This allows a smaller number of functions to be implemented, and
+ *	operate on generic types.
+ *
+ * I am using the terms, "function templates" or "template
+ *	functions", synonymously.
+ */
+template<typename T>
+string conversion_alphanumeric::number_to_string_cpp_stl_to_string(T a_num) {
+	return to_string(a_num);
+}
+
 // === Signed integers
 
 /**
@@ -85,7 +99,8 @@ string conversion_alphanumeric::int_to_str(int an_int) {
  * @param an_int:	A signed integer to be converted to a string.
  * @return string representation of an_int, the signed integer.
  */
-static string int_to_str_ss(int an_int) {
+string conversion_alphanumeric::int_to_str_ss(int an_int) {
+	return to_string(an_int);
 }
 
 
@@ -107,7 +122,8 @@ string conversion_alphanumeric::int_to_str(long long int an_int) {
  *					string.
  * @return string representation of an_int, the large signed integer.
  */
-static string int_to_str_ss(long long int an_int) {
+string conversion_alphanumeric::int_to_str_ss(long long int an_int) {
+	return to_string(an_int);
 }
 
 
@@ -127,7 +143,8 @@ string conversion_alphanumeric::int_to_str(unsigned int an_int) {
  * Function to convert an unsigned integer to a string, using
  *	the stringstream approach.
  */
-static string int_to_str_ss(unsigned int an_int) {
+string conversion_alphanumeric::int_to_str_ss(unsigned int an_int) {
+	return to_string(an_int);
 }
 
 
