@@ -99,6 +99,12 @@ class conversion_alphanumeric_ut {
 		 */
 		static void test_conversion_alphanumeric_constructor();
 		
+		/**
+		 * Function to test the template functions (or function
+		 *	templates) for converting numbers to strings.
+		 */
+		static void test_numbers_to_strings_fn_template();
+		
 		// Function to test functions to convert integers to strings.
 		static void test_integers_to_strings();
 		

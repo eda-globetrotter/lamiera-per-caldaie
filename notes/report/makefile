@@ -22,11 +22,11 @@
 #	Make targets for build automation with Make (using this Makefile).
 
 latex:
-	pdflatex	data-structures-n_algor
-	bibtex		data-structures-n_algor
-	pdflatex	data-structures-n_algor
-	bibtex		data-structures-n_algor
-	pdflatex	data-structures-n_algor
+	pdflatex	data-structures_n_algor
+	bibtex		data-structures_n_algor
+	pdflatex	data-structures_n_algor
+	bibtex		data-structures_n_algor
+	pdflatex	data-structures_n_algor
 
 
 

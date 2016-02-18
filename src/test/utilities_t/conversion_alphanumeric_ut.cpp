@@ -116,6 +116,92 @@ void conversion_alphanumeric_ut::test_conversion_alphanumeric_constructor() {
 	}
 }
 
+
+/**
+ * Function to test the template functions (or function templates)
+ *	for converting numbers to strings.
+ */
+void conversion_alphanumeric_ut::test_numbers_to_strings_fn_template() {
+	/**
+	 * Test the to_string() functions from the C++1y STL, for signed
+	 *	and unsigned integers.
+	 *
+	 * Assume that the compiler being used is C++11 (and other C++1y)
+	 *	compliant.
+	 */
+
+	/**
+	 * Flag to indicate if set of test cases is successfully passed.
+	 * If flag is false, at least one test case failed.
+	 * If flag is true, all the test case passed.
+	 */
+	bool int_to_str_flag = true;
+	
+	// For signed integers.
+	int initial_int					= -1000;
+	long long int initial_ll_int	= -100000;
+	int final_int					= 10000;
+	long long int final_ll_int		= 1000000;
+	printer::debug_std_op_ln("==tu	Test conversion from signed integers to strings.");
+	printer::debug_std_op("==tu	>>	number_to_string_cpp_stl_to_string(int x) works?");
+	printer::num_test_cases_eval();
+	for(int i=initial_int; i<final_int; i++) {
+		/**
+		 * Check if the function
+		 *	number_to_string_cpp_stl_to_string(int x) returns the
+		 *	same output as the to_string(int x) function from the
+		 *	C++ STL.
+		 */
+		if(0 != to_string(i).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(i))) {
+			// Test case failed for integer "i".
+			printer::debug_std_err("			NO!!!");
+			int_to_str_flag = false;
+		}
+	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_int, final_int], the testing of the function
+	 *	number_to_string_cpp_stl_to_string(int x) works for the
+	 *	specified range.
+	 */
+	if(int_to_str_flag) {
+		printer::debug_std_op_ln("			Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+
+	printer::debug_std_op("==tu	>>	number_to_string_cpp_stl_to_string(long long int x) works?");
+	printer::num_test_cases_eval();
+	for(long long int j=initial_ll_int; j<final_ll_int; j++) {
+		/**
+		 * Check if the function
+		 *	number_to_string_cpp_stl_to_string(long long int x)
+		 *	returns the same output as the to_string(long long int x)
+		 *	function from the C++ STL.
+		 */
+		if(0 != to_string(j).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(j))) {
+			// Test case failed for integer "j".
+			printer::debug_std_err("		NO!!!");
+			int_to_str_flag = false;
+		}
+	}
+	/**
+	 * If mini test cases passed for the range of integers used,
+	 *	[initial_ll_int, final_ll_int], the testing of the function
+	 *	number_to_string_cpp_stl_to_string(long long int x) works
+	 *	for the specified range.
+	 */
+	if(int_to_str_flag) {
+		printer::debug_std_op_ln("		Yes.");
+		printer::num_passed_test_cases_eval();
+	}
+
+	// ------------------------------------------------------------
+}
+
+
+// ================================================================
+
+
 /**
  * Function to test functions to convert integers to strings.
  * @param - None.
