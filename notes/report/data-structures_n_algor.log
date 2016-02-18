@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 FEB 2016 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 FEB 2016 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,11 +711,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \@LabelPart=\box43
 \ResultBox=\box44
 )
-(./data-structures_n_algor.aux
-
-LaTeX Warning: Label `sssec:DebuggingCppSoftware' multiply defined.
-
-)
+(./data-structures_n_algor.aux)
 \openout1 = `data-structures_n_algor.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -732,7 +728,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 51.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 51.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 51.
@@ -1095,13 +1092,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 752.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 751.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 752.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 751.
 )
 (./questions/questions.tex [24]
 Chapter 7.
@@ -1247,21 +1244,27 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
-Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
-.
-(rerunfilecheck)             Checksum: 75EF2B3F72BEF6F18B93E3BFA7CFB709;1977.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `data-structures_n_algor.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `data-structures_n_algor.out':
+(rerunfilecheck)             Before: 75EF2B3F72BEF6F18B93E3BFA7CFB709;1977
+(rerunfilecheck)             After:  D717FDE91A06FB70F94C70CEE21C2B40;2052.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
  ) 
 Here is how much of TeX's memory you used:
- 16319 strings out of 493089
- 230168 string characters out of 6134842
- 338077 words of memory out of 5000000
- 18790 multiletter control sequences out of 15000+600000
- 20536 words of font info for 76 fonts, out of 8000000 for 9000
+ 16320 strings out of 493089
+ 230180 string characters out of 6134842
+ 338118 words of memory out of 5000000
+ 18791 multiletter control sequences out of 15000+600000
+ 20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1262b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1286,7 +1289,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (42 pages, 367046 bytes).
+Output written on data-structures_n_algor.pdf (42 pages, 367203 bytes).
 PDF statistics:
  1521 PDF objects out of 1728 (max. 8388607)
  1441 compressed objects within 15 object streams
