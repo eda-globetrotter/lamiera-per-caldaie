@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 // ==================================================================
 
 // Define the static variables of the class conversion_alphanumeric.
@@ -75,8 +76,14 @@ conversion_alphanumeric::conversion_alphanumeric() {
  * I am using the terms, "function templates" or "template
  *	functions", synonymously.
  */
+ /*
+	template<typename T>
+	string conversion_alphanumeric<T>::number_to_string_cpp_stl_to_string(T &a_num) {
+		return to_string(a_num);
+	}
+*/
 template<typename T>
-string conversion_alphanumeric::number_to_string_cpp_stl_to_string(T a_num) {
+string conversion_alphanumeric::number_to_string_cpp_stl_to_string(T &a_num) {
 	return to_string(a_num);
 }
 

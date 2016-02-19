@@ -289,7 +289,10 @@ test:
 	more $(ERRORTXT)
 
 
-
+########################################################################
+#	Resolving linking problems during compilation.
+#	g++ -v -o ./test-boilerplate-code *.o
+#	g++ -o ./test-boilerplate-code *.o -v
 
 
 

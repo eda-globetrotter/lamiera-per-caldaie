@@ -256,6 +256,7 @@ using namespace std;
 
 // =========================================================
 
+
 // Class definition of the conversion_alphanumeric class
 class conversion_alphanumeric {
 	// Publicly accessible data members, constructors, and functions
@@ -277,7 +278,7 @@ class conversion_alphanumeric {
 		 *	functions", synonymously.
 		 */
 		template<typename T>
-		static string number_to_string_cpp_stl_to_string(T a_num);
+		static string number_to_string_cpp_stl_to_string(T &a_num);
 
 
 		// -----------------------------------------------------

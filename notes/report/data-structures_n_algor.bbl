@@ -290,6 +290,13 @@ Jayantha Katupitiya and Kim Bentley.
 \newblock {\em Interfacing with {C++}: Programming Real-World Applications}.
 \newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2006.
 
+\bibitem{Kirovski1997}
+Darko Kirovski and Miodrag Potkonjak.
+\newblock A quantitative approach to functional debugging.
+\newblock In {\em Proceedings of the {IEEE/ACM} International Conference on
+  Computer-Aided Design ({ICCAD 1997})}, pages 170--173, San Jose, {CA},
+  November 9--13 1997. {IEEE} Computer Society, {IEEE} Press.
+
 \bibitem{Koch2011a}
 Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
   Berthold, Robert~E. Bixby, Emilie Danna, Gerald Gamrath, Ambros~M. Gleixner,

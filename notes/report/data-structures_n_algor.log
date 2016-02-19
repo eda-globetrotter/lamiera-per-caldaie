@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 FEB 2016 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 FEB 2016 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1097,6 +1097,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 743--745
 
  []
 
+
+LaTeX Warning: Citation `Kirovski1997' on page 24 undefined on input line 746.
+
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 754.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
@@ -1205,43 +1208,49 @@ il-able on-line as Ver-
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 345--352
+Underfull \hbox (badness 1603) in paragraph at lines 294--299
+[]\OT1/cmr/m/n/12 Darko Kirovski and Mio-drag Potkon-jak.  A quan-ti-ta-tive ap
+-proach to func-tional de-bug-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--359
 []\OT1/cmr/m/n/12 Peter Mortensen.  What is the dif-fer-ence be-tween const int
 $[]$, const int $[]$
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 345--352
+Underfull \hbox (badness 6961) in paragraph at lines 352--359
 \OT1/cmr/m/n/12 const, and int const $[]$?  Avail-able on-line from \OT1/cmr/m/
 it/12 Stack Ex-change Inc.: Stack
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--352
+Underfull \hbox (badness 10000) in paragraph at lines 352--359
 \OT1/cmr/m/it/12 Over-flow: Ques-tions \OT1/cmr/m/n/12 at: [][]$\OT1/cmtt/m/n/1
 2 http : / / stackoverflow . com / questions / 1143262 /
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 367--373
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 []\OT1/cmr/m/n/12 Yusuf Ke-mal []Ozcan.  Is there any dif-fer-ence be-tween poi
 nt-ers and ref-er-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--373
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 \OT1/cmr/m/n/12 ences?  Avail-able on-line from \OT1/cmr/m/it/12 Stack Ex-chang
 e Inc.: Pro-gram-mers Stack Ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--373
+Underfull \hbox (badness 10000) in paragraph at lines 374--380
 \OT1/cmr/m/it/12 change: Ques-tions \OT1/cmr/m/n/12 at: [][]$\OT1/cmtt/m/n/12 h
 ttp : / / programmers . stackexchange . com / questions / 195337 /
  []
 
 [36]
-Underfull \hbox (badness 1502) in paragraph at lines 445--453
+Underfull \hbox (badness 1502) in paragraph at lines 452--460
 \OT1/cmr/m/it/12 Elec-tron-ics En-gi-neer-ing Com-mu-ni-ties: Em-bed-ded -- Cra
 ck-ing the Code to Sys-tems De-vel-
  []
@@ -1256,13 +1265,20 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
 (rerunfilecheck)             Checksum: 31CBCC2E62B3D0B40FE169DC76197EB9;2123.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
  ) 
 Here is how much of TeX's memory you used:
- 16325 strings out of 493089
- 230262 string characters out of 6134842
- 338164 words of memory out of 5000000
- 18794 multiletter control sequences out of 15000+600000
+ 16327 strings out of 493089
+ 230293 string characters out of 6134842
+ 339164 words of memory out of 5000000
+ 18795 multiletter control sequences out of 15000+600000
  20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1262b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1288,10 +1304,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (43 pages, 371297 bytes).
+Output written on data-structures_n_algor.pdf (43 pages, 372026 bytes).
 PDF statistics:
- 1537 PDF objects out of 1728 (max. 8388607)
- 1456 compressed objects within 15 object streams
- 705 named destinations out of 1000 (max. 500000)
+ 1538 PDF objects out of 1728 (max. 8388607)
+ 1457 compressed objects within 15 object streams
+ 706 named destinations out of 1000 (max. 500000)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 

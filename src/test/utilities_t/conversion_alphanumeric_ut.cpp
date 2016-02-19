@@ -152,7 +152,8 @@ void conversion_alphanumeric_ut::test_numbers_to_strings_fn_template() {
 		 *	same output as the to_string(int x) function from the
 		 *	C++ STL.
 		 */
-		if(0 != to_string(i).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(i))) {
+//		if(0 != to_string(i).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(<int>i))) {
+		if(0 != to_string(i).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string<int>(i))) {
 			// Test case failed for integer "i".
 			printer::debug_std_err("			NO!!!");
 			int_to_str_flag = false;
@@ -178,7 +179,8 @@ void conversion_alphanumeric_ut::test_numbers_to_strings_fn_template() {
 		 *	returns the same output as the to_string(long long int x)
 		 *	function from the C++ STL.
 		 */
-		if(0 != to_string(j).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(j))) {
+//		if(0 != to_string(j).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string(<long long int>j))) {
+		if(0 != to_string(j).compare(conversion_alphanumeric::number_to_string_cpp_stl_to_string<long long int>(j))) {
 			// Test case failed for integer "j".
 			printer::debug_std_err("		NO!!!");
 			int_to_str_flag = false;
