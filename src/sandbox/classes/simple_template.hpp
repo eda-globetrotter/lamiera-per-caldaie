@@ -72,45 +72,18 @@ class simple_template {
 	// Publicly accessible data members, constructors, and functions
 	public:
 		// Default constructor.
-		string_node();
-		// Standard constructors.
-		string_node(const string &n_ID, const string &n_label);
+		simple_template();
 		// Default destructor.
-		~string_node();
+		~simple_template();
 
 		// -----------------------------------------------------
 		
 		// Define headers for functions...
 
-		// Accessor functions.
-
-		// Function to get the ID of this node.
-		string get_node_ID() const;
+		// Function to convert a number to a string.
+		template<typename T>
+		static string number_to_string(T a_num);
 		
-		// Function to get the label of this node.
-		string get_node_label() const;
-		
-		// Function to print details of the object.
-		void print_node() const;
-
-		// -----------------------------------------------------
-
-		// Mutator functions.
-		
-		// Function to set the ID of the node.
-		void set_node_ID(const string &temp_ID);
-		
-		// Function to set the label of the node
-		void set_node_label(const string &temp_label);
-		
-		// -----------------------------------------------------
-		
-		// Operator overloading.
-		
-		// Overload the "<" operator for 1 input node.
-		bool operator<(const string_node &cmp) const;
-		// Overload the "<" operator for 2 input nodes.
-		bool operator() (const string_node& n1, const string_node& n2) const;
 
 	// =========================================================
 	
@@ -128,10 +101,8 @@ class simple_template {
 		// Declaration of instance variables...
 
 		// Index (as an integer) of the node.
-		string node_ID;
+//		string node_ID;
 		
-		// Label (as a string) of the node.
-		string node_label;
 
 		// -------------------------------------------------------
 		
