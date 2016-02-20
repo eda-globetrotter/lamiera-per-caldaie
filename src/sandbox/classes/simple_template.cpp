@@ -1,24 +1,20 @@
 /**
- * Implement the node object.
- * Node ID is a string. Test operator overloading for strings.
+ * Define the simple_template object.
+ * It has two simple attributes: an integer and a string.
  *
- * ### IMPORTANT ASSUMPTION:
- * Assume that the ID of the node is unique.
- *	Hence, for a set of nodes, the ID of each node in the set is unique.
+ * It has a set of simple template functions.
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  *
  * @author Zhiyang Ong
  * @version 1.0.0
  * @since March 1, 2015
- *
- *
- *
- *
- *
- *
- * References:
- * programmersmind, "An Introduction For How to Insert your Own Custom Objects Inside a std:::set", in CodeProject: Articles: Languages: C/C++ Language: General, Toronto, Ontario, Canada, May 6, 2009. Available at: http://www.codeproject.com/Articles/36232/An-Introduction-For-How-to-Insert-your-Own-Custom; last viewed on April 24, 2015.
- *
  *
  *
  *
