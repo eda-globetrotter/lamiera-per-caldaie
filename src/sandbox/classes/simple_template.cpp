@@ -47,7 +47,7 @@
 
 
 // Import packages from the software
-#include "./string_node.hpp"
+#include "./simple_template.hpp"
 
 // ==================================================================
 
