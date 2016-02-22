@@ -52,10 +52,8 @@
 // ==================================================================
 
 // Default constructor.
-string_node::string_node() {
-	// Assign private instance variables to NULL.
-	node_ID = "UNKNOWN-NODE-ID";
-	node_label = "UNKNOWN-LABEL";
+simple_template::simple_template() {
+	//	Do nothing.
 }
 
 // Standard constructors.
