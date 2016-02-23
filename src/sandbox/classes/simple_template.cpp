@@ -56,24 +56,8 @@ simple_template::simple_template() {
 	//	Do nothing.
 }
 
-// Standard constructors.
-
-/**
- * Standard constructor.
- * @param n_ID:		The ID number of the node.
- * @param n_label:	The label of the node.
- */
-string_node::string_node(const string &n_ID, const string &n_label) {
-	// Assign the node ID to be n_ID.
-	node_ID = n_ID;
-	// Assign the node label to n_label.
-	node_label = n_label;
-}
-
-// Default destructor.
-string_node::~string_node() {
-	//delete node_ID;
-	//delete node_label;
+simple_template::~simple_template() {
+	// Delete instances of instance variables;
 }
 
 // ==================================================================
