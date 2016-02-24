@@ -65,88 +65,11 @@ simple_template::~simple_template() {
 // Accessor functions.
 
 /**
- * Function to get the ID of the node.
- * @param - None.
+ * Function to convert a number to a string.
+ * @param anum	A number to be converted to a string.
  * @return - The ID of this node.
  */
-string string_node::get_node_ID() const {
-	return node_ID;
+string simple_template::number_to_string(T a_num) const {
+	return to_string(a_num);
 }
 
-
-/**
- * Function to get the label of the node.
- * @param - None.
- * @return - The label of this node.
- */
-string string_node::get_node_label() const {
-	return node_label;
-}
-
-
-/**
- * Function to print details of the object.
- * Call accessor functions to obtain private details of the object
- *	and print their content/values.
- * @param - None.
- * @return - Nothing.
- */
-void string_node::print_node() const {
-	cout << "Node ID:::" << get_node_ID() << "==" << endl;
-	cout << "Node Label:::" << get_node_label() << "==" << endl;
-
-}
-
-// ==================================================================
-
-// Mutator functions.
-
-/**
- * Function to set the ID of the node.
- * @param temp_ID:	The ID of the node.
- * @return - Nothing.
- */
-void string_node::set_node_ID(const string &temp_ID) {
-	node_ID = temp_ID;
-}
-		
-
-/**
- * Function to set the label of the node.
- * @param temp_label:	The label of the node.
- * @return - Nothing.
- */
-void string_node::set_node_label(const string &temp_label) {
-	node_label = temp_label;
-}
-
-
-// ==================================================================
-		
-// Operator overloading.
-
-/**
- * Overload the "<" operator for node comparison.
- *
- * When containers of nodes need to compare a pair of nodes, the IDs
- *	of the nodes are compared.
- * This is because the ID of a node is unique in a set/container of
- *	nodes.
- */
-bool string_node::operator<(const string_node &cmp) const {
-	return (0 > node_ID.compare(cmp.node_ID));
-}
-
-
-
-/**
- * Overload the "<" operator for 2 input nodes.
- *
- * When containers of nodes need to compare a pair of nodes, the IDs
- *	of the nodes are compared.
- * This is because the ID of a node is unique in a set/container of
- *	nodes.
- */
-bool string_node::operator() (const string_node& n1, const string_node& n2) const {
-	return (0 > (n1.get_node_ID()).compare(n2.get_node_ID()));
-}
