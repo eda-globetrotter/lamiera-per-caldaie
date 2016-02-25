@@ -67,7 +67,7 @@ simple_template::~simple_template() {
 /**
  * Function to convert a number to a string.
  * @param anum	A number to be converted to a string.
- * @return - The ID of this node.
+ * @return - The string representing the number a_num.
  */
 string simple_template::number_to_string(T a_num) const {
 	return to_string(a_num);
