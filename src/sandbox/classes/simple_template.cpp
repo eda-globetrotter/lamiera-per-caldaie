@@ -73,3 +73,4 @@ string simple_template::number_to_string(T a_num) const {
 	return to_string(a_num);
 }
 
+// Testing a simple template function.
