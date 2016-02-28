@@ -536,6 +536,56 @@ forloop:
 
 
 
+#####################################################################
+#	Target for empty set
+#####################################################################
+# Build and run C++ program to experiment with empty sets.
+template:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === Utilities Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	@echo === C++ Classes Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
+	@echo === C++ STL Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_empty_set.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

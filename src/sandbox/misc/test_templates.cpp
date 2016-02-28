@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Testing a simple temnplate.
 	 */
-	//
+	cout << "	###" << number_to_string() << "===" << endl;
 	
 	
 	// End of main function...
