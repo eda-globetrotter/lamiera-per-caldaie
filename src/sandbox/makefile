@@ -537,9 +537,9 @@ forloop:
 
 
 #####################################################################
-#	Target for empty set
+#	Target for testing templates.
 #####################################################################
-# Build and run C++ program to experiment with empty sets.
+# Build and run C++ program to experiment with templates.
 template:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
@@ -549,9 +549,9 @@ template:
 	@echo === Utilities Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === C++ Classes Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)node.cpp
-	@echo === C++ STL Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPSTL)$(STLCONTAINERS)test_empty_set.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)simple_template.cpp
+	@echo === C++ Miscellaneous Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)$(STLCONTAINERS)test_empty_set.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
