@@ -69,7 +69,8 @@ simple_template::~simple_template() {
  * @param anum	A number to be converted to a string.
  * @return - The string representing the number a_num.
  */
-string simple_template::number_to_string(T a_num) const {
+template<typename T>
+string simple_template::number_to_string(T a_num) {
 	return to_string(a_num);
 }
 
