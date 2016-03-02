@@ -551,7 +551,7 @@ template:
 	@echo === C++ Classes Directory
 	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)simple_template.cpp
 	@echo === C++ Miscellaneous Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)$(STLCONTAINERS)test_templates.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)test_templates.cpp
 	@echo === Link the C++ object files...
 	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...

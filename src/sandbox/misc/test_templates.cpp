@@ -48,7 +48,7 @@
 
 // Import packages from the software
 //#include "../classes/node.hpp"
-#include "../classes/element.hpp"
+#include "../classes/simple_template.hpp"
 
 using namespace std;
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Testing a simple temnplate.
 	 */
-	cout << "	###" << number_to_string() << "===" << endl;
+	cout << "	###" << simple_template::number_to_string(493) << "===" << endl;
 	
 	
 	// End of main function...
