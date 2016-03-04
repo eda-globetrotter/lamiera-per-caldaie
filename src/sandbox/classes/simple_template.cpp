@@ -69,9 +69,37 @@ simple_template::~simple_template() {
  * @param anum	A number to be converted to a string.
  * @return - The string representing the number a_num.
  */
+/*
 template<typename T>
 string simple_template::number_to_string(T a_num) {
 	return to_string(a_num);
 }
+
+template<typename T>
+T simple_template::number_to_string(T a_num) {
+	return a_num;
+}
+*/
+
+
+
+
+/**
+ * Function to convert a number to a string.
+ * @param anum	A number to be converted to a string.
+ * @return - The string representing the number a_num.
+ */
+template<typename T>
+bool simple_template::is_non_negative(T a_num) {
+	return (0 <= a_num);
+}
+
+
+
+
+
+
+
+
 
 // Testing a simple template function.

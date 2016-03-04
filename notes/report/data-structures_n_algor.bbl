@@ -19,6 +19,13 @@ Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo Berthold, Robert~E.
   \url{http://miplib.zib.de/biblio.html}; December 9, 2015 was the last
   accessed date, December 1 2015.
 
+\bibitem{Adve1997}
+Sarita~V. Adve, Doug Burger, Rudolf Eigenmann, Alasdair Rawsthorne, Michael~D.
+  Smith, Catherine~H. Gebotys, Mahmut~T. Kandemir, David~J. Lilja, Alok~N.
+  Choudbary, Jesse~Z. Fang, and {Pen-Chung} Yew.
+\newblock Changing interaction of compiler and architecture.
+\newblock {\em {IEEE} Computer}, 30(12):51--58, December 1997.
+
 \bibitem{Alexandrescu2001}
 Andrei Alexandrescu.
 \newblock {\em Modern {C++} Design: Generic Programming and Design Patterns
@@ -64,10 +71,29 @@ Philip Avery, Abraham Bachrach, Sebastien Barthelemy, Carlos Becker, David
   \url{http://eigen.tuxfamily.org/index.php?title=Main_Page}; February 15, 2016
   was the last accessed date, February 12 2016.
 
+\bibitem{Baik2013}
+Hyunki Baik, Fran{\c{c}}ois Bodin, Ross Dickson, Max Domeika, Scott~A. Hissam,
+  Skip Hovsmith, James Ivers, Ian Lintault, Stephen Olsen, and David Stewart.
+\newblock Multicore programming practices guide.
+\newblock Technical report, {The Multicore Association}, El Dorado Hills, {CA},
+  2013.
+
+\bibitem{Bailey2007}
+Brian Bailey, Grant Martin, and Andrew Piziali.
+\newblock {\em {ESL} Design and Verification: A Prescription for Electronic
+  System-Level Methodology}.
+\newblock The Morgan Kaufmann Series in Systems on Silicon. Morgan Kaufmann,
+  San Francisco, {CA}, 2007.
+
 \bibitem{Bertsimas2004}
 Dimitris Bertsimas and Melvyn Sim.
 \newblock The price of robustness.
 \newblock {\em Operations Research}, 52(1):35--53, January--February 2004.
+
+\bibitem{Boulanger2013}
+Jean-Louis Boulanger.
+\newblock {\em Static Analysis of Software: The Abstract Interpretation}.
+\newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, 2013.
 
 \bibitem{Bulka2000}
 Dov Bulka and David Mayhew.
@@ -146,6 +172,18 @@ Lawrence Crowl.
   Standardization and International Electrotechnical Commission, Gen{\`{e}}va,
   Switzerland, September 27 2015.
 
+\bibitem{Debbabi2010}
+Mourad Debbabi, Fawzi Hassa{\"{i}}ne, Yosr Jarraya, Andrei Soeanu, and Luay
+  Alawneh.
+\newblock {\em Verification and Validation in Systems Engineering: Assessing
+  {UML/SysML} Design Models}.
+\newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2010.
+
+\bibitem{Pradhan2009}
+Ian G.~Harris Dhiraj K.~Pradhan.
+\newblock {\em Practical Design Verification}.
+\newblock Cambridge University Press, New York, {NY}, 2009.
+
 \bibitem{DictionaryDotComStaff2016}
 {Dictionary.com staff}.
 \newblock Dictionary.com: Find the meanings and definitions of words at
@@ -175,6 +213,25 @@ Bruce Eckel and Chuck Allison.
 \newblock Available online from {\it cplusplus.com -- The C++ Resources
   Network} at: \url{http://www.cplusplus.com/articles/ENywvCM9/}; October 8,
   2015 was the last accessed date, August 20 2010.
+
+\bibitem{Fisher2005}
+Joseph~A. Fisher, Paolo Faraboschi, and Cliff Young.
+\newblock {\em Embedded Computing: A {VLIW} Approach to Architecture,
+  Compilers, and Tools}.
+\newblock Morgan Kaufmann, San Francisco, {CA}, 2005.
+
+\bibitem{Fog2014c}
+Agner Fog.
+\newblock Optimizing software in {C++}: An optimization guide for {Windows},
+  {Linux} and {Mac} platforms.
+\newblock Available online at:
+  \url{http://www.agner.org/optimize/optimizing_cpp.pdf}; July 1, 2015 was the
+  last accessed date, August 7 2014.
+
+\bibitem{Ford2008}
+Neal Ford.
+\newblock {\em The Productive Programmer: Theory in Practice}.
+\newblock O'Reilly Media, Sebastopol, {CA}, 2008.
 
 \bibitem{Gaddis2010}
 Tony Gaddis.
@@ -269,6 +326,13 @@ Nicolai~M. Josuttis.
 \newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
 \newblock Addison-Wesley, Reading, {MA}, 1999.
 
+\bibitem{Josuttis1999}
+Nicolai~M. Josuttis.
+\newblock Josuttis' summary of {STL} algorithms.
+\newblock Available online at:
+  \url{http://www.josuttis.com/libbook/algolist.pdf}; July 1, 2015 was the last
+  accessed date, 1999.
+
 \bibitem{Josuttis2012}
 Nicolai~M. Josuttis.
 \newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
@@ -290,6 +354,12 @@ Jayantha Katupitiya and Kim Bentley.
 \newblock {\em Interfacing with {C++}: Programming Real-World Applications}.
 \newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2006.
 
+\bibitem{Kernighan1999}
+Brian~W. Kernighan and Rob Pike.
+\newblock {\em The Practice of Programming}.
+\newblock Addison-Wesley Professional Computing Series. Addison-Wesley,
+  Reading, {MA}, 1999.
+
 \bibitem{Kirovski1997}
 Darko Kirovski and Miodrag Potkonjak.
 \newblock A quantitative approach to functional debugging.
@@ -309,6 +379,12 @@ Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
 Andrew Koenig and Barbara Moo.
 \newblock {\em Accelerated C++: Practical Programming by Example}.
 \newblock {C++} In-Depth Series. Addison-Wesley, Boston, {MA}, 2000.
+
+\bibitem{Lee2008b}
+Insup Lee, Joseph Y-T. Leung, and Sang~H. Son.
+\newblock {\em Handbook of Real-Time and Embedded Systems}.
+\newblock Chapman {\rm \&} Hall/{CRC} Computer {\rm \&} Information Science.
+  Chapman {\rm \&} Hall/{CRC}, Boca Raton, {FL}, 2008.
 
 \bibitem{Lee2004c}
 Jon Lee.
@@ -427,6 +503,16 @@ Chris Riesbeck.
   at:
   \url{http://www.cs.northwestern.edu/~riesbeck/programming/c++/stl-summary.html};
   September 30, 2015 was the last accessed date, July 3 2009.
+
+\bibitem{Riesbeck2009a}
+Chris Riesbeck.
+\newblock Useful {C++ / Unix} resources.
+\newblock Available online from {\it Prof. Chris Riesbeck's web page:
+  Programming}, Computer Science Division, Department of Electrical Engineering
+  and Computer Science, Robert R. McCormick School of Engineering and Applied
+  Science, Northwestern University at:
+  \url{http://www.cs.northwestern.edu/~riesbeck/programming/c++/}; September
+  30, 2015 was the last accessed date, July 2 2009.
 
 \bibitem{Robson2000}
 Robert Robson.

@@ -63,8 +63,12 @@ int main(int argc, char *argv[]) {
 	/**
 	 * Testing a simple temnplate.
 	 */
-	cout << "	###" << simple_template::number_to_string(493) << "===" << endl;
+//	cout << "	###" << simple_template::number_to_string<int>(493) << "===" << endl;
+//	cout << "	###" << simple_template::is_non_negative<int>(493) << "===" << endl;
+	cout << "	###" << simple_template::is_non_negative(493) << "===" << endl;
 	
+
+
 	
 	// End of main function...
 	return 0;

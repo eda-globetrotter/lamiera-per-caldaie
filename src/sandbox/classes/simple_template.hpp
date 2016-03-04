@@ -81,8 +81,15 @@ class simple_template {
 		// Define headers for functions...
 
 		// Function to convert a number to a string.
+/*
 		template<typename T>
 		static string number_to_string(T a_num);
+
+		template<typename T>
+		static T number_to_string(T a_num);
+*/		
+		template<typename T>
+		static bool is_non_negative(T a_num);
 		
 
 	// =========================================================
