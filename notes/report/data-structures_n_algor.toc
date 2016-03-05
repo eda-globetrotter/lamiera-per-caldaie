@@ -20,12 +20,12 @@
 \contentsline {chapter}{\numberline {6}C++ Resources}{10}{chapter.6}
 \contentsline {section}{\numberline {6.1}Resources for C++ and Notes About C++}{10}{section.6.1}
 \contentsline {section}{\numberline {6.2}Computational Complexity of C++ Containers}{18}{section.6.2}
-\contentsline {section}{\numberline {6.3}Additional Notes About C++}{20}{section.6.3}
+\contentsline {section}{\numberline {6.3}Additional Notes About C++}{21}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{21}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Software Development in C++}{21}{section.6.4}
+\contentsline {section}{\numberline {6.4}Software Development in C++}{22}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{24}{subsection.6.4.1}
 \contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{24}{subsubsection.6.4.1.1}
-\contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{24}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{25}{subsection.6.4.2}
 \contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{25}{subsubsection.6.4.2.1}
 \contentsline {subsection}{\numberline {6.4.3}Parser Development}{25}{subsection.6.4.3}
 \contentsline {section}{\numberline {6.5}Parallel Programming in C++}{25}{section.6.5}
