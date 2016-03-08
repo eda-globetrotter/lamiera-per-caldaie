@@ -19,21 +19,21 @@
 \contentsline {chapter}{\numberline {5}Statistics}{9}{chapter.5}
 \contentsline {chapter}{\numberline {6}C++ Resources}{10}{chapter.6}
 \contentsline {section}{\numberline {6.1}Resources for C++ and Notes About C++}{10}{section.6.1}
-\contentsline {section}{\numberline {6.2}Computational Complexity of C++ Containers}{18}{section.6.2}
+\contentsline {section}{\numberline {6.2}Computational Complexity of C++ Containers}{19}{section.6.2}
 \contentsline {section}{\numberline {6.3}Additional Notes About C++}{21}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{21}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{22}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Software Development in C++}{22}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{24}{subsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{24}{subsubsection.6.4.1.1}
+\contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{25}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{25}{subsubsection.6.4.1.1}
 \contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{25}{subsection.6.4.2}
-\contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{25}{subsubsection.6.4.2.1}
-\contentsline {subsection}{\numberline {6.4.3}Parser Development}{25}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Parallel Programming in C++}{25}{section.6.5}
-\contentsline {section}{\numberline {6.6}Numerical Computing in C++}{25}{section.6.6}
-\contentsline {chapter}{\numberline {7}Questions}{26}{chapter.7}
-\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{26}{section.7.1}
-\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{26}{section.7.2}
-\contentsline {chapter}{\numberline {8}Miscellaneous}{30}{chapter.8}
-\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{30}{section.8.1}
-\contentsline {chapter}{Acknowledgments}{31}{chapter*.4}
-\contentsline {chapter}{Bibliography}{39}{appendix*.5}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{26}{subsubsection.6.4.2.1}
+\contentsline {subsection}{\numberline {6.4.3}Parser Development}{26}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Parallel Programming in C++}{26}{section.6.5}
+\contentsline {section}{\numberline {6.6}Numerical Computing in C++}{26}{section.6.6}
+\contentsline {chapter}{\numberline {7}Questions}{27}{chapter.7}
+\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{27}{section.7.1}
+\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{27}{section.7.2}
+\contentsline {chapter}{\numberline {8}Miscellaneous}{31}{chapter.8}
+\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{31}{section.8.1}
+\contentsline {chapter}{Acknowledgments}{32}{chapter*.4}
+\contentsline {chapter}{Bibliography}{40}{appendix*.5}
