@@ -68,6 +68,7 @@ using namespace std;
 // =========================================================
 
 // Class definition of the simple_template class.
+template <typename T>
 class simple_template {
 	// Publicly accessible data members, constructors, and functions
 	public:
@@ -88,7 +89,7 @@ class simple_template {
 		template<typename T>
 		static T number_to_string(T a_num);
 */		
-		template<typename T>
+//		template<typename T>
 		static bool is_non_negative(T a_num);
 		
 

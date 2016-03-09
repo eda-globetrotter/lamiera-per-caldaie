@@ -52,6 +52,7 @@
 // ==================================================================
 
 // Default constructor.
+template <typename T>
 simple_template::simple_template() {
 	//	Do nothing.
 }
