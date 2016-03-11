@@ -7,3 +7,5 @@ class Foo
 
 // somewhere in a .cpp
 Foo<int> f;
+
+// Do I need to create a C++ implementation file for this header file?
