@@ -1,5 +1,5 @@
 template<typename T>
-struct Foo
+class Foo
 {
     T bar;
     void doSomething(T param) {/* do stuff using T */}

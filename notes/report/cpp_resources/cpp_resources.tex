@@ -830,6 +830,44 @@ Notes about software development in {\it C++}: \vspace{-0.3cm}
 		\item 
 		\end{enumerate}
 	\end{enumerate}
+\item To obtain the {\tt x86} assembly output to a {\it C++} program: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Reference: Andrew Edgecombe, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 26, 2008 (edited by Prashant Kumar on May 1, 2012). Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/137074}; March 15, 2016 was the last accessed date.: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item To view the source file: {\tt cat {\it [source\_file]}}
+		\item To remove all symbol table and relocation information from the executable, the executable for that source file becomes: {\tt gcc -s {\it [source\_file.c]}}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Or, try: {\tt gcc -S {\it [source\_file.c]}}
+			\item Alternatively, try: {\tt strip {\it [source\_file]}}
+			\item {\tt gcc -g {\it [source\_file.c]}} adds debugging information to the executable.
+			\end{enumerate}
+		\item If access to source files is unavailable, but access to the object file is available, use: {\tt objdump -S --disassemble {\it [object\_file]} $>$ {\it [object\_file.dump]}}. Use {\tt file {\it [object\_file]}} to determine if I can get enough information from the object file.: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\tt gcc -S -o {\it [unassembled\_file.s]} {\it [source\_file.c]}}
+			\item To view the output file from {\tt gcc -S}: {\tt cat {\it [source\_file]}}
+			\end{enumerate}
+		\end{enumerate}
+	\item References: \cite[pp. 3, or pp. 15 in the PDF]{Arndt2010} and Kenneth Finnegan, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 26, 2008. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/137479}; March 16, 2016 was the last accessed date. Also, includes information from comments to this answer by Sundaram Ramaswamy (May 6, 2013) and L{\uhorn}u V{\~{\i}}nh Ph{\'{u}}c (June 7, 2014): \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Create assembly code: {\tt c++ -S -fverbose-asm -g -02 {\it [source\_code.cpp]} -o {\it [unassembled\_file.s]}}
+		\item Create assembled code interfaced with source lines: {\tt as -alhnd {\it [unassembled\_file.s]} $>$ {\it [listing\_file.lst]}} 
+		\item Alternatively, the on line version on {\it Mac OS X}, try: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\tt g++ -g -O0 -c -fverbose-asm -Wa,-adhln test.cpp $>$ test.lst}
+			\item {\tt gcc -c -g -Wa,-ahl=test.s test.c}
+			\item {\tt gcc -c -g -Wa,-a,-ad [{\it other GCC options}] test.c $>$ test.txt}
+			\end{enumerate}
+		\end{enumerate}
+	\item Reference: Cr McDonough, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 29, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/19083877}; March 16, 2016 was the last accessed date. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item {\tt g++ -g -O -Wa,-aslh horton\_ex2\_05.cpp $>$ list.txt}
+		\end{enumerate}
+	\item Reference: Andrew Pennebaker, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, February 6, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/7871911}; March 16, 2016 was the last accessed date. Also, comment from Grady Player (February 6, 2013) is helpful. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item To get the LLVM assembly code, try: {\tt llvm-gcc -emit-llvm -S hello.c}
+		\item I can also use the same command for {\tt clang}.
+		\end{enumerate}
+	\end{enumerate}
 \end{enumerate}
 
 

@@ -37,6 +37,13 @@ Alex Allain.
 \newblock {\em Jumping into {C++}}.
 \newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
 
+\bibitem{Arndt2010}
+J{\"{o}}rg Arndt.
+\newblock Matters computational: Ideas, algorithms, source code.
+\newblock Available online at: \url{http://www.jjj.de/fxt/} and
+  \url{http://www.jjj.de/fxt/fxtbook.pdf}; October 9, 2014 was the last
+  accessed date, September 7 2010.
+
 \bibitem{Avery2016}
 Philip Avery, Abraham Bachrach, Sebastien Barthelemy, Carlos Becker, David
   Benjamin, Cyrille Berger, Armin Berres, Jose~Luis Blanco, Mark Borgerding,

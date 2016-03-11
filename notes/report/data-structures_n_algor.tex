@@ -41,6 +41,20 @@
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	New commands to typeset Vietnamese fonts
+\usepackage{stackengine}
+\usepackage{scalerel}
+\def\stackalignment{r}
+%	Required shortcut for creating commands.
+\def\shortcomma{\vstretch{.7}{,}}
+%	command ``\uhorn'' produces: u'
+\newcommand\uhorn{\topinset{\shortcomma}{u}{.05ex}{-.1ex}}
+%	References:
+%	Steven B. Segletes, answer to ``Horn accent in LaTeX,'' Stack Exchange Inc., New York, NY, August 7, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://tex.stackexchange.com/a/127173}; March 16, 2016 was the last accessed date.
+
+ 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
