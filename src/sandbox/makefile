@@ -109,6 +109,7 @@ DYNINCLUDE=			-l
 #	Used when testing and debugging.
 COVERAGE=			-coverage
 CPP11=				-std=c++0x
+CPP14=				-Wc++14-extensions
 
 
 
@@ -586,13 +587,13 @@ template1:
 	$(DATE)
 	@echo === Compiling C++ source code...
 	@echo === Utilities Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === C++ Classes Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPCLASSES)try_template.cpp
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPCLASSES)try_template.cpp
 	@echo === C++ Miscellaneous Directory
-	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(CPPMISC)test_templates1.cpp
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPMISC)test_templates1.cpp
 	@echo === Link the C++ object files...
-	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	$(GPLUSPLUS)	$(CPP14)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
 	$(TIME) $(EXECUTABLE)
 	@echo
