@@ -91,7 +91,7 @@ T simple_template::number_to_string(T a_num) {
  * @return - The string representing the number a_num.
  */
 template<typename T>
-bool simple_template::is_non_negative(T a_num) {
+bool simple_template<T>::is_non_negative(T a_num) {
 	return (0 <= a_num);
 }
 
