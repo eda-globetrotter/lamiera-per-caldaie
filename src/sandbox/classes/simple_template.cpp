@@ -53,11 +53,13 @@
 
 // Default constructor.
 template <typename T>
-simple_template::simple_template() {
+simple_template<T>::simple_template() {
 	//	Do nothing.
 }
 
-simple_template::~simple_template() {
+
+template <typename T>
+simple_template<T>::~simple_template() {
 	// Delete instances of instance variables;
 }
 

@@ -48,7 +48,7 @@
 
 // Import packages from the software
 //#include "../classes/node.hpp"
-#include "../classes/simple_template.hpp"
+#include "../classes/simple_template.cpp"
 
 using namespace std;
 
@@ -65,9 +65,11 @@ int main(int argc, char *argv[]) {
 	 */
 //	cout << "	###" << simple_template::number_to_string<int>(493) << "===" << endl;
 //	cout << "	###" << simple_template::is_non_negative<int>(493) << "===" << endl;
-	cout << "	###" << simple_template::is_non_negative(493) << "===" << endl;
-	
+//	cout << "	###" << simple_template<int>::is_non_negative<int>(493) << "===" << endl;
+//	cout << "	###" << simple_template<int>::is_non_negative<int>(493) << "===" << endl;
 
+	// Causes linking problems.
+	cout << "	###" << simple_template<int>::is_non_negative(493) << "===" << endl;
 
 	
 	// End of main function...
