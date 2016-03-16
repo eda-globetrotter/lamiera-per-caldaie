@@ -15,6 +15,14 @@
 		temporal performance of the implemented methods.
 	+ Do code inspection of all mutator methods to determine if
 		the mutator methods are implemented correctly.
+	+ Clean up comments for *make template*.
+	+ Keep these:
+		- make template
+		- 
+	+ Remove these:
+		- make template1
+		- *Other test suites for C++ templates*
+
 
 
 - Test graph module.
