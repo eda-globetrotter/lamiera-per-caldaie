@@ -48,6 +48,9 @@
 
 
 
+- Implement gate sizing, threshold voltage assignment, and
+	adaptivitiy assignment engine.
+
 
 
 - **Whenver I commit code, I should do automated regression testing.**
