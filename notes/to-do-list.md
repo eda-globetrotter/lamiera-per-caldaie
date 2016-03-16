@@ -13,6 +13,14 @@
 		temporal performance of the implemented methods.
 
 
+
+- Test graph module.
+- Test parser module.
+	+ Use ISPD contest parser.
+	+ Implement with:
+		- flex/bison
+		- lex/yacc
+
 - Refactor other packages.
 	+ Add "const" to all the accessor functions in the classes.
 
