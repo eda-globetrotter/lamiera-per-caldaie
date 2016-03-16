@@ -9,6 +9,8 @@
 		the implemented methods.
 		That is, try different ways to determine how long does it
 		take to implement each function.
+		Report which method is the best way of measuring the
+		temporal performance of the implemented methods.
 
 
 - Refactor other packages.
