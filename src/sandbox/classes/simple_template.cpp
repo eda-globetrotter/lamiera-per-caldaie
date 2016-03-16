@@ -16,6 +16,21 @@
  * @version 1.0.0
  * @since March 1, 2015
  *
+ * References:
+ * [Tang2001]	Hannah C. Tang, "C++ Templates," University of Washington, Seattle, WA, October 9, 2001. Available online from the course web page of CSE 326 Data Structures (Autumn 2001): Computing Information: Templates -- About C++ templates, Computer Science & Engineering Department, UW College of Engineering, University of Washington} at: https://courses.cs.washington.edu/courses/cse326/01au/computing/c++-templates.html; March 16, 2016 was the last accessed date.
+
+
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  *
  *
  *
