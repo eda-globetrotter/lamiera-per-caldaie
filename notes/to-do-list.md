@@ -17,6 +17,9 @@
 
 
 
+
+
+
 - Develop STA and SSTA code in the boilerplate code base.
 - Fork the code base for the STA and SSTA into separate repositories.
 	+ The code base for the STA and SSTA timers should be dependent
@@ -26,5 +29,11 @@
 
 
 
-- *Whenver I commit code, I should do automated regression testing.*
+
+- **Whenver I commit code, I should do automated regression testing.**
+- Use *make test* for automated regression testing.
+- Use *make torture* for automated regression testing of the
+	boilerplate code and the "micro" test suites in the *sandbox*.
+
+
 
