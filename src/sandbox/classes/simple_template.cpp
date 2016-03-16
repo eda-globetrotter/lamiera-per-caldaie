@@ -105,8 +105,14 @@ bool simple_template<T>::is_non_negative(T a_num) {
  * @param anum	A number to be squared.
  * @return - The square of the number a_num.
  */
+/*
 template<typename T>
 int simple_template<T>::square_given_number(T a_num) {
+	return (a_num*a_num);
+}
+*/
+template<typename T>
+T simple_template<T>::square_given_number(T a_num) {
 	return (a_num*a_num);
 }
 

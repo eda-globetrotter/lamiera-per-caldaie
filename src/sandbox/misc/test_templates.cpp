@@ -68,9 +68,17 @@ int main(int argc, char *argv[]) {
 //	cout << "	###" << simple_template<int>::is_non_negative<int>(493) << "===" << endl;
 //	cout << "	###" << simple_template<int>::is_non_negative<int>(493) << "===" << endl;
 
-	// Causes linking problems.
-	cout << "	###" << simple_template<int>::is_non_negative(493) << "===" << endl;
 
+	cout << "	###" << simple_template<int>::is_non_negative(493) << "===" << endl;
+	simple_template<int> *a_ptr;
+	cout << "	###" << a_ptr->square_given_number(5) << "===" << endl;
+	// 0.25^2 = 0.0625
+	simple_template<long double> *b_ptr;
+	cout << "	###" << b_ptr->square_given_number(-0.25) << "===" << endl;
+	// 16.25^2 = 164.0625
+	cout << "	###" << b_ptr->square_given_number(-16.25) << "===" << endl;
+
+	// Answers are rounded to six significant figures.
 	
 	// End of main function...
 	return 0;
