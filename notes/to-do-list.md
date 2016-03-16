@@ -16,10 +16,10 @@
 	+ Do code inspection of all mutator methods to determine if
 		the mutator methods are implemented correctly.
 	+ Clean up comments for *make template*.
-	+ Keep these:
+	+ Keep these
 		- make template
 		- 
-	+ Remove these:
+	+ Remove these
 		- make template1
 		- *Other test suites for C++ templates*, and their associated
 			classes that are not used by other/useful test suites.
