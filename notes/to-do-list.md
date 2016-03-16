@@ -21,7 +21,8 @@
 		- 
 	+ Remove these:
 		- make template1
-		- *Other test suites for C++ templates*
+		- *Other test suites for C++ templates*, and their associated
+			classes that are not used by other/useful test suites.
 
 
 
