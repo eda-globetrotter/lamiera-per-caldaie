@@ -26,5 +26,5 @@
 
 
 
-
+- *Whenver I commit code, I should do automated regression testing.*
 
