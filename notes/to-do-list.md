@@ -18,7 +18,6 @@
 	+ Clean up comments for *make template*.
 	+ Keep these
 		- make template
-		- 
 	+ Remove these
 		- make template1
 		- *Other test suites for C++ templates*, and their associated
