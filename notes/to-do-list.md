@@ -24,7 +24,8 @@
 - Fork the code base for the STA and SSTA into separate repositories.
 	+ The code base for the STA and SSTA timers should be dependent
 		on the boilerplate code base.
-
+- Finish the robust linear programming test cases.
+	- Finish the testing linear programming engine.
 
 
 
