@@ -3,7 +3,12 @@
 
 - Refactor the Utility package
 	+ Add "const" to all the accessor functions in the classes.
-	+ Clean up
+	+ Clean up the class for converting numbers to strings.
+	+ Test the performance measurement class to determine which
+		method is better for measure the temporal performance of
+		the implemented methods.
+		That is, try different ways to determine how long does it
+		take to implement each function.
 
 
 - Refactor other packages.
