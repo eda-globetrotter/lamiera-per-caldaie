@@ -2,6 +2,10 @@
 
 
 - Refactor the Utility package
+	+ Update and copy comments in the preamble for the class
+		*simple_template*.
+		Copy these comments from the header file to the
+		implementation file.
 	+ Add "const" to all the accessor functions in the classes.
 		Add "const" at the end of the function declaration
 		(in the header file).
