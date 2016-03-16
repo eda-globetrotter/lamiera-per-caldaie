@@ -99,6 +99,19 @@ bool simple_template<T>::is_non_negative(T a_num) {
 
 
 
+/**
+ * Function to square a number.
+ * A number can be squared by multiplying it by itself.
+ * @param anum	A number to be squared.
+ * @return - The square of the number a_num.
+ */
+template<typename T>
+int simple_template<T>::square_given_number(T a_num) {
+	return (a_num*a_num);
+}
+
+
+
 
 
 

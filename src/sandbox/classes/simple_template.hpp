@@ -92,6 +92,8 @@ class simple_template {
 //		template<typename T>
 		static bool is_non_negative(T a_num);
 		
+		int square_given_number(T a_num);
+		
 
 	// =========================================================
 	
