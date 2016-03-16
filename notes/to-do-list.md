@@ -3,6 +3,8 @@
 
 - Refactor the Utility package
 	+ Add "const" to all the accessor functions in the classes.
+		Add "const" at the end of the function declaration
+		(in the header file).
 	+ Clean up the class for converting numbers to strings.
 	+ Test the performance measurement class to determine which
 		method is better for measure the temporal performance of
@@ -11,7 +13,8 @@
 		take to implement each function.
 		Report which method is the best way of measuring the
 		temporal performance of the implemented methods.
-
+	+ Do code inspection of all mutator methods to determine if
+		the mutator methods are implemented correctly.
 
 
 - Test graph module.
