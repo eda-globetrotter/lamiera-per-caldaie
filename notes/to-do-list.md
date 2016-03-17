@@ -70,8 +70,9 @@
 
 - **Whenver I commit code, I should do automated regression testing.**
 - Use *make test* for automated regression testing.
-- Use *make torture* for automated regression testing of the
-	boilerplate code and the "micro" test suites in the *sandbox*.
+- Use *make torture* for automated regression testing of the EDA tool,
+	the boilerplate code that the EDA tool uses, and the "micro" test
+	suites in the *sandbox*.
 
 
 

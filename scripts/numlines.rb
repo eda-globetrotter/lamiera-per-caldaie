@@ -20,16 +20,16 @@
 
 #	=============================================================
 
-=begin
+"""
 	Script to count the number of lines of code in the source
 	files.
 	
-	Types of source files that would be considered include:
+	Types of source files that would be considered include
 	@ C++	-- .h, .cpp
 	@ Ruby	-- .rb
 	@ MATLAB/GNU Octave	-- .m
 	@ Java	-- .java
-=end
+"""
 
 # Current search/working directory: "binaries" directory
 #search_dir = Dir.pwd + "\/../scripts"		-- Result should be 650

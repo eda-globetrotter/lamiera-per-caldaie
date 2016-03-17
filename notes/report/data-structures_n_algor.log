@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 MAR 2016 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAR 2016 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,8 +868,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 65.
 LaTeX Info: Redefining \pageref on input line 65.
 LaTeX Info: Redefining \nameref on input line 65.
-
-(./data-structures_n_algor.out) (./data-structures_n_algor.out)
 \@outlinefile=\write4
 \openout4 = `data-structures_n_algor.out'.
 
@@ -1295,16 +1293,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
-Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
-.
-(rerunfilecheck)             Checksum: FD196277CE6024BD541DEBBBA28F89F1;2268.
+
+
+Package rerunfilecheck Warning: File `data-structures_n_algor.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `data-structures_n_algor.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  FD196277CE6024BD541DEBBBA28F89F1;2268.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  ) 
 Here is how much of TeX's memory you used:
- 16953 strings out of 493089
- 237647 string characters out of 6134842
- 350202 words of memory out of 5000000
- 19284 multiletter control sequences out of 15000+600000
+ 16914 strings out of 493089
+ 237069 string characters out of 6134842
+ 350165 words of memory out of 5000000
+ 19249 multiletter control sequences out of 15000+600000
  20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1262b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1330,10 +1335,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (47 pages, 392230 bytes).
+Output written on data-structures_n_algor.pdf (47 pages, 389810 bytes).
 PDF statistics:
- 1819 PDF objects out of 2073 (max. 8388607)
- 1731 compressed objects within 18 object streams
+ 1715 PDF objects out of 1728 (max. 8388607)
+ 1628 compressed objects within 17 object streams
  831 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
