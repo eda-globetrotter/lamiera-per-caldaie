@@ -39,6 +39,7 @@
 		- Some other parser generator
 		- Ignore *Java*-based parser generator, such as ???ant???
 		- LLVM???
+- Do initial testing with stub classes.
 
 - Refactor other packages.
 	+ Add "const" to all the accessor functions in the classes.

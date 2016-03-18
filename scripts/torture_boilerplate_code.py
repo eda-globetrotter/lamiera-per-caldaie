@@ -14,6 +14,8 @@
 		C++ concepts, C++ libraries, C++ -based tools, and hybrid
 		integration of C++ code with code in other computer languages.
 
+	Also, as a precautionary measure, ensure that all LaTeX documents
+		in the boilerplate code base
 
 
 
