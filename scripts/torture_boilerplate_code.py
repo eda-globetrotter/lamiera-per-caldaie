@@ -15,7 +15,22 @@
 		integration of C++ code with code in other computer languages.
 
 	Also, as a precautionary measure, ensure that all LaTeX documents
-		in the boilerplate code base
+		in the boilerplate code base can be typeset, so that users of
+		the boilerplate code base can typeset the documents and view
+		the result PDF documents for further information.
+
+	Lastly, it shall remove all temporary files generated in the
+		process.
+
+
+
+
+
+
+
+
+
+
 
 
 
