@@ -13,6 +13,10 @@
 	That is, test all the miscellaneous test code to try out various
 		C++ concepts, C++ libraries, C++ -based tools, and hybrid
 		integration of C++ code with code in other computer languages.
+	E.g., test the use of integrating C++ and Python using
+		Boost Python and SWIG, separately.
+	E.g., test the use of using Scala to (partially) automate parser
+		generation (or compiler generation).
 
 	Also, as a precautionary measure, ensure that all LaTeX documents
 		in the boilerplate code base can be typeset, so that users of
@@ -52,14 +56,24 @@
 
 #	Import packages and functions from the Python Standard Library.
 from os import listdir, system, chdir
-from os.path import isfile, join, splitexts
+#from os.path import isfile, join, splitexts
+from os.path import isfile, join
 import subprocess
 
 #	=============================================================
 
+#	Print the header banner for the script.
+
+print "============================================================="
+print "==	Begin torturing the boilerplate code base."
+
+
+
+
 #	Path to the boilerplate code.
 boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie"
 print "boilerplate_code_dir is:::", boilerplate_code_dir, "==="
+print "boilerplate_code_dir is###",boilerplate_code_dir,"+++"
 sandbox_dir = ""
 boilerplate_code_dir = ""
 
@@ -72,8 +86,8 @@ boilerplate_code_dir = ""
 
 
 #subprocess.call('make')
-subprocess.call('make')
-
+subprocess.call('pwd')
+subprocess.call('date')
 
 
 
@@ -95,4 +109,6 @@ subprocess.call('make')
 
 
 #	============================================================
+
+print "============================================================="
 print "==	End of program."

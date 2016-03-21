@@ -33,12 +33,20 @@
 - Test parser module.
 	+ Use ISPD contest parser.
 	+ Implement with:
-		- flex/bison
+		- flex++ (part of flex???)/bison (also, try bison++, or bisonc++)
 		- lex/yacc
-		- Boost parser
+		- Boost parser framework, **Spirit Parser Framework** (Spirit2???)
+		- Boost parser framework, **AXE**
+		- Ragel???
+		- lexertl???
+		- Quex???
+		- ANTLR3, which supports C++. ANTLR4 doesn't support C++.
+		- APG???
+		- Dragon??? GPL-based.
+		- PEGTL???
 		- Some other parser generator
 		- Ignore *Java*-based parser generator, such as ???ant???
-		- LLVM???
+		- LLVM??? No.
 - Do initial testing with stub classes.
 
 - Refactor other packages.
