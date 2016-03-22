@@ -35,6 +35,12 @@
 
 
 
+	References:
+	[Li2010]	Lihan Li, ``Good way to append to a string,'' Stack Exchange Inc., New York, NY, December 14, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/4435169/good-way-to-append-to-a-string} and \url{http://stackoverflow.com/q/4435169}; edited by Pratyush Nalam on March 16, 2013; March 16, 2016 was the last accessed date.
+
+	[Max2012]	Max, ``Which is the preferred way to concatenate a string in Python?,'' Stack Exchange Inc., New York, NY, August 29, 2012. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/12169839} and \url{http://stackoverflow.com/questions/12169839/which-is-the-preferred-way-to-concatenate-a-string-in-python}; March 16, 2016 was the last accessed date.
+
+
 
 
 
@@ -72,8 +78,29 @@ print "==	Begin torturing the boilerplate code base."
 
 #	Path to the boilerplate code.
 boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie"
+
+#"""
+#	String appending exercise.
+
+#	This style of printing a set of strings introduces a space character in between strings.
 print "boilerplate_code_dir is:::", boilerplate_code_dir, "==="
 print "boilerplate_code_dir is###",boilerplate_code_dir,"+++"
+#	[Li2010, answer by John Kugelman, December 14, 2010]
+temp_str = "boilerplate_code_dir is###"
+temp_str += boilerplate_code_dir
+temp_str += "+++"
+print temp_str
+temp_str = []
+temp_str.append('boilerplate_code_dir is###')
+temp_str.append(boilerplate_code_dir)
+temp_str.append('+++')
+#		This statement prints a list of tokens instead: print temp_str.
+print "".join(temp_str)
+
+#	[Max2012]
+
+
+#"""
 sandbox_dir = ""
 boilerplate_code_dir = ""
 
@@ -111,4 +138,4 @@ subprocess.call('date')
 #	============================================================
 
 print "============================================================="
-print "==	End of program."
+print "==	End of torture."
