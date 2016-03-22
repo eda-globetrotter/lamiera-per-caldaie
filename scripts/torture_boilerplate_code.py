@@ -162,9 +162,11 @@ except OSError:
 #subprocess.call('make test')
 subprocess.call(["make", "test"])
 #	Generate documentation for the boilerplate code base.
-#subprocess.call('make doxygen')
+#subprocess.call(["make", "doxygeninit"])
+subprocess.call(["make", "doxygen"])
 #	Check if temporary files are created during testing.
 print listdir(boilerplate_code_dir)
+#	Clean the binaries subdirectory of the boilerplate code base.
 subprocess.call(["make", "clean"])
 #	Check if temporary files are removed.
 print listdir(boilerplate_code_dir)
