@@ -312,7 +312,7 @@ test:
 clean:
 	@echo ===Removing all temporary files...
 	$(SCRIPTS)clean_temp_files.rb
-
+	@echo "	=Removed all temporary files."
 
 
 

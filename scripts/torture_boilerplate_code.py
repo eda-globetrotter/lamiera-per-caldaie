@@ -79,6 +79,7 @@ from os.path import dirname, abspath, isfile, join
 import subprocess, sys
 from sys import argv
 
+
 #	=============================================================
 
 #	Print the header banner for the script.
@@ -102,7 +103,7 @@ boilerplate_LaTeX_guidelines = "/Applications/apps/others/comune/lamiera-per-cal
 """
 #	String appending exercise.
 
-#	This style of printing a set of strings introduces a space character in between strings.
+#	This style of printing a set of strings introduces a space character in between strings, whenever a comma used to separate string tokens.
 print "boilerplate_code_dir is:::", boilerplate_code_dir, "==="
 print "boilerplate_code_dir is###",boilerplate_code_dir,"+++"
 #	[Li2010, answer by John Kugelman, December 14, 2010]
@@ -118,51 +119,54 @@ temp_str.append('+++')
 print "".join(temp_str)
 """
 
+"""
+	Correct method to print location of the boilerplate code base.	
+	It appends string tokens correctly.
+
 temp_str = []
 temp_str.append('boilerplate_code_dir is###')
 temp_str.append(boilerplate_code_dir)
 temp_str.append('+++')
 print "".join(temp_str)
+"""
+temp_str = []
+temp_str.append('Boilerplate directory is:')
+temp_str.append(boilerplate_code_dir)
+temp_str.append('.')
+print "".join(temp_str)
 
 
 #	=============================================================
 
-"""
-	Make system calls to test the boilerplate code and the code in
-		its sandbox.
-"""
-
-
-#subprocess.call('make')
-subprocess.call('pwd')
-subprocess.call('date')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Print the current working directory.
+#	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#pre"
-#print "\b\b"
 
 #	Go to the binaries subdirectory of the boilerplate code base.
 chdir(boilerplate_code_dir)
-# Print the current working directory.
+#	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#boilerplate"
 try:
+	#	Clean the binaries subdirectory of the boilerplate code base.
+	subprocess.call('make clean')
+	#	Test the boilerplate code base.
+	subprocess.call('make test')
+	#	Generate documentation for the boilerplate code base.
+	subprocess.call('make doxygen')
+	#	Clean the binaries subdirectory of the boilerplate code base.
 	subprocess.call('make clean')
 except OSError:
 	#	Do nothing. NOP.
-	print ""
+	sys.stdout.write('')
+
+#	Test the boilerplate code base.
+#subprocess.call('make test')
+subprocess.call(["make", "test"])
+#	Generate documentation for the boilerplate code base.
+#subprocess.call('make doxygen')
+#	Check if temporary files are created during testing.
+print listdir(boilerplate_code_dir)
+subprocess.call(["make", "clean"])
+#	Check if temporary files are removed.
 print listdir(boilerplate_code_dir)
 
 
@@ -175,7 +179,7 @@ try:
 	subprocess.call('make clean')
 except OSError:
 	#	Do nothing. NOP.
-	print ""
+	sys.stdout.write('')
 
 #	Go to the subdirectory of the boilerplate code base's LaTeX report.
 chdir(boilerplate_LaTeX_report)
@@ -185,7 +189,7 @@ try:
 	subprocess.call('make clean')
 except OSError:
 	#	Do nothing. NOP.
-	print ""
+	sys.stdout.write('')
 
 #	Go to the subdirectory of the boilerplate code base's LaTeX guidelines.
 chdir(boilerplate_LaTeX_guidelines)
@@ -195,7 +199,7 @@ try:
 	subprocess.call('make clean')
 except OSError:
 	#	Do nothing. NOP.
-	print ""
+	sys.stdout.write('')
 
 
 #	============================================================
