@@ -59,9 +59,23 @@
 #	=============================================================
 
 #	Import packages and functions from the Python Standard Library.
-from os import listdir, system, chdir
+
+#	To access contents of a directory or switch directories.
+#from os import listdir, system, chdir
+from os import listdir, chdir
+"""
+	To perform operations related to absolute/relative paths,
+		directory names, and file types.
+"""
 #from os.path import isfile, join, splitexts
 from os.path import dirname, abspath, isfile, join
+"""
+	To perform system calls and process input arguments to this
+		script ; see the "library reference manual" for more details
+		\cite[The Python Standard Library - Python 2.7.11 Documentation: 28.1. sys - System-specific parameters and functions]{DrakeJr2014}.
+	"argv" is a container/list of input arguments that are provided
+		to this script when executed at the command line.
+"""
 import subprocess, sys
 from sys import argv
 
@@ -138,7 +152,7 @@ subprocess.call('date')
 
 # Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#pre"
-print ""
+#print "\b\b"
 
 #	Go to the binaries subdirectory of the boilerplate code base.
 chdir(boilerplate_code_dir)
