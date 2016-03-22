@@ -61,21 +61,29 @@
 #	Import packages and functions from the Python Standard Library.
 from os import listdir, system, chdir
 #from os.path import isfile, join, splitexts
-from os.path import isfile, join
-import subprocess
+from os.path import dirname, abspath, isfile, join
+import subprocess, sys
+from sys import argv
 
 #	=============================================================
 
 #	Print the header banner for the script.
 
 print "============================================================="
-print "==	Begin torturing the boilerplate code base."
+print "==	Begin extensive torturing the boilerplate code base."
 
 
 
 
-#	Path to the boilerplate code base.
-boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie"
+#	Path to the boilerplate code base's binaries subdirectory.
+boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/binaries"
+#	Path to the boilerplate code base's sandbox.
+sandbox_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/src/sandbox"
+#	Path to the boilerplate code base's LaTeX report.
+boilerplate_LaTeX_report = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/report"
+#	Path to the boilerplate code base's LaTeX guidelines.
+boilerplate_LaTeX_guidelines = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/guidelines"
+
 
 """
 #	String appending exercise.
@@ -102,12 +110,6 @@ temp_str.append(boilerplate_code_dir)
 temp_str.append('+++')
 print "".join(temp_str)
 
-#	Path to the boilerplate code base's sandbox.
-sandbox_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/src/sandbox"
-#	Path to the boilerplate code base's LaTeX report.
-boilerplate_LaTeX_report = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/report"
-#	Path to the boilerplate code base's LaTeX guidelines.
-boilerplate_LaTeX_guidelines = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/guidelines"
 
 #	=============================================================
 
@@ -134,13 +136,55 @@ subprocess.call('date')
 
 
 
+# Print the current working directory.
+print "	pwd=", dirname(abspath(sys.argv[0])),"#pre"
+print ""
+
+#	Go to the binaries subdirectory of the boilerplate code base.
+chdir(boilerplate_code_dir)
+# Print the current working directory.
+print "	pwd=", dirname(abspath(sys.argv[0])),"#boilerplate"
+try:
+	subprocess.call('make clean')
+except OSError:
+	#	Do nothing. NOP.
+	print ""
+print listdir(boilerplate_code_dir)
 
 
 
+#	Go to the sandbox.
+chdir(sandbox_dir)
+# Print the current working directory.
+print "	pwd=", dirname(abspath(sys.argv[0])),"#sandbox"
+try:
+	subprocess.call('make clean')
+except OSError:
+	#	Do nothing. NOP.
+	print ""
 
+#	Go to the subdirectory of the boilerplate code base's LaTeX report.
+chdir(boilerplate_LaTeX_report)
+# Print the current working directory.
+print "	pwd=", dirname(abspath(sys.argv[0])),"#report"
+try:
+	subprocess.call('make clean')
+except OSError:
+	#	Do nothing. NOP.
+	print ""
+
+#	Go to the subdirectory of the boilerplate code base's LaTeX guidelines.
+chdir(boilerplate_LaTeX_guidelines)
+# Print the current working directory.
+print "	pwd=", dirname(abspath(sys.argv[0])),"#guide"
+try:
+	subprocess.call('make clean')
+except OSError:
+	#	Do nothing. NOP.
+	print ""
 
 
 #	============================================================
 
 print "============================================================="
-print "==	End of torture."
+print "==	End of extensive torture."
