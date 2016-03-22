@@ -34,13 +34,13 @@
 	+ Use ISPD contest parser.
 	+ Implement with:
 		- flex++ (part of flex???)/bison (also, try bison++, or bisonc++)
-		- lex/yacc
 		- Boost parser framework, **Spirit Parser Framework** (Spirit2???)
 		- Boost parser framework, **AXE**
 		- Ragel???
-		- lexertl???
-		- Quex???
 		- ANTLR3, which supports C++. ANTLR4 doesn't support C++.
+		- lex/yacc
+		- Quex???
+		- lexertl???
 		- APG???
 		- Dragon??? GPL-based.
 		- PEGTL???
