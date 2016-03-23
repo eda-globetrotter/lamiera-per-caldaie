@@ -87,10 +87,39 @@
 
 # Doxygen Shortcuts
 
-- \brief	: Brief
 
 
+- \brief		: Brief description of something.
+- \sideeffect	: Side effect(s) of a function or subset of a code 
+					block.
+- \internal		: Comments in the source code that is available only
+					to the software development team that I am
+					working/collaborating with.
+- \todo			: To-do list of the software project, which is the
+					boilerplate code base.
+- \test			: Indicate the test(s) case that I am developing.
+- \bug			: Bug that I found and has not been fixed.
+- \deprecated	: C++ function/macro/variable/constant that has been
+					deprecated.
+- \cite			: For using BibTeX (+ LaTeX) to reference my source
+					code.
+- \include		: Code that I included from elsewhere.
+- \dontinclude	: Code that I do not want to include, from elsewhere.
+- \image		: Figures to be added to the documentation.
+- \class		: Indicate that this is a class.
+- \msc			: Definition of message sequence charts in the
+					comments (in the source code).
+- \callgraph
+- \hidecallgraph	: Create the call graph for this function, place
+						in the (source) code.
+- \dotfile		: Include figures of graphs/networks via Graphviz.
+- \mscfile		: Include figures of graphs/networks via message
+					sequence charts.
+- \diafile		: Include figures of graphs/networks via Dia.
+- \startuml
 
+
+Reference: /Applications/apps/others/comune/lamiera-per-caldaie/binaries/doxygen.config
 
 
 
