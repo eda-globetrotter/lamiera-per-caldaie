@@ -85,3 +85,31 @@
 
 
 
+# Doxygen Shortcuts
+
+- \brief	: Brief
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
