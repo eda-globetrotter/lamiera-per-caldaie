@@ -161,20 +161,73 @@ subprocess.call(["make", "clean"])
 print listdir(boilerplate_code_dir)
 
 
-
+#	---------------------------------------------------------
 #	Go to the sandbox.
 chdir(sandbox_dir)
-# Print the current working directory.
+#	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#sandbox"
-try:
-	subprocess.call('make clean')
-except OSError:
-	#	Do nothing. NOP.
-	sys.stdout.write('')
+#	Clean the sandbox subdirectory of the boilerplate code base.
+subprocess.call(["make", "clean"])
+"""
+	Test different Make targets of the sandbox.
+	
+	\todo	Use a FOR loop to sweep through all the Make targets.
+"""
+subprocess.call(["make", "null"])
+subprocess.call(["make", "clean"])
 
+subprocess.call(["make", "emptyset"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "dtypes"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "string"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "vector"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "set"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "set1"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "typedef"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "null"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "fcreturn"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "forloop"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "template"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "template1"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "null"])
+#	Check if temporary files are created during testing.
+print listdir(boilerplate_code_dir)
+#	Clean the binaries subdirectory of the boilerplate code base.
+subprocess.call(["make", "clean"])
+#	Check if temporary files are removed.
+print listdir(boilerplate_code_dir)
+
+
+
+
+
+#	---------------------------------------------------------
 #	Go to the subdirectory of the boilerplate code base's LaTeX report.
 chdir(boilerplate_LaTeX_report)
-# Print the current working directory.
+#	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#report"
 try:
 	subprocess.call('make clean')
@@ -182,9 +235,16 @@ except OSError:
 	#	Do nothing. NOP.
 	sys.stdout.write('')
 
+
+
+
+
+
+
+#	---------------------------------------------------------
 #	Go to the subdirectory of the boilerplate code base's LaTeX guidelines.
 chdir(boilerplate_LaTeX_guidelines)
-# Print the current working directory.
+#	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#guide"
 try:
 	subprocess.call('make clean')
@@ -192,6 +252,11 @@ except OSError:
 	#	Do nothing. NOP.
 	sys.stdout.write('')
 
+
+
+
+#	Do nothing. NOP.
+#sys.stdout.write('')
 
 #	============================================================
 
