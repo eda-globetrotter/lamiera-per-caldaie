@@ -214,11 +214,11 @@ subprocess.call(["make", "clean"])
 
 subprocess.call(["make", "null"])
 #	Check if temporary files are created during testing.
-print listdir(boilerplate_code_dir)
+print listdir(sandbox_dir)
 #	Clean the binaries subdirectory of the boilerplate code base.
 subprocess.call(["make", "clean"])
 #	Check if temporary files are removed.
-print listdir(boilerplate_code_dir)
+print listdir(sandbox_dir)
 
 
 
@@ -229,11 +229,17 @@ print listdir(boilerplate_code_dir)
 chdir(boilerplate_LaTeX_report)
 #	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#report"
-try:
-	subprocess.call('make clean')
-except OSError:
-	#	Do nothing. NOP.
-	sys.stdout.write('')
+#	Typeset the LaTeX report for the boilerplate code base.
+subprocess.call(["make", "latex"])
+#	Check if temporary files are created during typesetting.
+print listdir(boilerplate_LaTeX_report)
+"""
+	Clean the temporary files associated with the boilerplate code
+		base's LaTeX report.
+"""
+subprocess.call(["make", "clean"])
+#	Check if temporary files are removed.
+print listdir(boilerplate_LaTeX_report)
 
 
 
@@ -246,11 +252,17 @@ except OSError:
 chdir(boilerplate_LaTeX_guidelines)
 #	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#guide"
-try:
-	subprocess.call('make clean')
-except OSError:
-	#	Do nothing. NOP.
-	sys.stdout.write('')
+#	Typeset LaTeX report for the boilerplate code base's guidelines.
+subprocess.call(["make", "latex"])
+#	Check if temporary files are created during typesetting.
+print listdir(boilerplate_LaTeX_guidelines)
+"""
+	Clean the temporary files associated with the boilerplate code
+		base's LaTeX guidelines.
+"""
+subprocess.call(["make", "clean"])
+#	Check if temporary files are removed.
+print listdir(boilerplate_LaTeX_guidelines)
 
 
 
