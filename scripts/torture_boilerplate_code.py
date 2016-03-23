@@ -145,19 +145,8 @@ print "	pwd=", dirname(abspath(sys.argv[0])),"#pre"
 chdir(boilerplate_code_dir)
 #	Print the current working directory.
 print "	pwd=", dirname(abspath(sys.argv[0])),"#boilerplate"
-try:
-	#	Clean the binaries subdirectory of the boilerplate code base.
-	subprocess.call('make clean')
-	#	Test the boilerplate code base.
-	subprocess.call('make test')
-	#	Generate documentation for the boilerplate code base.
-	subprocess.call('make doxygen')
-	#	Clean the binaries subdirectory of the boilerplate code base.
-	subprocess.call('make clean')
-except OSError:
-	#	Do nothing. NOP.
-	sys.stdout.write('')
-
+#	Clean the binaries subdirectory of the boilerplate code base.
+subprocess.call(["make", "clean"])
 #	Test the boilerplate code base.
 #subprocess.call('make test')
 subprocess.call(["make", "test"])
