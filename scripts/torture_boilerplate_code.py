@@ -109,8 +109,22 @@ boilerplate_LaTeX_guidelines = "/Applications/apps/others/comune/lamiera-per-cal
 
 
 """
-#	String appending exercise.
+	Methods to execute Linux system calls.
 
+	import os
+	os.system("date")
+	
+	import os
+	f = os.popen('date')
+	now = f.read()
+	print "Today is ", now
+	
+	import subprocess
+	subprocess.call("command1")
+	subprocess.call(["command1", "arg1", "arg2"])
+"""
+#	String appending exercise.
+"""
 #	This style of printing a set of strings introduces a space character in between strings, whenever a comma used to separate string tokens.
 print "boilerplate_code_dir is:::", boilerplate_code_dir, "==="
 print "boilerplate_code_dir is###",boilerplate_code_dir,"+++"
@@ -217,8 +231,8 @@ subprocess.call(["make", "clean"])
 subprocess.call(["make", "template"])
 subprocess.call(["make", "clean"])
 
-subprocess.call(["make", "template1"])
-subprocess.call(["make", "clean"])
+#subprocess.call(["make", "template1"])
+#subprocess.call(["make", "clean"])
 
 subprocess.call(["make", "null"])
 #	Check if temporary files are created during testing.

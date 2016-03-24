@@ -258,6 +258,7 @@ using namespace std;
 
 
 // Class definition of the conversion_alphanumeric class
+//template<class T>
 template<typename T>
 class conversion_alphanumeric {
 	// Publicly accessible data members, constructors, and functions
