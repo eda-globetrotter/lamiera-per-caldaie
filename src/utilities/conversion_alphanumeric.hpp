@@ -7,7 +7,7 @@
  * Class to convert numbers to strings.
  * The C++ STL provides 2 functions to convert strings to numbers.
  * However, the functions for converting numbers to strings are not
- *	provided by the C++ STL (as part of the C++14 standard).
+ *	provided by the C++ STL prior to the C++11/C++14 standard.
  * Hence, this class provides some functions for converting numbers
  *	to strings.
  * 
@@ -212,9 +212,12 @@
  * #	I am using the terms, "function templates" or "template 
  *			functions", synonymously.
  *
- *
- *
- *
+ * #	[Mar 25, 2015]
+ *			I am refactoring the class to enable each technique for
+ *			implementing the conversion from numbers to strings to
+ *			accept parameters of the following types: int,
+ *			long long int, unsigned int, unsigned long long int,
+ *			double, and long double.
  *
  *
  *
