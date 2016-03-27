@@ -282,6 +282,12 @@ class conversion_alphanumeric {
 		 * I am using the terms, "function templates" or "template
 		 *	functions", synonymously.
 		 */
+		
+		/**
+		 * Function to use the to_string() function from the C++11
+		 *	STL to convert numbers to strings, for the specified,
+		 *	or aforementioned, data types.
+		 */
 		static string number_to_string_cpp_stl_to_string(T &a_num);
 
 
