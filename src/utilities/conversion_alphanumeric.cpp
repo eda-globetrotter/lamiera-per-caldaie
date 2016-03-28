@@ -96,11 +96,12 @@ string conversion_alphanumeric<T>::number_to_string_cpp_stl_to_string(T &a_num) 
  * @return string representation of an_int, the signed integer.
  */
 //string conversion_alphanumeric::num_to_str(int an_int) {
+/*
 template<typename T>
 string conversion_alphanumeric<T>::int_to_str(int an_int) {
 	return to_string(an_int);
 }
-
+*/
 
 /**
  * Function to convert a signed integer to a string, using
@@ -108,11 +109,12 @@ string conversion_alphanumeric<T>::int_to_str(int an_int) {
  * @param an_int:	A signed integer to be converted to a string.
  * @return string representation of an_int, the signed integer.
  */
+/*
 template<typename T>
 string conversion_alphanumeric<T>::int_to_str_ss(int an_int) {
 	return to_string(an_int);
 }
-
+*/
 
 /**
  * Function to convert a large signed integer to a string.
