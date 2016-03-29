@@ -106,12 +106,12 @@ class conversion_alphanumeric_ut {
 		static void test_numbers_to_strings_fn_template();
 		
 		// Function to test functions to convert integers to strings.
-		static void test_integers_to_strings();
+//		static void test_integers_to_strings();
 		
 		/**
 		 * Function to test functions to convert floating-point
 		 *	numbers to strings.
 		 */
-		static void test_floating_point_numbers_to_strings();
+//		static void test_floating_point_numbers_to_strings();
 };
 #endif
