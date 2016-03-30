@@ -1,3 +1,4 @@
+/*
 #include "./trivial_template.hpp"
 
 template <typename T>
@@ -17,3 +18,4 @@ template<typename T>
 T trivial_template<T>::square_given_number(T a_num) {
 	return (a_num*a_num);
 }
+*/
