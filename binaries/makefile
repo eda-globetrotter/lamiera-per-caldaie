@@ -113,7 +113,10 @@ COVERAGE=			-coverage
 NORMALTXT=			normal_output.txt
 #	Error output message/text file
 ERRORTXT=			error_output.txt
-
+#	Used when testing and debugging.
+COVERAGE=			-coverage
+CPP11=				-std=c++0x
+CPP14=				-Wc++14-extensions
 
 
 
@@ -181,6 +184,9 @@ BINARIES=		../binaries/
 # Module containing the documention of the software.
 NOTESPATH=		../notes/
 DOCSPATH=		../docs/
+# Module containing "test" code from the "sandbox".
+SANDBOXPATH=	../src/sandbox/
+TEMPLATEPATH=	classes/simple_template.cpp
 
 
 
@@ -255,20 +261,22 @@ test:
 	$(TBBSETUP)
 	@echo === Compiling C++ source code in the...
 	@echo === Utilities Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
 	@echo === Graph Directory
-#	$(GPLUSPLUS)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
+#	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(DIRGRAPHPATH)$(SOURCE)
 	@echo === Parsers Directory
+	@echo === Sandbox Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(SANDBOXPATH)$(TEMPLATEPATH)
 	@echo === Test/Utilities Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(TESTPATH)$(TPUTILITIES)$(SOURCE)
 	@echo === Test/Graph Directory
-#	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
-#	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(TPDIRGRAPH)$(SOURCE)
+#	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(SOURCE)
+#	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(TESTPATH)$(TPGRAPH)$(TPDIRGRAPH)$(SOURCE)
 	@echo === Test/Parsers Directory
 	@echo === Test Directory
-	$(GPLUSPLUS)	$(COMPILE)	$(TESTPATH)$(SOURCE)
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(TESTPATH)$(SOURCE)
 	@echo === Link the C++ object files...
-	$(GPLUSPLUS)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
 	$(TIME) $(EXECUTABLE) $(BENCHMARKS)$(STACK1)	$(OPRESULTS)
 	@echo
@@ -287,6 +295,42 @@ test:
 	@echo
 	more $(NORMALTXT)
 	more $(ERRORTXT)
+
+
+
+#####################################################################
+#	Target for testing templates.
+#####################################################################
+# Build and run C++ program to experiment with templates.
+template:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === Utilities Directory
+	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
+	@echo === Sandbox Directory
+	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(SANDBOXPATH)$(TEMPLATEPATH)
+	@echo === Test Directory
+	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(TESTPATH)temp/test_templates.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
 
 
 ########################################################################

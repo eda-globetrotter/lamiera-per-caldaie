@@ -47,6 +47,8 @@
 #include "../../utilities/violated_assertion.hpp"
 #include "../../utilities/violated_precondition.hpp"
 
+// Import "test" classes from the "sandbox".
+#include "../../sandbox/classes/simple_template.hpp"
 
 // Import packages from the C++ STL
 #include <iostream>

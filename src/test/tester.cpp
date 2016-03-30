@@ -93,7 +93,8 @@
 // Graph module
 //#include "graph_t/graph_mt.hpp"
 
-
+// Import "test" classes from the "sandbox". Test works when its code are not used.
+#include "../sandbox/classes/simple_template.hpp"
 
 
 

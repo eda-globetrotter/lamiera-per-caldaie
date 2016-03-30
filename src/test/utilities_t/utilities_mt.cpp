@@ -33,6 +33,12 @@
 //#include "../../utilities/printer.hpp"
 
 
+// Import "test" classes from the "sandbox".
+//#include "../../sandbox/classes/simple_template.hpp"
+
+
+
+
 // Import appropriate header files from the C++ STL
 
 
@@ -74,5 +80,18 @@ void utilities_mt::test_utilities() {
 	// Test the class file_io.
 	file_io_ut::test_file_io();
 	// Test the class conversion_alphanumeric.
-	conversion_alphanumeric_ut::test_numbers_to_strings();
+//	conversion_alphanumeric_ut::test_numbers_to_strings();
+
+
+/*
+	// Test if I can use "simple_template". 
+	cout << "	###" << simple_template<int>::is_non_negative(493) << "===" << endl;
+	simple_template<int> *a_ptr;
+	cout << "	###" << a_ptr->square_given_number(5) << "===" << endl;
+	// 0.25^2 = 0.0625
+	simple_template<long double> *b_ptr;
+	cout << "	###" << b_ptr->square_given_number(-0.25) << "===" << endl;
+	// 16.25^2 = 164.0625
+	cout << "	###" << b_ptr->square_given_number(-16.25) << "===" << endl;
+*/
 }

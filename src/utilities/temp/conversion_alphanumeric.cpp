@@ -26,6 +26,14 @@ conversion_alphanumeric<T>::conversion_alphanumeric() {
 }
 
 
+// Default destructor.
+template<typename T>
+conversion_alphanumeric<T>::~conversion_alphanumeric() {
+	string err_msg = "==u	conversion_alphanumeric destructor is faulty!";
+	throw new violated_assertion(err_msg);
+}
+
+
 // -----------------------------------------------------
 
 /**
@@ -83,8 +91,8 @@ conversion_alphanumeric<T>::conversion_alphanumeric() {
 		return to_string(a_num);
 	}
 */
-template<class T>
-string conversion_alphanumeric<T>::number_to_string_cpp_stl_to_string(T &a_num) {
+template<typename T>
+string conversion_alphanumeric<T>::number_to_string_cpp_stl_to_string(T a_num) {
 	return to_string(a_num);
 }
 

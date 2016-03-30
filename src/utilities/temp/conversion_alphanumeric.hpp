@@ -268,6 +268,8 @@ class conversion_alphanumeric {
 	public:
 		// Default constructor
 		conversion_alphanumeric();
+		// Default destructor.
+		~conversion_alphanumeric();
 
 		// -----------------------------------------------------
 		
@@ -288,7 +290,7 @@ class conversion_alphanumeric {
 		 *	STL to convert numbers to strings, for the specified,
 		 *	or aforementioned, data types.
 		 */
-		static string number_to_string_cpp_stl_to_string(T &a_num);
+		static string number_to_string_cpp_stl_to_string(T a_num);
 
 
 		// -----------------------------------------------------
