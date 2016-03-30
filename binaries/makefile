@@ -308,14 +308,12 @@ template:
 	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
 	$(DATE)
 	@echo === Compiling C++ source code...
-	@echo === Utilities Directory
-	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(UTILITYPATH)$(SOURCE)
-	@echo === Sandbox Directory
-	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(SANDBOXPATH)$(TEMPLATEPATH)
+	@echo === Elements Directory
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(ELEMPATH)$(SOURCE)
 	@echo === Test Directory
-	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(COMPILE)	$(TESTPATH)temp/test_templates.cpp
+	$(GPLUSPLUS)	$(CPP11)	$(COMPILE)	$(TESTPATH)temp/test_templates.cpp
 	@echo === Link the C++ object files...
-	$(GPLUSPLUS)	$(COMPILATIONSTEPS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	$(GPLUSPLUS)	$(CPP11)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
 	@echo === Executing the software...
 	$(TIME) $(EXECUTABLE)
 	@echo
