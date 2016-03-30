@@ -190,6 +190,11 @@ C++ topics: \vspace{-0.3cm}
 	\item \cite{Vermeir2001}, Chp 6
 	\item \cite{Eckel2000}, Chp 16
 	\item \cite[Chp. 18, pp. 461--487]{Schildt1998a}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\item 
+		\end{enumerate}
 	\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Debugging: \vspace{-0.3cm}
@@ -787,6 +792,7 @@ Notes about software development in {\it C++}: \vspace{-0.3cm}
 				\item \#ifdef
 				\item \#define
 				\item \#include
+				\item ``I would recommend putting your include guards above your includes. That way the includes don't get parsed twice for the same file.'' {\color{red} That is, the pre-processors {\tt \#ifdef} and {\tt \#define} should be placed above the {\tt \#include} statements. This would avoid repetitive parsing of (header) files that are included.} Reference: sdsmith, comment to the question ``Why is the discrepancy in these two cases of using C++ templates?,'' Stack Exchange Inc., New York, NY, March 30, 2016. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30, 2016 was the last accessed date.
 				\end{itemize}
 			\item ``linkage'': \vspace{-0.1cm}
 				\begin{itemize} \itemsep -1pt

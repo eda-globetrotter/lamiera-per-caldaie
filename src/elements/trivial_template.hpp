@@ -23,8 +23,6 @@ class trivial_template {
 
 
 // From the original "trivial_template.hpp".
-#include "./trivial_template.hpp"
-
 template <typename T>
 trivial_template<T>::trivial_template() {
 }
