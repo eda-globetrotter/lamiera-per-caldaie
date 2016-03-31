@@ -5,7 +5,7 @@
 		benchmark repository.
 	
 	Firstly, it checks if the benchmark repository exists.
-		If not, create a directory for the benchmark repository.
+	If not, create a directory for the benchmark repository.
 
 	Secondly, it checks if the set of benchmarks are there.
 	If not, download the set of benchmarks to the benchmark
@@ -14,6 +14,9 @@
 	Thirdly, parse the benchmarks to validate the benchmarks.
 	That is, check if the benchmarks are valid. 
 
+	Fourthly, check if evaluation scripts are available for each
+		set of benchmarks.
+	If not, download the required evaluation scripts (if any).
 
 	Notes:
 		The solution from [Damian2010] manually enumerates all files
@@ -89,9 +92,13 @@ from sys import argv
 #	Preamble.
 
 #	Relative paths to directories.
+boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/binaries"
 current_working_directory = "."
 path_to_benchmark_repository = "../benchmarks/"
-path_to_ISPD_2013_contest_benchmark = "../benchmarks/ispd2013"
+ispd_2013_contest = "ispd2013"
+path_to_ISPD_2013_contest_benchmark = path_to_benchmark_repository + ispd_2013_contest 
+path_to_evaluation_repository = "../evaluation/"
+path_to_evaluation_repository_ispd_2013_contest = path_to_evaluation_repository + ispd_2013_contest
 
 #	File extensions.
 verilog_file_extension = "*.v"
@@ -100,6 +107,29 @@ def_file_extension = "*.def"
 
 #	Number of benchmarks used for the ISPD 2013 contest.
 number_of_ispd2013_contest_benchmarks = 8
+
+#	URLs of files to download.
+url_ispd2013_contest_benchmarks_prefix = "http://www.ispd.cc/contests/13/benchmark/"
+
+filename_ispd2013_contest_benchmarks_most = "ispd2013.tgz" 
+url_ispd2013_contest_benchmarks_most = url_ispd2013_contest_benchmarks_prefix + filename_ispd2013_contest_benchmarks_most
+
+filename_ispd2013_contest_benchmarks_netcard = "netcard.tgz"
+url_ispd2013_contest_benchmarks_netcard = url_ispd2013_contest_benchmarks_prefix + filename_ispd2013_contest_benchmarks_netcard
+
+filename_ispd2013_contest_benchmarks_final = "ispd2013_final.tar.bz2"
+url_ispd2013_contest_benchmarks_final = url_ispd2013_contest_benchmarks_prefix + filename_ispd2013_contest_benchmarks_final
+"""
+print "most", url_ispd2013_contest_benchmarks_most
+print "netcard", url_ispd2013_contest_benchmarks_netcard
+print "final", url_ispd2013_contest_benchmarks_final
+"""
+
+#	Go to target working directory...
+#	Go to the binaries subdirectory of the boilerplate code base.
+chdir(boilerplate_code_dir)
+#	Print the current working directory.
+#print "	pwd=", dirname(abspath(sys.argv[0])),"#boilerplate"
 
 #	=============================================================
 #	Function definitions
@@ -124,11 +154,7 @@ if not isdir(path_to_benchmark_repository):
 	makedirs(path_to_benchmark_repository)
 else:
 	print "		>>	The benchmark repository exists."
-
-
-
 #	--------------------------------------------------------
-
 print "	==>	Checks if the ISPD 2013 contest benchmark directory exists."
 if not isdir(path_to_ISPD_2013_contest_benchmark):
 	print "		>>	Create a directory for the ISPD 2013 contest benchmarks."
@@ -140,6 +166,12 @@ else:
 
 
 
+
+
+
+
+
+#	--------------------------------------------------------
 """
 	Secondly, it checks if the complete set of benchmarks for the
 		ISPD 2013 contest is there.
@@ -162,8 +194,9 @@ print "Number of regular files in ISPD benchmark subdirectory [Miranda2015]:", l
 #	From [okobaka2012], which is a modification of [Luke2011] and [Miranda2015].
 print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
 """
+print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
 #	Is there any regular file in the ISPD 2013 contest benchmark directory?
-if not 0 < len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
+if 0 == len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 	print "		>>	No regular file in the ISPD 2013 contest benchmark directory."
 	print "		>>	Download the ISPD 2013 contest benchmarks."
 #	From [Lowis2009].
@@ -193,16 +226,52 @@ if number_of_ispd2013_contest_benchmarks != number_of_txt_files:
 
 
 
+
+
+
+
+
+
+#	--------------------------------------------------------
 """
 	Thirdly, parse the benchmarks to validate the benchmarks.
 	That is, check if the benchmarks are valid. 
 """
 print "	==>	Call the check_benchmark feature of the parser."
 print "		... Call check_benchmark feature of parser!"
+#	\todo
+print "		???	To be finished!!!"
 
 
 
 
+
+
+
+
+#	--------------------------------------------------------
+"""
+	Fourthly, check if evaluation scripts are available for each
+		set of benchmarks.
+	If not, download the required evaluation scripts (if any).
+"""
+print "	==>	Checks if the 'evaluation scripts' directory exists."
+if not isdir(path_to_evaluation_repository):
+	print "		>>	Create a directory for the 'evaluation scripts'."
+	makedirs(path_to_evaluation_repository)
+else:
+	print "		>>	The 'evaluation scripts' directory exists."
+#	--------------------------------------------------------
+print "	==>	Checks if the 'evaluation' dir exists for ISPD 2013 contest."
+if not isdir(path_to_evaluation_repository_ispd_2013_contest):
+	print "		>>	Create dir for 'evaluation' - ISPD 2013 contest."
+	makedirs(path_to_evaluation_repository_ispd_2013_contest)
+else:
+	print "		>>	Evaluation dir for ISPD 2013 contest exists."
+#	--------------------------------------------------------
+print "	==>	Check contents of 'evaluation' dir for ISPD 2013 contest."
+#	\todo
+print "		???	To be finished!!!"
 
 
 
