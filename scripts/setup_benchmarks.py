@@ -146,6 +146,8 @@ print "Number of regular files in ISPD benchmark subdirectory [Miranda2015]:", l
 #	From [okobaka2012], which is a modification of [Luke2011] and [Miranda2015].
 print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
 """
+#	From [Lowis2009].
+number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, "*.v")) 
 #	From 
 #	Is there any regular file in the ISPD 2013 contest benchmark directory?
 if not 0 < len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
