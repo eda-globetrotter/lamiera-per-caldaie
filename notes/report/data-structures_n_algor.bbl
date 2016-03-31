@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{Abrahams2005}
 David Abrahams and Aleksey Gurtovoy.
@@ -91,6 +91,14 @@ Brian Bailey, Grant Martin, and Andrew Piziali.
   System-Level Methodology}.
 \newblock The Morgan Kaufmann Series in Systems on Silicon. Morgan Kaufmann,
   San Francisco, {CA}, 2007.
+
+\bibitem{Ben2013}
+Ben.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/16493574/1531728}; March 30,
+  2016 was the last accessed date, May 11 2013.
 
 \bibitem{Bertsimas2004}
 Dimitris Bertsimas and Melvyn Sim.
@@ -186,6 +194,14 @@ Mourad Debbabi, Fawzi Hassa{\"{i}}ne, Yosr Jarraya, Andrei Soeanu, and Luay
   {UML/SysML} Design Models}.
 \newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2010.
 
+\bibitem{DevSolar2009}
+{DevSolar}.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/495511/1531728}; March 30,
+  2016 was the last accessed date, January 30 2009.
+
 \bibitem{Pradhan2009}
 Ian G.~Harris Dhiraj K.~Pradhan.
 \newblock {\em Practical Design Verification}.
@@ -256,6 +272,15 @@ Tony Gaddis.
 Tony Gaddis, Judy Walters, and Godfrey Muganda.
 \newblock {\em Starting Out With {C++}: Early Objects}.
 \newblock Addison-Wesley, Boston, {MA}, seventh edition, 2011.
+
+\bibitem{Gogolev2009}
+Anton Gogolev.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/495032/1531728}; edited by
+  Jonathan Henly, September 19, 2013; March 30, 2016 was the last accessed
+  date, January 30 2009.
 
 \bibitem{Gregoire2014}
 Marc Gregoire.
@@ -440,6 +465,16 @@ Peter Mortensen.
   \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const};
   October 1, 2015 was the last accessed date, March 13 2015.
 
+\bibitem{Moses2016}
+Black Moses.
+\newblock answer to the question `why is the discrepancy in these two cases of
+  using {C++} templates?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/36319466/1531728} and
+  \url{http://stackoverflow.com/questions/36319028/why-is-the-discrepancy-in-these-two-cases-of-using-c-templates/36319466#36319466};
+  edited by Kuba Ober, on March 30, 2016; March 30, 2016 was the last accessed
+  date, March 30 2016.
+
 \bibitem{Mukherjee2015}
 Arindam Mukherjee.
 \newblock {\em Learning {Boost C++} Libraries: Solve Practical Programming
@@ -587,6 +622,14 @@ Herbert Schildt.
 Herbert Schildt.
 \newblock {\em The Art of {C++}}.
 \newblock {McGraw-Hill}/Osborne, Emeryville, {CA}, 2004.
+
+\bibitem{sdsmith2016}
+sdsmith.
+\newblock comment to the question `why is the discrepancy in these two cases of
+  using {C++} templates?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30,
+  2016 was the last accessed date, March 30 2016.
 
 \bibitem{Soulie2007}
 Juan Souli{\'{e}}.
