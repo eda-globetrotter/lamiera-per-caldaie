@@ -193,9 +193,16 @@ C++ topics: \vspace{-0.3cm}
 	\item References: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \cite{Moses2016} recommends including the implementation file ({\tt .cpp}), instead of the header file ({\tt .hpp}) in any {\it C++} file that uses the {\it C++} template.
-		\item \cite{Ben2013,DevSolar2009,Diago2013} argues for separating the {\it C++} template definitions in the header file ({\tt .hpp}) from the {\it C++} template implementations in the implementation file ({\tt .cpp}).
+		\item \cite{Ben2013} argues for separating the {\it C++} template definitions in the header file ({\tt .hpp}) from the {\it C++} template implementations in the implementation file ({\tt .cpp}).
 		\item ``Although standard C++ has no such requirement, some compilers require that all function and class templates need to be made available in every translation unit they are used. In effect, for those compilers, the bodies of template functions must be made available in a header file. To repeat: that means those compilers won't allow them to be defined in non-header files such as .cpp files.\dots\ There is an export keyword which is supposed to mitigate this problem, but it's nowhere close to being portable.'' \cite{Gogolev2009}
 		\item \cite{Benoit2009} argues that you can merge the definition and implementation in a single file, which ends with the {\tt .hpp} file extension.
+		\item \cite{DevSolar2009,Diago2013} argue that both the definition and the implementation of {\it C++} templates should be placed together in the {\it C++} header file, with white space 
+		\item This is a list of different implementations of a C++ template: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Implemented with {\it C++} template definition and implementation in one file, where the definition and implementation are clearly separated/distinguished/demarcated. The implementation is appended to the end of the definition, with some white space to separate them \cite{Gogolev2009,DevSolar2009,Diago2013}.
+			\item Implemented with merged {\it C++} template definition and implementation in one file \cite{Benoit2009}.
+			\item Implemented with {\it C++} template definition and implementation separately in different files: a {\it C++} header file and a {\it C++} implementation file. Any file that uses this {\it C++} template will have to import the {\it C++} implementation file, instead of the {\it C++} header file \cite{Moses2016,Ben2013}. {\color{red}\tt I shall use this method. This clearly decouples the {\it C++} template definition and implementation separately into different files, and keeps things modular in my software architecture. It prevents templates from being huge monoliths.}
+			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
