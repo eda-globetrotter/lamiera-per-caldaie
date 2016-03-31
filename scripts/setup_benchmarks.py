@@ -57,7 +57,7 @@ from os import listdir, chdir
 		directory names, and file types.
 """
 #from os.path import isfile, join, splitexts
-from os.path import dirname, abspath, isfile, join
+from os.path import dirname, abspath, isfile, join, isdir
 """
 	To perform system calls and process input arguments to this
 		script ; see the "library reference manual" for more details
@@ -80,22 +80,32 @@ print "==	Begin setting up the benchmark repository for the boilerplate code bas
 	Firstly, it checks if the benchmark repository exists.
 		If not, create a directory for the benchmark repository.
 """
+print "	==>	Checks if the benchmark repository exists."
+if not isdir("../benchmarks/"):
+	print "		>>	Create a directory for the benchmark repository."
+else:
+	print "		>>	The benchmark repository exists."
 
+#	--------------------------------------------------------
 
-
-
-
+print "	==>	Checks if the ISPD 2013 contest benchmark directory exists."
+if not isdir("../benchmarks/ispd2013"):
+	print "		>>	Create a directory for the ISPD 2013 contest benchmarks."
+else:
+	print "		>>	The ISPD 2013 contest benchmark directory exists."
 
 
 
 
 
 """
-	Secondly, it checks if the set of benchmarks are there.
+	Secondly, it checks if the complete set of benchmarks for the
+		ISPD 2013 contest is there.
 	If not, download the set of benchmarks to the benchmark
 		repository.
 """
-
+print "	==>	Check if ISPD 2013 contest benchmark directory is complete."
+print "		... Checking!"	
 
 
 
@@ -107,8 +117,8 @@ print "==	Begin setting up the benchmark repository for the boilerplate code bas
 	Thirdly, parse the benchmarks to validate the benchmarks.
 	That is, check if the benchmarks are valid. 
 """
-print "==	Call the check_benchmark feature of the parser."
-
+print "	==>	Call the check_benchmark feature of the parser."
+print "		... Call check_benchmark feature of parser!"
 
 
 
