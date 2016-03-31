@@ -25,6 +25,8 @@
 				[Zaslavsky2009]
 
 	References:
+	[Boissinot2009]
+		Benoit Boissinot, answer to the question ``Count number of files with certain extension in Python,'' Stack Exchange Inc., New York, NY, August 24, 2009. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/1321138/1531728}; March 31, 2016 was the last accessed date.
 	[Damian2010]
 		Kristian Damian, answer to the question ``How to count the number of files in a directory using Python?,'' Stack Exchange Inc., New York, NY, April 13, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/2632298/1531728}; March 31, 2016 was the last accessed date.
 	[Lowis2009]
@@ -85,13 +87,19 @@ from sys import argv
 #	=============================================================
 
 #	Preamble.
+
+#	Relative paths to directories.
 current_working_directory = "."
 path_to_benchmark_repository = "../benchmarks/"
 path_to_ISPD_2013_contest_benchmark = "../benchmarks/ispd2013"
 
+#	File extensions.
 verilog_file_extension = "*.v"
 lef_file_extension = "*.lef"
 def_file_extension = "*.def"
+
+#	Number of benchmarks used for the ISPD 2013 contest.
+number_of_ispd2013_contest_benchmarks = 8
 
 #	=============================================================
 #	Function definitions
@@ -159,14 +167,29 @@ if not 0 < len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 	print "		>>	No regular file in the ISPD 2013 contest benchmark directory."
 	print "		>>	Download the ISPD 2013 contest benchmarks."
 #	From [Lowis2009].
+# Benchmarks in Verilog file format.
 number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, verilog_file_extension)) 
 print "		>	Number of Verilog files is:", number_of_verilog_files
-number_of_lef_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, lef_file_extension)) 
+# Benchmarks in LEF file format.
+number_of_lef_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, lef_file_extension))
 print "		>	Number of LEF files is:", number_of_lef_files
+# Benchmarks in DEF file format.
 number_of_def_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, def_file_extension)) 
 print "		>	Number of DEF files is:", number_of_def_files
+# Benchmarks in ".txt" file format.
+#	From [Boissinot2009].
+number_of_txt_files = len([f for f in listdir(path_to_ISPD_2013_contest_benchmark) if f.endswith('.tif') and isfile(join(path_to_ISPD_2013_contest_benchmark, f))])
+print "		>	Number of text files (.txt) is:", number_of_txt_files
 
-
+#	Check if number of benchmarks for ISPD 2013 contest is correct. 
+if number_of_ispd2013_contest_benchmarks != number_of_verilog_files:
+	print "!!!	ERROR! Benchmarks in Verilog file format are missing!"
+if number_of_ispd2013_contest_benchmarks != number_of_lef_files:
+	print "!!!	ERROR! Benchmarks in LEF file format are missing!"
+if number_of_ispd2013_contest_benchmarks != number_of_def_files:
+	print "!!!	ERROR! Benchmarks in DEF file format are missing!"
+if number_of_ispd2013_contest_benchmarks != number_of_txt_files:
+	print "!!!	ERROR! Benchmarks in .txt file format are missing!"
 
 
 
