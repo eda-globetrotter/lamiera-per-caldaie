@@ -2,10 +2,8 @@
 
 
 - Refactor the Utility package
-	+ Update and copy comments in the preamble for the class
-		*simple_template*.
-		Copy these comments from the header file to the
-		implementation file.
+	+ Place "include guards above your includes"
+		Reference: sdsmith, comment to the question 'Why is the discrepancy in these two cases of using C++ templates?,' Stack Exchange Inc., New York, NY, March 30, 2016. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30, 2016 was the last accessed date \cite{sdsmith2016}.
 	+ Add "const" to all the accessor functions in the classes.
 		Add "const" at the end of the function declaration
 		(in the header file).
@@ -17,16 +15,7 @@
 		take to implement each function.
 		Report which method is the best way of measuring the
 		temporal performance of the implemented methods.
-	+ Do code inspection of all mutator methods to determine if
-		the mutator methods are implemented correctly.
-	+ Clean up comments for *make template*.
-	+ Keep these
-		- make template
-	+ Remove these
-		- make template1
-		- *Other test suites for C++ templates*, and their associated
-			classes that are not used by other/useful test suites.
-
+	
 
 
 - Test graph module.

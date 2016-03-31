@@ -39,8 +39,8 @@
 #include "violated_postcondition_ut.hpp"
 #include "../../utilities/file_io.hpp"
 #include "file_io_ut.hpp"
-//#include "../../utilities/conversion_alphanumeric.hpp"
-//#include "conversion_alphanumeric_ut.hpp"
+#include "../../utilities/conversion_alphanumeric.cpp"
+#include "conversion_alphanumeric_ut.hpp"
 
 
 // Import "test" classes from the "sandbox".

@@ -80,7 +80,7 @@ void utilities_mt::test_utilities() {
 	// Test the class file_io.
 	file_io_ut::test_file_io();
 	// Test the class conversion_alphanumeric.
-//	conversion_alphanumeric_ut::test_numbers_to_strings();
+	conversion_alphanumeric_ut::test_numbers_to_strings();
 
 
 /*
