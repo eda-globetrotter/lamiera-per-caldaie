@@ -20,7 +20,9 @@
 			and directories in the specified directory. This is slow
 			and inefficient compared to the use of functions from
 			"The Python Standard Library".
-
+		The following solutions cannot work on my software
+			development environment:
+				[Zaslavsky2009]
 
 	References:
 	[Damian2010]
@@ -33,7 +35,10 @@
 		Guillermo Pereira Miranda, answer to the question ``How to count the number of files in a directory using Python?,'' Stack Exchange Inc., New York, NY, July 8, 2015. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/31297262/1531728}; edited on July 8, 2015; March 31, 2016 was the last accessed date.
 	[okobaka2012]
 		okobaka, answer to the question ``How to count the number of files in a directory using Python?,'' Stack Exchange Inc., New York, NY, May 30, 2012. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/10812604/1531728}; March 31, 2016 was the last accessed date.
-
+	[Zaslavsky2009]
+		David Zaslavsky, answer to the question ``Count number of files with certain extension in Python,'' Stack Exchange Inc., New York, NY, August 24, 2009. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/1320780/1531728}; March 31, 2016 was the last accessed date.
+		
+		
 
 
 	The MIT License (MIT)
@@ -73,7 +78,7 @@ from os.path import dirname, abspath, isfile, join, isdir
 	"argv" is a container/list of input arguments that are provided
 		to this script when executed at the command line.
 """
-import subprocess, sys
+import subprocess, sys, glob
 from sys import argv
 
 
@@ -84,6 +89,9 @@ current_working_directory = "."
 path_to_benchmark_repository = "../benchmarks/"
 path_to_ISPD_2013_contest_benchmark = "../benchmarks/ispd2013"
 
+verilog_file_extension = "*.v"
+lef_file_extension = "*.lef"
+def_file_extension = "*.def"
 
 #	=============================================================
 #	Function definitions
@@ -146,16 +154,17 @@ print "Number of regular files in ISPD benchmark subdirectory [Miranda2015]:", l
 #	From [okobaka2012], which is a modification of [Luke2011] and [Miranda2015].
 print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
 """
-#	From [Lowis2009].
-number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, "*.v")) 
-#	From 
 #	Is there any regular file in the ISPD 2013 contest benchmark directory?
 if not 0 < len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 	print "		>>	No regular file in the ISPD 2013 contest benchmark directory."
 	print "		>>	Download the ISPD 2013 contest benchmarks."
-
-
-
+#	From [Lowis2009].
+number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, verilog_file_extension)) 
+print "		>	Number of Verilog files is:", number_of_verilog_files
+number_of_lef_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, lef_file_extension)) 
+print "		>	Number of LEF files is:", number_of_lef_files
+number_of_def_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, def_file_extension)) 
+print "		>	Number of DEF files is:", number_of_def_files
 
 
 
