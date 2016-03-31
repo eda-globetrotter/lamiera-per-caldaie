@@ -538,7 +538,7 @@ forloop:
 
 
 #####################################################################
-#	Target for testing templates.
+#	Target for testing templates. (1)
 #####################################################################
 # Build and run C++ program to experiment with templates.
 template:
@@ -577,7 +577,7 @@ template:
 
 
 #####################################################################
-#	Target for testing templates.
+#	Target for testing templates. (2)
 #####################################################################
 # Build and run C++ program to experiment with templates.
 template1:
@@ -609,6 +609,116 @@ template1:
 	@echo
 	@echo
 	@echo
+
+
+
+
+#####################################################################
+#	Target for testing templates. (3)
+#####################################################################
+# Build and run C++ program to experiment with templates.
+template2:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === C++ Classes Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPCLASSES)trivial_template.hpp
+	@echo === C++ Miscellaneous Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPMISC)test_templates_appended.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP14)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+
+
+
+
+
+#####################################################################
+#	Target for testing templates. (4)
+#####################################################################
+# Build and run C++ program to experiment with templates.
+template3:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === C++ Classes Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPCLASSES)merged_template.hpp
+	@echo === C++ Miscellaneous Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPMISC)test_templates_merged.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP14)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+
+
+#####################################################################
+#	Target for testing templates. (5)
+#####################################################################
+# Build and run C++ program to experiment with templates.
+template4:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === C++ Classes Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPCLASSES)double_template.cpp
+	@echo === C++ Miscellaneous Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(CPPMISC)test_templates_separate.cpp
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP14)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
+
+
+
+
+
+
 
 
 

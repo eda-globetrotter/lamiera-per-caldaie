@@ -14,7 +14,9 @@
 		implementations of a C++ template.
 		Implemented with C++ template definition and implementation
 			in one file, where the definition and implementation are
-			clearly separated/distinguished/.
+			clearly separated/distinguished/demarcated.
+			The implementation is appended to the end of the
+			definition, with some white space to separate them.
 		Implemented with merged C++ template definition and
 			implementation in one file.
 		Implemented with C++ template definition and implementation
@@ -23,18 +25,18 @@
 			template will have to import the C++ implementation file,
 			instead of the C++ header file.
 */
-//#include "../../elements/trivial_template.hpp"
-//#include "../../elements/merged_template.hpp"
-#include "../../elements/double_template.cpp"
+#include "../classes/trivial_template.hpp"
+//#include "../classes/merged_template.hpp"
+//#include "../classes/double_template.cpp"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	cout << "	###" << merged_template<int>::is_non_negative(493) << "===" << endl;
-	merged_template<int> *a_ptr;
+	cout << "	###" << trivial_template<int>::is_non_negative(493) << "===" << endl;
+	trivial_template<int> *a_ptr;
 	cout << "	###" << a_ptr->square_given_number(5) << "===" << endl;
 	// 0.25^2 = 0.0625
-	merged_template<long double> *b_ptr;
+	trivial_template<long double> *b_ptr;
 	cout << "	###" << b_ptr->square_given_number(-0.25) << "===" << endl;
 	// 16.25^2 = 164.0625
 	cout << "	###" << b_ptr->square_given_number(-16.25) << "===" << endl;

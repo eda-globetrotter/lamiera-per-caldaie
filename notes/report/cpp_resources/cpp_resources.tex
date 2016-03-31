@@ -195,7 +195,7 @@ C++ topics: \vspace{-0.3cm}
 		\item \cite{Moses2016} recommends including the implementation file ({\tt .cpp}), instead of the header file ({\tt .hpp}) in any {\it C++} file that uses the {\it C++} template.
 		\item \cite{Ben2013,DevSolar2009,Diago2013} argues for separating the {\it C++} template definitions in the header file ({\tt .hpp}) from the {\it C++} template implementations in the implementation file ({\tt .cpp}).
 		\item ``Although standard C++ has no such requirement, some compilers require that all function and class templates need to be made available in every translation unit they are used. In effect, for those compilers, the bodies of template functions must be made available in a header file. To repeat: that means those compilers won't allow them to be defined in non-header files such as .cpp files.\dots\ There is an export keyword which is supposed to mitigate this problem, but it's nowhere close to being portable.'' \cite{Gogolev2009}
-		\item \cite{Benoit2009} argues that you can merge the definition and implementation in a single file, which ends with the \tt .hpp} file extension.
+		\item \cite{Benoit2009} argues that you can merge the definition and implementation in a single file, which ends with the {\tt .hpp} file extension.
 		\end{enumerate}
 	\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

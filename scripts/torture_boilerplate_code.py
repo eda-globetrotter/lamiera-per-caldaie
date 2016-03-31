@@ -231,8 +231,16 @@ subprocess.call(["make", "clean"])
 subprocess.call(["make", "template"])
 subprocess.call(["make", "clean"])
 
-#subprocess.call(["make", "template1"])
-#subprocess.call(["make", "clean"])
+#	Make target "template1" fails. It cannot work.
+
+subprocess.call(["make", "template2"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "template3"])
+subprocess.call(["make", "clean"])
+
+subprocess.call(["make", "template4"])
+subprocess.call(["make", "clean"])
 
 subprocess.call(["make", "null"])
 #	Check if temporary files are created during testing.
