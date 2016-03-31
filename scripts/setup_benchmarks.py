@@ -107,6 +107,8 @@ print "==	Begin setting up the benchmark repository for the boilerplate code bas
 	Thirdly, parse the benchmarks to validate the benchmarks.
 	That is, check if the benchmarks are valid. 
 """
+print "==	Call the check_benchmark feature of the parser."
+
 
 
 

@@ -39,6 +39,17 @@
 		- Some other parser generator
 		- Ignore *Java*-based parser generator, such as ???ant???
 		- LLVM??? No.
+	+ The compiler front-end (or parser), with output, is the
+		front-end of a given EDA tool.
+	+ The compiler front-end (or parser), without output, is the
+		check_benchmark feature for my EDA software development
+		environment.
+		- That is, it is meant to validate each benchmark, and warn
+			the EDA software developer(s) of any invalid benchmark.
+		- Any benchmark that does not conform to the industry standard
+			of a given computer language (e.g., a HDL), based on its
+			*Language Reference Manual* (or equivalent), is reported
+			to the EDA software developer(s).
 - Do initial testing with stub classes.
 
 - Refactor other packages.
