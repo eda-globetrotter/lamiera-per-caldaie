@@ -1,6 +1,9 @@
 # To-Do List for Developing my Boilerplate Code Base
 
 
+- Develop *Python* script to ensure that benchmark repository exists.
+	Ensure that each benchmark in the benchmark repository is valid. 
+
 - Refactor the Utility package
 	+ Place "include guards above your includes"
 		Reference: sdsmith, comment to the question 'Why is the discrepancy in these two cases of using C++ templates?,' Stack Exchange Inc., New York, NY, March 30, 2016. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30, 2016 was the last accessed date \cite{sdsmith2016}.
