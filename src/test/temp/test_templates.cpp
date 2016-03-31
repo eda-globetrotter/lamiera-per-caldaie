@@ -9,6 +9,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+	The following list of include statements test different
+		implementations of a C++ template.
+		Implemented with C++ template definition and implementation
+			in one file, where the definition and implementation are
+			clearly separated/distinguished/.
+		Implemented with merged C++ template definition and
+			implementation in one file.
+		Implemented with C++ template definition and implementation
+			separately in different files: a C++ header file and a
+			C++ implementation file. Any file that uses this C++
+			template will have to import the C++ implementation file,
+			instead of the C++ header file.
+*/
 //#include "../../elements/trivial_template.hpp"
 //#include "../../elements/merged_template.hpp"
 #include "../../elements/double_template.cpp"
