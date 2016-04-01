@@ -69,7 +69,7 @@
 
 #	To access contents of a directory or switch directories.
 #from os import listdir, system, chdir
-from os import listdir, chdir, makedirs, walk
+from os import listdir, chdir, makedirs, walk, remove
 """
 	To perform operations related to absolute/relative paths,
 		directory names, and file types.
@@ -194,7 +194,17 @@ print "Number of regular files in ISPD benchmark subdirectory [Miranda2015]:", l
 #	From [okobaka2012], which is a modification of [Luke2011] and [Miranda2015].
 print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
 """
-print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
+#print "Number of regular files in ISPD benchmark subdirectory [okobaka2012]:", len(walk(path_to_ISPD_2013_contest_benchmark).next()[2])
+#	Remove specific hidden file, created by the operating system's file system.
+#	Path to specific hidden file
+path_to_hidden_file = path_to_ISPD_2013_contest_benchmark + "/.DS_Store"
+#print "Path to hidden file is:", path_to_hidden_file
+if isfile(path_to_hidden_file):
+	try:
+		remove(path_to_hidden_file)
+		print "		>>	Hidden file is deleted:",path_to_hidden_file
+	except OSError:
+		print "Hidden file can't be deleted:",path_to_hidden_file
 #	Is there any regular file in the ISPD 2013 contest benchmark directory?
 if 0 == len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 	print "		>>	No regular file in the ISPD 2013 contest benchmark directory."
@@ -202,17 +212,17 @@ if 0 == len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 #	From [Lowis2009].
 # Benchmarks in Verilog file format.
 number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, verilog_file_extension)) 
-print "		>	Number of Verilog files is:", number_of_verilog_files
+print "		>>	Number of Verilog files is:", number_of_verilog_files
 # Benchmarks in LEF file format.
 number_of_lef_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, lef_file_extension))
-print "		>	Number of LEF files is:", number_of_lef_files
+print "		>>	Number of LEF files is:", number_of_lef_files
 # Benchmarks in DEF file format.
 number_of_def_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, def_file_extension)) 
-print "		>	Number of DEF files is:", number_of_def_files
+print "		>>	Number of DEF files is:", number_of_def_files
 # Benchmarks in ".txt" file format.
 #	From [Boissinot2009].
 number_of_txt_files = len([f for f in listdir(path_to_ISPD_2013_contest_benchmark) if f.endswith('.tif') and isfile(join(path_to_ISPD_2013_contest_benchmark, f))])
-print "		>	Number of text files (.txt) is:", number_of_txt_files
+print "		>>	Number of text files (.txt) is:", number_of_txt_files
 
 #	Check if number of benchmarks for ISPD 2013 contest is correct. 
 if number_of_ispd2013_contest_benchmarks != number_of_verilog_files:
