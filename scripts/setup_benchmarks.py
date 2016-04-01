@@ -18,6 +18,13 @@
 		set of benchmarks.
 	If not, download the required evaluation scripts (if any).
 
+
+
+
+
+
+
+
 	Notes:
 		The solution from [Damian2010] manually enumerates all files
 			and directories in the specified directory. This is slow
@@ -27,11 +34,17 @@
 			development environment:
 				[Zaslavsky2009]
 
+
+
+
 	References:
 	[Boissinot2009]
 		Benoit Boissinot, answer to the question ``Count number of files with certain extension in Python,'' Stack Exchange Inc., New York, NY, August 24, 2009. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/1321138/1531728}; March 31, 2016 was the last accessed date.
 	[Damian2010]
 		Kristian Damian, answer to the question ``How to count the number of files in a directory using Python?,'' Stack Exchange Inc., New York, NY, April 13, 2010. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/2632298/1531728}; March 31, 2016 was the last accessed date.
+
+	\cite[The Python Standard Library: \S21 Internet Protocols and Support: \S21.6 {\tt urllib.request} - Extensible library for opening URLs]{DrakeJr2016b}
+		
 	[Lowis2009]
 		Martin v. L{\"{o}}wis, answer to the question ``Count number of files with certain extension in Python,'' Stack Exchange Inc., New York, NY, August 24, 2009. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/1320744/1531728}; March 31, 2016 was the last accessed date.
 	[Luke2011]
@@ -43,7 +56,11 @@
 	[Zaslavsky2009]
 		David Zaslavsky, answer to the question ``Count number of files with certain extension in Python,'' Stack Exchange Inc., New York, NY, August 24, 2009. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/1320780/1531728}; March 31, 2016 was the last accessed date.
 		
-		
+
+
+
+
+
 
 
 	The MIT License (MIT)
@@ -83,8 +100,18 @@ from os.path import dirname, abspath, isfile, join, isdir
 	"argv" is a container/list of input arguments that are provided
 		to this script when executed at the command line.
 """
-import subprocess, sys, glob
+#import subprocess, sys, glob
+import subprocess, glob
 from sys import argv
+
+"""
+	Use the extensible library for WWW access, authentication, and
+		other access operations.
+	Import function from this library to download a web page or a
+		file.
+"""
+from urllib import urlopen, close
+from urllib.request import urlretrieve, urlcleanup
 
 
 #	=============================================================
@@ -99,6 +126,7 @@ ispd_2013_contest = "ispd2013"
 path_to_ISPD_2013_contest_benchmark = path_to_benchmark_repository + ispd_2013_contest 
 path_to_evaluation_repository = "../evaluation/"
 path_to_evaluation_repository_ispd_2013_contest = path_to_evaluation_repository + ispd_2013_contest
+#os.path.basename(sys.argv[0])
 
 #	File extensions.
 verilog_file_extension = "*.v"
@@ -209,6 +237,23 @@ if isfile(path_to_hidden_file):
 if 0 == len(walk(path_to_ISPD_2013_contest_benchmark).next()[2]):
 	print "		>>	No regular file in the ISPD 2013 contest benchmark directory."
 	print "		>>	Download the ISPD 2013 contest benchmarks."
+	"""
+		Method from \cite[The Python Standard Library: \S21 Internet Protocols and Support: \S21.6 {\tt urllib.request} - Extensible library for opening URLs: 21.6.23. Examples]{DrakeJr2016b}
+		
+		Other methods that I have considered are:
+			Requests: http://docs.python-requests.org/en/master/ and https://pypi.python.org/pypi/requests
+			
+	"""
+	try:
+		ispd2013_bmk_most_zip, headers_most = urlopen(url_ispd2013_contest_benchmarks_most)
+		ispd2013_bmk_netcard_zip, headers_netcard = urlopen(url_ispd2013_contest_benchmarks_netcard)
+		ispd2013_bmk_final_zip, headers_final = urlopen(url_ispd2013_contest_benchmarks_final)
+		ispd2013_bmk_most_zip.close()
+		ispd2013_bmk_netcard_zip.close()
+		ispd2013_bmk_final_zip.close()
+		urlcleanup()
+	except urllib.error.URLError:
+		print "		>>	ERROR in downloading ISPD 2013 contest benchmarks."
 #	From [Lowis2009].
 # Benchmarks in Verilog file format.
 number_of_verilog_files = len(glob.glob1(path_to_ISPD_2013_contest_benchmark, verilog_file_extension)) 

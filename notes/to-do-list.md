@@ -3,6 +3,14 @@
 
 - Develop *Python* script to ensure that benchmark repository exists.
 	Ensure that each benchmark in the benchmark repository is valid. 
+	+ Instead of making system calls (for UNIX-like operating systems)
+		to uncompress files, I can use Python commands/functions to
+		do that.
+	+ Find out if the file handler/stream obtained from the Python
+		command/function to download a file can be used to uncompress
+		files in Python, instead of having to obtain the path to that
+		file (so that I can use a Python command/function to
+		uncompress it). 
 
 - Refactor the Utility package
 	+ Place "include guards above your includes"
