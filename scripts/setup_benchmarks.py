@@ -110,8 +110,8 @@ from sys import argv
 	Import function from this library to download a web page or a
 		file.
 """
-from urllib import urlopen, close
-from urllib.request import urlretrieve, urlcleanup
+from urllib import urlopen
+#from urllib.request import urlretrieve, urlcleanup
 
 
 #	=============================================================
@@ -123,7 +123,7 @@ boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/bin
 current_working_directory = "."
 path_to_benchmark_repository = "../benchmarks/"
 ispd_2013_contest = "ispd2013"
-path_to_ISPD_2013_contest_benchmark = path_to_benchmark_repository + ispd_2013_contest 
+path_to_ISPD_2013_contest_benchmark = path_to_benchmark_repository + ispd_2013_contest
 path_to_evaluation_repository = "../evaluation/"
 path_to_evaluation_repository_ispd_2013_contest = path_to_evaluation_repository + ispd_2013_contest
 #os.path.basename(sys.argv[0])
@@ -168,7 +168,6 @@ chdir(boilerplate_code_dir)
 #	=============================================================
 
 #	Print the header banner for the script.
-
 print "============================================================="
 print "==	Begin setting up the benchmark repository for the boilerplate code base."
 
