@@ -7,12 +7,15 @@
 		techniques (and associated file formats):
 		- TAR (Tape ARchive), or tar balls.
 		- tar balls in Gzip'ed (or gzipped) format; .tar.gz or tgz.
+			Or, GZIP Compressed Tar Archive files.
 		- bzip2 compressed files.
-	
+		- bzip2 tar balls
 
-
-
-
+	Approaches, which I have considered, to do this:
+		- Use UNIX commands via "system call"s to archive/unarchive 
+			and compress/uncompress files.
+		- Use Python functions to archive/unarchive and
+			compress/uncompress files.
 
 
 
@@ -37,7 +40,10 @@
 	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"		Don't compromise my computing accounts. You have been warned.
 """
 
+#	Names of archived and/or compressed files. 
+ispd2013_contest_benchmarks_final = ispd2013_final.tar.bz2
 
+#	Check if the uncompress
 
 
 

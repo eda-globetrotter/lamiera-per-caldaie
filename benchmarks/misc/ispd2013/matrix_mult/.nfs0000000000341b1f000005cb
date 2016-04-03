@@ -1,0 +1,1462 @@
+#@ # 
+#@ # Running pt_shell Version E-2010.12-SP3 for suse64 -- Apr 14, 2011
+#@ # Date:   Tue Jan  8 16:19:08 2013
+#@ # Run by: aayupov@dlxc0537
+#@ 
+
+source /nfs/site/eda/data/coe71.mirror.3/synopsys/primetime/E-2010.12-SP3/common/admin/setup/.synopsys_pt.setup
+#@ #
+#@ # .synopsys_pt.setup: Initialization File for PrimeTime
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparcOS5" || $sh_arch == "hpux10" ||      $sh_arch == "hp32" || $sh_arch == "linux" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you use new variable message
+#@ # tracing for debugging purposes only.
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ alias report_constraints	report_constraint
+#@ alias report_clocks		report_clock
+#@ 
+#@ #
+#@ # The alias for get_clock was added when get_clock_network_objects
+#@ # was introduced, as it conflicts with get_clocks (and get_clock is a
+#@ # typical abbreviation for get_clocks)
+#@ #
+#@ alias get_clock get_clocks
+#@ 
+#@ 
+#@ #
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ 
+#@ # -- End source /nfs/site/eda/data/coe71.mirror.3/synopsys/primetime/E-2010.12-SP3/common/admin/setup/.synopsys_pt.setup
+
+source ../../scripts/synopsys_scripts.tcl
+#@ #create sdc files for every verilog in given directories (dirs)
+#@ proc create_timing_constraints_batch {dirs {overwrite 0}} {
+#@   foreach dir $dirs {
+#@     set verilogs [glob $dir/*.v]
+#@     foreach verilog_fname $verilogs {
+#@       if {[regexp "(.+)\.v" $verilog_fname res basename]} {
+#@         if {![file exists $basename.sdc] || $overwrite == 1} {
+#@           create_timing_constraints_for_verilog $verilog_fname $basename.sdc
+#@         }
+#@       } else {
+#@         puts "-E- Check the expression, we must have .v extension here - $verilog_fname"
+#@       }
+#@     }
+#@   }
+#@ }
+#@ 
+#@ proc analyze_slack_distribution_batch {dirs {overwrite 0}} {
+#@   foreach dir $dirs {
+#@     set verilogs [glob $dir/*.v]
+#@     foreach verilog_fname $verilogs {
+#@       if {[regexp "(.+)\.v" $verilog_fname res basename]} {
+#@         if {![file exists $basename] || $overwrite == 1} {
+#@           analyze_slack_distribution $verilog_fname $basename.sdc $basename
+#@         }
+#@       } else {
+#@         puts "-E- Check the expression, we must have .v extension here - $verilog_fname"
+#@       }
+#@     }
+#@   }
+#@ }
+#@ 
+#@ proc analyze_slack_distribution {verilog_fname sdc_fname xg_fname} {
+#@   setenv your_block $xg_fname
+#@ 
+#@   set ::search_path [list . /nfs/site/disks/scl.work.46/ppt/users/smburns/ptlr/contest]
+#@   set ::link_library [list * contest.ldb]
+#@ 
+#@   remove_design -all
+#@ 
+#@   read_verilog contest_defs.v
+#@   read_verilog $verilog_fname
+#@ 
+#@   link
+#@ 
+#@   source $sdc_fname
+#@   #create_clock -name hclk -period 2.0 -waveform [list 0 1.0] [get_ports {HCLK}]
+#@   set env(your_block) [get_object_name [get_design]]
+#@   
+#@   set ::timing_save_pin_arrival_and_slack 1
+#@   update_timing
+#@ 
+#@   #report_timing -group {**async_default**} -sig 4 -input_pins -nets -capacitance -transition_time -max_paths 10000 > PATHS_async.txt
+#@ 
+#@   #report_timing -group {hclk} -sig 4 -input_pins -nets -capacitance -transition_time -max_paths 10000 > PATHS_hclk.txt
+#@ 
+#@   source $::env(PTLR_SCRIPTS)/PTLR_flow.tcl
+#@   set ::LR_TO_PS 1.0
+#@ 
+#@   set fp [open "__fetch_pin_slacks" "w"]
+#@   foreach_in_collection ph [get_pins -hier -filter "is_hierarchical==false"] {
+#@           puts $fp "fetch_pin_slack_accumulate [get_attribute $ph full_name]"
+#@   }
+#@   foreach_in_collection ph [get_ports] {
+#@           puts $fp "fetch_port_slack_accumulate [get_attribute $ph full_name]"
+#@   }
+#@   close $fp
+#@ 
+#@   read_lr_pins __fetch_pin_slacks
+#@ 
+#@   dump_pin_slacks $xg_fname $::LR_TO_PS
+#@ 
+#@   exec $::env(PTLR_SCRIPTS)/cumulative $xg_fname.binary > $xg_fname.xg
+#@   exec xgraph -lx -1000,3000 $xg_fname.xg &
+#@ }
+#@ 
+#@ proc create_timing_constraints_for_verilog {verilog_fname sdc_fname}  {
+#@ #  set clk_pattern "*CK"
+#@   set clk_pattern "*ck"
+#@   set def_clk_period 500.0
+#@ 
+#@   set ::search_path [list . /nfs/site/disks/scl.work.46/ppt/users/smburns/ptlr/contest]
+#@ 
+#@   set ::link_library [list * contest.ldb]
+#@ 
+#@   remove_design -all
+#@   
+#@   read_verilog "contest_defs.v"
+#@   read_verilog $verilog_fname
+#@ 
+#@   link
+#@ 
+#@   # looking for clock primary inputs based on clk_pattern in the clock name of sequentials
+#@   set clk_ports [get_ports -of_object [get_nets -segments -of_objects [get_pins -of_objects  [get_cells -hierarchical -filter "is_hierarchical == false && is_sequential == true"] -filter "full_name=~$clk_pattern"]] -filter "port_direction==in"]
+#@   set comb_only 0
+#@   # check if no clocks then dealing with combinational circuit
+#@   if {[sizeof_collection $clk_ports] == 0} {
+#@     set comb_only 1
+#@   }
+#@   if {[sizeof_collection $clk_ports] > 1} {
+#@     puts "-W- Found more than one clock! The constraint generator is coded to deal with one clock only... Verilog - $verilog_fname"
+#@   }
+#@ 
+#@   #set default clock constraints, arrival/required time etc
+#@   if {$comb_only} {
+#@     create_clock -name mclk -period $def_clk_period -waveform [list 0 [expr $def_clk_period/2]]
+#@     set_input_delay 0.0 [get_ports -filter "port_direction==in"]
+#@     set_output_delay 0.0 [get_ports -filter "port_direction==out"]
+#@   } else {
+#@     #for all clock ports create clock in sdc
+#@     foreach_in_collection clk $clk_ports {
+#@       create_clock -name [get_object_name $clk] -period $def_clk_period -waveform [list 0 [expr $def_clk_period/2]] $clk
+#@     }
+#@     set_input_delay 0.0 [get_ports -filter "port_direction==in"]
+#@     set_output_delay 0.0 [get_ports -filter "port_direction==out"]
+#@   }
+#@   
+#@ 
+#@   #calculate slacks
+#@   set ::timing_save_pin_arrival_and_slack 1
+#@   update_timing
+#@   
+#@   # get all ports and sequentials pins to get WNS
+#@   set pins [get_ports]
+#@   append_to_collection pins [get_pins -of_objects [get_cells -hierarchical -filter "is_sequential == true"] -filter "full_name!~$clk_pattern"] 
+#@   set worst_slack $def_clk_period
+#@   foreach_in_collection pin $pins {
+#@     set rise_slack [get_attribute $pin "max_rise_slack"]
+#@     set fall_slack [get_attribute $pin "max_fall_slack"]
+#@     if {$rise_slack != "INFINITY" && [expr $rise_slack < $worst_slack]} {
+#@       set worst_slack $rise_slack
+#@     }
+#@     if {$fall_slack != "INFINITY" && [expr $fall_slack < $worst_slack]} {
+#@       set worst_slack $fall_slack
+#@     }
+#@   }
+#@   puts "Worst slack $worst_slack"
+#@   
+#@   #if the worst slack is negative we tune the clock cycle to get wns > -$def_clk_period
+#@   set clock_period $def_clk_period
+#@   if {[expr $worst_slack < 0]} {
+#@     set clock_period [expr floor(double($def_clk_period - $worst_slack)/$def_clk_period)*$def_clk_period]
+#@   }
+#@   puts "Clock period chosen $clock_period"
+#@   #open sdc file 
+#@   set sdc_file [open $sdc_fname "w+"]
+#@   #write constraints to file
+#@   if {$comb_only} {
+#@     puts $sdc_file "create_clock -name mclk -period $clock_period -waveform \{0 [expr $clock_period/2]\}"
+#@   } else {
+#@     #for all clock ports create clock in sdc
+#@     foreach_in_collection clk $clk_ports {
+#@       puts $sdc_file "create_clock -name [get_object_name $clk] -period $clock_period -waveform \{0 [expr $clock_period/2]\} \[get_ports [get_object_name $clk]\]"
+#@     }
+#@   }
+#@   #find the strongest cell 
+#@   set max_resistance 10000.0
+#@   set strongest_cell 0.0
+#@   set strongest_pin 0.0
+#@   foreach_in_collection lib_cell [get_lib_cells */in01*] {
+#@     foreach_in_collection lib_out_pin [get_lib_pins -of_object $lib_cell -filter "pin_direction==out"] {
+#@       set fall_drive_resistance [expr [get_attribute $lib_out_pin "drive_resistance_fall"]]
+#@       set rise_drive_resistance [expr [get_attribute $lib_out_pin "drive_resistance_rise"]]
+#@       #puts "drive_resistance $fall_drive_resistance $rise_drive_resistance [get_object_name $lib_cell]"
+#@       if {[expr $fall_drive_resistance < $max_resistance]} {
+#@         set max_resistance $fall_drive_resistance
+#@         set strongest_cell $lib_cell
+#@         set strongest_pin $lib_out_pin
+#@       }
+#@       if {[expr $rise_drive_resistance < $max_resistance]} {
+#@         set max_resistance $rise_drive_resistance
+#@         set strongest_cell $lib_cell
+#@         set strongest_pin $lib_out_pin
+#@       }
+#@     }
+#@   }
+#@   puts $sdc_file "set_input_delay 0.0 \[get_ports -filter \"port_direction==in\"]"
+#@   puts $sdc_file "set_output_delay 0.0 \[get_ports -filter \"port_direction==out\"]"
+#@   puts $sdc_file "set_driving_cell -lib_cell [get_object_name $strongest_cell] -pin [get_attribute $strongest_pin base_name] \[get_ports -filter \"port_direction==in\"]"
+#@   puts $sdc_file "set_load -pin_load 0.0 \[get_ports -filter \"port_direction==out\"]"
+#@   
+#@   close $sdc_file
+#@ } 
+#@ 
+#@ set fanout_thresh "100.0"
+#@ 
+#@ 
+#@ proc write_nets_with_fanout {filename {random 0}} {
+#@   if {[sizeof_collection [get_cells -hier -filter "is_hierarchical==true"]] != 0} {
+#@     puts "-E- Design is hierarchical. Cannot write nets for it! Aborting..."
+#@     return
+#@   }
+#@   if {[sizeof_collection [get_nets]]!= [sizeof_collection [get_nets -segm]]} {
+#@     puts "-E- Design has hierarchical nets. Cannot write nets for it! Aborting..."
+#@     return
+#@   }
+#@   
+#@   set out_file [open $filename "w+"]
+#@   set nets [get_nets]
+#@   set counter 0
+#@   foreach_in_collection net $nets {
+#@     set fanout [sizeof_collection [all_fanout -from $net -levels 0]]
+#@      
+#@     set cap 0
+#@     if {$random == 0} {
+#@       set cap $fanout
+#@     } else {
+#@       set cap [expr int(1+[scale_cap_randomly]*$fanout)]
+#@     }
+#@     
+#@     if {[get_object_name $net] == $::ispd_clk_name} {
+#@       puts $out_file "[get_object_name $net] 0.0"
+#@     } elseif {$cap > $::fanout_thresh || [get_object_name $net] == $::ispd_clk_name} {
+#@       puts $out_file "[get_object_name $net] $::fanout_thresh"
+#@       puts "-W- Net [get_object_name $net] is to have cap of $cap. In the text-spef we write $::fanout_thresh out."
+#@     } else {
+#@       puts $out_file "[get_object_name $net] $cap"
+#@     }
+#@     #puts "[get_object_name $net]"
+#@     incr counter
+#@     #if {$counter == 10} break
+#@   }
+#@   close $out_file
+#@ }
+#@ 
+#@ proc get_slack_for_pin {driver} {
+#@   set fall_slack [get_attribute $driver max_fall_slack]
+#@   set rise_slack [get_attribute $driver max_rise_slack]
+#@   #puts "$fall_slack $rise_slack"
+#@   if {[expr $fall_slack < $rise_slack]} {
+#@     return $fall_slack
+#@   } else {
+#@     return $rise_slack
+#@   }
+#@ }
+#@ 
+#@ proc scale_cap_based_on_slack {slack fanout} {
+#@   if {$slack < 0} {return 0.1}
+#@   if {$slack < 50} {return 0.2}
+#@   if {$slack < 100} {return 1}
+#@   if {$fanout < 20} {return 4}
+#@   return 1
+#@ }
+#@ 
+#@ proc scale_cap_randomly {} {
+#@   return [expr double(int(rand()*10))/10]
+#@ }
+#@ 
+#@ 
+#@ proc write_nets_with_scaled_fanout {filename} {
+#@   if {[sizeof_collection [get_cells -hier -filter "is_hierarchical==true"]] != 0} {
+#@     puts "-E- Design is hierarchical. Cannot write nets for it! Aborting..."
+#@     return
+#@   }
+#@   if {[sizeof_collection [get_nets]]!= [sizeof_collection [get_nets -segm]]} {
+#@     puts "-E- Design has hierarchical nets. Cannot write nets for it! Aborting..."
+#@     return
+#@   }
+#@   
+#@   set out_file [open $filename "w+"]
+#@   set nets [get_nets]
+#@   foreach_in_collection net $nets {
+#@     set fanout [sizeof_collection [all_fanout -from $net -levels 0]]
+#@     if {[get_object_name $net] == $::ispd_clk_name} {
+#@       puts $out_file "[get_object_name $net] 0.0"
+#@     } elseif {$fanout > $fanout_thresh || [get_object_name $net] == $::ispd_clk_name} {
+#@       puts $out_file "[get_object_name $net] $fanout_thresh"
+#@       puts "-W- Net [get_object_name $net] has fanout of $fanout. In the text-spef we write $fanout_thresh out."
+#@     } else {
+#@       set driver [all_fanin -to $net -levels 0]
+#@       set slack [get_slack_for_pin $driver]
+#@       set cap [expr $fanout*[scale_cap_based_on_slack $slack $fanout]]
+#@       #set cap [expr $fanout*[scale_cap_randomly]]
+#@       puts $out_file "[get_object_name $net] $cap"
+#@     }
+#@   }
+#@   close $out_file
+#@ }
+#@ 
+#@ #
+#@ 
+#@ #proc write_sdc_for_ispd {filename} {
+#@ #  # design should be loaded at this point
+#@ #  set sdc_file [open $filename "w+"]
+#@ #  
+#@ #  puts $sdc_file "# clock definition"
+#@ #  # writing clocks
+#@ #  set clocks [get_clocks]
+#@ #  if {[sizeof_collection $clocks] != 1} error "-E- The number of clocks more than one ([sizeof_collection $clocks]), do sanitizing pre-processing first."
+#@ #  set clock [index_collection $clocks 0]
+#@ #  set period [get_attribute $clock period]
+#@ #  set clock_name [get_attribute $clock name]
+#@ #  
+#@ #  puts $sdc_file "# clock definition"
+#@ #  puts $sdc_file "create_clock -name $clock_name -period $period [get_ports $clock_name]"
+#@ #  puts $sdc_file ""
+#@ #  
+#@ #  puts $sdc_file "# input delays"
+#@ #  set in_ports [get_ports -filter "pin_direction == in"]
+#@ #  foreach_in_collection in_port $in_ports {
+#@ #    set port_name [get_object_name $in_port]
+#@ #    if {$port_name == $clock_name} continue
+#@ #    
+#@ #    puts "set_input_delay  0 [get_ports $port_name] -clock $clock_name"
+#@ #    
+#@ #  }
+#@ #  
+#@ #  close $sdc_file
+#@ #}
+#@ 
+#@ proc ispd_read_design {design_name} {
+#@   set lib_name "contest"
+#@   set ::search_path [list . $::env(ISPD_CONTEST_ROOT)/lib]
+#@   set ::link_library [list $lib_name.lib]
+#@   #read_lib $::env(ISPD_CONTEST_ROOT)/lib/$lib_name.lib
+#@   
+#@   remove_design -all
+#@   
+#@   read_verilog $::env(ISPD_CONTEST_ROOT)/$design_name/$design_name.v
+#@   link
+#@ 
+#@   read_sdc $::env(ISPD_CONTEST_ROOT)/$design_name/$design_name.sdc
+#@   read_parasitics $::env(ISPD_CONTEST_ROOT)/$design_name/$design_name.spef
+#@   print_circuit_stats
+#@ }
+#@ 
+#@ proc ispd_read_design_dc {design_name} {
+#@   set lib_name "contest"
+#@   set ::search_path [list . $::env(ISPD_CONTEST_ROOT)/lib]
+#@   set ::link_library "$lib_name"
+#@ 
+#@   remove_design -all
+#@   
+#@   read_lib $::env(ISPD_CONTEST_ROOT)/lib/$lib_name.lib
+#@   
+#@   #remove_design -all
+#@   
+#@   read_verilog ./$design_name.v
+#@   link
+#@ 
+#@   read_sdc ./$design_name.sdc
+#@   read_parasitics ./$design_name.spef
+#@ }
+#@ 
+#@ # may change the netlist including deletion of ports
+#@ proc handle_constant_nets {} {
+#@   if {[sizeof_collection [get_cells -quiet Logic0]]} {
+#@     set logic_0_driver [get_pins Logic0/**logic_0**]
+#@     set logic_0_net [get_nets -of_object $logic_0_driver]
+#@     if {[sizeof_collection $logic_0_net]} {
+#@       #delete ports connected to constants
+#@       set ports_to_remove {}
+#@       foreach_in_collection port [get_ports -of_objects $logic_0_net] {
+#@         disconnect_net $logic_0_net $port
+#@         lappend ports_to_remove $port
+#@       }
+#@       if {[llength $ports_to_remove]} {
+#@         remove_bus $ports_to_remove
+#@         remove_port $ports_to_remove
+#@       }
+#@       
+#@       # if the constant net is connected more than to the "constant cell" create PI for it
+#@       if {[sizeof_collection [get_pins -of_objects $logic_0_net -filter "pin_direction==in"] ] > 0} {
+#@         set port_name [get_object_name $logic_0_net]
+#@         create_port $port_name -dir in
+#@         set l0_port $port_name
+#@         disconnect_net $logic_0_net $logic_0_driver
+#@         connect_net $logic_0_net $l0_port
+#@       } else {
+#@         disconnect_net $logic_0_net $logic_0_driver
+#@         remove_net   $logic_0_net
+#@       }
+#@     }
+#@     remove_cell [get_cells -quiet Logic0]
+#@     
+#@     
+#@   }
+#@ 
+#@   if {[sizeof_collection [get_cells -quiet Logic1]]} {
+#@     set logic_1_driver [get_pins Logic1/**logic_1**]
+#@     set logic_1_net [get_nets -of_object $logic_1_driver]
+#@     if {[sizeof_collection $logic_1_net]} {
+#@       set ports_to_remove {}
+#@       foreach_in_collection port [get_ports -of_objects $logic_1_net] {
+#@         disconnect_net $logic_1_net $port
+#@         lappend ports_to_remove $port
+#@       }
+#@       if {[llength $ports_to_remove]} {
+#@         remove_bus $ports_to_remove
+#@         remove_port $ports_to_remove
+#@       }
+#@ 
+#@       if {[sizeof_collection [get_pins -of_objects $logic_1_net -filter "pin_direction==in"] ] > 0} {
+#@         set port_name [get_object_name $logic_1_net]
+#@         create_port $port_name -dir in
+#@         set l1_port $port_name
+#@         disconnect_net $logic_1_net $logic_1_driver
+#@         connect_net $logic_1_net $l1_port
+#@       } else {
+#@         disconnect_net $logic_1_net $logic_1_driver
+#@         remove_net   $logic_1_net
+#@       }
+#@     }
+#@     remove_cell [get_cells -quiet Logic1]
+#@   }
+#@   
+#@ }
+#@ 
+#@ #delete ports that are not connected to anything
+#@ proc remove_unconnected_primary_ports {} {
+#@   set ports [get_ports]
+#@   foreach_in_collection port $ports {
+#@     if {[get_attribute $port "pin_direction"]=="in"} {
+#@       if {[sizeof_collection [all_fanout -from $port -levels 1]] <=1} {
+#@         set net [get_nets -of_object $port]
+#@         if {[sizeof_collection $net]} {
+#@           disconnect_net $net $port
+#@           remove_net $net
+#@         }
+#@         remove_bus $port
+#@         remove_port $port
+#@       }
+#@     } elseif {[get_attribute $port "pin_direction"]=="out"} {
+#@       if {[sizeof_collection [all_fanin -to $port -levels 1]] <=1} {
+#@         set net [get_nets -of_object $port]
+#@         if {[sizeof_collection $net]} {
+#@           disconnect_net $net $port
+#@           remove_net $net
+#@         }
+#@         remove_bus $port
+#@         remove_port $port
+#@       }
+#@     } else {#inout port 
+#@       if {[sizeof_collection [all_fanout -from $port -levels 1]] <=1 && [sizeof_collection [all_fanin -to $port -levels 1]] <=1} {
+#@         set net [get_nets -of_object $port]
+#@         if {[sizeof_collection $net]} {
+#@           disconnect_net $net $port
+#@           remove_net $net
+#@         }
+#@         remove_bus $port
+#@         remove_port $port
+#@       }
+#@     }
+#@   }
+#@ }
+#@ 
+#@ set one_cell_cases 0
+#@ set other_cases 0
+#@ 
+#@ proc handle_unconnected_output_pin {pin} {
+#@      set net [get_nets -of_object $pin]
+#@      if {[sizeof_collection $net] == 0 || [expr [sizeof_collection [get_pins -of_object $net]] == 1 && [sizeof_collection [get_ports -of_object $net]] == 0]} {
+#@        set port_name [get_object_name $pin]
+#@        # if there is a net connected to that pin, delete it as we need to create a net with a name matching port name
+#@        if {[sizeof_collection $net]} {
+#@          disconnect_net $net $pin
+#@          remove_net $net
+#@        }
+#@        if {[sizeof_collection [all_fanin -to $pin -startpoints_only -levels 2]] <= 1} {
+#@          # we are dealing with inverted flop output 
+#@          remove_cell [all_fanin -to $pin -only_cells -levels 0]
+#@          incr ::one_cell_cases
+#@        } else { # create out port
+#@          puts "-I- Creating output for the unconnected port $port_name"
+#@          # replace / of the hier pin name to _. should be only one /
+#@          set port_name [string replace $port_name [string last / $port_name] [string last / $port_name] _]
+#@          if {[sizeof_collection [get_ports -quiet $port_name]] != 0} {
+#@            set port_name $port_name\_ispd
+#@          } 
+#@          create_port $port_name -dir out
+#@          create_net $port_name
+#@          connect_net [get_nets $port_name] [get_ports $port_name]
+#@          connect_net [get_nets $port_name] $pin
+#@          incr ::other_cases
+#@        }  
+#@      }
+#@ }
+#@ proc handle_unconnected_output_pins {} {
+#@   set pins [get_pins -filter "pin_direction==out"]
+#@   set ::one_cell_cases 0
+#@   set ::other_cases 0
+#@   
+#@   set filename "[current_design_name].check_design"
+#@ 
+#@   check_design > $filename
+#@   set file [open $filename "r"]
+#@   
+#@   while {![eof $file]} {
+#@     set str [gets $file]
+#@     if {[regexp "net \'(.+)\' driven by pin \'(.+)\' .+ \\(LINT-2\\)" $str res var1 var2]} {
+#@       set pin_name $var2
+#@       set pin [get_pins $pin_name]
+#@       handle_unconnected_output_pin $pin
+#@     }
+#@   }
+#@   close $file
+#@   
+#@ #  foreach_in_collection pin $pins {
+#@ #     set net [get_nets -of_object $pin]
+#@ #     if {[sizeof_collection $net] == 0 || [expr [sizeof_collection [get_pins -of_object $net]] == 1 && [sizeof_collection [get_ports -of_object $net]] == 0]} {
+#@ #       set port_name [get_object_name $pin]
+#@ #       # if there is a net connected to that pin, delete it as we need to create a net with a name matching port name
+#@ #       if {[sizeof_collection $net]} {
+#@ #         disconnect_net $net $pin
+#@ #         remove_net $net
+#@ #       }
+#@ #       if {[sizeof_collection [all_fanin -to $pin -startpoints_only -levels 2]] <= 1} {
+#@ #         # we are dealing with inverted flop output 
+#@ #         remove_cell [all_fanin -to $pin -only_cells -levels 0]
+#@ #         incr one_cell_cases
+#@ #       } else { # create out port
+#@ #         puts "-I- Creating output for the unconnected port $port_name"
+#@ #         # replace / of the hier pin name to _. should be only one /
+#@ #         set port_name [string replace $port_name [string last / $port_name] [string last / $port_name] _]
+#@ #         if {[sizeof_collection [get_ports -quiet $port_name]] != 0} {
+#@ #           set port_name $port_name\_ispd
+#@ #         } 
+#@ #         create_port $port_name -dir out
+#@ #         create_net $port_name
+#@ #         connect_net [get_nets $port_name] [get_ports $port_name]
+#@ #         connect_net [get_nets $port_name] $pin
+#@ #         incr other_cases
+#@ #       }  
+#@ #     }
+#@ #  }
+#@   puts "-I- Deleted cells - $::one_cell_cases "
+#@   puts "-I- Connected to PO - $::other_cases "
+#@ }
+#@ 
+#@ proc handle_multiport_assigns {} {
+#@   set filename "[current_design_name].check_design"
+#@ 
+#@   check_design > $filename
+#@   set file [open $filename "r"]
+#@   
+#@   while {![eof $file]} {
+#@     set str [gets $file]
+#@     if {[regexp "output port \'(.+)\' is connected directly to output port \'(.+)\'.+ \\(LINT-31\\)" $str res var1 var2]} {
+#@       remove_bus [get_ports $var2]
+#@       remove_port [get_ports $var2]
+#@     }
+#@   }
+#@   close $file
+#@ }
+#@ 
+#@ 
+#@ proc handle_unconnected_input_pin {pin} {
+#@        set net [get_nets -of_object $pin]
+#@        set port_name [get_object_name $pin]
+#@        # if there is a net connected to that pin, delete it as we need to create a net with a name matching port name
+#@        if {[sizeof_collection $net]} {
+#@          disconnect_net $net $pin
+#@          remove_net $net
+#@        }
+#@        puts "-I- Creating input for the unconnected port $port_name"
+#@        # replace / of the hier pin name to _. should be only one /
+#@        set port_name [string replace $port_name [string last / $port_name] [string last / $port_name] _]
+#@        if {[sizeof_collection [get_ports -quiet $port_name]] != 0} {
+#@          set port_name $port_name\_ispd
+#@        } 
+#@        create_port $port_name -dir in
+#@        create_net $port_name
+#@        connect_net [get_nets $port_name] [get_ports $port_name]
+#@        connect_net [get_nets $port_name] $pin
+#@ }
+#@ 
+#@ proc  handle_unconnected_input_pins {} {
+#@   set pins [get_pins -filter "pin_direction==in"]
+#@   set other_cases 0
+#@   set filename "[current_design_name].check_design"
+#@ 
+#@   check_design > $filename
+#@   set file [open $filename "r"]
+#@   
+#@   while {![eof $file]} {
+#@     set str [gets $file]
+#@     if {[regexp "input pin \'(.+)\' of leaf cell \'(.+)\' .+ \\(LINT-58\\)" $str res var1 var2] ||
+#@         [regexp "input pin \'(.+)\' of leaf cell \'(.+)\' .+ \\(LINT-0\\)" $str res var1 var2]} {
+#@       set pin_name $var2/$var1
+#@       set pin [get_pins $pin_name]
+#@       handle_unconnected_input_pin $pin
+#@       incr other_cases
+#@     }
+#@   }
+#@   close $file
+#@   puts "-I- Connected to PI - $other_cases "
+#@ }
+#@ 
+#@ #  foreach_in_collection pin $pins {
+#@ #     set net [get_nets -of_object $pin]
+#@ #     set fanin_pin_name ""
+#@ #     
+#@ #     if {[sizeof_collection $net] == 0  
+#@ #      || ([sizeof_collection  [get_pins -of_object $net -filter "pin_direction == out"]] == 0 
+#@ #      || ([sizeof_collection  [get_pins -of_object $net -filter "pin_direction == out"]] == 1 
+#@ #      && [get_attribute [get_pins -of_object $net -filter "pin_direction == out"] name] == "**logic_0**")) 
+#@ #      && [sizeof_collection [get_ports -of_object $net -filter "pin_direction == in"]] == 0} {
+#@ #       set port_name [get_object_name $pin]
+#@ #       # if there is a net connected to that pin, delete it as we need to create a net with a name matching port name
+#@ #       if {[sizeof_collection $net]} {
+#@ #         disconnect_net $net $pin
+#@ #         remove_net $net
+#@ #       }
+#@ #       puts "-I- Creating input for the unconnected port $port_name"
+#@ #       # replace / of the hier pin name to _. should be only one /
+#@ #       set port_name [string replace $port_name [string last / $port_name] [string last / $port_name] _]
+#@ #       if {[sizeof_collection [get_ports -quiet $port_name]] != 0} {
+#@ #         set port_name $port_name\_ispd
+#@ #       } 
+#@ #       create_port $port_name -dir in
+#@ #       create_net $port_name
+#@ #       connect_net [get_nets $port_name] [get_ports $port_name]
+#@ #       connect_net [get_nets $port_name] $pin
+#@ #       incr other_cases
+#@ #     }
+#@ #  }
+#@ 
+#@ 
+#@ proc handle_high_fanout_nets {max_fanout} {
+#@   set nets [get_nets]
+#@   foreach_in_collection net $nets {
+#@     set pins [get_pins -of_object $net]
+#@     if {[sizeof_collection $pins] > $max_fanout} {
+#@       puts "-W- high fanout net: [get_object_name $net]"
+#@     }
+#@   }
+#@ }
+#@ 
+#@ set ispd_clk_name "ispd_clk"
+#@ set pin_clk_pattern "ck"
+#@ 
+#@ proc handle_multiple_clocks {} {
+#@   set new_clk_name $::ispd_clk_name
+#@   set seqs [get_cells -filter "is_sequential == true"]
+#@   set clock_pins [get_pins -of_objects $seqs -filter "name==ck"]
+#@   set clk_nets [get_nets -of_object $clock_pins]
+#@   set clk_ports [get_ports -of_object $clk_nets]
+#@   foreach_in_collection clk_net $clk_nets {
+#@     set this_clock_pins [get_pins -of_objects $clk_net]
+#@     set this_clock_ports [get_ports -of_objects $clk_net]
+#@     disconnect_net $clk_net $this_clock_ports
+#@     disconnect_net $clk_net $this_clock_pins
+#@   }
+#@   remove_net $clk_nets
+#@   remove_bus $clk_ports
+#@   remove_port $clk_ports
+#@   create_port $new_clk_name -direction "in"
+#@   create_net $new_clk_name 
+#@   connect_net [get_nets $new_clk_name] [get_ports $new_clk_name]
+#@   connect_net [get_nets $new_clk_name] $clock_pins
+#@ }
+#@ 
+#@ # handle inout ports 
+#@ # if inout has more than one driver, we'll unconnect it from them and keep only one driver and convert it to output
+#@ proc handle_inout_ports  {} {
+#@   set inouts [get_ports -filter "port_direction == inout"]
+#@   set inouts_to_delete {}
+#@   foreach_in_collection inout $inouts {
+#@     set net [get_net -of_object $inout]
+#@     set drivers [all_fanin -to $net -level 0]
+#@     # 1 is the inout itself and the other is another driver. if it is only one we are good
+#@     if {[sizeof_collection $drivers] > 2} {
+#@       set found_one_driver 0
+#@       puts "-W- handle_inout_ports: not tested code: deleting connections to inout port [get_object_name $inout] from mulitple drivers"
+#@       foreach_in_collection driver $drivers {
+#@         if {[get_object_name $driver] != [get_object_name $inout]} {
+#@           if {$found_one_driver = 0} {
+#@             set found_one_driver 1
+#@           } else {
+#@             disconnect_net $net $inout
+#@           }
+#@         } 
+#@       }
+#@     }
+#@     set inout_name [get_object_name $inout]
+#@     disconnect $net $inout
+#@     append_to_collection inouts_to_delete $inout
+#@     #remove_bus $inout
+#@     #remove_port $inout
+#@     create_port $inout_name -dir out
+#@     connect_net $net [get_ports $inout_name]
+#@   }
+#@   remove_bus $inouts_to_delete
+#@   remove_port $inouts_to_delete
+#@ }
+#@ 
+#@ proc write_verilog_for_current_design {} {
+#@ 
+#@     set desName [get_attribute [current_design] name]
+#@     set filename "$desName.v"
+#@ 
+#@     set ofp [open $filename w]
+#@ 
+#@     set ports [get_ports *]
+#@ 
+#@     set inPortNames [list]
+#@     set outPortNames [list]
+#@ 
+#@     foreach_in_collection p $ports {
+#@         
+#@         set portName [get_attribute $p name]
+#@         set portDir [get_attribute $p direction]
+#@         
+#@         if {$portDir == "in"} {
+#@             lappend inPortNames $portName
+#@ 
+#@         } elseif {$portDir == "out"} {
+#@             lappend outPortNames $portName
+#@ 
+#@         } else {
+#@             puts "Error: Port $portName has unknown port direction $portDir!"
+#@             return "err"
+#@         }
+#@     }
+#@ 
+#@     set inPortNames [lsort -increasing $inPortNames]
+#@     set outPortNames [lsort -increasing $outPortNames]
+#@ 
+#@ 
+#@     # Write the module header first
+#@     puts $ofp "module $desName ("
+#@     
+#@     #Then, list the ports in parenthesis
+#@     foreach p $inPortNames {
+#@         puts $ofp "$p,"
+#@     }
+#@ 
+#@     for {set pi 0} {$pi < [llength $outPortNames]} {incr pi} {
+#@         set p [lindex $outPortNames $pi]
+#@         
+#@         puts -nonewline $ofp "$p"
+#@ 
+#@         if {$pi != [expr {[llength $outPortNames] -1}]} {
+#@             puts -nonewline $ofp ","
+#@         }
+#@         
+#@         puts $ofp ""
+#@     }
+#@     
+#@     puts $ofp ");"
+#@ 
+#@     # Declare input/output ports
+#@     puts $ofp ""
+#@     puts $ofp "// Start PIs"
+#@     foreach p $inPortNames {
+#@         puts $ofp "input $p;"
+#@     }
+#@ 
+#@     puts $ofp ""
+#@     puts $ofp "// Start POs"
+#@     foreach p $outPortNames {
+#@         puts $ofp "output $p;"
+#@     }
+#@ 
+#@ 
+#@     # Sort the net names
+#@     set netNames [list]
+#@     foreach_in_collection net [get_nets *] {
+#@         lappend netNames [get_attribute $net name]
+#@     }
+#@ 
+#@     set netNames [lsort -increasing $netNames]
+#@ 
+#@     # Declare nets in the verilog
+#@     puts $ofp ""
+#@     puts $ofp "// Start wires"
+#@     foreach n $netNames {
+#@ 
+#@         puts $ofp "wire $n;"
+#@     }
+#@ 
+#@ 
+#@     # Sort the cell instance names
+#@     set cellNames [list]
+#@     foreach_in_collection cell [get_cells *] {
+#@         lappend cellNames [get_attribute $cell name]
+#@     }
+#@ 
+#@     set cellNames [lsort -increasing $cellNames]
+#@ 
+#@     # Write cell instances
+#@     puts $ofp ""
+#@     puts $ofp "// Start cells"
+#@     foreach c $cellNames {
+#@ 
+#@         set cell [get_cell $c]
+#@         set cellType [get_attribute $cell ref_name]
+#@         set cellName [get_attribute $cell name]
+#@ 
+#@         puts -nonewline $ofp "$cellType $cellName ( "
+#@         
+#@         # Sort the pins of the cell
+#@         set pinNames [list]
+#@         foreach_in_collection pin [get_pins -of_objects $cell] {
+#@             lappend pinNames [get_attribute $pin name]
+#@         }
+#@ 
+#@         set pinNames [lsort -increasing $pinNames]
+#@ 
+#@         set isFirstPin 1
+#@         foreach p $pinNames {
+#@ 
+#@             if {$isFirstPin} {
+#@                 set isFirstPin 0
+#@ 
+#@             } else {
+#@                 puts -nonewline $ofp ", "
+#@             }
+#@ 
+#@             set pin [get_pin "$c/$p"]
+#@ 
+#@             set nets [get_nets -of_objects $pin]
+#@             if {[sizeof_collection $nets] > 1} {
+#@                 puts "Error: Pin $c/$p is connected to multiple nets!"
+#@                 return "err"
+#@ 
+#@             } elseif {[sizeof_collection $nets] < 1} {
+#@                 puts "Error: Pin $c/$p is not connected to any net!"
+#@                 return "err"
+#@             }
+#@ 
+#@             set netName ""
+#@             foreach_in_collection net $nets {
+#@                 set netName [get_attribute $net name]
+#@             }
+#@             
+#@             if {$netName == ""} {
+#@                 puts "Error: Pin $c/$p is not connected to a valid net!"
+#@                 return "err"
+#@             }
+#@ 
+#@             puts -nonewline $ofp ".$p\($netName\)"
+#@         }
+#@         
+#@         puts $ofp " );"
+#@     }
+#@     
+#@     puts $ofp ""
+#@     puts $ofp "endmodule"
+#@ 
+#@     close $ofp
+#@ }
+#@ proc write_verilog_for_current_design_pt {} {
+#@ 
+#@     set desName [get_attribute [current_design] full_name]
+#@     set filename "$desName.v"
+#@ 
+#@     set ofp [open $filename w]
+#@ 
+#@     set ports [get_ports *]
+#@ 
+#@     set inPortNames [list]
+#@     set outPortNames [list]
+#@ 
+#@     foreach_in_collection p $ports {
+#@         
+#@         set portName [get_attribute $p full_name]
+#@         set portDir [get_attribute $p direction]
+#@         
+#@         if {$portDir == "in"} {
+#@             lappend inPortNames $portName
+#@ 
+#@         } elseif {$portDir == "out"} {
+#@             lappend outPortNames $portName
+#@ 
+#@         } else {
+#@             puts "Error: Port $portName has unknown port direction $portDir!"
+#@             return "err"
+#@         }
+#@     }
+#@ 
+#@     set inPortNames [lsort -increasing $inPortNames]
+#@     set outPortNames [lsort -increasing $outPortNames]
+#@ 
+#@ 
+#@     # Write the module header first
+#@     puts $ofp "module $desName ("
+#@     
+#@     #Then, list the ports in parenthesis
+#@     foreach p $inPortNames {
+#@         puts $ofp "$p,"
+#@     }
+#@ 
+#@     for {set pi 0} {$pi < [llength $outPortNames]} {incr pi} {
+#@         set p [lindex $outPortNames $pi]
+#@         
+#@         puts -nonewline $ofp "$p"
+#@ 
+#@         if {$pi != [expr {[llength $outPortNames] -1}]} {
+#@             puts -nonewline $ofp ","
+#@         }
+#@         
+#@         puts $ofp ""
+#@     }
+#@     
+#@     puts $ofp ");"
+#@ 
+#@     # Declare input/output ports
+#@     puts $ofp ""
+#@     puts $ofp "// Start PIs"
+#@     foreach p $inPortNames {
+#@         puts $ofp "input $p;"
+#@     }
+#@ 
+#@     puts $ofp ""
+#@     puts $ofp "// Start POs"
+#@     foreach p $outPortNames {
+#@         puts $ofp "output $p;"
+#@     }
+#@ 
+#@ 
+#@     # Sort the net names
+#@     set netNames [list]
+#@     foreach_in_collection net [get_nets *] {
+#@         lappend netNames [get_attribute $net base_name]
+#@     }
+#@ 
+#@     set netNames [lsort -increasing $netNames]
+#@ 
+#@     # Declare nets in the verilog
+#@     puts $ofp ""
+#@     puts $ofp "// Start wires"
+#@     foreach n $netNames {
+#@ 
+#@         puts $ofp "wire $n;"
+#@     }
+#@ 
+#@ 
+#@     # Sort the cell instance names
+#@     set cellNames [list]
+#@     foreach_in_collection cell [get_cells *] {
+#@         lappend cellNames [get_attribute $cell base_name]
+#@     }
+#@ 
+#@     set cellNames [lsort -increasing $cellNames]
+#@ 
+#@     # Write cell instances
+#@     puts $ofp ""
+#@     puts $ofp "// Start cells"
+#@     foreach c $cellNames {
+#@ 
+#@         set cell [get_cell $c]
+#@         set cellType [get_attribute $cell ref_name]
+#@         set cellName [get_attribute $cell base_name]
+#@ 
+#@         puts -nonewline $ofp "$cellType $cellName ( "
+#@         
+#@         # Sort the pins of the cell
+#@         set pinNames [list]
+#@         foreach_in_collection pin [get_pins -of_objects $cell] {
+#@             lappend pinNames [get_attribute $pin lib_pin_name]
+#@         }
+#@ 
+#@         set pinNames [lsort -increasing $pinNames]
+#@ 
+#@         set isFirstPin 1
+#@         foreach p $pinNames {
+#@ 
+#@             if {$isFirstPin} {
+#@                 set isFirstPin 0
+#@ 
+#@             } else {
+#@                 puts -nonewline $ofp ", "
+#@             }
+#@ 
+#@             set pin [get_pin "$c/$p"]
+#@ 
+#@             set nets [get_nets -of_objects $pin]
+#@             if {[sizeof_collection $nets] > 1} {
+#@                 puts "Error: Pin $c/$p is connected to multiple nets!"
+#@                 return "err"
+#@ 
+#@             } elseif {[sizeof_collection $nets] < 1} {
+#@                 puts "Error: Pin $c/$p is not connected to any net!"
+#@                 return "err"
+#@             }
+#@ 
+#@             set netName ""
+#@             foreach_in_collection net $nets {
+#@                 set netName [get_attribute $net base_name]
+#@             }
+#@             
+#@             if {$netName == ""} {
+#@                 puts "Error: Pin $c/$p is not connected to a valid net!"
+#@                 return "err"
+#@             }
+#@ 
+#@             puts -nonewline $ofp ".$p\($netName\)"
+#@         }
+#@         
+#@         puts $ofp " );"
+#@     }
+#@     
+#@     puts $ofp ""
+#@     puts $ofp "endmodule"
+#@ 
+#@     close $ofp
+#@ }
+#@ 
+#@ proc ispd_dump_sizes {filename} {
+#@   set outfile [open $filename "w+"]
+#@   
+#@   foreach_in_collection cell [get_cells] {
+#@     puts $outfile "[get_object_name $cell] [get_attribute $cell "ref_name"]"
+#@   }
+#@     
+#@   close $outfile
+#@ }
+#@ 
+#@ proc buffer_high_fanout_net {net fanout_thresh} {
+#@     set fanout_pins [all_fanout -from $net -levels 0]
+#@     #array set clusters {}
+#@     set clusters {}
+#@     set cluster {}
+#@     set counter 0
+#@     foreach_in_collection pin $fanout_pins {
+#@       lappend cluster [get_object_name $pin]
+#@       incr counter
+#@       if {$counter == $fanout_thresh} {
+#@         lappend clusters $cluster
+#@         set cluster {}
+#@         set counter 0
+#@       }
+#@       #puts $counter
+#@     }
+#@     if {[llength $cluster] != 0} {
+#@       lappend clusters $cluster
+#@     }  
+#@     #puts "[llength $clusters] - [llength [lindex $clusters 0]]" 
+#@     # add a buffer for each cluster
+#@     set name_prefix "ispd_fanout_opt"
+#@     set buffer_ref [get_lib_cells "contest/in01s01"]
+#@     set driver_pin [get_object_name [all_fanin -to $net -levels 0]]
+#@     set counter 0
+#@     set net_name [get_object_name $net]
+#@     # create buffer driving net
+#@     create_net $net_name\_$counter
+#@     set driving_net [get_nets $net_name\_$counter]
+#@     incr counter
+#@     
+#@     foreach cluster $clusters {
+#@       create_net $name_prefix\_$net_name\_$counter
+#@       set cluster_net [get_nets $name_prefix\_$net_name\_$counter]
+#@       foreach pin $cluster {
+#@         disconnect_net $net $pin
+#@         connect_net $cluster_net $pin
+#@         puts $pin
+#@       }
+#@       #create a buffer
+#@       create_cell $name_prefix\_$net_name\_$counter $buffer_ref
+#@       set buffer [get_cells $name_prefix\_$net_name\_$counter]
+#@       set buffer_out [get_pins -of_object $buffer -filter "pin_direction==out"]
+#@       set buffer_in [get_pins -of_object $buffer -filter "pin_direction==in"]
+#@       connect_net $cluster_net $buffer_out
+#@       connect_net $driving_net $buffer_in
+#@       incr counter
+#@     }
+#@     disconnect_net $net $driver_pin
+#@     connect_net $driving_net $driver_pin
+#@     remove_net $net
+#@ }
+#@ 
+#@ proc buffer_high_fanout_nets {fanout_thresh {report_only 0}} {
+#@   set nets [get_nets]
+#@   set counter 0
+#@   foreach_in_collection net $nets {
+#@     if {[get_object_name $net] == $::ispd_clk_name} continue
+#@     set fanout [sizeof_collection [all_fanout -from $net -levels 0]]
+#@     if {[expr $fanout > $fanout_thresh]} {
+#@       puts "[get_object_name $net] - $fanout"
+#@       if {$report_only==0} {
+#@         buffer_high_fanout_net $net $fanout_thresh
+#@       }
+#@       incr counter
+#@     }
+#@   }
+#@   puts "-I- Total number of high-fanout nets - $counter"
+#@ }
+#@ 
+#@ proc create_default_sdc_for_ispd {sdc_fname}  {
+#@ #  set clk_pattern "*CK"
+#@   set def_clk_period 500.0
+#@   set def_slope 80.0
+#@   set def_load 4.0
+#@   set def_clk_label "mclk"
+#@   set strongest_cell "in01f80"
+#@   set strongest_pin "o"
+#@   # get clock port 
+#@   set clk_ports [get_ports $::ispd_clk_name]
+#@   set clk_pattern $::pin_clk_pattern
+#@   puts "clk_pattern $clk_pattern"
+#@   set comb_only 0
+#@   # check if no clocks then dealing with combinational circuit
+#@   if {[sizeof_collection $clk_ports] == 0} {
+#@     set comb_only 1
+#@   }
+#@   if {[sizeof_collection $clk_ports] > 1} {
+#@     puts "-W- Found more than one clock! The constraint generator is coded to deal with one clock only... "
+#@   }
+#@ 
+#@   #set default clock constraints, arrival/required time etc
+#@   if {$comb_only} {
+#@     create_clock -name $def_clk_label -period $def_clk_period -waveform [list 0 [expr $def_clk_period/2]]
+#@     set_input_delay 0.0 [get_ports -filter "port_direction==in"] -clock $def_clk_label
+#@     set_output_delay 0.0 [get_ports -filter "port_direction==out"] -clock $def_clk_label
+#@   } else {
+#@     #for all clock ports create clock in sdc
+#@     foreach_in_collection clk $clk_ports {
+#@       create_clock -name $def_clk_label -period $def_clk_period -waveform [list 0 [expr $def_clk_period/2]] $clk
+#@     }
+#@     set_input_delay 0.0 [get_ports -filter "port_direction==in"] -clock $def_clk_label 
+#@     set_output_delay 0.0 [get_ports -filter "port_direction==out"] -clock $def_clk_label
+#@   }
+#@   
+#@ 
+#@   #calculate slacks
+#@   set ::timing_save_pin_arrival_and_slack 1
+#@   update_timing
+#@   
+#@   # get all ports and sequentials pins to get WNS
+#@   set pins [get_ports]
+#@   set pins [remove_from_collection $pins $clk_ports]
+#@   append_to_collection pins [get_pins -of_objects [get_cells -hierarchical -filter "is_sequential == true"] -filter "full_name!~*$clk_pattern"] 
+#@   set worst_slack $def_clk_period
+#@   foreach_in_collection pin $pins {
+#@     set rise_slack [get_attribute $pin "max_rise_slack"]
+#@     set fall_slack [get_attribute $pin "max_fall_slack"]
+#@     if {$rise_slack != "INFINITY" && [expr $rise_slack < $worst_slack]} {
+#@       set worst_slack $rise_slack
+#@     }
+#@     if {$fall_slack != "INFINITY" && [expr $fall_slack < $worst_slack]} {
+#@       set worst_slack $fall_slack
+#@     }
+#@   }
+#@   puts "Worst slack $worst_slack"
+#@   
+#@   #if the worst slack is negative we tune the clock cycle to get wns > -$def_clk_period
+#@   set clock_period $def_clk_period
+#@   if {[expr $worst_slack < 0]} {
+#@     set clock_period [expr floor(double($def_clk_period - $worst_slack)/$def_clk_period)*$def_clk_period]
+#@   }
+#@   puts "Clock period chosen $clock_period"
+#@   #open sdc file 
+#@   set sdc_file [open $sdc_fname "w+"]
+#@ 
+#@   puts $sdc_file "# clock definition"
+#@   #write constraints to file
+#@   if {$comb_only} {
+#@     puts $sdc_file "create_clock -name $def_clk_label -period $clock_period "
+#@   } else {
+#@     #for all clock ports create clock in sdc
+#@     foreach_in_collection clk $clk_ports {
+#@       puts $sdc_file "create_clock -name $def_clk_label -period $clock_period \[get_ports [get_object_name $clk]\]"
+#@     }
+#@   }
+#@   #input constraints
+#@   set in_ports [get_ports -filter "pin_direction == in"]
+#@   set in_ports [remove_from_collection $in_ports $clk_ports]
+#@   puts $sdc_file ""
+#@   puts $sdc_file "# input delays"
+#@   foreach_in_collection in_port $in_ports {
+#@     set port_name [get_object_name $in_port]
+#@     puts $sdc_file "set_input_delay 0.0 \[get_ports $port_name\] -clock $def_clk_label"
+#@     #puts $sdc_file "set_input_transition $def_slope $port_name"
+#@     #puts $sdc_file "set_driving_cell -lib_cell $strongest_cell -pin $strongest_pin $port_name -input_transition_fall $def_slope -input_transition_rise $def_slope"
+#@   }
+#@   puts $sdc_file ""
+#@   puts $sdc_file "# input drivers"
+#@   foreach_in_collection in_port $in_ports {
+#@     set port_name [get_object_name $in_port]
+#@     #puts $sdc_file "set_input_delay 0.0 $port_name -clock $def_clk_label"
+#@     #puts $sdc_file "set_input_transition $def_slope $port_name"
+#@     puts $sdc_file "set_driving_cell -lib_cell $strongest_cell -pin $strongest_pin \[get_ports $port_name\] -input_transition_fall $def_slope -input_transition_rise $def_slope"
+#@   }
+#@   #output constraints
+#@   puts $sdc_file ""
+#@   puts $sdc_file "# output delays"
+#@   foreach_in_collection out_port [get_ports -filter "pin_direction == out"] {
+#@     set port_name [get_object_name $out_port]
+#@     puts $sdc_file "set_output_delay 0.0 \[get_ports $port_name\] -clock $def_clk_label"
+#@     #puts $sdc_file "set_load -pin_load $def_load $port_name"
+#@   }
+#@   puts $sdc_file ""
+#@   puts $sdc_file "# output loads"
+#@   foreach_in_collection out_port [get_ports -filter "pin_direction == out"] {
+#@     set port_name [get_object_name $out_port]
+#@     #puts $sdc_file "set_output_delay 0.0 $port_name -clock $def_clk_label"
+#@     puts $sdc_file "set_load -pin_load $def_load \[get_ports $port_name\]"
+#@   }
+#@   
+#@   close $sdc_file
+#@ } 
+#@ 
+#@ proc create_design_from_iwls {orig_verilog {out_verilog ""}} {
+#@   #set ::search_path [list . $::env(B_ROOT)/library]
+#@   #set ::search_path  [list . $::env(ISPD_CONTEST_LIBDIR)]
+#@   #set ::link_library [list $::env(ISPD_CONTEST_LIB)]
+#@   #set ::target_library [list $::env(ISPD_CONTEST_LIB)]
+#@   set lib_name "contest"
+#@   set ::search_path [list . $::env(ISPD_CONTEST_ROOT)/lib]
+#@   set ::link_library [list $lib_name]
+#@   set ::target_library [list "*"]
+#@ 
+#@   # removes libraries too in DC, so read_lib should go after
+#@   remove_design -all
+#@ 
+#@   read_lib $::env(ISPD_CONTEST_ROOT)/lib/$lib_name.lib
+#@ 
+#@   #read_lib $::env(ISPD_CONTEST_LIB)
+#@   
+#@   # read verilogs to translate iwls to iccad lib
+#@   read_verilog $::env(ISPD_CONTEST_ROOT)/lib/contest_defs.v
+#@   # read input verilog mapped to iwls lib cells
+#@   read_verilog $orig_verilog
+#@   link
+#@   # ungroup all cell hierarchy
+#@   ungroup -all -flatten 
+#@  
+#@   define_name_rules remove_hier_sep -reset
+#@   #define_name_rules remove_hier_sep -restricted "/\[\]\\" -replacement_char _ 
+#@   define_name_rules remove_hier_sep -restricted "/\[\]\\" -replacement_char _ -remove_internal_net_bus -remove_port_bus -equal_ports_nets -check_internal_net_name 
+#@   change_names -rules remove_hier_sep
+#@ 
+#@   set ::auto_link_disable true
+#@ 
+#@   # sanitizing scripts
+#@   remove_unconnected_primary_ports
+#@   write -format ddc -output $orig_verilog.1.ddc
+#@   handle_constant_nets
+#@   write -format ddc -output $orig_verilog.2.ddc
+#@   handle_unconnected_output_pins
+#@   write -format ddc -output $orig_verilog.3.ddc
+#@   #handle_high_fanout_nets 1000
+#@   handle_multiple_clocks
+#@   write -format ddc -output $orig_verilog.4.ddc
+#@   # in case of clock gates, we might need to run this again
+#@   handle_unconnected_output_pins
+#@   write -format ddc -output $orig_verilog.5.ddc
+#@   # handle uncoonected input pins
+#@   handle_unconnected_input_pins
+#@   # handle inout ports 
+#@   handle_inout_ports 
+#@   write -format ddc -output $orig_verilog.6.ddc
+#@   handle_multiport_assigns
+#@   
+#@   # sometime handle_unconnected_output_pins may create more dangling pins.. 
+#@   #ideally we may call it until no dangling pins left, but it may be too expensive for that and should be re-written
+#@   #for now run it once again
+#@   handle_unconnected_output_pins
+#@   write -format ddc -output $orig_verilog.7.ddc
+#@ 
+#@   set ::auto_link_disable false
+#@   
+#@   # write output verilog
+#@   #write -format verilog -output $out_verilog
+#@ }
+#@ 
+#@ # just provide a path to iwls verilog
+#@ proc prepare_collaterals_for_ispd {iwls_verilog} {
+#@   # get verilog ready
+#@   create_design_from_iwls $iwls_verilog
+#@   check_design
+#@   
+#@   write_verilog_for_current_design
+#@   
+#@   set name [get_attribute [current_design] name]
+#@   
+#@   # get spef ready 
+#@   write_nets_with_fanout "temp_cap.txt"
+#@   #write_nets_with_scaled_fanout "temp_cap.txt"
+#@   exec $::env(ISPD_PREP_SCRIPTS)/txt2spef.pl "temp_cap.txt" $name.spef
+#@   exec rm temp_cap.txt
+#@   
+#@   #get sdc ready
+#@   create_default_sdc_for_ispd $name.sdc
+#@ }
+#@ 
+#@ set ispd_designs [list b19 leon2 leon3mp netcard pci_bridge32 usb_phy  vga_lcd DMA des_perf]
+#@ #set ispd_designs [list vga_lcd]
+#@ #set ispd_designs [list DMA  b19 des_perf leon3mp netcard pci_bridge32]
+#@ 
+#@ proc generate_randomly_relaxed_spef {} {
+#@   foreach ispd_design $::ispd_designs {
+#@     ispd_read_design $ispd_design 
+#@     #ispd_read_design_dc $ispd_design 
+#@    
+#@     write_nets_with_fanout "temp_cap.txt" 1
+#@     exec $::env(ISPD_PREP_SCRIPTS)/txt2spef.pl "temp_cap.txt" $ispd_design.spef
+#@   }
+#@ }
+#@ 
+#@ proc generate_scaled_spef {dir fname} {
+#@   source $::env(PTLR_SCRIPTS)/PTLR_flow.tcl
+#@   foreach ispd_design $::ispd_designs {
+#@     set ::your_block $ispd_design 
+#@     ispd_read_design $ispd_design 
+#@     perform_eco_changes $dir/$ispd_design/$fname
+#@     update_timing
+#@     write_nets_with_scaled_fanout "temp_cap.txt"
+#@     exec $::env(ISPD_PREP_SCRIPTS)/txt2spef.pl "temp_cap.txt" $ispd_design.spef
+#@   }
+#@ }
+#@ 
+#@ proc print_circuit_stats {{design_name {}}} {
+#@   if {$design_name != {}} {
+#@     ispd_read_design $design_name
+#@   }
+#@   puts "Stats for design [get_object_name [current_design]]"
+#@   puts "Number of input ports - [sizeof_collection [get_ports -filter "port_direction==in"]]"
+#@   puts "Number of output ports - [sizeof_collection [get_ports -filter "port_direction==out"]]"
+#@   puts "Number of combinational cells - [sizeof_collection [get_cells -filter "is_sequential!=true"]]"
+#@   puts "Number of sequential cells - [sizeof_collection [get_cells -filter "is_sequential==true"]]"
+#@   puts "Number of all cells - [sizeof_collection [get_cells ]]"
+#@ }
+#@ 
+#@ proc upsize_to_max_size {} {
+#@ 
+#@     set cell_sizes {}
+#@     
+#@     foreach_in_collection cell [get_cells *] {
+#@         set sizes [get_alternative_lib_cells -base_names $cell]
+#@         
+#@         set biggest_cell {}
+#@         set highest_leakage 0
+#@ 
+#@         foreach size $sizes {
+#@           set lib_cell [get_lib_cell contest/$size]
+#@           set leakage [get_attribute $lib_cell area]
+#@           if {$leakage > $highest_leakage} {
+#@             set biggest_cell $size
+#@             set highest_leakage $leakage
+#@           }
+#@         } 
+#@         #puts "$size $biggest_cell $highest_leakage"
+#@         lappend cell_sizes [list [get_object_name $cell] $biggest_cell]
+#@     }
+#@     puts "Found biggest library cell for every cell. Sizing now..."
+#@     foreach cell_size $cell_sizes {
+#@        size_cell [lindex $cell_size 0] [lindex $cell_size 1]
+#@     }
+#@ }
+#@ 
+#@ proc write_random_sizes {filename} {
+#@ 
+#@     set ofp [open $filename w]
+#@ 
+#@     set index 0
+#@     set useSameSize 0
+#@     
+#@     # suppress warning about only one alternative cell for flops
+#@     suppress_message NED-002
+#@     
+#@     foreach_in_collection cell [get_cells *] {
+#@ 
+#@         if {$useSameSize} {
+#@             set sizeSelected [get_attribute $cell ref_name]
+#@             
+#@             # Flip the setting
+#@             set useSameSize 0
+#@ 
+#@         } else {
+#@ 
+#@             # Flip the setting
+#@             #set useSameSize 1 
+#@ 
+#@             set sizes [get_alternative_lib_cells -base_names $cell]
+#@             
+#@             #incr index
+#@             # random size?
+#@             if {[llength $sizes] != 0} {
+#@               set index [expr [lindex [time {glob *}] 0] % [llength $sizes]]
+#@             }
+#@             
+#@             if {$index >= [llength $sizes]} {
+#@                 set index 0
+#@             } 
+#@ 
+#@             set sizeSelected [lindex $sizes $index]
+#@         }
+#@         
+#@         if {$sizeSelected != {}} {
+#@           set cellName [get_attribute $cell full_name]
+#@           puts $ofp "$cellName $sizeSelected"
+#@         }
+#@ 
+#@     }
+#@     close $ofp
+#@ }
+#@ 
+#@ #create_timing_constraints_batch [glob IWLS_benchmarks_2005_V_1.0/*/netlist] 1
+#@ 
+#@ #analyze_slack_distribution_batch [glob IWLS_benchmarks_2005_V_1.0/*/netlist] 1
+#@ # -- End source ../../scripts/synopsys_scripts.tcl
+
+ispd_read_design matrix_mult
+upsize_to_max_size
+write_verilog_for_current_design_pt
+ispd_read_design matrix_mult

@@ -1,0 +1,52 @@
+===================================
+ISPD 2013 Sizing Contest Benchmarks
+===================================
+Top level direcotry:
+ispd2013/
+
+Technology library:
+ispd2013/lib - technology library directory
+ispd2013/lib/contest.lib - Synopsys .lib format (ASCII). 
+ispd2013/simple - a 3 cell testcase used for explanation of the formats in the presentation 
+
+New benchmarks were generated for this contest using C-to-Silicon High-Level Synthesis tool from Cadence.
+ispd2013/fft - 64-point fast Fourier transform using butterfly algorithm
+ispd2013/matrix_mult - two 10x10 matrix multiplication (4 bit integer elements)
+ispd2013/cordic - fast sine and cosine calculation using CORDIC (coordinate rotation digital computer) algorithm
+ispd2013/edit_dist - edit distance algorithm for strings of 128 symbols long and 4 bit alphabet
+
+Benchmarks 'usb_phy', 'pci_bridge32', 'des_perf' and 'netcard' are based on the netlists 
+of the corresponding benchmarks from the ISPD2012 sizing contest. 
+Note: 'netcard' benchmark comes in a separate archive due to its large size
+
+The SPEF files were generated for them using Cadence Encounter Digital Implementation System  
+All cell sizes were reset to the largest sizes afterwards.
+
+Benchmark statistics:
+---- Name ----|--- Input #---|--- Output #---|--- Comb cell # ---|--- Seq cell #---|--- Total cell #---| 
+ simple       |          3   |           1   |              2    |             1   |                3  |
+ usb_phy      |         15   |          19   |            511    |            98   |              609  |
+ pci_bridge32 |        160   |         201   |          27316    |          3359   |            30675  |
+ des_perf     |        234   |         140   |         103842    |          8802   |           112644  |
+ netcard      |       1836   |          10   |         884427    |         97831   |           982258  |
+ cordic       |         34   |          64   |          40371    |          1230   |            41601  |
+ fft          |       1026   |        1026   |          30297    |          1984   |            32281  |
+ matrix_mult  |       3202   |        1600   |         152427    |          2898   |           155325  |
+ edit_dist    |       2562   |          12   |         125000    |          5661   |           130661  |
+-------------------------------------------------------------------------------------------------------|
+In each benchmark directory, you have at least the following files:
+ispd2013/$bench_name/$bench_name.v - netlist in Verilog format
+ispd2013/$bench_name/$bench_name.sdc - environment and timing constraints in .sdc format
+ispd2013/$bench_name/$bench_name.spef - wire parasitics information in .spef format
+ 
+For the simple benchmark we also include an example of the .sizes file:
+ispd2013/simple/simple.sizes
+
+Parser helpers directory contains C++ code to help you parse these benchmarks (.lib, .v, .sdc, .spef, .timing files). 
+Please note, this is not a generic parser of given formats. It will parse only the very restricted form of those formats
+that we follow in our benchmark files.
+ispd2012/parser_helpers
+ispd2012/parser_helpers/parser_helper.cpp
+ispd2012/parser_helpers/parser_helper.h
+
+Please refer to the main function in parser_helper.cpp as an example on how to use the parser classes provided in this package.
