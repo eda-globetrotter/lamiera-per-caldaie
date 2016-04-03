@@ -1,23 +1,14 @@
 #!/usr/bin/python
 
 """
-	This Python script is written by Zhiyang Ong to uncompress tar
-		balls in the Gzip'ed (or gzipped) format.
+	This Python script is written by Zhiyang Ong to archiving and
+		unarchiving (i.e., unpacking archive files), and compressing
+		and uncompressing, files in the following data compression
+		techniques (and associated file formats):
+		- TAR (Tape ARchive), or tar balls.
+		- tar balls in Gzip'ed (or gzipped) format; .tar.gz or tgz.
+		- bzip2 compressed files.
 	
-	Firstly, it checks if the benchmark repository exists.
-	If not, create a directory for the benchmark repository.
-
-	Secondly, it checks if the set of benchmarks are there.
-	If not, download the set of benchmarks to the benchmark
-		repository.
-
-	Thirdly, parse the benchmarks to validate the benchmarks.
-	That is, check if the benchmarks are valid. 
-
-	Fourthly, check if evaluation scripts are available for each
-		set of benchmarks.
-	If not, download the required evaluation scripts (if any).
-
 
 
 
