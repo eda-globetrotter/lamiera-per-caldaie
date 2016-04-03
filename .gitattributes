@@ -1,2 +1,5 @@
 *.tgz filter=lfs diff=lfs merge=lfs -text
 *.bz2 filter=lfs diff=lfs merge=lfs -text
+*.sdc filter=lfs diff=lfs merge=lfs -text
+*.spef filter=lfs diff=lfs merge=lfs -text
+*.v filter=lfs diff=lfs merge=lfs -text
