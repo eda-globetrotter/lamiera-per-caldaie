@@ -62,7 +62,19 @@
 		Url = {http://www.ispd.cc/contests/13/benchmark/ispd2013.tgz},  
 		Year = {2013}}  
 
-
+	@misc{Olson2016,  
+		Address = {San Francisco, {CA}},  
+		Author = {Risk Danger technoweenie Olson and Brandon Keepers and Anatoly Borodin and Lucas Werkmeister and Steve Streeting and Scott Barron},  
+		Date-Added = {2014-03-30 00:11:00 +0200},  
+		Date-Modified = {2014-03-30 00:11:00 +0200},  
+		Howpublished = {Available online at: \url{https://git-lfs.github.com/} and \url{https://github.com/github/git-lfs}; April 1, 2016 was the last accessed date},  
+		Keywords = {software development tools, version control, version control system, revision control, revision control system, configuration management, software configuration, software configuration management},  
+		Month = {March 31},  
+		Publisher = {{GitHub, Inc.}},  
+		School = {},  
+		Title = {Git Large File Storage},  
+		Url = {https://git-lfs.github.com/},  
+		Year = {2016}}  
 
 
 
