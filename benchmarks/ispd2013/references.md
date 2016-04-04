@@ -108,7 +108,7 @@
 
 The original set of benchmarks for the ISPD 2013 Discrete Gate Sizing and Threshold Voltage Assignment Contest includes: [Ozdal2013]; and [Ozdal2013].
 
-
+The final set of benchmarks used for the ISPD 2013 Discrete Gate Sizing and Threshold Voltage Assignment Contest includes: [Ozdal2013]; and [Ozdal2013].
 
 
 
