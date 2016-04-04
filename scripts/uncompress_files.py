@@ -111,8 +111,9 @@ if not isfile(ispd2013_contest_benchmarks_final):
 	print "	==>	The final set of benchmarks for the ISPD 2013 contest"
 	print "		is not available in this directory."
 
-
-
+"""
+	Insert references for ISPD benchmarks.
+"""
 
 
 
