@@ -1,4 +1,21 @@
+#	Preamble
 
+
+This is the software license for this document, which references the
+	benchmark suite used in evaluating submissions for the ISPD 2013   
+	contest on "Discrete Gate Sizing and Threshold Voltage Assignment".
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	The MIT License (MIT)
 
 	Copyright (c) <2016> <Zhiyang Ong>
