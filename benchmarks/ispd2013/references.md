@@ -104,7 +104,7 @@
 
 \cite{Olson2016} enables large benchmarks to be uploaded to GutHub. 
 
-\cite{Ozdal2013} [Ozdal2013][Ozdal2013] refers to the preferred citation of the benchmark suite for the ISPD 
+\cite{Ozdal2013} [Ozdal2013] refers to the preferred citation of the benchmark suite for the ISPD 
 original
 
 comment
