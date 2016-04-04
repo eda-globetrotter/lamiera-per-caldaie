@@ -112,7 +112,13 @@ if not isfile(ispd2013_contest_benchmarks_final):
 	print "		is not available in this directory."
 
 """
-	Insert references for ISPD benchmarks.
+	Processing ".tgz" files, which are Gzip compressed tar balls,
+		and bzip2 compressed tar balls.
+
+	Uncompress Gzip compressed tar balls.
+	Uncompress bzip2 compressed tar balls.
+	
+	"Un"-tar tar balls (or tar archive files). 
 """
 
 
@@ -136,7 +142,7 @@ if not isfile(ispd2013_contest_benchmarks_final):
 
 
 
-
+#	Check if the uncompressed and unarchived files are correct.
 
 
 
