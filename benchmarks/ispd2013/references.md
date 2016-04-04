@@ -104,10 +104,11 @@
 
 \cite{Olson2016} enables large benchmarks to be uploaded to GutHub. 
 
-\cite{Ozdal2013} [Ozdal2013] refers to the preferred citation of the benchmark suite for the ISPD 
-original
+\cite{Ozdal2013} [Ozdal2013] refers to the preferred citation of the benchmark suite for the ISPD 2013 Discrete Gate Sizing and Threshold Voltage Assignment Contest.
 
-comment
+The original set of benchmarks for the ISPD 2013 Discrete Gate Sizing and Threshold Voltage Assignment Contest includes: [Ozdal2013]; and [Ozdal2013].
+
+
 
 
 
