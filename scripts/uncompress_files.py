@@ -17,6 +17,57 @@
 		- Use Python functions to archive/unarchive and
 			compress/uncompress files.
 
+	Use "git reset HEAD~1" to reset last commit.
+
+
+
+
+	Notes:
+		The following references indicate the mode arguments for
+			file operations in Python.
+			- \cite{Allen2016}
+			- \cite{Wentworth2012a}
+			- cite{Mohtashim2016}
+		These mode arguments are indicated in single characters (for
+			ASCII/text/non-binary file formats), or double characters
+			(appended by 'b', for binary file formats).
+		Alternatively, a "+" sign can be appended to these mode
+			arguments to enable read and write.
+		The single characters are for the following file operations,
+			in non-binary file formats.
+			'r'	-	Read operations
+			'w'	-	Write operations; for non-empty files, it would
+					overwrite data in the existing file. 
+			'a'	-	Append operations; write operations append data
+					at the end of the file.
+			'x'	-	"Exclusive creation" mode \cite{Holscher2016}
+		The multiple characters are for the following file
+			operations.
+			'rb' -	Read operations for binary files.
+			'r+' -	Read and write operations.
+			'rb+' -	Read and write operations, for binary files.
+			'wb' -	Write operations for binary files.
+			'w+' -	Read and write operations.
+			'wb+' -	Read and write operations, for binary files.
+			'ab' -	Append operations for binary files.
+			'a+' -	Read and append operations.
+			'ab+' -	Read and append operations, for binary files.
+			
+			
+		For write operations, if the file exists, the file is
+			overwritten. Else, create a new file for writing.
+			
+		When the 'append' operation is carried out, if the file
+			exists, the file pointer is placed at the end of the file.
+		Else, a new file is created for read and write operations.
+		That is, the file pointer is placed at the beginning of the file.
+
+	References:
+		\cite{Allen2016}
+		\cite{Holscher2016}
+		\cite{Mohtashim2016}
+		\cite{Wentworth2012a} 
+
 
 
 
@@ -71,7 +122,10 @@ from sys import argv
 		file.
 """
 from urllib import urlopen
-
+#	Function to uncompress/gunzip Gzip'ed files.
+from gzip import open
+#	Function to copy file objects, at a high level.
+#from shutil import copyfileobject
 
 #	=============================================================
 
@@ -79,8 +133,13 @@ from urllib import urlopen
 
 #	Names of archived and/or compressed files. 
 ispd2013_contest_benchmarks_most = "ispd2013.tgz"
+ispd2013_contest_benchmarks_most_tar = "ispd2013.tar"
+
 ispd2013_contest_benchmarks_netcard = "netcard.tgz"
+ispd2013_contest_benchmarks_netcard_tar = "netcard.tar"
+
 ispd2013_contest_benchmarks_final = "ispd2013_final.tar.bz2"
+ispd2013_contest_benchmarks_final_tar = "ispd2013_final.tar"
 
 #	Relative paths to directories.
 boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/binaries"
@@ -114,23 +173,39 @@ if not isfile(ispd2013_contest_benchmarks_final):
 """
 	Processing ".tgz" files, which are Gzip compressed tar balls,
 		and bzip2 compressed tar balls.
-
-	Uncompress Gzip compressed tar balls.
-	Uncompress bzip2 compressed tar balls.
-	
-	"Un"-tar tar balls (or tar archive files). 
 """
 
+#	Uncompress Gzip compressed tar balls.
+with open(ispd2013_contest_benchmarks_most, 'rb') as most_fh_gzip:
+	with open(ispd2013_contest_benchmarks_most_tar, 'wb') as most_fh_tar:
+#		copyfileobject(most_fh_gzip, most_fh_tar)
+		most_fh_tar.write(most_fh_gzip.read())
+		most_fh_gzip.close()
+		most_fh_tar.close()
+
+with open(ispd2013_contest_benchmarks_netcard, 'rb') as netcard_fh_gzip:
+	with open(ispd2013_contest_benchmarks_netcard_tar, 'wb') as netcard_fh_tar:
+		netcard_fh_tar.write(netcard_fh_gzip.read())
+		netcard_fh_gzip.close()
+		netcard_fh_tar.close()
+
+"""
+#	The following statement requires a compressed string in binary format.
+input_string_in_binary = b"This is a string."
+output_string_in_binary = compress(input_string_in_binary)
+...
+output_string_in_binary = decompress(input_string_in_binary)
+"""
+
+#	Uncompress bzip2 compressed tar balls.
+with open(ispd2013_contest_benchmarks_final, 'rb') as final_fh_gzip:
+	with open(ispd2013_contest_benchmarks_final, 'wb') as final_fh_tar:
+		final_fh_tar.write(final_fh_gzip.read())
+		final_fh_gzip.close()
+		final_fh_tar.close()
 
 
-
-
-
-
-
-
-
-
+#	"Un"-tar tar balls (or tar archive files).
 
 
 
